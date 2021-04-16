@@ -1,0 +1,57 @@
+﻿Meeting Note #1 
+Date: 9 April 2021
+
+
+Dewi read and learn this paper: 
+https://www.mathematica.org/our-publications-and-findings/publications/multilevel-regression-with-poststratification-for-the-analysis-of-sms-survey-data
+
+
+Shiro's suggestion of what a paper on this would look like (different topic)
+
+
+https://www.princeton.edu/~davidlee/wp/RDDEconomics.pdf
+
+
+My suggestion (different topic)
+
+
+https://arxiv.org/pdf/1709.01449.pdf
+
+
+Next steps:
+
+
+Call a friend/maybe collaborate
+- Contact Shiro Kuriwaki & have a chat
+- Contact Jonathan Gellar & he suggests
+
+
+Research steps:
+1. Collecting up influential MRP papers (systematic review)
+2. Quickly skim to make they're useful/meet our criteria:
+- They need to use MRP
+- They need have figures that show their results
+- Those figures need be used in a diagnostic fashion 
+-> Comparisons between different methods
+-> Benchmarking type plots
+-> Comparisons to ground truth
+- Database of the eligible papers
+- Database of eligible plots and summaries 
+- Synthesize it. 
+
+
+Potential extensions:
+- Code them all in ggplot 
+- Make for the different types for the package
+- Fill any gaps (develop new plots)
+
+
+Rough timeline
+April - November (7 months)
+
+
+Next stages: 
+1. LK sends emails to shiro and jonathan
+2. Dewi does a few database searches (save the terms, numbers) (counts)
+ - Download endnote (counts)
+ - Remove duplicates (counts)
