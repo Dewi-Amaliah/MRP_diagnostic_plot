@@ -1,0 +1,700 @@
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - How Does Multilevel Regression and Poststratification Perform with Conventional National Surveys?
+AU  - Buttice, Matthew K.
+AU  - Highton, Benjamin
+AB  - [Multilevel regression and poststratification (MRP) is a method to estimate public opinion across geographic units from individual-level survey data. If it works with samples the size of typical national surveys, then MRP offers the possibility of analyzing many political phenomena previously believed to be outside the bounds of systematic empirical inquiry. Initial investigations of its performance with conventional national samples produce generally optimistic assessments. This article examines a larger number of cases and a greater range of opinions than in previous studies and finds substantial variation in MRP performance. Through empirical and Monte Carlo analyses, we develop an explanation for this variation. The findings suggest that the conditions necessary for MRP to perform well will not always be met. Thus, we draw a less optimistic conclusion than previous studies do regarding the use of MRP with samples of the size found in typical national surveys.]
+C1  - Full publication date: Autumn 2013
+DB  - JSTOR
+EP  - 467
+IS  - 4
+PB  - [Oxford University Press, Society for Political Methodology]
+PY  - 2013
+SN  - 10471987, 14764989
+SP  - 449
+T2  - Political Analysis
+UR  - http://www.jstor.org/stable/24572674
+VL  - 21
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - Post-stratification is used to improve the precision of survey estimators when categorical auxiliary information is available from external sources. In natural resource surveys, such information may be obtained from remote sensing data classified into categories and displayed as maps. These maps may be based on classification models fitted to the sample data. Such "endogenous post-stratification" violates the standard assumptions that observations are classified without error into post-strata, and post-stratum population counts are known. Properties of the endogenous post-stratification estimator (EPSE) are derived for the case of sample-fitted nonparametric models, with particular emphasis on monotone regression models. Asymptotic properties of the nonparametric EPSE are investigated under a superpopulation model framework. Simulation experiments illustrate the practical effects of first fitting a nonparametric model to survey data before post-stratifying.
+AU  - Dahlke, Mark
+AU  - Breidt, F. Jay
+AU  - Opsomer, Jean D.
+AU  - Van Keilegom, Ingrid
+C1  - Full publication date: January 2013
+DB  - JSTOR
+EP  - 211
+IS  - 1
+PB  - Institute of Statistical Science, Academia Sinica
+PY  - 2013
+SN  - 10170405, 19968507
+SP  - 189
+T2  - Statistica Sinica
+TI  - NONPARAMETRIC ENDOGENOUS POST-STRATIFICATION ESTIMATION
+UR  - http://www.jstor.org/stable/24310520
+VL  - 23
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - This text reports the results of an evaluation of the performance of multilevel regression modeling and poststratication (MRP) in reconstructing state-level estimates from federal-level data. The evaluation makes use of Eurobarometer data and relies on the fact that Eurobarometer provides representative survey data for each European Union state to further explore the performance of MRP. I repeatedly draw subsets of the entire Eurobarometer sample, then I compute adjusted country means using MRP with census data, and I compare the resulting estimates to the true country means from the full sample. I do that for ten survey items from various Eurobarometer waves. The results show that MRP is generally successful in producing estimates that are highly correlated with the true values (mean of 0.90). But the approach is less capable of reconstructing the relative rankings of the country means and hitting the range of plausible values of the individual state means. I also show that the great part of the adjustment comes from the modeling of the state means and not from poststratification, and that population-weighted samples perform no worse than samples in which countries have equal shares of the pool of respondents.
+AU  - Toshkov, Dimiter
+C1  - Full publication date: Summer 2015
+DB  - JSTOR
+EP  - 460
+IS  - 3
+PB  - [Oxford University Press, Society for Political Methodology]
+PY  - 2015
+SN  - 10471987, 14764989
+SP  - 455
+T2  - Political Analysis
+TI  - Exploring the Performance of Multilevel Modeling and Poststratification with Eurobarometer Data
+UR  - http://www.jstor.org/stable/24573172
+VL  - 23
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Adjusting treatment effect estimates by post-stratification in randomized experiments
+AU  - Miratrix, Luke W.
+AU  - Sekhon, Jasjeet S.
+AU  - Yu, Bin
+AB  - [Experimenters often use post-stratification to adjust estimates. Post-stratification is akin to blocking, except that the number of treated units in each stratum is a random variable because stratification occurs after treatment assignment. We analyse both post-stratification and blocking under the Neyman—Rubin model and compare the efficiency of these designs. We derive the variances for a post-stratified estimator and a simple difference-in-means estimator under different randomization schemes. Post-stratification is nearly as efficient as blocking: the difference in their variances is of the order of 1/n 2 , with a constant depending on treatment proportion. Post-stratification is therefore a reasonable alternative to blocking when blocking is not feasible. However, in finite samples, post-stratification can increase variance if the number of strata is large and the strata are poorly chosen. To examine why the estimators' variances are different, we extend our results by conditioning on the observed number of treated units in each stratum. Conditioning also provides more accurate variance estimates because it takes into account how close (or far) a realized random sample is from a comparable blocked experiment. We then show that the practical substance of our results remains under an infinite population sampling model. Finally, we provide an analysis of an actual experiment to illustrate our analytical results.]
+C1  - Full publication date: MARCH 2013
+DB  - JSTOR
+EP  - 396
+IS  - 2
+PB  - Wiley
+PY  - 2013
+SN  - 13697412, 14679868
+SP  - 369
+T2  - Journal of the Royal Statistical Society. Series B (Statistical Methodology)
+UR  - http://www.jstor.org/stable/23360930
+VL  - 75
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - Natural populations of plants and animals spatially cluster because (1) suitable habitat is patchy, and (2) within suitable habitat, individuals aggregate further into clusters of higher density. We compare the precision of random and systematic field sampling survey designs under these two processes of species clustering. Second, we evaluate the performance of 13 estimators for the variance of the sample mean from a systematic survey. Replicated simulated surveys, as counts from 100 transects, allocated either randomly or systematically within the study region, were used to estimate population density in six spatial point populations including habitat patches and Mat&#xe9;rn circular clustered aggregations of organisms, together and in combination. The standard one-start aligned systematic survey design, a uniform 10 &#xd7; 10 grid of transects, was much more precise. Variances of the 10 000 replicated systematic survey mean densities were one-third to one-fifth of those from randomly allocated transects, implying transect sample sizes giving equivalent precision by random survey would need to be three to five times larger. Organisms being restricted to patches of habitat was alone sufficient to yield this precision advantage for the systematic design. But this improved precision for systematic sampling in clustered populations is underestimated by standard variance estimators used to compute confidence intervals. True variance for the survey sample mean was computed from the variance of 10 000 simulated survey mean estimates. Testing 10 published and three newly proposed variance estimators, the two variance estimators (v) that corrected for inter-transect correlation (v8 and vW) were the most accurate and also the most precise in clustered populations. These greatly outperformed the two "post-stratification" variance estimators (v2 and v3) that are now more commonly applied in systematic surveys. Similar variance estimator performance rankings were found with a second differently generated set of spatial point populations, v8 and vW again being the best performers in the longer-range autocorrelated populations. However, no systematic variance estimators tested were free from bias. On balance, systematic designs bring more narrow confidence intervals in clustered populations, while random designs permit unbiased estimates of (often wider) confidence interval. The search continues for better estimators of sampling variance for the systematic survey mean.
+AU  - McGarvey, Richard
+AU  - Burch, Paul
+AU  - Matthews, Janet M.
+C1  - Full publication date: January 2016
+DB  - JSTOR
+EP  - 248
+IS  - 1
+PB  - [Wiley, Ecological Society of America]
+PY  - 2016
+SN  - 10510761
+SP  - 233
+T2  - Ecological Applications
+TI  - Precision of systematic and random sampling in clustered populations: habitat patches and aggregating organisms
+UR  - http://www.jstor.org/stable/24701233
+VL  - 26
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+TI  - PREVALENCE AND TREND ESTIMATION FROM OBSERVATIONAL DATA WITH HIGHLY VARIABLE POST-STRATIFICATION WEIGHTS
+AU  - Vandendijck, Yannick
+AU  - Faes, Christel
+AU  - Hens, Niel
+AB  - In observational surveys, post-stratification is used to reduce bias resulting from differences between the survey population and the population under investigation. However, this can lead to inflated post-stratification weights and, therefore, appropriate methods are required to obtain less variable estimates. Proposed methods include collapsing post-strata, trimming poststratification weights, generalized regression estimators (GREG) and weight smoothing models, the latter defined by random-effects models that induce shrinkage across post-stratum means. Here, we first describe the weightsmoothing model for prevalence estimation from binary survey outcomes in observational surveys. Second, we propose an extension of this method for trend estimation. And, third, a method is provided such that the GREG can be used for prevalence and trend estimation for observational surveys. Variance estimates of all methods are described. A simulation study is performed to compare the proposed methods with other established methods. The performance of the nonparametric GREG is consistent over all simulation conditions and therefore serves as a valuable solution for prevalence and trend estimation from observational surveys. The method is applied to the estimation of the prevalence and incidence trend of influenza-like illness using the 2010/2011 Great Influenza Survey in Flanders, Belgium.
+C1  - Full publication date: March 2016
+EP  - 117
+IS  - 1
+PB  - Institute of Mathematical Statistics
+PY  - 2016
+SN  - 19326157
+SP  - 94
+T2  - The Annals of Applied Statistics
+UR  - http://www.jstor.org/stable/43826472
+VL  - 10
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Public Opinion in the U.S. States: 1956 to 2010
+AU  - Enns, Peter K.
+AU  - Koch, Julianna
+AB  - [In this article, we create, validate, and analyze new dynamic measures of state partisanship, state policy mood, and state political ideology. The measures of partisanship and policy mood begin in 1956 and the measure of ideology begins in 1976. Our approach uses the advantages of two leading techniques for measuring state public opinion—multilevel regression and poststratification (MRP) and survey aggregation. The resulting estimates are based on nearly 500 different surveys with a total of more than 740,000 respondents. After validating our measures, we show that during the last half century, policy preferences in the states have shifted in important and sometimes surprising ways. For example, we find that differences in political attitudes across time can be as important as differences across states.]
+C1  - Full publication date: September 2013
+DB  - JSTOR
+EP  - 372
+IS  - 3
+PB  - Sage Publications, Inc.
+PY  - 2013
+SN  - 15324400, 19461607
+SP  - 349
+T2  - State Politics & Policy Quarterly
+UR  - http://www.jstor.org/stable/24711109
+VL  - 13
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups
+AU  - Ghitza, Yair
+AU  - Gelman, Andrew
+AB  - [Using multilevel regression and poststratification (MRP), we estimate voter turnout and vote choice within deeply interacted subgroups: subsets of the population that are defined by multiple demographic and geographic characteristics. This article lays out the models and statistical procedures we use, along with the steps required to fit the model for the 2004 and 2008 presidential elections. Though MRP is an increasingly popular method, we improve upon it in numerous ways: deeper levels of covariate interaction, allowing for nonlinearity and nonmonotonicity, accounting for unequal inclusion probabilities that are conveyed in survey weights, postestimation adjustments to turnout and voting levels, and informative multidimensional graphical displays as a form of model checking. We use a series of examples to demonstrate the flexibility of our method, including an illustration of turnout and vote choice as subgroups become increasingly detailed, and an analysis of both vote choice changes and turnout changes from 2004 to 2008.]
+C1  - Full publication date: July 2013
+DB  - JSTOR
+EP  - 776
+IS  - 3
+PB  - [Midwest Political Science Association, Wiley]
+PY  - 2013
+SN  - 00925853, 15405907
+SP  - 762
+T2  - American Journal of Political Science
+UR  - http://www.jstor.org/stable/23496652
+VL  - 57
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Adoption and Frequency of Precision Soil Testing in Cotton Production
+AU  - Lambert, Dayton M.
+AU  - English, Burton C.
+AU  - Harper, David C.
+AU  - Larkin, Sherry L.
+AU  - Larson, James A.
+AU  - Mooney, Daniel F.
+AU  - Roberts, Roland K.
+AU  - Velandia, Margarita
+AU  - Reeves, Jeanne M.
+AB  - [A 2009 survey of cotton farmers in twelve states collected information about the use of georeferenced precision soil testing (PST). Adoption of PST technology and the interval until retesting were examined with a Poisson hurdle regression. Survey data were calibrated using a post-stratification weighting protocol. Farming experience, farm size, land ownership, variable rate fertilizer management plans, and the use of soil electrical conductivity devices were correlated the with period until PST adopters retested soil. Understanding how producers perceive the useful life of soil-test information may be important for monitoring the effectiveness of best nutrient management practice adoption.]
+C1  - Full publication date: April 2014
+DB  - JSTOR
+EP  - 123
+IS  - 1
+PB  - Western Agricultural Economics Association
+PY  - 2014
+SN  - 10685502
+SP  - 106
+T2  - Journal of Agricultural and Resource Economics
+UR  - http://www.jstor.org/stable/44131317
+VL  - 39
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - Enns and Koch (hereafter E&K) use multilevel regression and poststratification (MRP) along with survey aggregation to measure state policy mood. As E&K rely on direct information about public opinion, it would be preferable to Berry et al.'s widely used indirect measure relying on data about the issue positions and vote shares of members of Congress, if E&K's measure were valid. Assessing the validity of E&K's measure takes on special importance because the measure proves to be nearly uncorrelated with Berry et al.'s measure, implying that at least one is invalid. Because the "true" policy mood of states is unknown, it is impossible to definitively assess the validity of E&K's measure. Instead, we raise some concerns about E&K's measurement methodology and present evidence pertaining to the indicator's face validity, convergent validity, and construct validity. Our analyses leave us doubtful that the E&K measure is valid because its characterization of state moods departs significantly from conventional wisdom and current scholarship.
+AU  - Berry, William D.
+AU  - Ringquist, Evan J.
+AU  - Fording, Richard C.
+AU  - Hanson, Russell L.
+C1  - Full publication date: DECEMBER 2015
+DB  - JSTOR
+EP  - 435
+IS  - 4
+PB  - Sage Publications, Inc.
+PY  - 2015
+SN  - 15324400, 19461607
+SP  - 425
+T2  - State Politics & Policy Quarterly
+TI  - Assessing the Validity of Enns and Koch's Measure of State Policy Mood
+UR  - http://www.jstor.org/stable/24643857
+VL  - 15
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR https://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Gender Equality Mood across States and over Time
+AU  - Koch, Julianna
+AU  - Thomsen, Danielle M.
+AB  - [This article provides a new measure of state-level attitudes toward gender roles. Our series, gender equality mood, spans from 1972 to 2010 and is the first measure to capture variation in gender-role attitudes across states and over time. The series is created using two leading techniques for opinion estimation: multilevel regression and poststratification and survey aggregation. We conclude by discussing several research areas in which our measure of gender equality mood may be especially useful.]
+C1  - Full publication date: DECEMBER 2017
+DB  - JSTOR
+EP  - 360
+IS  - 4
+PB  - Sage Publications, Inc.
+PY  - 2017
+SN  - 15324400, 19461607
+SP  - 351
+T2  - State Politics & Policy Quarterly
+UR  - https://www.jstor.org/stable/26940189
+VL  - 17
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR https://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Evaluating Policy Representation with Dynamic MRP Estimates
+AU  - Lewis, Daniel C.
+AU  - Jacobsmeier, Matthew L.
+AB  - [Does direct democracy strengthen popular control of public policy in the United States? A major challenge in evaluating policy representation is the measurement of state-level public opinion and public policy. Although recent studies of policy responsiveness and congruence have provided improved measures of public opinion using multilevel regression and poststratification (MRP) techniques, these analyses are limited by their static nature and cross-sectional design. Issue attitudes, unlike more general political orientations, often vary considerably over time. Unless the dynamics of issue-specific public opinion are appropriately incorporated into the analyses, tests of policy responsiveness and congruence may be misleading. Thus, we assess the degree of policy representation in direct democracy states regarding same-sex relationship recognition policies using dynamic models of policy adoption and congruence that employ dynamic MRP estimates of attitudes toward same-sex marriage. We find that direct democracy institutions increase both policy responsiveness and congruence with issue-specific public opinion.]
+C1  - Full publication date: DECEMBER 2017
+DB  - JSTOR
+EP  - 464
+IS  - 4
+PB  - Sage Publications, Inc.
+PY  - 2017
+SN  - 15324400, 19461607
+SP  - 441
+T1  - Direct Democracy and Same-Sex Relationship Policies in the United States
+T2  - State Politics & Policy Quarterly
+UR  - https://www.jstor.org/stable/26940194
+VL  - 17
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Combining multi-observer information in partially rank-ordered judgment post-stratified and ranked set samples
+AU  - OZTURK, Omer
+AB  - [This paper develops two sampling designs to create artificially stratified samples. These designs use a small set of experimental units to determine their relative ranks without measurement. In each set, the units are ranked by all available observers (rankers), with ties whenever the units cannot be ranked with high confidence. The rankings from all the observers are then combined in a meaningful way to create a single weight measure. This weight measure is used to create judgment strata in both designs. The first design constructs the strata through judgment post-stratification after the data has been collected. The second design creates the strata before any measurements are made on the experimental units. The paper constructs estimators and confidence intervals, and develops testing procedures for the mean and median of the underlying distribution based on these sampling designs. We show that the proposed sampling designs provide a substantial improvement over their competitor designs in the literature. Dans cet article, nous développons deux plans d'échantillonnage pour créer des échantillons stratifiés artificiellement. Ces plans utilisent un petit ensemble d'unités expérimentales pour déterminer leurs rangs relatifs sans les mesurer. Dans chaque ensemble, les unités sont classées en fonction de tous les observateurs disponibles (classeurs), tout en permettant des égalités lorsque le rang des unités ne peut être établi à un niveau de confiance élevé. Les classements de tous les observateurs sont ensuite combinés de façon judicieuse en une mesure de poids unique utilisée pour créer une stratification de jugement dans les deux plans. Le premier plan construit les strates par le biais de jugement post-stratification, après la collecte des données. Le deuxième plan crée les strates avant la prise de toute mesure sur les unités expérimentales. Nous présentons des estimateurs et des intervalles de confiance, ainsi que des procédures de test pour la moyenne et la médiane de la distribution sous-jacente basées sur ces plans d'échantillonnage. Nous montrons que les plans d'échantillonnage proposés constituent une amélioration considérable par rapport aux plans concurrents dans la littérature.]
+C1  - Full publication date: June/juin 2013
+DB  - JSTOR
+EP  - 324
+IS  - 2
+PB  - Statistical Society of Canada
+PY  - 2013
+SN  - 03195724
+SP  - 304
+T2  - The Canadian Journal of Statistics / La Revue Canadienne de Statistique
+UR  - http://www.jstor.org/stable/43185136
+VL  - 41
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - When Do Legislators Defy Popular Sovereignty? Testing Theories of Minority Representation Using DOMA
+AU  - Bishin, Benjamin G.
+AU  - Smith, Charles Anthony
+AB  - [What explains the behavior of legislators on bills that restrict the rights of marginalized minorities? Studies of representation typically focus on factors like party or public opinion but seldom account for theories of minority representation like electoral capture or subconstituency politics. One reason for this is that data allowing for the comparison of these theories are seldom available for U.S. House districts. We overcome this hurdle by implementing multilevel regression with post-stratification to estimate opinion on gay marriage during the 1996 Defense of Marriage Act vote. We show that subconstituency politics explains legislators' behavior better than electoral capture, party, or public opinion.]
+C1  - Full publication date: DECEMBER 2013
+DB  - JSTOR
+EP  - 803
+IS  - 4
+PB  - [University of Utah, Sage Publications, Inc.]
+PY  - 2013
+SN  - 10659129
+SP  - 794
+T2  - Political Research Quarterly
+UR  - http://www.jstor.org/stable/23612058
+VL  - 66
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+TI  - ASSESSING THE POTENTIAL OF PARADATA AND OTHER AUXILIARY DATA FOR NONRESPONSE ADJUSTMENTS
+AU  - KRUEGER, BRIAN S.
+AU  - WEST, BRADY T.
+AB  - Given the theoretical promise of these auxiliary data for overcoming the challenge of nonresponse, survey researchers have shown an increased interest in collecting paradata, data from screening interviews, and other contextual information. However, very few studies have systematically assessed the use of these data for post-survey nonresponse adjustments. Those studies that do exist generally do not identify auxiliary variables that correlate with response propensity and key survey variables, a necessary condition for auxiliary data to be effective tools for reducing nonresponse bias. Using the National Survey of Family Growth (NSFG), this paper leverages a large set of auxiliary variables available for the full NSFG sample to assess their potential as independent tools for post-survey nonresponse adjustments. We begin by using this auxiliary information to predict response propensity (RP) for each person in the full sample. We then display descriptive estimates for a variety of attitudes and behaviors measured in the NSFG, using post-stratification weighting adjustments as well as RP adjustments followed by post-stratification. The results show that accounting for RP in the weighting adjustment often produces noteworthy differences in the estimates, thus supporting the collection of these types of auxiliary variables in practice. These results also suggest that standard post-stratification adjustments may not be entirely effective at removing nonresponse bias from all survey estimates, and that some subgroup analyses may be especially subject to bias when adjusting survey estimates using post-stratification alone.
+C1  - Full publication date: Winter 2014
+EP  - 831
+IS  - 4
+PB  - [Oxford University Press, American Association for Public Opinion Research]
+PY  - 2014
+SN  - 0033362X, 15375331
+SP  - 795
+T2  - The Public Opinion Quarterly
+UR  - http://www.jstor.org/stable/24545971
+VL  - 78
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+TI  - COMPARING MULTIPLE IMPUTATION AND PROPENSITY-SCORE WEIGHTING IN UNIT-NONRESPONSE ADJUSTMENTS: A SIMULATION STUDY
+AU  - ALANYA, AHU
+AU  - WOLF, CHRISTOF
+AU  - SOTTO, CRISTINA
+AB  - The usual approach to unit-nonresponse bias detection and adjustment in social surveys has been post-stratification weights, or more recently, propensity-score weighting (PSW) based on auxiliary information. There exists a third approach, which is far less popular: using multiple imputed values for each missing unit of the survey outcome(s). We suggest multiple imputation (MI) as an alternative to PSW since the latter is known to increase variance substantially without reducing bias when auxiliary variables are not associated with the survey outcome of interest. Given that most social surveys have multiple target variables, creating imputed data sets may address bias in survey outcomes with less variance inflation. We examine the performance of PSW and MI on mean estimates under various conditions using fully simulated data. To evaluate the performance of the methods, we report average bias, root mean squared error, and percent coverage of 95 percent confidence intervals. MI performs better under some of our scenarios, but PSW performs better under others. Even within certain scenarios, PSW performs better on coverage or root mean squared error while MI performs better on the other criteria. Therefore, robust methods that simultaneously model both the outcomes and the (non)response may be a promising alternative in the future.
+C1  - Full publication date: Fall 2015
+EP  - 661
+IS  - 3
+PB  - [Oxford University Press, American Association for Public Opinion Research]
+PY  - 2015
+SN  - 0033362X, 15375331
+SP  - 635
+T2  - The Public Opinion Quarterly
+UR  - http://www.jstor.org/stable/24546785
+VL  - 79
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - A multi-ethnic breast cancer case–control study in New Zealand: evidence of differential risk patterns
+AU  - Jeffreys, Mona
+AU  - McKenzie, Fiona
+AU  - Firestone, Ridvan
+AU  - Gray, Michelle
+AU  - Cheng, Soo
+AU  - Moala, Ate
+AU  - Pearce, Neil
+AU  - Ellison-Loschmann, Lis
+AB  - [Purpose: To investigate whether the relationships between established risk factors and breast cancer risk differ between three ethnic groups in New Zealand, namely Māori, Pacific, and Māori/non-Pacific women. Methods: The study is a multi-ethnic, age-, and ethnicity-matched population-based case–control study of breast cancer in women. Women with a primary, invasive breast cancer registered on the New Zealand Cancer Registry between 1 April 2005 and 30 April 2006, and Māori or Pacific women diagnosed to 30 April 2007 were eligible. Control women were identified from the New Zealand Electoral Roll, stratified by ethnicity, then frequency matched on age to the cases. Logistic regression was used to estimate odds ratios (OR) and 95 % confidence intervals (CI) between exposures and breast cancer risk in three ethnic groups separately. Likelihood ratio tests were used to test for modification of the effects by ethnicity. Post-stratification weighting of the controls was used to account for differential non-response by deprivation category. Results: The study comprised 1,799 cases (302 Māori, 70 Pacific, 1,427 non-Māori/non-Pacific) and 2,543 controls (746 Māori, 194 Pacific, 1,603 non-Māori/non-Pacific), based on self-identified ethnicity. Māori women were more likely to have ER and PR positive breast cancer compared to other ethnicities. There were marked differences in exposure prevalence between ethnicities and some differing patterns of risk factors for breast cancer between the three main ethnic groups. Of interest was the strong relationship between number of children and lower breast cancer risk in Pacific women (OR for 4 or more vs. 1 child OR 0.13, 95 % CI 0.05–0.35) and a higher risk of breast cancer associated with smoking (OR 1.76, 95 % CI 1.25–2.48) and binge drinking (5 or more vs. 1–2 drinks per occasion, OR 1.55, 95 % CI 1.07–2.26) in Māori women. Some of the documented results were attenuated following post-stratification weighting. Conclusions: The findings of this study need to be interpreted with caution, given the possibility of selection bias due to low response rates among some groups of women. Reducing the burden of breast cancer in New Zealand is likely to require different approaches for different ethnic groups.]
+C1  - Full publication date: January, 2013
+DB  - JSTOR
+EP  - 152
+IS  - 1
+PB  - Springer
+PY  - 2013
+SN  - 09575243, 15737225
+SP  - 135
+T2  - Cancer Causes & Control
+UR  - http://www.jstor.org/stable/24717834
+VL  - 24
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - [The comparative study of subnational units is on the rise. Multilevel regression and poststratification (MrP) has become the standard method for estimating subnational public opinion. Unfortunately, MrP comes with stringent data demands. As a consequence, scholars cannot apply MrP in countries without detailed census data, and when such data are available, the modeling is restricted to a few variables. This article introduces multilevel regression with synthetic poststratification (MrsP), which relaxes the data requirement of MrP to marginal distributions, substantially increases the prediction precision of the method, and extends its use to countries without census data. The findings of Monte Carlo, U.S., and Swiss analyses show that, using the same predictors, MrsP usually performs in standard applications as well as the currently used standard approach, and it is superior when additional predictors are modeled. The better performance and the more straightforward implementation promise that MrsP will further stimulate subnational research.]
+AU  - Leemann, Lucas
+AU  - Wasserfallen, Fabio
+C1  - Full publication date: OCTOBER 2017
+DB  - JSTOR
+EP  - 1022
+IS  - 4
+PB  - [Midwest Political Science Association, Wiley]
+PY  - 2017
+SN  - 00925853, 15405907
+SP  - 1003
+T2  - American Journal of Political Science
+TI  - Extending the Use and Prediction Precision of Subnational Public Opinion Estimation
+UR  - http://www.jstor.org/stable/26379541
+VL  - 61
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Metabolically healthy obese and metabolically unhealthy non-obese phenotypes in a Russian population
+AU  - Rotar, Oxana
+AU  - Boyarinova, Maria
+AU  - Orlov, Alexander
+AU  - Solntsev, Vladislav
+AU  - Zhernakova, Yulia
+AU  - Shalnova, Svetlana
+AU  - Deev, Alexander
+AU  - Konradi, Alexandra
+AU  - Baranova, Elena
+AU  - Chazova, Irina
+AU  - Boytsov, Sergey
+AU  - Shlyakhto, Eugene
+AB  - [Introduction The aim of the study was to estimate the prevalence of metabolically healthy obese (MHO) and metabolically unhealthy non-obese (MUNO) phenotypes in Russian population. Design and methods In cross-sectional epidemiology survey "Epidemiology of cardiovascular diseases and its risk factors in some regions of the Russian Federation" a random sampling of 21,121 subjects (25–65 years), stratified by age and sex was involved. Anthropometry, blood pressure (BP) measurement and fasting blood-tests (glucose, lipids) were performed according to standard protocols. Criteria for MHO—body mass index (BMI) ≥30 kg/m² and ≤2 of markers: HDL < 1.30 (females)/1.04 (males) triglycérides ≥1.7 mmol/1; glucose ≥5.6 mmol/1 or treatment; waist >88 (females)/102 (males) cm and BP > 130/85 mm Hg or therapy. Criteria for MUNO was BMI < 30 kg/m² and ≥2 markers listed above. Simple tabulations, descriptive statistics, post-stratification weights and logistic regression were used for analyses. Results MHO phenotype was detected in 2856 (41.5%) obese people; MUNO phenotype—in 4762 (34.4%) nonobese subjects. Aging was negatively associated with MHO and positively with MUNO prevalence. Gender was registered as determinant only of MUNO probability. No dramatic differences in lifestyle risk factors between 3 BMI groups (lean, overweight, obese) were found out. Conclusion Half of obese Russian inhabitants are metabolically healthy. At the same time, metabolic abnormalities were detected in one third of non-obese participants with a shift to male gender.]
+C1  - Full publication date: 2017
+DB  - JSTOR
+EP  - 254
+IS  - 3
+PB  - Springer
+PY  - 2017
+SN  - 03932990, 15737284
+SP  - 251
+T2  - European Journal of Epidemiology
+UR  - http://www.jstor.org/stable/44851854
+VL  - 32
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+TI  - Simulating Counterfactual Representation
+AU  - Eggers, Andrew C.
+AU  - Lauderdale, Benjamin E.
+AB  - [We show how to use multilevel modeling and post-stratification to estimate legislative outcomes under counterfactual representation schemes that, for example, boost the representation of women or translate votes into seats differently. We apply this technique to two research questions: (1) Would the U.S. Congress be less polarized if state delegations were formed according to the principle of party proportional representation? (2) Would there have been stronger support for legalizing same-sex marriage in the U.K. House of Commons if Parliament more closely reflected the population in gender and age?]
+C1  - Full publication date: Spring 2016
+EP  - 290
+IS  - 2
+PB  - [Cambridge University Press, Oxford University Press, Society for Political Methodology]
+PY  - 2016
+SN  - 10471987, 14764989
+SP  - 281
+T2  - Political Analysis
+UR  - http://www.jstor.org/stable/26350001
+VL  - 24
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+TI  - Options for Conducting Web Surveys
+AU  - Schonlau, Matthias
+AU  - Couper, Mick P.
+AB  - [Web surveys can be conducted relatively fast and at relatively low cost. However, Web surveys are often conducted with nonprobability samples and, therefore, a major concern is generalizability. There are two main approaches to address this concern: One, find a way to conduct Web surveys on probability samples without losing most of the cost and speed advantages (e.g., by using mixed-mode approaches or probability-based panel surveys). Two, make adjustments (e.g., propensity scoring, post-stratification, GREG) to nonprobability samples using auxiliary variables. We review both of these approaches as well as lesser-known ones such as respondent-driven sampling. There are many different ways Web surveys can solve the challenge of generalizability. Rather than adopting a one-size-fits-all approach, we conclude that the choice of approach should be commensurate with the purpose of the study.]
+C1  - Full publication date: May 2017
+EP  - 292
+IS  - 2
+PB  - Institute of Mathematical Statistics
+PY  - 2017
+SN  - 08834237, 21688745
+SP  - 279
+T2  - Statistical Science
+UR  - http://www.jstor.org/stable/26408231
+VL  - 32
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Deriving population norms for the AQoL-6D and AQoL-8D multi-attribute utility instruments from web-based data
+AU  - Maxwell, Aimee
+AU  - Özmen, Mehmet
+AU  - Iezzi, Angelo
+AU  - Richardson, Jeff
+AB  - [Objectives (i) to demonstrate a method which ameliorates the problem of self-selection in the estimation of population norms from web-based data and (ii) to use the method to calculate population norms for two multi-attribute utility (MAU) instruments, the AQoL-6D and AQoL-8D, and population norms for the sub-scales from which they are constructed. Methods A web-based survey administered the AQoL-8D MAU instrument (which subsumes the AQoL-6D questionnaire), to members of the public along with the AQoL-4D which has extant population norms. Age, gender and the AQoL-4D were used as post-stratification auxiliary variables to construct weights to ameliorate the potential effects of self-selection associated with web-based surveys. The weights were used to estimate unbiased population norms. Standard errors from the weighted samples were calculated using Jackknife estimation. Results For both AQoL-6D and AQoL-8D, physical health dimensions decline significantly with age. In contrast, for the majority of the psycho-social dimensions there is a significant U-shaped profile. The net effect is a shallow U-shaped relationship between age and both the AQoL-6D and AQoL-8D utilities. This contrasts with the almost monotonie decline in the utilities derived from the AQoL-4D and SF-6D MAU instruments. Conclusions Post-stratification weights were used to ameliorate potential bias in the derivation of norms from web-based data for the AQoL-6D and AQoL-8D. The methods may be used generally to obtain norms when suitable auxiliary variables are available. The inclusion of an enlarged psycho-social component in the two instruments significantly alters the demographic profile.]
+C1  - Full publication date: December 2016
+DB  - JSTOR
+EP  - 3219
+IS  - 12
+PB  - Springer
+PY  - 2016
+SN  - 09629343, 15732649
+SP  - 3209
+T2  - Quality of Life Research
+UR  - http://www.jstor.org/stable/44855779
+VL  - 25
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Prevalence of adolescents who perceive their parents to have alcohol problems: A Swedish national survey using a web panel
+AU  - ELGÁN, TOBIAS H
+AU  - LEIFMAN, HÅKAN
+AB  - [Aims: The primary aim is to estimate the prevalence of Swedish adolescents who perceive their parent(s) to have alcohol problems. Additional research questions pertain to the prevalence of adolescents who think someone close to them drinks too much alcohol and if this has hurt them or caused them problems. Methods: A cross-sectional design was employed using a web-based survey targeted to 1000 Swedish 16-19-year-olds randomly selected from a web panel. The questionnaire included the CAST-6 scale, used to assess whether or not participants perceived their parents' alcohol consumption as problematic, and questions relating to whether or not they think someone close to them drinks too much and if this has caused them problems. Data was weighted using a post-stratification procedure. Results: The proportion of adolescents classified as having parents with alcohol problems was 20.1%. Further, 44.0% reported that they think someone close to them drinks too much alcohol and 9.6% that this has hurt them or caused them problems. Conclusions: These results indicate that the problem is widespread. Our findings are similar to previous research where a more indirect methodology has been adopted, using either psychiatric interviews or self-reported alcohol consumption of adults, to estimate the magnitude of the problem.]
+C1  - Full publication date: November 2013
+DB  - JSTOR
+EP  - 683
+IS  - 7
+PB  - Sage Publications, Ltd.
+PY  - 2013
+SN  - 14034948, 16511905
+SP  - 680
+T2  - Scandinavian Journal of Public Health
+UR  - http://www.jstor.org/stable/45150733
+VL  - 41
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - Due to insufficient sample sizes in national surveys, strikingly little is known about public opinion at the level of Congressional and state legislative districts in the United States. As a result, there has been virtually no study of whether legislators accurately represent the will of their constituents on individual issues. This article solves this problem by developing a multilevel regression and poststratification (MRP) model that combines survey and census data to estimate public opinion at the district level. We show that MRP estimates are excellent predictors of public opinion and referenda results for both congressional and state senate districts. Moreover, they have less error, higher correlations, and lower variance than either disaggregated survey estimates or presidential vote shares. The MRP approach provides American and Comparative Politics scholars with a valuable new tool to measure issue-specific public opinion at low levels of geographic aggregation.
+AU  - Warshaw, Christopher
+AU  - Rodden, Jonathan
+C1  - Full publication date: Jan., 2012
+DB  - JSTOR
+DO  - 10.1017/s0022381611001204
+EP  - 219
+IS  - 1
+PB  - [The University of Chicago Press, Southern Political Science Association]
+PY  - 2012
+SN  - 00223816, 14682508
+SP  - 203
+T2  - The Journal of Politics
+TI  - How Should We Measure District-Level Public Opinion on Individual Issues?
+UR  - http://www.jstor.org/stable/10.1017/s0022381611001204
+VL  - 74
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Using Consumer Panels to Understand the Characteristics of US Jewry
+AU  - Boxer, Matthew
+AU  - Aronson, Janet Krasner
+AU  - Saxe, Leonard
+AB  - [To understand the characteristics and attitudes of the US Jewish population, researchers have increasingly relied on respondents drawn from established online consumer survey panels. In the absence of a large, nationally representative study of US Jews, online panels provide a faster and lower cost alternative to cross-sectional surveys. The present paper describes general issues associated with studies conducted with consumer panels that affect the validity and generalizability of their findings. The paper focuses on one of the largest and most often utilized probability based consumer panels, that of Knowledge Networks. The key question about the results of studies based on the Knowledge Networks panel, as well as studies based on nonprobability samples, is whether their findings represent the population. Along with considering the bias that may result from sampling designs, including the willingness to participate in consumer research, the paper also considers whether bias can be addressed by application of post-stratification weights. Analyses are reported of a survey conducted using the Knowledge Networks panel. Various alternative weighting protocols were applied. Relationships between variables appear robust regardless of survey weights, but precise estimates of the magnitude of such relationships as well as overall population proportions require current and accurate socio-demographic data about American Jews for development of weights. Although it is possible that there is systematic bias in regard to willingness to participate in a consumer panel, the availability of high quality demographic data makes a prerecruited probability sample a valuable source of information for ongoing study of the American Jewish community.]
+C1  - Full publication date: April-July 2013
+DB  - JSTOR
+EP  - 82
+IS  - 1/2
+PB  - Springer
+PY  - 2013
+SN  - 01471694, 18765165
+SP  - 63
+T2  - Contemporary Jewry
+UR  - http://www.jstor.org/stable/23455537
+VL  - 33
+Y2  - 2021/04/14/
+ER  - 

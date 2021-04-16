@@ -1,0 +1,531 @@
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Post-Stratification and Calibration-A Synthesis
+AU  - Zhang, Li-Chun
+AB  - [This article presents a synthesis of several widely used methods of estimation in survey sampling, including post-stratified estimation, regression estimation, and calibration estimation or generalized raking. All of these methods come under the general formulation of calibration estimation, and all of them are based on post-stratification given categorical auxiliary variables. Indeed, post-stratification is the finest calibration, and calibration is the relaxed post-stratification. Some results derived from such a perspective enable us to bring conditional inference of to stratified simple random sampling by means of Holt and Smith calibration estimation.]
+C1  - Full publication date: Aug., 2000
+DB  - JSTOR
+DO  - 10.2307/2685587
+EP  - 184
+IS  - 3
+PB  - [American Statistical Association, Taylor & Francis, Ltd.]
+PY  - 2000
+SN  - 00031305
+SP  - 178
+T2  - The American Statistician
+UR  - http://www.jstor.org/stable/2685587
+VL  - 54
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Local Post-Stratification in Dual System Accuracy and Coverage Evaluation for the U.S. Census
+AU  - Chen, Song Xi
+AU  - Tang, Cheng Yong
+AU  - Mule, Vincent T.
+AB  - [We consider a local post-stratification approach to analyze the capture—recapture dual system Accuracy and Coverage Evaluation (A.C.E.) data associated with the 2000 U.S. Census. The local post-stratification is carried out via a nonparametric regression estimation of the census enumeration and the correct enumeration functions. We propose a nonparametric population size estimator that is designed to accommodate some key aspects of the A.C.E.: missing values, erroneous enumerations, and extra covariates affecting the missingness and correct enumeration. The resulting estimates are compared with estimates from a conventional post-stratification and a logistic regression approach in an analysis on the 2000 Census A.C.E. data.]
+C1  - Full publication date: March 2010
+DB  - JSTOR
+EP  - 119
+IS  - 489
+PB  - [American Statistical Association, Taylor & Francis, Ltd.]
+PY  - 2010
+SN  - 01621459
+SP  - 105
+T2  - Journal of the American Statistical Association
+UR  - http://www.jstor.org/stable/29747013
+VL  - 105
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - The Chain and Post-Stratification Methods for Observed-Score Equating: Their Relationship to Population Invariance
+AU  - von Davier, Alina A.
+AU  - Holland, Paul W.
+AU  - Thayer, Dorothy T.
+AB  - [The Non-Equivalent-groups Anchor Test (NEAT) design has been in wide use since at least the early 1940s. It involves two populations of test takers, P and Q, and makes use of an anchor test to link them. Two linking methods used for NEAT designs are those (a) based on chain equating and (b) that use the anchor test to post-stratify the distributions of the two operational test scores to a common population (i.e., Tucker equating and frequency estimation). We show that, under different sets of assumptions, both methods are observed score equating methods and we give conditions under which the methods give identical results. In addition, we develop analogues of the Dorans and Holland (2000) RMSD measures of population invariance of equating methods for the NEAT design for both chain and post-stratification equating methods.]
+C1  - Full publication date: Spring, 2004
+DB  - JSTOR
+EP  - 32
+IS  - 1
+PB  - [National Council on Measurement in Education, Wiley]
+PY  - 2004
+SN  - 00220655, 17453984
+SP  - 15
+T2  - Journal of Educational Measurement
+UR  - http://www.jstor.org/stable/1435069
+VL  - 41
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Bayesian Multilevel Estimation with Poststratification: State-Level Estimates from National Polls
+AU  - Park, David K.
+AU  - Gelman, Andrew
+AU  - Bafumi, Joseph
+AB  - [We fit a multilevel logistic regression model for the mean of a binary response variable conditional on poststratification cells. This approach combines the modeling approach often used in small-area estimation with the population information used in poststratification (see Gelman and Little 1997, Survey Methodology 23:127–135). To validate the method, we apply it to U.S. preelection polls for 1988 and 1992, poststratified by state, region, and the usual demographic variables. We evaluate the model by comparing it to state-level election outcomes. The multilevel model outperforms more commonly used models in political science. We envision the most important usage of this method to be not forecasting elections but estimating public opinion on a variety of issues at the state level.]
+C1  - Full publication date: Autumn 2004
+DB  - JSTOR
+EP  - 385
+IS  - 4
+PB  - [Oxford University Press, Society for Political Methodology]
+PY  - 2004
+SN  - 10471987, 14764989
+SP  - 375
+T2  - Political Analysis
+UR  - http://www.jstor.org/stable/25791784
+VL  - 12
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Endogenous Post-Stratification in Surveys: Classifying with a Sample-Fitted Model
+AU  - Breidt, F. Jay
+AU  - Opsomer, Jean D.
+AB  - [Post-stratification is frequently used to improve the precision of survey estimators when categorical auxiliary information is available from sources outside the survey. In natural resource surveys, such information is often obtained from remote sensing data, classified into categories and displayed as pixel-based maps. These maps may be constructed based on classification models fitted to the sample data. Post-stratification of the sample data based on categories derived from the sample data ("endogenous post-stratification") violates the standard post-stratification assumptions that observations are classified without error into post-strata, and post-stratum population counts are known. Properties of the endogenous post-stratification estimator are derived for the case of a sample-fitted generalized linear model, from which the post-strata are constructed by dividing the range of the model predictions into predetermined intervals. Design consistency of the endogenous post-stratification estimator is established under mild conditions. Under a super-population model, consistency and asymptotic normality of the endogenous post-stratification estimator are established, showing that it has the same asymptotic variance as the traditional post-stratified estimator with fixed strata. Simulation experiments demonstrate that the practical effect of first fitting a model to the survey data before post-stratifying is small, even for relatively small sample sizes.]
+C1  - Full publication date: Feb., 2008
+DB  - JSTOR
+EP  - 427
+IS  - 1
+PB  - Institute of Mathematical Statistics
+PY  - 2008
+SN  - 00905364
+SP  - 403
+T2  - The Annals of Statistics
+UR  - http://www.jstor.org/stable/25464629
+VL  - 36
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Judgement Post-Stratification with Imprecise Rankings
+AU  - MacEachern, Steven N.
+AU  - Stasny, Elizabeth A.
+AU  - Wolfe, Douglas A.
+AB  - [Judgement post-stratification, which is based on ideas similar to those in ranked set sampling, relies on the ability of a ranker to forecast the ranks of potential observations on a set of units. In practice, the authors sometimes find it difficult to assign these ranks. This note shows how one can borrow techniques from the literature on finite population sampling to allow a probabilistic ranking of the units in a set, thus facilitating use of these sampling plans and improving estimation. The same techniques provide one approach to estimation using a judgement post-stratified sample with multiple rankers. The technique is illustrated on allometric data relating brain weight to body weight in different species of mammals, and on a study of student performance in graduate school.]
+C1  - Full publication date: Mar., 2004
+DB  - JSTOR
+EP  - 215
+IS  - 1
+PB  - [Wiley, International Biometric Society]
+PY  - 2004
+SN  - 0006341X, 15410420
+SP  - 207
+T2  - Biometrics
+UR  - http://www.jstor.org/stable/3695569
+VL  - 60
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Judgement Post-Stratification for Designed Experiments
+AU  - Du, Juan
+AU  - MacEachern, Steven N.
+AB  - [In many scientific studies, information that is not easily translated into covariates is ignored in the analysis. However, this type of information may significantly improve inference. In this research, we apply the idea of judgment post-stratification to utilize such information. Specifically, we consider experiments that are conducted under a completely randomized design. Sets of experimental units are formed, and the units in a set are ranked. Estimation is performed conditional on the sets and ranks. We propose a new estimator for a treatment contrast. We improve the new estimator by Rao-Blackwellization. Asymptotic distribution theory and corresponding inferential procedures for both estimators are developed. Simulation studies quantify the superiority of the new estimators and show their desirable properties for small and moderate sample sizes. The impact of the new techniques is illustrated with data from a clinical trial. /// Dans de nombreuses études scientifiques, l'information qu'il est difficile de traduire sous forme de covariables n'est pas prise en compte dans l'analyse. Cependant ce type d'information peut améliorer de façon significative l'inférence. Dans ce travail, nous appliquons l'idée de jugement post-stratification pour utiliser cette information. Plus précisément, nous considérons des expériences conduites sous un dispositif complètement randomisé. Des ensembles d'unités expérimentales sont constituées et les unités sont ordonnées dans les ensembles. L'estimation est effectuée conditionnellement aux ensembles et aux rangs des unités. Nous proposons un nouvel estimateur pour le contraste entre traitements. Nous améliorons le nouvel estimateur par Rao-Blackwellisation. La théorie des distributions asymptotiques et les procédures d'inférence correspondantes sont élaborées pour les deux estimateurs. Des études par simulation quantifient la supériorité des nouveaux estimateurs et montrent leurs propriétés intéressantes pour des échantillons de tailles petites à modérées. L'impact des nouvelles techniques est illustré avec les données d'une étude clinique.]
+C1  - Full publication date: Jun., 2008
+DB  - JSTOR
+EP  - 354
+IS  - 2
+PB  - [Wiley, International Biometric Society]
+PY  - 2008
+SN  - 0006341X, 15410420
+SP  - 345
+T2  - Biometrics
+UR  - http://www.jstor.org/stable/25502069
+VL  - 64
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - An Approach to Evaluating the Missing Data Assumptions of the Chain and Post-Stratification Equating Methods for the NEAT Design
+AU  - Holland, Paul W.
+AU  - Sinharay, Sandip
+AU  - von Davier, Alina A.
+AU  - Han, Ning
+AB  - [Two important types of observed score equating (OSE) methods for the non-equivalent groups with Anchor Test (NEAT) design are chain equating (CE) and post-stratification equating (PSE). CE and PSE reflect two distinctly different ways of using the information provided by the anchor test for computing OSE functions. Both types of methods include linear and nonlinear equating functions. In practical situations, it is known that the PSE and CE methods will give different results when the two groups of examinees differ on the anchor test. However, given that both types of methods are justified as OSE methods by making different assumptions about the missing data in the NEAT design, it is difficult to conclude which, if either, of the two is more correct in a particular situation. This study compares the predictions of the PSE and CE assumptions for the missing data using a special data set for which the usually missing data are available. Our results indicate that in an equating setting where the linking function is decidedly non-linear and CE and PSE ought to be different, both sets of predictions are quite similar but those for CE are slightly more accurate.]
+C1  - Full publication date: Spring, 2008
+DB  - JSTOR
+EP  - 43
+IS  - 1
+PB  - [National Council on Measurement in Education, Wiley]
+PY  - 2008
+SN  - 00220655, 17453984
+SP  - 17
+T2  - Journal of Educational Measurement
+UR  - http://www.jstor.org/stable/20461876
+VL  - 45
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Regulation and Role of the Arabidopsis Abscisic Acid-Insensitive 5 Gene in Abscisic Acid, Sugar, and Stress Response
+AU  - Inès M. Brocard
+AU  - Lynch, Tim J.
+AU  - Finkelstein, Ruth R.
+AB  - [Abscisic acid (ABA) and stress response from late embryonic growth through early seedling development is regulated by a signaling network that includes the Arabidopsis ABA-insensitive (ABI)5 gene, which encodes a basic leucine zipper transcription factor. We have characterized genetic, developmental, and environmental regulation of ABI5 expression. Although expressed most strongly in seeds, the ABI5 promoter is also active in vegetative and floral tissue. Vegetative expression is strongly induced by ABA, and weakly by stress treatments during a limited developmental window up to approximately 2 d post-stratification, but ABA and some stresses can induce expression in specific tissues at later stages. ABI5 expression is autoregulated in transgenic plants and yeast (Saccharomyces cerevisiae), and stress response appears to involve ABI5-dependent and -independent mechanisms. To determine whether ABI5 is necessary and/or sufficient for ABA or stress response, we assayed the effects of increased ABI5 expression on growth and gene expression. Although overexpression of ABI5 confers hypersensitivity to ABA and sugar, as previously described for ABI4 and ABI3 overexpression lines, it has relatively limited effects on enhancing ABA-responsive gene expression. Comparison of expression of eight ABI5-homologous genes shows overlapping regulation by ABI3, ABI4, and ABI5, suggestive of a combinatorial network involving positive and negative regulatory interactions.]
+C1  - Full publication date: Aug., 2002
+DB  - JSTOR
+EP  - 1543
+IS  - 4
+PB  - American Society of Plant Biologists (ASPB)
+PY  - 2002
+SN  - 00320889, 15322548
+SP  - 1533
+T2  - Plant Physiology
+UR  - http://www.jstor.org/stable/4280584
+VL  - 129
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - The Living Planet Index: Using Species Population Time Series to Track Trends in Biodiversity
+AU  - Loh, Jonathan
+AU  - Green, Rhys E.
+AU  - Ricketts, Taylor
+AU  - Lamoreux, John
+AU  - Jenkins, Martin
+AU  - Kapos, Valerie
+AU  - Randers, Jorgen
+AB  - [The Living Planet Index was developed to measure the changing state of the world's biodiversity over time. It uses time-series data to calculate average rates of change in a large number of populations of terrestrial, freshwater and marine vertebrate species. The dataset contains about 3000 population time series for over 1100 species. Two methods of calculating the index are outlined: the chain method and a method based on linear modelling of log-transformed data. The dataset is analysed to compare the relative representation of biogeographic realms, ecoregional biomes, threat status and taxonomic groups among species contributing to the index. The two methods show very similar results: terrestrial species declined on average by 25% from 1970 to 2000. Birds and mammals are over-represented in comparison with other vertebrate classes, and temperate species are over-represented compared with tropical species, but there is little difference in representation between threatened and non-threatened species. Some of the problems arising from over-representation are reduced by the way in which the index is calculated. It may be possible to reduce this further by post-stratification and weighting, but new information would first need to be collected for data-poor classes, realms and biomes.]
+C1  - Full publication date: Feb. 28, 2005
+DB  - JSTOR
+EP  - 295
+IS  - 1454
+PB  - The Royal Society
+PY  - 2005
+SN  - 09628436
+SP  - 289
+T2  - Philosophical Transactions: Biological Sciences
+UR  - http://www.jstor.org/stable/30040895
+VL  - 360
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - COMPARING THE ACCURACY OF RDD TELEPHONE SURVEYS AND INTERNET SURVEYS CONDUCTED WITH PROBABILITY AND NON-PROBABILITY SAMPLES
+AU  - YEAGER, DAVID S.
+AU  - KROSNICK, JON A.
+AU  - CHANG, LINCHIAT
+AU  - JAVITZ, HAROLD S.
+AU  - LEVENDUSKY, MATTHEW S.
+AU  - SIMPSER, ALBERTO
+AU  - WANG, RUI
+AB  - [This study assessed the accuracy of telephone and Internet surveys of probability samples and Internet surveys of non-probability samples of American adults by comparing aggregate survey results against benchmarks. The probability sample surveys were consistently more accurate than the non-probability sample surveys, even after post-stratification with demographics. The non-probability sample survey measurements were much more variable in their accuracy, both across measures within a single survey and across surveys with a single measure. Post-stratification improved the overall accuracy of some of the non-probability sample surveys but decreased the overall accuracy of others.]
+C1  - Full publication date: Winter 2011
+DB  - JSTOR
+EP  - 747
+IS  - 4
+PB  - American Association for Public Opinion Research
+PY  - 2011
+SN  - 0033362X, 15375331
+SP  - 709
+T2  - The Public Opinion Quarterly
+UR  - http://www.jstor.org/stable/41288414
+VL  - 75
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Web Surveys in the Social Sciences: An Overview
+AU  - Frippiat, Didier
+AU  - Marquis, Nicolas
+AU  - Wiles-Portier, Elizabeth
+AB  - [There has been a huge increase in the number of social science surveys conducted over the Internet in the last decade, especially in the area of quantitative research. Interest in this method has generated abundant literature, almost ail of it in English-speaking world. The present article provides an exhaustive list of the questions raised in the literature by this survey method. They fall into two categories: issues relating to sampling procedures (who exactly responds to Web surveys?) and concerns about effects of the survey mode (what is the quality of responses elicited by Web surveys?). While there is consensus in one or two areas, researchers' analyses are otherwise widely divergent. Many agree that random sampling is extremely difficult to achieve over the Internet, but the procedures used to compensate for sampling bias (weighting, post-stratification, propensity score adjustment) are strongly contested. Similarly, regarding the use of new technologies for innovative questionnaire design, studies demonstrating real and reproducible effects are still few and far between. The present article, which also cites examples of good practice, concludes by setting out the vital precautions to taken when designing a Web survey for social science research. Les enquêtes en sciences sociales réalisées par Internet ont proliféré durant la dernière décennie, particulièrement dans le domaine de la recherche quantitative. L'intérêt que cette méthode suscite a produit une littérature presque totalement issue du monde anglo-saxon. Il semblait donc indispensable que les débats autour de l'enquête par Internet puissent devenir accessibles au lecteur francophone. À partir d'une revue de la littérature existante, l'article offre un relevé exhaustif des questions soulevées par cette méthode, qui sont de deux types : les problèmes liés aux procédures d'échantillonnage (qui répond aux enquêtes par Internet?), et ceux concernant l'effet « mode » généré par ce canal d'enquête (quelle est la qualité des réponses produites?). Au-delà de quelques éléments de consensus, les analyses des chercheurs sont loin d'être concordantes. Si beaucoup s'accordent pour signaler que l'échantillonnage aléatoire est très difficile à réaliser sur Internet, l'efficacité des procédures de rectification d'échantillon (pondération, poststratification, pondération par l'inverse de la propension à être inclus dans l'échantillon) est fortement discutée. De même, lorsqu'il s'agit de tirer parti des nouvelles possibilités techniques en termes de conception du questionnaire, les recherches démontrant des effets réels reproductibles sont encore peu nombreuses. L'article, qui propose également un relevé de bonnes pratiques, conclut sur les indispensables précautions à prendre lorsqu'est créée une enquête par Internet dans une perspective de recherche en sciences sociales. Las encuestas sociales realizadas por Internet han proliferado durante el último decenio, particularmente en el dominio de la investigación cuantitativa. El interés suscitado por este método ha producido una literatura que proviene integralmente del mundo anglosajón. Parecía pues indispensable que los debates en torno a la encuesta por Internet fueran accesibles al lector francófono. A partir de un examen de la literatura existente, el artículo ofrece un inventario exhaustivo de las cuestiones que este método plantea, y que son de dos tipos: los problemas ligados a los procedimientos de muestreo (¿quién responde a las encuestas por Internet?), y los que se refieren al efecto "modo" generado por este tipo de encuesta (¿cuál es la calidad de las respuestas producidas?). Aparte de algunos puntos de acuerdo, los análisis de los investigadores no son muy convergentes. Si muchos de ellos piensan que el muestreo aleatorio es muy difícil de obtener por Internet, la eficacia de los procedimientos de corrección de la muestra (ponderación, post-estratificación, ponderación por el inverso de la propensión a formar parte de la muestra) es muy discutida. Del mismo modo, cuando se trata de sacar partido de las nuevas posibilidades técnicas en términos de concepción del cuestionario, las investigaciones mostrando efectos reales reproductibles son todavía poco numerosas. El artículo, que propone también una serie de prácticas recomendables, concluye sobre las precauciones indispensables que hay que tomar cuando se crea una encuesta por Internet con una perspectiva de investigación en ciencias sociales.]
+C1  - Full publication date: 2010 April-June
+DB  - JSTOR
+EP  - 311
+IS  - 2
+PB  - Institut National d'Études Démographiques
+PY  - 2010
+SN  - 16342941, 19589190
+SP  - 285
+T2  - Population (English Edition, 2002-)
+UR  - http://www.jstor.org/stable/40960969
+VL  - 65
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Is It Necessary to Make Anchor Tests Mini-Versions of the Tests Being Equated or Can Some Restrictions Be Relaxed?
+AU  - Sinharay, Sandip
+AU  - Holland, Paul W.
+AB  - [It is a widely held belief that anchor tests should be miniature versions (i.e., minitests), with respect to content and statistical characteristics, of the tests being equated. This article examines the foundations for this belief regarding statistical characteristics. It examines the requirement of statistical representativeness of anchor tests that are content representative. The equating performance of several types of anchor tests, including those having statistical characteristics that differ from those of the tests being equated, is examined through several simulation studies and a real data example. Anchor tests with a spread of item difficulties less than that of a total test seem to perform as well as a minitest with respect to equating bias and equating standard error. Hence, the results demonstrate that requiring an anchor test to mimic the statistical characteristics of the total test may be too restrictive and need not be optimal. As a side benefit, this article also provides a comparison of the equating performance of post-stratification equating and chain equipercentile equating.]
+C1  - Full publication date: Fall, 2007
+DB  - JSTOR
+EP  - 275
+IS  - 3
+PB  - [National Council on Measurement in Education, Wiley]
+PY  - 2007
+SN  - 00220655, 17453984
+SP  - 249
+T2  - Journal of Educational Measurement
+UR  - http://www.jstor.org/stable/20461859
+VL  - 44
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - The Effect of Lead Exposure on Survival of Adult Mallards in the Camargue, Southern France
+AU  - Tavecchia, Giacomo
+AU  - Pradel, Roger
+AU  - Lebreton, Jean-Dominique
+AU  - Johnson, Alan R.
+AU  - Mondain-Monval, Jean-Yves
+AB  - [1. In those countries where lead shot is still in use, a secondary effect of waterfowl hunting is lead poisoning from shot ingested by birds during bottom feeding. Moreover, waterfowl injured during hunting can die undetected as a direct or indirect consequence of wounds. The occurrence and influence of these types of lead exposure have often been estimated by the inspection of dead bodies, but this method will yield biased estimates if dead birds are not a random sample of the population. 2. We analysed a historical set of recoveries of adult mallard Anas platyrynchos ringed in the Camargue, southern France, over the period 1960-71, for which the amount and type of lead exposure had been determined by X-ray inspection before release. It was therefore possible to investigate the prevalence and effect of lead shot, avoiding the problem of post-stratification that may arise when only dead individuals are considered. 3. Among the captured birds, the proportion of gizzard-contaminated birds was constant (0·11) during the study period. In contrast, the proportion of birds carrying pellets in muscles increased linearly from 0·19 to 0·29. Males and females were similarly exposed to shot from both sources. 4. The relative survival of lead-affected mallards was 19% lower than unaffected birds for both types of lead exposure. The two sources of mortality were additive on a logarithmic scale and unaffected by sex. 5. Attempts to estimate the consequence of lead poisoning on population dynamics were not conclusive because of large confidence intervals in survival estimates. Moreover, it was still not clear how much mortality due to lead exposure should be considered as additive to other causes. We nevertheless advocate measures to control the long-term impact of lead exposure on waterfowl populations. 6. This work presents a new approach to the analysis of survival, in which the standard recovery models were reformulated in terms of monthly survival. This allows for the effect of a long ringing period during which mortality cannot be ignored. It also allows the estimation of parameters for newly marked birds without additional information. Since any within-year time interval can be considered, this approach can be used to investigate seasonal changes in mortality.]
+C1  - Full publication date: Dec., 2001
+DB  - JSTOR
+EP  - 1207
+IS  - 6
+PB  - [British Ecological Society, Wiley]
+PY  - 2001
+SN  - 00218901, 13652664
+SP  - 1197
+T2  - Journal of Applied Ecology
+UR  - http://www.jstor.org/stable/827292
+VL  - 38
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - CELL-PHONE-ONLY HOUSEHOLDS AND PROBLEMS OF DIFFERENTIAL NONRESPONSE USING AN ADDRESS-BASED SAMPLING DESIGN
+AU  - LINK, MICHAEL W.
+AU  - LAI, JENNIE W.
+AB  - [Identifying and contacting cell-phone-only (CPO) households in an efficient and cost-effective manner is critical for many studies to ensure the representativeness of final survey estimates. With the advent of address-based sampling (ABS)—that is, the sampling of addresses from a database with near universal coverage of residential households—researchers have an alternative to cell-phone frame sampling for identifying and surveying these households. Using a large ABS mixed-mode study, we explore three key questions. First, how effective is an ABS design in identifying CPO households? Second, is there significant differential response across the "matched" (address and telephone number) and "unmatched" (address only) portions of the sample, given that CPO households are nearly all found within the "unmatched" sample where first contact is limited to mail only? Third, can traditional sex-age-race/ethnicity post-stratification reduce potential bias due to differential nonresponse or are additional measures required? For this latter question, we examine the potential biasing impact of differential nonresponse where CPO homes are shown to be significantly different in attitudes and behaviors from the more prevalent homes that have both landline and cell-phone access. Data come from a study of 87,034 Nielsen Radio Audience Measurement adult respondents conducted in spring 2009. The study shows that, while CPO homes can be reached and interviewed using an ABS design, it is important to assess and correct for the potential biasing effects of differential nonresponse.]
+C1  - Full publication date: Winter 2011
+DB  - JSTOR
+EP  - 635
+IS  - 4
+PB  - American Association for Public Opinion Research
+PY  - 2011
+SN  - 0033362X, 15375331
+SP  - 613
+T2  - The Public Opinion Quarterly
+UR  - http://www.jstor.org/stable/41288410
+VL  - 75
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Using National Surveys to Measure Dynamic U.S. State Public Opinion: A Guideline for Scholars and an Application
+AU  - Pacheco, Julianna
+AB  - [The author improves on the measurement of U.S. state public opinion by (1) applying previous methods used only on cross-sectional data to create dynamic measures of state public opinion and (2) providing a systematic comparison of the performance of the various methodological approaches on these dynamic measures. The author shows that scholars can use multilevel regression, imputation, and poststratification (MRP) coupled with a simple moving average to measure state public opinion over time. Compared to aggregation, the MRP approach has less error and is more reliable, particularly for the less populated states. The author shows the applicability of the MRP approach by measuring and validating state partisanship and state ideology over time. The validated measures are available for public use. Armed with a method to measure state public opinion over time, scholars can begin to more fully understand the dynamic relationship between public opinion and policy in the U.S. states.]
+C1  - Full publication date: DECEMBER 2011
+DB  - JSTOR
+EP  - 439
+IS  - 4
+PB  - Sage Publications, Inc.
+PY  - 2011
+SN  - 15324400, 19461607
+SP  - 415
+T2  - State Politics & Policy Quarterly
+UR  - http://www.jstor.org/stable/41575834
+VL  - 11
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+AB  - We study parametric and non-parametric approaches for assessing the accuracy and coverage of a population census based on dual system surveys. The two parametric approaches being considered are post-stratification and logistic regression, which have been or will be implemented for the US Census dual system surveys. We show that the parametric model-based approaches are generally biased unless the model is correctly specified. We then study a local post-stratification approach based on a non-parametric kernel estimate of the Census enumeration functions. We illustrate that the non-parametric approach avoids the risk of model mis-specification and is consistent under relatively weak conditions. The performances of these estimators are evaluated numerically via simulation studies and an empirical analysis based on the 2000 US Census post-enumeration survey data. Nous &#xe9;tudions des m&#xe9;thodes param&#xe9;triques et non param&#xe9;triques d'&#xe9;valuation de la pr&#xe9;cision et de la couverture d'un recensement fond&#xe9; sur un double syst&#xe8;me d'enqu&#xea;tes. Deux approches param&#xe9;triques, la post-stratification et la r&#xe9;gression logistique, sont consid&#xe9;r&#xe9;es; ces approches ont &#xe9;t&#xe9; ou seront mises en pratique dans le cadre du double syst&#xe8;me d'enqu&#xea;tes utilis&#xe9; pour le recensement des Etats-Unis. Nous montrons que ces m&#xe9;thodes sont g&#xe9;n&#xe9;ralement biais&#xe9;es lorsque le mod&#xe8;le sur lequel elles se fondent est incorrectement sp&#xe9;cifi&#xe9;. Nous &#xe9;tudions ensuite une approche de post-stratification locale fond&#xe9;e sur un estimateur &#xe0; noyau des fonctions d'enumeration du recensement. Nous illustrons le fait que cette approche non param&#xe9;trique &#xe9;vite les risques li&#xe9;s aux erreurs de sp&#xe9;cification des mod&#xe8;les utilis&#xe9;s, et converge sous des conditions assez g&#xe9;n&#xe9;rales. Les performances des estimateurs qui en r&#xe9;sultent sont &#xe9;valu&#xe9;es de fa&#xe7;on num&#xe9;rique &#xe0; partir de simulations et d'une analyse empirique fond&#xe9;e sur les r&#xe9;sultats de l'enqu&#xea;te post-censitaire du recensement des Etats-Unis de 2000.
+AU  - Chen, Song Xi
+AU  - Tang, Cheng Yong
+C1  - Full publication date: December 2011
+DB  - JSTOR
+EP  - 361
+IS  - 3
+PB  - International Statistical Institute (ISI)
+PY  - 2011
+SN  - 03067734, 17515823
+SP  - 336
+T2  - International Statistical Review / Revue Internationale de Statistique
+TI  - Properties of Census Dual System Population Size Estimators
+UR  - http://www.jstor.org/stable/41305055
+VL  - 79
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - Stratified Case-Cohort Analysis of General Cohort Sampling Designs
+AU  - SAMUELSEN, SVEN OVE
+AU  - ÅNESTAD, HALLVARD
+AU  - SKRONDAL, ANDERS
+AB  - [It is shown that variance estimates for regression coefficients in exposure-stratified case-cohort studies (Borgan et al 9 Lifetime Data Anal., 6,2000,39-58) can easily be obtained from influence terms routinely calculated in the standard software for Cox regression. By allowing for post-stratification on outcome we also place the estimators proposed by Chen (J. R. Statist. Soc. Ser. B, 63, 2001,791-809) for a general class of cohort sampling designs within the Borgan et al.'s framework, facilitating simple variance estimation for these designs. Finally, the Chen approach is extended to accommodate stratified designs with surrogate variables available for all cohort members, such as stratified case-cohort and counter-matching designs.]
+C1  - Full publication date: March 2007
+DB  - JSTOR
+EP  - 119
+IS  - 1
+PB  - [Board of the Foundation of the Scandinavian Journal of Statistics, Wiley]
+PY  - 2007
+SN  - 03036898, 14679469
+SP  - 103
+T2  - Scandinavian Journal of Statistics
+UR  - http://www.jstor.org/stable/41548541
+VL  - 34
+Y2  - 2021/04/14/
+ER  - 
+
+
+
+
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="UTF-8"
+
+
+TY  - JOUR
+TI  - A Nonparametric Mean Estimator for Judgment Poststratified Data
+AU  - Wang, Xinlei
+AU  - Lim, Johan
+AU  - Stokes, Lynne
+AB  - [MacEachern, Stasny, and Wolfe (2004, Biometrics 60, 207-215) introduced a data collection method, called judgment poststratification (JPS), based on ideas similar to those in ranked set sampling, and proposed methods for mean estimation from JPS samples. In this article, we propose an improvement to their methods, which exploits the fact that the distributions of the judgment poststrata are often stochastically ordered, so as to form a mean estimator using isotonized sample means of the poststrata. This new estimator is strongly consistent with similar asymptotic properties to those in MacEachern et al. (2004). It is shown to be more efficient for small sample sizes, which appears to be attractive in applications requiring cost efficiency. Further, we extend our method to JPS samples with imprecise ranking or multiple rankers. The performance of the proposed estimators is examined on three data examples through simulation. /// MacEachern, Stasny et Wolfe ont présenté, en 2004, une nouvelle méthode de recueil de données appelée jugement post-stratification (JP-S) et inspirée des mêmes idées que l'échantillonnage par ensembles avec classement (RSS: "ranked set sampling"); ils ont également présenté des méthodes d'estimation de la moyenne à partir de tels échantillonnages. Dans cet article, nous proposons d'améliorer leurs méthodes en exploitant le fait que les distributions du jugement dans les différentes strates constituées a posteriori sont souvent ordonnées de façon stochastique: il s'agit alors de construire un estimateur de la moyenne à partir des estimateurs isotoniques propres à chaque strate. Ce nouvel estimateur est tout-à-fait cohérent avec celui de MacEachern et al. (2004), et présente des propriétés asymptotiques semblables. Il se révèle plus efficace que ce dernier dans les échantillons de petite taille, lorsque la problématique du coût de l'étude est majeure. Qui plus est, nous adaptons notre estimateur aux échantillons avec JP-S où les rangs sont attribués de façon imprécise ou bien par plusieurs personnes. La performance des estimateurs ainsi proposés est étudiée par simulation sur trois jeux de données.]
+C1  - Full publication date: Jun., 2008
+DB  - JSTOR
+EP  - 363
+IS  - 2
+PB  - [Wiley, International Biometric Society]
+PY  - 2008
+SN  - 0006341X, 15410420
+SP  - 355
+T2  - Biometrics
+UR  - http://www.jstor.org/stable/25502070
+VL  - 64
+Y2  - 2021/04/14/
+ER  - 
