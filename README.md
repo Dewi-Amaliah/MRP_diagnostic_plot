@@ -12,6 +12,6 @@
    - Mentions use of MRP OR multilevel models to make population estimates.
    - Mentions use of other regression models (BART, Spatial, Stacked, trees) to make population estimates
 4. What figures ar eligible for our study?
-5. Good way to store the data and organize meeting notes. 
+5. Make GitHub repo and share EndNote library to Lauren (Good way to store the data and organize meeting notes.)
 
 
