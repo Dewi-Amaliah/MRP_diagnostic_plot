@@ -1,0 +1,1789 @@
+TY  - JOUR
+AU  - Green, Nathan
+AU  - Sherrard-Smith, Ellie
+AU  - Tanton, Clare
+AU  - Sonnenberg, Pam
+AU  - Mercer, Catherine H
+AU  - White, Peter J
+AN  - 31068656
+ID  - 31068656
+T1  - Assessing local chlamydia screening performance by combining survey and administrative data to account for differences in local population characteristics.
+JO  - Scientific reports
+JF  - Scientific reports
+JA  - Sci Rep
+Y1  - 2019/05/08/
+VL  - 9
+IS  - 1
+SP  - 7070
+CY  - England
+PB  - Nature Publishing Group
+SN  - 2045-2322
+AD  - MRC Centre Global Infectious Disease Analysis, Department of Infectious Disease Epidemiology, School of Public Health, Faculty of Medicine, Imperial College London, Norfolk Place, London, W2 1PG, UK. nathan.green@imperial.ac.uk.; NIHR Health Protection Research Unit in Modelling Methodology, Department of Infectious Disease Epidemiology, School of Public Health, Faculty of Medicine, Imperial College London, Norfolk Place, London, W2 1PG, UK. nathan.green@imperial.ac.uk.
+AD  - MRC Centre Global Infectious Disease Analysis, Department of Infectious Disease Epidemiology, School of Public Health, Faculty of Medicine, Imperial College London, Norfolk Place, London, W2 1PG, UK.
+AD  - Centre for Population Research in Sexual Health & HIV, Institute for Global Health, University College London, Mortimer Market Centre, off Capper Street, London, WC1E 6JB, UK.
+AD  - Centre for Population Research in Sexual Health & HIV, Institute for Global Health, University College London, Mortimer Market Centre, off Capper Street, London, WC1E 6JB, UK.
+AD  - Centre for Population Research in Sexual Health & HIV, Institute for Global Health, University College London, Mortimer Market Centre, off Capper Street, London, WC1E 6JB, UK.
+AD  - MRC Centre Global Infectious Disease Analysis, Department of Infectious Disease Epidemiology, School of Public Health, Faculty of Medicine, Imperial College London, Norfolk Place, London, W2 1PG, UK.; NIHR Health Protection Research Unit in Modelling Methodology, Department of Infectious Disease Epidemiology, School of Public Health, Faculty of Medicine, Imperial College London, Norfolk Place, London, W2 1PG, UK.; Modelling and Economics Unit, National Infection Service, Public Health England, London, NW9 5EQ, UK.
+N1  - Accession Number: 31068656. Language: English. Date Revised: 20210109. Date Created: 20190510. Date Completed: 20201027. Update Code: 20210210. Publication Type: Journal Article, Research Support, Non-U.S. Gov't. Journal ID: 101563288. Publication Model: Electronic. Cited Medium: Internet. NLM ISO Abbr: Sci Rep. PubMed Central ID: PMC6506589. Linked References: Sex Transm Infect. 2013 Feb;89(1):51-6. (PMID: 22941864); Lancet. 2013 Nov 30;382(9907):1781-94. (PMID: 24286784); Sex Transm Infect. 2014 Mar;90(2):84-9. (PMID: 24277881); Lancet. 2013 Nov 30;382(9907):1795-806. (PMID: 24286785); Lancet Public Health. 2018 Jun;3(6):e271-e278. (PMID: 29776798); Lancet. 2016 Jun 25;387(10038):2576. (PMID: 27353805); Prev Chronic Dis. 2013 May 02;10:E68. (PMID: 23639763); Epidemiology. 2017 Jul;28(4):492-502. (PMID: 28306613); Sex Transm Infect. 2011 Jun;87(4):306-11. (PMID: 21429897); J Med Internet Res. 2014 Dec 08;16(12):e276. (PMID: 25488851); Epidemiol Infect. 2014 Jan;142(1):211-20. (PMID: 23561246); Health Technol Assess. 2014 Jan;18(2):1-100, vii-viii. (PMID: 24411488); Prev Chronic Dis. 2018 Nov 01;15:E133. (PMID: 30388068); Soc Sci Med. 2007 Jan;64(2):451-61. (PMID: 17050054); Stat Med. 2005 Apr 30;24(8):1185-202. (PMID: 15568194). Linking ISSN: 20452322. Subset: MEDLINE; Grant Information: United Kingdom WT_ Wellcome Trust; MR/R015600/1 United Kingdom MRC_ Medical Research Council; 084840 United Kingdom WT_ Wellcome Trust; G0701757 United Kingdom MRC_ Medical Research Council Date of Electronic Publication: 2019 May 08. ; Original Imprints: Publication: London : Nature Publishing Group, copyright 2011-
+AB  - Reducing health inequalities requires improved understanding of the causes of variation. Local-level variation reflects differences in local population characteristics and health system performance. Identifying low- and high-performing localities allows investigation into these differences. We used Multilevel Regression with Post-stratification (MRP) to synthesise data from multiple sources, using chlamydia testing as our example. We used national probability survey data to identify individual-level characteristics associated with chlamydia testing and combined this with local-level census data to calculate expected levels of testing in each local authority (LA) in England, allowing us to identify LAs where observed chlamydia testing rates were lower or higher than expected, given population characteristics. Taking account of multiple covariates, including age, sex, ethnicity, student and cohabiting status, 5.4% and 3.5% of LAs had testing rates higher than expected for 95% and 99% posterior credible intervals, respectively; 60.9% and 50.8% had rates lower than expected. Residual differences between observed and MRP expected values were smallest for LAs with large proportions of non-white ethnic populations. London boroughs that were markedly different from expected MRP values (≥90% posterior exceedance probability) had actively targeted risk groups. This type of synthesis allows more refined inferences to be made at small-area levels than previously feasible.
+KW  - Chlamydia*
+KW  - Healthcare Disparities*
+KW  - Chlamydia Infections/*epidemiology
+KW  - Chlamydia Infections/*ethnology
+KW  - Mass Screening/*methods
+KW  - Adolescent
+KW  - African Continental Ancestry Group
+KW  - Bayes Theorem
+KW  - Chlamydia Infections/diagnosis
+KW  - Chlamydia Infections/microbiology
+KW  - Ethnic Groups
+KW  - European Continental Ancestry Group
+KW  - Female
+KW  - Humans
+KW  - London/epidemiology
+KW  - London/ethnology
+KW  - Male
+KW  - Risk Factors
+KW  - Surveys and Questionnaires
+KW  - Young Adult
+DO  - 10.1038/s41598-019-43521-y
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=31068656&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+ID  - 104032404
+T1  - Association between variables used in the field substitution and post-stratification adjustment in the Belgian health interview survey and non-response.
+AU  - Van der Heyden, Johan
+AU  - Demarest, Stefaan
+AU  - Van Herck, Koen
+AU  - De Bacquer, Dirk
+AU  - Tafforeau, Jean
+AU  - Van Oyen, Herman
+Y1  - 2014/02//
+N1  - Accession Number: 104032404. Language: English. Entry Date: 20141121. Revision Date: 20200708. Publication Type: journal article; research. Journal Subset: Biomedical; Continental Europe; Europe; Public Health. Special Interest: Public Health. NLM UID: 101304551. 
+KW  - Bias (Research)
+KW  - Surveys -- Standards
+KW  - Adult
+KW  - Aged
+KW  - Belgium
+KW  - Data Analysis, Statistical
+KW  - Female
+KW  - Surveys
+KW  - Human
+KW  - Interviews
+KW  - Logistic Regression
+KW  - Male
+KW  - Middle Age
+KW  - Young Adult
+SP  - 197
+EP  - 206
+JO  - International Journal of Public Health (Springer Nature)
+JF  - International Journal of Public Health (Springer Nature)
+JA  - INT J PUBLIC HEALTH
+VL  - 59
+IS  - 1
+CY  - , <Blank>
+PB  - Springer Nature
+AB  - Objectives: Field substitution and post-stratification adjustment have been proposed to reduce non-response bias in population surveys. We investigated if variables involved in those techniques in the Belgian health interview survey 2004 are associated with non-response and assessed the impact of field substitution and post-stratification adjustment on the survey results.Methods: Data were obtained from all selected households (n = 12.204). The association between non-response and the selected variables was explored through multilevel logistic regression models with municipality and statistical sector as random effects.Results: All investigated variables were significantly related with non-response. Especially households that could not be contacted differed substantially from those who participated. Only post-stratification had a clear impact on the survey results.Conclusions: Even if variables used in the field substitution procedure of health surveys are strongly associated with non-response, the impact of field substitution on the survey results may be minimal, either because there was no bias of relevance or it was not captured. The usefulness of field substitution to correct for non-response bias in population health surveys seems to be quite limited.
+SN  - 1661-8556
+AD  - Scientific Institute of Public Health, Brussels, Belgium, johan.vanderheyden@wiv-isp.be.
+U2  - PMID: NLM23619721.
+DO  - 10.1007/s00038-013-0460-7
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=104032404&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+AU  - BISBEE, JAMES
+T1  - BARP: Improving Mister P Using Bayesian Additive Regression Trees.
+JO  - American Political Science Review
+JF  - American Political Science Review
+Y1  - 2019/11//
+VL  - 113
+IS  - 4
+M3  - Article
+SP  - 1060
+EP  - 1065
+SN  - 00030554
+AB  - Multilevel regression and post-stratification (MRP) is the current gold standard for extrapolating opinion data from nationally representative surveys to smaller geographic units. However, innovations in nonparametric regularization methods can further improve the researcher's ability to extrapolate opinion data to a geographic unit of interest. I test an ensemble of regularization algorithms and find that there is room for substantial improvement on the multilevel model via more flexible methods of regularization. I propose a modified version of MRP that replaces the multilevel model with a nonparametric approach called Bayesian additive regression trees (BART or, when combined with post-stratification, BARP). I compare both methods across a number of data contexts, demonstrating the benefits of applying more powerful regularization methods to extrapolate opinion data to target geographical units. I provide an R package that implements the BARP method. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of American Political Science Review is the property of Cambridge University Press and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Bayesian analysis
+KW  - Regression analysis
+KW  - Regression trees
+N1  - Accession Number: 139014885; BISBEE, JAMES 1; Email Address: james.bisbee@nyu.edu; Affiliations: 1: New York University; Issue Info: Nov2019, Vol. 113 Issue 4, p1060; Thesaurus Term: Bayesian analysis; Thesaurus Term: Regression analysis; Subject Term: Regression trees; Number of Pages: 6p; Document Type: Article
+L3  - 10.1017/S0003055419000480
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=139014885&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Gelman, Andrew
+AU  - Carpenter, Bob
+T1  - Bayesian analysis of tests with unknown specificity and sensitivity.
+JO  - Journal of the Royal Statistical Society: Series C (Applied Statistics)
+JF  - Journal of the Royal Statistical Society: Series C (Applied Statistics)
+Y1  - 2020/11//
+VL  - 69
+IS  - 5
+M3  - Article
+SP  - 1269
+EP  - 1283
+SN  - 00359254
+AB  - Summary: When testing for a rare disease, prevalence estimates can be highly sensitive to uncertainty in the specificity and sensitivity of the test. Bayesian inference is a natural way to propagate these uncertainties, with hierarchical modelling capturing variation in these parameters across experiments. Another concern is the people in the sample not being representative of the general population. Statistical adjustment cannot without strong assumptions correct for selection bias in an opt‐in sample, but multilevel regression and post‐stratification can at least adjust for known differences between the sample and the population. We demonstrate hierarchical regression and post‐stratification models with code in Stan and discuss their application to a controversial recent study of SARS‐CoV‐2 antibodies in a sample of people from the Stanford University area. Wide posterior intervals make it impossible to evaluate the quantitative claims of that study regarding the number of unreported infections. For future studies, the methods described here should facilitate more accurate estimates of disease prevalence from imperfect tests performed on non‐representative samples. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Journal of the Royal Statistical Society: Series C (Applied Statistics) is the property of Wiley-Blackwell and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Bayesian analysis
+KW  - SARS-CoV-2
+KW  - Regression analysis
+KW  - Disease prevalence
+KW  - Selection bias (Statistics)
+KW  - Rare diseases
+KW  - Bayesian inference
+KW  - Diagnostic testing
+KW  - Sensitivity
+KW  - Sensitivity analysis
+KW  - Specificity
+KW  - Stanford University
+N1  - Accession Number: 146320186; Gelman, Andrew 1; Email Address: gelman@stat.columbia.edu; Carpenter, Bob 2; Affiliations: 1: Columbia University, New York, USA; 2: Flatiron Institute, New York, USA; Issue Info: Nov2020, Vol. 69 Issue 5, p1269; Thesaurus Term: Bayesian analysis; Thesaurus Term: SARS-CoV-2; Thesaurus Term: Regression analysis; Subject Term: Disease prevalence; Subject Term: Selection bias (Statistics); Subject Term: Rare diseases; Author-Supplied Keyword: Bayesian inference; Author-Supplied Keyword: Diagnostic testing; Author-Supplied Keyword: Sensitivity; Author-Supplied Keyword: Sensitivity analysis; Author-Supplied Keyword: Specificity ; Company/Entity: Stanford University; Number of Pages: 15p; Document Type: Article
+L3  - 10.1111/rssc.12435
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=146320186&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Pouwels, Koen B
+AU  - House, Thomas
+AU  - Pritchard, Emma
+AU  - Robotham, Julie V
+AU  - Birrell, Paul J
+AU  - Gelman, Andrew
+AU  - Vihta, Karina-Doris
+AU  - Bowers, Nikola
+AU  - Boreham, Ian
+AU  - Thomas, Heledd
+AU  - Lewis, James
+AU  - Bell, Iain
+AU  - Bell, John I
+AU  - Newton, John N
+AU  - Farrar, Jeremy
+AU  - Diamond, Ian
+AU  - Benton, Pete
+AU  - Walker, Ann Sarah
+AN  - 33308423
+ID  - 33308423
+T1  - Community prevalence of SARS-CoV-2 in England from April to November, 2020: results from the ONS Coronavirus Infection Survey.
+JO  - The Lancet. Public health
+JF  - The Lancet. Public health
+JA  - Lancet Public Health
+Y1  - 2021/01//
+VL  - 6
+IS  - 1
+SP  - e30
+EP  - e38
+CY  - England
+PB  - Elsevier, Ltd
+SN  - 2468-2667
+AD  - Health Economics Research Centre, Nuffield Department of Population Health, University of Oxford, Oxford, UK; The National Institute for Health Research Health Protection Research Unit in Healthcare Associated Infections and Antimicrobial Resistance at the University of Oxford, University of Oxford, Oxford, UK. Electronic address: koen.pouwels@ndph.ox.ac.uk.
+AD  - Department of Mathematics, University of Manchester, Manchester, UK; IBM Research, Hartree Centre, Sci-Tech, Daresbury, UK.
+AD  - The National Institute for Health Research Health Protection Research Unit in Healthcare Associated Infections and Antimicrobial Resistance at the University of Oxford, University of Oxford, Oxford, UK; Nuffield Department of Medicine, University of Oxford, Oxford, UK.
+AD  - National Infection Service, Public Health England, London, UK.
+AD  - National Infection Service, Public Health England, London, UK; Medical Research Council (MRC) Biostatistics Unit, University of Cambridge, Cambridge Institute of Public Health, Cambridge, UK.
+AD  - Department of Statistics, Columbia University, New York, NY, USA.
+AD  - The National Institute for Health Research Health Protection Research Unit in Healthcare Associated Infections and Antimicrobial Resistance at the University of Oxford, University of Oxford, Oxford, UK; Nuffield Department of Medicine, University of Oxford, Oxford, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - Office of the Regius Professor of Medicine, University of Oxford, Oxford, UK.
+AD  - Health Improvement Directorate, Public Health England, London, UK.
+AD  - Wellcome Trust, London, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - Office for National Statistics, Newport, UK.
+AD  - The National Institute for Health Research Health Protection Research Unit in Healthcare Associated Infections and Antimicrobial Resistance at the University of Oxford, University of Oxford, Oxford, UK; Nuffield Department of Medicine, University of Oxford, Oxford, UK; The National Institute for Health Research Oxford Biomedical Research Centre, University of Oxford, Oxford, UK; MRC Clinical Trials Unit at University College London, London, UK.
+N1  - Accession Number: 33308423. Corporate Author: COVID-19 Infection Survey Team. Language: English. Date Revised: 20210320. Date Created: 20201214. Date Completed: 20210114. Update Code: 20210320. Publication Type: Journal Article, Research Support, Non-U.S. Gov't. Journal ID: 101699003. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Lancet Public Health. PubMed Central ID: PMC7786000. Linked References: N Engl J Med. 2020 Jun 11;382(24):2302-2315. (PMID: 32289214); N Engl J Med. 2020 Dec 17;383(25):2417-2426. (PMID: 33176077); BMC Med. 2020 May 7;18(1):124. (PMID: 32375776); Emerg Themes Epidemiol. 2012 Dec 28;9(1):9. (PMID: 23270542); Science. 2020 Jul 10;369(6500):208-211. (PMID: 32404476); Clin Infect Dis. 2020 Jun 04;:. (PMID: 32497212); Nat Hum Behav. 2020 Jun;4(6):577-587. (PMID: 32493967); Lancet Public Health. 2020 Jul;5(7):e375-e385. (PMID: 32502389); Lancet. 2020 Feb 15;395(10223):497-506. (PMID: 31986264); Clin Infect Dis. 2020 Oct 19;:. (PMID: 33075138); Biom J. 2020 Mar;62(2):479-491. (PMID: 31172582); Lancet. 2020 Aug 22;396(10250):535-544. (PMID: 32645347); Nature. 2020 Aug;584(7821):425-429. (PMID: 32604404). Subset: MEDLINE; Date of Electronic Publication: 2020 Dec 11. ; Original Imprints: Publication: [Oxford] : Elsevier, Ltd., [2016]-
+AB  - Background: Decisions about the continued need for control measures to contain the spread of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) rely on accurate and up-to-date information about the number of people testing positive for SARS-CoV-2 and risk factors for testing positive. Existing surveillance systems are generally not based on population samples and are not longitudinal in design.; Methods: Samples were collected from individuals aged 2 years and older living in private households in England that were randomly selected from address lists and previous Office for National Statistics surveys in repeated cross-sectional household surveys with additional serial sampling and longitudinal follow-up. Participants completed a questionnaire and did nose and throat self-swabs. The percentage of individuals testing positive for SARS-CoV-2 RNA was estimated over time by use of dynamic multilevel regression and poststratification, to account for potential residual non-representativeness. Potential changes in risk factors for testing positive over time were also assessed. The study is registered with the ISRCTN Registry, ISRCTN21086382.; Findings: Between April 26 and Nov 1, 2020, results were available from 1 191 170 samples from 280 327 individuals; 5231 samples were positive overall, from 3923 individuals. The percentage of people testing positive for SARS-CoV-2 changed substantially over time, with an initial decrease between April 26 and June 28, 2020, from 0·40% (95% credible interval 0·29-0·54) to 0·06% (0·04-0·07), followed by low levels during July and August, 2020, before substantial increases at the end of August, 2020, with percentages testing positive above 1% from the end of October, 2020. Having a patient-facing role and working outside your home were important risk factors for testing positive for SARS-CoV-2 at the end of the first wave (April 26 to June 28, 2020), but not in the second wave (from the end of August to Nov 1, 2020). Age (young adults, particularly those aged 17-24 years) was an important initial driver of increased positivity rates in the second wave. For example, the estimated percentage of individuals testing positive was more than six times higher in those aged 17-24 years than in those aged 70 years or older at the end of September, 2020. A substantial proportion of infections were in individuals not reporting symptoms around their positive test (45-68%, dependent on calendar time.; Interpretation: Important risk factors for testing positive for SARS-CoV-2 varied substantially between the part of the first wave that was captured by the study (April to June, 2020) and the first part of the second wave of increased positivity rates (end of August to Nov 1, 2020), and a substantial proportion of infections were in individuals not reporting symptoms, indicating that continued monitoring for SARS-CoV-2 in the community will be important for managing the COVID-19 pandemic moving forwards.; Funding: Department of Health and Social Care. (Copyright © 2021 The Author(s). Published by Elsevier Ltd. This is an Open Access article under the CC BY 4.0 license. Published by Elsevier Ltd.. All rights reserved.)
+KW  - Residence Characteristics*
+KW  - COVID-19/*epidemiology
+KW  - Public Health Surveillance/*methods
+KW  - Adolescent
+KW  - Adult
+KW  - Aged
+KW  - COVID-19/diagnosis
+KW  - COVID-19 Testing
+KW  - Child
+KW  - Child, Preschool
+KW  - England/epidemiology
+KW  - Female
+KW  - Health Surveys
+KW  - Humans
+KW  - Male
+KW  - Middle Aged
+KW  - Prevalence
+KW  - Young Adult
+DO  - 10.1016/S2468-2667(20)30282-6
+U3  - Investigator: KB Pouwels; AS Walker; D Crook; PC Matthews; T Peto; E Pritchard; N Stoesser; KD Vihta; A Howarth; G Doherty; J Kavanagh; KK Chau; SB Hatch; D Ebner; L Martins Ferreira; T Christott; BD Marsden; W Dejnirattisai; J Mongkolsapaya; S Hoosdally; R Cornall; DI Stuart; G Screaton; D Eyre; J Bell; S Cox; K Paddon; T James; T House; JN Newton; JV Robotham; P Birrell; H Jordan; T Sheppard; G Athey; D Moody; L Curry; P Brereton; J Hay; H Vansteenhouse; I Bell; I Diamond; A Lambert; P Benton; E Rourke; S Hawkes; S Henry; J Scruton; P Stokes; T Thomas; J Allen; R Black; H Bovill; D Braunholtz; D Brown; S Collyer; M Crees; C Daglish; B Davies; H Donnarumma; J Douglas-Mann; A Felton; H Finselbach; E Fordham; A Ipser; J Jenkins; J Jones; K Kent; G Kerai; L Lloyd; V Masding; E Osborn; A Patel; E Pereira; T Pett; M Randall; D Reeve; P Shah; R Snook; R Studley; E Sutherland; E Swinn; H Thomas; A Tudor; J Weston; S Leib; J Tierney; G Farkas; R Cobb; F Van Galen; L Compton; J Irving; J Clarke; R Mullis; L Ireland; D Airimitoaie; C Nash; D Cox; S Fisher; Z Moore; J McLean; M Kerby. 
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=33308423&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Ghitza, Yair
+AU  - Gelman, Andrew
+T1  - Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups.
+JO  - American Journal of Political Science (John Wiley & Sons, Inc.)
+JF  - American Journal of Political Science (John Wiley & Sons, Inc.)
+Y1  - 2013/07//
+VL  - 57
+IS  - 3
+M3  - Article
+SP  - 762
+EP  - 776
+SN  - 00925853
+AB  - Using multilevel regression and poststratification (MRP), we estimate voter turnout and vote choice within deeply interacted subgroups: subsets of the population that are defined by multiple demographic and geographic characteristics. This article lays out the models and statistical procedures we use, along with the steps required to fit the model for the 2004 and 2008 presidential elections. Though MRP is an increasingly popular method, we improve upon it in numerous ways: deeper levels of covariate interaction, allowing for nonlinearity and nonmonotonicity, accounting for unequal inclusion probabilities that are conveyed in survey weights, postestimation adjustments to turnout and voting levels, and informative multidimensional graphical displays as a form of model checking. We use a series of examples to demonstrate the flexibility of our method, including an illustration of turnout and vote choice as subgroups become increasingly detailed, and an analysis of both vote choice changes and turnout changes from 2004 to 2008. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of American Journal of Political Science (John Wiley & Sons, Inc.) is the property of John Wiley & Sons, Inc. and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Multilevel models
+KW  - Voter turnout
+KW  - Subgroup analysis (Experimental design)
+KW  - United States presidential election, 2004
+KW  - United States presidential election, 2008
+KW  - Mathematical models of political science
+N1  - Accession Number: 88800079; Ghitza, Yair 1; Email Address: yg2173@columbia.edu; Gelman, Andrew 1; Email Address: gelman@stat.columbia.edu; Affiliations: 1: Columbia University; Issue Info: Jul2013, Vol. 57 Issue 3, p762; Subject Term: Multilevel models; Subject Term: Voter turnout; Subject Term: Subgroup analysis (Experimental design); Subject Term: United States presidential election, 2004; Subject Term: United States presidential election, 2008; Subject Term: Mathematical models of political science; Number of Pages: 15p; Illustrations: 2 Color Photographs, 2 Black and White Photographs, 3 Charts; Document Type: Article
+L3  - 10.1111/ajps.12004
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=88800079&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Ciftci, Sabri
+AU  - Robbins, Michael
+AU  - Zaytseva, Sofya
+T1  - Devotion at Sub-National Level: Ramadan, Nighttime Lights, and Religiosity in the Egyptian Governorates.
+JO  - International Journal of Public Opinion Research
+JF  - International Journal of Public Opinion Research
+Y1  - 2021///Spring2021
+VL  - 33
+IS  - 1
+M3  - Article
+SP  - 99
+EP  - 117
+SN  - 09542892
+AB  - This study aims to construct reliable measures of religiosity and to cross-validate survey-based measures in operationalization of this central variable. We obtain measures of sub-national religiosity in the Egyptian governorates from the Arab Barometer surveys using disaggregation and multilevel regression and post-stratification techniques. Then, we use satellite imagery to compare these measures to the intensity of nighttime lights during the holy month of Ramadan. Although not designed to be fully representative, the analysis reveals that survey data at the sub-national level can provide approximate measures when aggregated. These findings contribute to scholarship by introducing a novel measure of religiosity based on nighttime activity during Ramadan and by cross-validating the reliability of survey-based measures of aggregate religiosity. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of International Journal of Public Opinion Research is the property of Oxford University Press / USA and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Ramadan
+KW  - Religiousness
+KW  - Remote-sensing images
+KW  - Egyptians
+N1  - Accession Number: 149741814; Ciftci, Sabri 1; Email Address: ciftci@ksu.edu; Robbins, Michael 2; Zaytseva, Sofya 3; Affiliations: 1: Department of Political Science, Kansas State University , USA; 2: Department of Politics, Princeton University , USA; 3: Department of Mathematics, University of Georgia , USA; Issue Info: Spring2021, Vol. 33 Issue 1, p99; Subject Term: Ramadan; Subject Term: Religiousness; Subject Term: Remote-sensing images; Subject Term: Egyptians; Number of Pages: 19p; Document Type: Article; Full Text Word Count: 7391
+L3  - 10.1093/ijpor/edaa019
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=ufh&AN=149741814&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Communication & Mass Media Complete
+ER  - 
+
+TY  - JOUR
+AU  - Saville, Christopher W. N.
+T1  - Ecological social capital does not predict geographical variance in increases in depression following the 2008 financial crisis.
+JO  - British Journal of Psychology
+JF  - British Journal of Psychology
+Y1  - 2021/02//
+VL  - 112
+IS  - 1
+M3  - Article
+SP  - 163
+EP  - 179
+SN  - 00071269
+AB  - Research suggests that the financial crisis of 2008 and its aftermath were associated with an increase in mental health problems, but there has been little research into potential protective factors. Ecological social capital is a plausible candidate given evidence of its protective status following natural disasters. Pre‐crisis area‐level estimates of generalized trust and sense of belonging were computed from the 2004 to 2006 waves of the Living in Wales survey (N = 43,473) for 413 neighbourhoods in Wales, using multilevel regression with post‐stratification, a technique for disaggregating survey data into small area estimates. Area estimates and the planned analysis were preregistered using Open Science Framework. Data (N = 180,462) from the Welsh Health Survey (2003–2015) were then used to model whether social capital was protective against depression in general and whether it moderated the increase in depression prevalence, associated with the financial crisis. Depression rates increased post‐crisis (odds ratio [OR] = 1.271), and trust was a protective factor against depression (OR = 0.775). The hypothesized interaction, however, was not significant (OR = 1.033), nor was sense of belonging (OR = 0.934) or its interaction with the crisis (OR = 1.024). Although ecological generalized trust appears to be a protective factor against depression, it did not buffer against the mental health impact of the financial crisis. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of British Journal of Psychology is the property of Wiley-Blackwell and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Recessions
+KW  - Regression analysis
+KW  - Financial stress
+KW  - Odds ratio
+KW  - Mental depression risk factors
+KW  - Natural disasters -- Psychological aspects
+KW  - Social capital
+KW  - Ecology
+KW  - Surveys
+KW  - Social integration
+KW  - Trust
+KW  - Psychological factors
+KW  - Wales
+KW  - austerity
+KW  - mental health
+KW  - multilevel regression with post‐stratification
+KW  - recession
+KW  - trust
+N1  - Accession Number: 149077305; Saville, Christopher W. N. 1; Email Address: c.saville@bangor.ac.uk; Affiliations: 1: North Wales Clinical Psychology Programme, School of Psychology, Bangor University, , UK; Issue Info: Feb2021, Vol. 112 Issue 1, p163; Thesaurus Term: Recessions; Thesaurus Term: Regression analysis; Thesaurus Term: Financial stress; Thesaurus Term: Odds ratio; Subject Term: Mental depression risk factors; Subject Term: Natural disasters -- Psychological aspects; Subject Term: Social capital; Subject Term: Ecology; Subject Term: Surveys; Subject Term: Social integration; Subject Term: Trust; Subject Term: Psychological factors; Subject: Wales; Author-Supplied Keyword: austerity; Author-Supplied Keyword: mental health; Author-Supplied Keyword: multilevel regression with post‐stratification; Author-Supplied Keyword: recession; Author-Supplied Keyword: trust; Number of Pages: 17p; Illustrations: 1 Chart, 3 Graphs, 1 Map; Document Type: Article
+L3  - 10.1111/bjop.12448
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=149077305&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Eun Kim, Sung
+AU  - Urpelainen, Johannes
+T1  - Environmental public opinion in U.S. states, 1973–2012.
+JO  - Environmental Politics
+JF  - Environmental Politics
+Y1  - 2018/01//
+VL  - 27
+IS  - 1
+M3  - Article
+SP  - 89
+EP  - 114
+SN  - 09644016
+AB  - Partisan polarization of public opinion is a major trend in American environmental politics. While the national pattern is widely recognized, scholars know much less about the polarization of public opinion over time at the state level. This lack of knowledge is unfortunate because geographic variation in the polarization of opinion is essential for explaining the origins of partisan polarization and evaluating its consequences for policy. To fill the gap, the multilevel regression and poststratification technique is applied to provide credible estimates of state-level environmental public opinion for both Democrats and Republicans, 1973–2012. It appears that the growing partisan gap reflects increased pro-environmental opinion among Democrats across many states, whereas Republican state-level public opinion is converging toward a much lower baseline. Cross-state variation among both parties has decreased over time, contributing to greater partisan polarization in the aggregate. Changes in the sorting of voters in and out of political parties cannot explain these patterns of polarization. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Environmental Politics is the property of Routledge and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Polarization (Economics)
+KW  - Labor supply
+KW  - Job skills
+KW  - Economic policy
+KW  - Economic security
+KW  - Political science
+KW  - Social influence
+KW  - Legislators
+KW  - American politics
+KW  - environmental politics
+KW  - partisan polarization
+KW  - public opinion
+N1  - Accession Number: 126002638; Eun Kim, Sung 1; Email Address: sung_kim@korea.edu; Urpelainen, Johannes 2; Affiliations: 1 : Department of Political Science, Korea University, Seoul, Korea; 2 : School of Advanced International Studies, Johns Hopkins University, Washington, DC, USA;  Source Info: Jan2018, Vol. 27 Issue 1, p89; Subject Term: Polarization (Economics); Subject Term: Labor supply; Subject Term: Job skills; Subject Term: Economic policy; Subject Term: Economic security; Subject Term: Political science; Subject Term: Social influence; Subject Term: Legislators; Author-Supplied Keyword: American politics; Author-Supplied Keyword: environmental politics; Author-Supplied Keyword: partisan polarization; Author-Supplied Keyword: public opinion; Number of Pages: 26p; Illustrations: 7 Graphs, 2 Maps; Document Type: Article
+L3  - 10.1080/09644016.2017.1362720
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=8gh&AN=126002638&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - GreenFILE
+ER  - 
+
+TY  - JOUR
+AU  - Leemann, Lucas
+AU  - Wasserfallen, Fabio
+T1  - Extending the Use and Prediction Precision of Subnational Public Opinion Estimation.
+JO  - American Journal of Political Science (John Wiley & Sons, Inc.)
+JF  - American Journal of Political Science (John Wiley & Sons, Inc.)
+Y1  - 2017/10//
+VL  - 61
+IS  - 4
+M3  - Article
+SP  - 1003
+EP  - 1022
+SN  - 00925853
+AB  - The comparative study of subnational units is on the rise. Multilevel regression and poststratification (MrP) has become the standard method for estimating subnational public opinion. Unfortunately, MrP comes with stringent data demands. As a consequence, scholars cannot apply MrP in countries without detailed census data, and when such data are available, the modeling is restricted to a few variables. This article introduces multilevel regression with synthetic poststratification (MrsP), which relaxes the data requirement of MrP to marginal distributions, substantially increases the prediction precision of the method, and extends its use to countries without census data. The findings of Monte Carlo, U.S., and Swiss analyses show that, using the same predictors, MrsP usually performs in standard applications as well as the currently used standard approach, and it is superior when additional predictors are modeled. The better performance and the more straightforward implementation promise that MrsP will further stimulate subnational research. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of American Journal of Political Science (John Wiley & Sons, Inc.) is the property of John Wiley & Sons, Inc. and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Public opinion
+KW  - Distribution (Probability theory)
+KW  - Multilevel models
+KW  - Subnational governments
+KW  - Logical prediction
+N1  - Accession Number: 125891035; Leemann, Lucas 1; Email Address: l.leemann@essex.ac.uk; Wasserfallen, Fabio 2; Email Address: fabio.wasserfallen@sbg.ac; Affiliations: 1: University of Essex; 2: University of Salzburg, University of Zurich; Issue Info: Oct2017, Vol. 61 Issue 4, p1003; Thesaurus Term: Public opinion; Thesaurus Term: Distribution (Probability theory); Subject Term: Multilevel models; Subject Term: Subnational governments; Subject Term: Logical prediction; Number of Pages: 20p; Illustrations: 9 Charts, 8 Graphs; Document Type: Article
+L3  - 10.1111/ajps.12319
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=125891035&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+T1  - Factors Influencing Student-Athletes' Identity: A Multilevel Regression and Poststratification Approach.
+AU  - Quinaud, Ricardo T.
+AU  - Gonçalves, Carlos E.
+AU  - Capranica, Laura
+AU  - Carvalho, Humberto M.
+JO  - Perceptual & Motor Skills
+JF  - Perceptual & Motor Skills
+Y1  - 2020/04//
+VL  - 127
+IS  - 2
+SP  - 432
+EP  - 447
+SN  - 00315125
+N1  - Accession Number: 141956804; Author: Quinaud, Ricardo T.: 1 Author: Gonçalves, Carlos E.: 2 Author: Capranica, Laura: 3 Author: Carvalho, Humberto M.: 1 email: hmoreiracarvalho@gmail.com. ; Author Affiliation: 1 Department of Physical Education, School of Sports, Federal University of Santa Catarina, Brazil: 2 Faculty of Sport Sciences and Physical Education, University of Coimbra, Portugal: 3 Department of Movement, Human and Health Sciences, University of Rome "Foro Italico," Italy; No. of Pages: 16; Language: English; Publication Type: Article; Update Code: 20200229
+N2  - We considered identity variation among Brazilian university student-athletes in relation to their gender, sport type, competition level, and university type. Participants were 506 student-athletes (219 males and 287 females) from public and private Brazilian universities, competing in team and individual sports, at local, state, and national levels. We used multilevel regression and poststratification to estimate each participant's identity from the aforementioned variables. Gender and sport type were not associated with any substantial identify variation, but there were higher values on Baller Identity Measurement Scale dimensions for student-athletes from public versus private universities, and student-athletes competing at the highest level had lower Baller Identity Measurement Scale values compared to peers competing at lower levels. Overall, university type and sport competitive level were the contextual factors that most influenced Brazilian student-athletes' identities. ABSTRACT FROM AUTHOR
+KW  - *ATHLETIC ability
+KW  - *ATTITUDE (Psychology)
+KW  - *SPORTS
+KW  - *UNIVERSITIES & colleges
+KW  - GROUP identity
+KW  - QUESTIONNAIRES
+KW  - SEX distribution
+KW  - PRIVATE sector
+KW  - PUBLIC sector
+KW  - AFFINITY groups
+KW  - MULTIPLE regression analysis
+KW  - BRAZIL
+KW  - Bayesian methods
+KW  - multilevel modeling
+KW  - questionnaires
+KW  - social identity
+KW  - sports
+KW  - university
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=s3h&AN=141956804&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - SPORTDiscus with Full Text
+ER  - 
+
+TY  - JOUR
+AU  - Quinaud, Ricardo T
+AU  - Gonçalves, Carlos E
+AU  - Capranica, Laura
+AU  - Carvalho, Humberto M
+AN  - 31928392
+ID  - 31928392
+T1  - Factors Influencing Student-Athletes' Identity: A Multilevel Regression and Poststratification Approach.
+JO  - Perceptual and motor skills
+JF  - Perceptual and motor skills
+JA  - Percept Mot Skills
+Y1  - 2020/04//
+VL  - 127
+IS  - 2
+SP  - 432
+EP  - 447
+CY  - United States
+PB  - SAGE
+SN  - 1558-688X
+AD  - Department of Physical Education, School of Sports, Federal University of Santa Catarina, Brazil.
+AD  - Faculty of Sport Sciences and Physical Education, University of Coimbra, Portugal.
+AD  - Department of Movement, Human and Health Sciences, University of Rome 'Foro Italico,' Italy.
+AD  - Department of Physical Education, School of Sports, Federal University of Santa Catarina, Brazil.
+N1  - Accession Number: 31928392. Language: English. Date Revised: 20201123. Date Created: 20200114. Date Completed: 20201123. Update Code: 20210210. Publication Type: Journal Article. Journal ID: 0401131. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Percept Mot Skills. Linking ISSN: 00315125. Subset: MEDLINE; Date of Electronic Publication: 2020 Jan 13. Current Imprints: Publication: 2016- : Thousand Oaks, California : SAGE; Original Imprints: Publication: Louisville, Ky. : Southern Universities Press
+KW  - Social Identification*
+KW  - Athletes/*psychology
+KW  - Students/*psychology
+KW  - Adolescent
+KW  - Adult
+KW  - Female
+KW  - Humans
+KW  - Male
+KW  - Multilevel Analysis
+KW  - Regression Analysis
+KW  - Young Adult
+KW  - Bayesian methods*
+KW  - multilevel modeling*
+KW  - questionnaires*
+KW  - social identity*
+KW  - sports*
+KW  - university*
+DO  - 10.1177/0031512519899751
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=31928392&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - STURGIS, PATRICK
+AU  - WILLIAMS, JOEL
+AU  - BRUNTON-SMITH, IAN
+AU  - MOORE, JAMIE
+T1  - FIELDWORK EFFORT, RESPONSE RATE, AND THE DISTRIBUTION OF SURVEY OUTCOMES A MULTILEVEL META-ANALYSIS.
+JO  - Public Opinion Quarterly
+JF  - Public Opinion Quarterly
+Y1  - 2017///Summer2017
+VL  - 81
+IS  - 2
+M3  - Article
+SP  - 523
+EP  - 542
+PB  - Oxford University Press / USA
+SN  - 0033362X
+AB  - This study assesses how survey outcome distributions change over repeated calls made to addresses in face-to-face household interview surveys. We consider this question for 541 survey variables, drawn from six major face-to-face UK surveys that have different sample designs, cover different topic areas, and achieve response rates between 54 and 76 percent. Using a multilevel meta-analytic framework, we estimate for each survey variable the expected difference between the point estimate for a proportion at call n and for the full achieved sample. Results show that most variables are surprisingly close to the final achieved sample distribution after only one or two call attempts and before any post-stratification weighting has been applied; the mean expected difference from the final sample proportion across all 559 variables after one call is 1.6 percent, dropping to 0.7 percent after three calls and to 0.4 percent after five calls. These estimates vary only marginally across the six surveys and the different types of questions examined. Our findings add weight to the body of evidence that questions the strength of the relationship between response rate and nonresponse bias. In practical terms, our results suggest that making large numbers of calls at sampled addresses and converting "soft" refusals into interviews are not cost-effective means of minimizing survey error. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Public Opinion Quarterly is the property of Oxford University Press / USA and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Household surveys
+KW  - Response rates
+KW  - Field work (Research)
+KW  - Multilevel models
+KW  - Meta-analysis
+KW  - Sample size (Statistics)
+N1  - Accession Number: 123320806; STURGIS, PATRICK 1; Email Address: p.sturgis@soton.ac.uk; WILLIAMS, JOEL 2; BRUNTON-SMITH, IAN 3; MOORE, JAMIE 4; Affiliations: 1: Professor in the Department of Social Statistics and Demography, University of Southampton, Southampton, UK; 2: Head of methods at Kantar Public, London, UK; 3: Professor in the Department of Sociology, University of Warwick, Coventry, UK; 4: Senior research fellow with the Southampton Statistical Sciences Research Institute, Southampton, UK; Issue Info: Summer2017, Vol. 81 Issue 2, p523; Subject Term: Household surveys; Subject Term: Response rates; Subject Term: Field work (Research); Subject Term: Multilevel models; Subject Term: Meta-analysis; Subject Term: Sample size (Statistics); Number of Pages: 20p; Illustrations: 2 Charts, 3 Graphs; Document Type: Article
+L3  - 10.1093/poq/nfw055
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=ufh&AN=123320806&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Communication & Mass Media Complete
+ER  - 
+
+TY  - JOUR
+AU  - Wang, Wei
+AU  - Rothschild, David
+AU  - Goel, Sharad
+AU  - Gelman, Andrew
+T1  - Forecasting elections with non-representative polls.
+JO  - International Journal of Forecasting
+JF  - International Journal of Forecasting
+Y1  - 2015/07//
+VL  - 31
+IS  - 3
+M3  - Article
+SP  - 980
+EP  - 991
+SN  - 01692070
+AB  - Election forecasts have traditionally been based on representative polls, in which randomly sampled individuals are asked who they intend to vote for. While representative polling has historically proven to be quite effective, it comes at considerable costs of time and money. Moreover, as response rates have declined over the past several decades, the statistical benefits of representative sampling have diminished. In this paper, we show that, with proper statistical adjustment, non-representative polls can be used to generate accurate election forecasts, and that this can often be achieved faster and at a lesser expense than traditional survey methods. We demonstrate this approach by creating forecasts from a novel and highly non-representative survey dataset: a series of daily voter intention polls for the 2012 presidential election conducted on the Xbox gaming platform. After adjusting the Xbox responses via multilevel regression and poststratification, we obtain estimates which are in line with the forecasts from leading poll analysts, which were based on aggregating hundreds of traditional polls conducted during the election cycle. We conclude by arguing that non-representative polling shows promise not only for election forecasting, but also for measuring public opinion on a broad range of social, economic and cultural issues. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of International Journal of Forecasting is the property of Elsevier B.V. and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Public opinion polls
+KW  - Regression analysis
+KW  - Estimates
+KW  - Election forecasting
+KW  - United States presidential elections
+KW  - Xbox video game consoles
+KW  - Multilevel regression and poststratification
+KW  - Non-representative polling
+N1  - Accession Number: 103403285; Wang, Wei 1; Email Address: ww2243@columbia.edu; Rothschild, David 2; Email Address: davidmr@microsoft.com; Goel, Sharad 2; Email Address: sharadg@microsoft.com; Gelman, Andrew 1,3; Email Address: gelman@stat.columbia.edu; Affiliations: 1: Department of Statistics, Columbia University, New York, NY, USA; 2: Microsoft Research, New York, NY, USA; 3: Department of Political Science, Columbia University, New York, NY, USA; Issue Info: Jul2015, Vol. 31 Issue 3, p980; Thesaurus Term: Public opinion polls; Thesaurus Term: Regression analysis; Thesaurus Term: Estimates; Subject Term: Election forecasting; Subject Term: United States presidential elections; Subject Term: Xbox video game consoles; Author-Supplied Keyword: Multilevel regression and poststratification; Author-Supplied Keyword: Non-representative polling; NAICS/Industry Codes: 921110 Executive Offices; NAICS/Industry Codes: 541910 Marketing Research and Public Opinion Polling; Number of Pages: 12p; Document Type: Article
+L3  - 10.1016/j.ijforecast.2014.06.001
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=103403285&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Allan, Jinan N
+AU  - Ripberger, Joseph T
+AU  - Wehde, Wesley
+AU  - Krocak, Makenzie
+AU  - Silva, Carol L
+AU  - Jenkins-Smith, Hank C
+AN  - 32722870
+ID  - 32722870
+T1  - Geographic Distributions of Extreme Weather Risk Perceptions in the United States.
+JO  - Risk analysis : an official publication of the Society for Risk Analysis
+JF  - Risk analysis : an official publication of the Society for Risk Analysis
+JA  - Risk Anal
+Y1  - 2020/12//
+VL  - 40
+IS  - 12
+SP  - 2498
+EP  - 2508
+CY  - United States
+PB  - Blackwell Publishers
+SN  - 1539-6924
+AD  - National Institute for Risk & Resilience, Norman, OK, USA.; Department of Psychology, University of Oklahoma, Norman, OK, USA.
+AD  - National Institute for Risk & Resilience, Norman, OK, USA.; Department of Political Science, University of Oklahoma, Norman, OK, USA.
+AD  - Department of Political Science, International Affairs, and Public Administration, East Tennessee State University, Johnson City, TN, USA.
+AD  - National Institute for Risk & Resilience, Norman, OK, USA.; The Cooperative Institute for Mesoscale Meteorological Studies and the NOAA Storm Prediction Center, Norman, OK, USA.
+AD  - National Institute for Risk & Resilience, Norman, OK, USA.; Department of Political Science, University of Oklahoma, Norman, OK, USA.
+AD  - National Institute for Risk & Resilience, Norman, OK, USA.; Department of Political Science, University of Oklahoma, Norman, OK, USA.
+N1  - Accession Number: 32722870. Language: English. Date Revised: 20210114. Date Created: 20200730. Date Completed: 20210114. Update Code: 20210210. Publication Type: Journal Article, Research Support, U.S. Gov't, Non-P.H.S.. Journal ID: 8109978. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Risk Anal. Linked References: Anderson, W. A. (1965). Some observations on a disaster subculture: The organizational response of Cincinnati, Ohio to the 1964 flood. Columbus, OH: Disaster Research Center, Ohio State University.; Baker, R., Brick, J. M., Bates, N. A., Battaglia, M., Couper, M. P., Dever, J. A., … Tourangeau, R. (2013). Summary report of the AAPOR task force on non-probability sampling. Journal of Survey Statistics and Methodology, 1(2), 90-143.; Bankoff, G. (2017). Living with hazard: Disaster subcultures, disaster cultures and risk-mitigating strategies. In Historical Disaster Experiences (pp. 45-59). Cham: Springer.; Berrens, R. P., Bohara, A. K., Jenkins-Smith, H., Silva, C., & Weimer, D. L. (2003). The advent of Internet surveys for political research: A comparison of telephone and Internet samples. Political Analysis, 11(1), 1-22.; Burnside, R., Miller, D. S., & Rivera, J. D. (2007). The impact of information and risk perception on the hurricane evacuation decision-making of greater New Orleans residents. Sociological Spectrum, 27(6), 727-740.; Burton, I., Kates, R. W., & White, G. F. (1993). The environment as hazard. New York London: Guilford Press.; Buttice, M. K., & Highton, B. (2013). How does multilevel regression and poststratification perform with conventional national surveys? Political Analysis, 21(4), 449-467.; Champ, P. A., & Brenkert-Smith, H. (2016). Is seeing believing? Perceptions of wildfire risk over time. Risk Analysis, 36(4), 816-830.; Chang, L., & Krosnick, J. A. (2009). National surveys via RDD telephone interviewing versus the Internet: Comparing sample representativeness and response quality. Public Opinion Quarterly, 73(4), 641-678.; Cutter, S. L., Boruff, B. J., & Shirley, W. L. (2003). Social vulnerability to environmental hazards. Social Science Quarterly, 84(2), 242-261.; Demuth, J. L. (2018). Explicating experience: Development of a valid scale of past hazard experience for tornadoes. Risk Analysis, 38(9), 1921-1943.; Dow, K., & Cutter, S. L. (2000). Public orders and personal opinions: Household strategies for hurricane risk assessment. Global Environmental Change Part B: Environmental Hazards, 2(4), 143-155.; Engel, K., Frerks, G., Velotti, L., Warner, J., & Weijs, B. (2014). Flood disaster subcultures in The Netherlands: The parishes of Borgharen and Itteren. Natural Hazards, 73(2), 859-882.; Flynn, J., Slovic, P., & Mertz, C. K. (1994). Gender, race, and perception of environmental health risks. Risk Analysis, 14(6), 1101-1108.; Goodrich, B., Gabry, J., Ali, I., & Brilleman, S. (2018). Package “rstanarm”. Bayesian applied regression modeling via Stan. R package version, 2.17.4. Retrieved from http://mc-stan.org/.; Granot, H. (1996). Disaster subcultures. Disaster Prevention and Management: An International Journal, 5(4), 36-40.; Horney, J. A., MacDonald, P. D., Van Willigen, M., Berke, P. R., & Kaufman, J. S. (2010). Individual actual or perceived property flood risk: Did it predict evacuation from Hurricane Isabel in North Carolina, 2003? Risk Analysis: An International Journal, 30(3), 501-511.; Howe, P. D., Marlon, J. R., Wang, X., & Leiserowitz, A. (2019). Public perceptions of the health risks of extreme heat across US states, counties, and neighborhoods. Proceedings of the National Academy of Sciences, 116(14), 6743-6748.; Kahan, D. M., Braman, D., Gastil, J., Slovic, P., & Mertz, C. K. (2007). Culture and identity-protective cognition: Explaining the white-male effect in risk perception. Journal of Empirical Legal Studies, 4(3), 465-505.; Kahan, D. M., Jenkins-Smith, H., & Braman, D. (2011). Cultural cognition of scientific consensus. Journal of Risk Research, 14(2), 147-174.; Kellens, W., Zaalberg, R., Neutens, T., Vanneuville, W., & De Maeyer, P. (2011). An analysis of the public perception of flood risk on the Belgian coast. Risk Analysis: An International Journal, 31(7), 1055-1068.; Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. American Journal of Political Science, 53(1), 107-121.; Lindell, M. K., Arlikatti, S., & Prater, C. S. (2009). Why people do what they do to protect against earthquake risk: Perceptions of hazard adjustment attributes. Risk Analysis: An International Journal, 29(8), 1072-1088.; Lindell, M. K., & Perry, R. W. (2012). The protective action decision model: Theoretical modifications and additional evidence. Risk Analysis: An International Journal, 32(4), 616-632.; MacInnis, B., Krosnick, J. A., Ho, A. S., & Cho, M. J. (2018). The accuracy of measurements with probability and nonprobability survey samples: Replication and extension. Public Opinion Quarterly, 82(4), 707-744.; Mileti, D. S., & O'Brien, P. W. (1992). Warnings during disaster: Normalizing communicated risk. Social Problems, 39(1), 40-57.; Mileti, D. S., & Sorensen, J. H. (1990). Communication of emergency public warnings. Landslides, 1(6), 52-70.; Murphy, S. T., Cody, M., Frank, L. B., Glik, D., & Ang, A. (2009). Predictors of emergency preparedness and compliance. Disaster Medicine and Public Health Preparedness, 3(2), 1-10.; National Drought Mitigation Center. (2019). United States Drought Monitor. Retrieved from https://droughtmonitor.unl.edu/Data.aspx.; NOAA. (2019). Storm Events Database. NOAA National Centers for Environmental Information. Retrieved from https://www.ncdc.noaa.gov/stormevents/.; O'Neill, E., Brereton, F., Shahumyan, H., & Clinch, J. P. (2016). The impact of perceived flood exposure on flood-risk perception: The role of distance. Risk Analysis, 36(11), 2158-2186.; Perry, R. W., & Lindell, M. K. (2003). Preparedness for emergency response: Guidelines for the emergency planning process. Disasters, 27(4), 336-350.; Plapp, T., & Werner, U. (2006). Understanding risk perception from natural hazards: Examples from Germany. In RISK21-coping with risks due to natural hazards in the 21st century (pp. 111-118). Boca Raton, FL: CRC Press.; Ramasubramanian, M., Allan, J. N., Garcia-Retamero, R., Jenkins-Smith, H., & Cokely, E. T. (2019). Flood risk communication and implications for protective action. Proceedings of the Human Factors and Ergonomics Society Annual Meeting (No. 1, Vol. 63, pp. 1629-1633). Sage CA: Los Angeles, SAGE Publications.; Royal, A., & Walls, M. (2019). Flood risk perceptions and insurance choice: Do decisions in the floodplain reflect overoptimism? Risk Analysis, 39(5), 1088-1104.; Rüstemli, A., & Karanci, A. N. (1999). Correlates of earthquake cognitions and preparedness behavior in a victimized population. Journal of Social Psychology, 139(1), 91-101.; Siebeneck, L. K., & Cova, T. J. (2012). Spatial and temporal variation in evacuee risk perception throughout the evacuation and return-entry process. Risk Analysis: An International Journal, 32(9), 1468-1480.; Siegrist, M. (2019). Trust and risk perception: A critical review of the literature. Risk Analysis. https://doi.org/10.1111/risa13325.; Siegrist, M., & Cvetkovich, G. (2000). Perception of hazards: The role of social trust and knowledge. Risk Analysis, 20(5), 713-720.; Siegrist, M., & Gutscher, H. (2006). Flooding risks: A comparison of lay people's perceptions and expert's assessments in Switzerland. Risk Analysis, 26(4), 971-979.; Silva, C. L., Ripberger, J. T., Jenkins-Smith, H. C., & Krocak, M. (2017). Establishing a baseline: Public Reception, understanding, and responses to severe weather forecasts and warnings in the contiguous United States. University of Oklahoma Center for Risk and Crisis Management. Retrieved from http://risk.ou.edu/downloads/news/WX17-Reference-Report.pdf.; Silva, C. L., Ripberger, J. T., Jenkins-Smith, H. C., Krocak, M., & Wehde, W. W. (2018). Refining the baseline: Public reception, understanding, and responses to severe weather forecasts and warnings in the contiguous United States. University of Oklahoma Center for Risk and Crisis Management. Retrieved from http://risk.ou.edu/downloads/news/WX18-Reference-Report.pdf.; Silva, C. L., Ripberger, J. T., Jenkins-Smith, H. C., Krocak, M., Ernst, S., & Bell, A. (2019). Continuing the baseline: Public reception, understanding, and responses to severe weather forecasts and warnings in the contiguous United States. University of Oklahoma Center for Risk and Crisis Management. Retrieved from http://risk.ou.edu/downloads/news/WX19-Reference-Report.pdf.; Sims, J. H., & Baumanm, D. D. (1972). The tornado threat: Coping styles of the north and south. Science, 176(4042), 1386-1392.; Sjöberg, L., Moen, B. E., & Rundmo, T. (2004). Explaining risk perception: An evaluation of the psychometric paradigm in risk perception research. Rotunde publikasjoner Rotunde. 84, 1-39.; Slovic, P. (1987). Perception of risk. Science, 236(4799), 280-285.; Smith, A. B. (2018). 2017 US billion-dollar weather and climate disasters: A historic year in context. NOAA Climate. Retrieved from https://www.climate.gov/news-features/blogs/beyond-data/2017-us-billion-dollar-weather-and-climate-disasters-historic-year.; Sunstein, C. R. (2003). Terrorism and probability neglect. Journal of Risk and Uncertainty, 26(2-3), 121-136.; Tanner, A., & Árvai, J. (2018). Perceptions of risk and vulnerability following exposure to a major natural disaster: The Calgary flood of 2013. Risk Analysis, 38(3), 548-561.; Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability. Cognitive Psychology, 5(2), 207-232.; US Census Bureau. (2018). Annual County Resident Population Estimates by Age, Sex, Race, and Hispanic Origin: April 1, 2010 to July 1, 2018. Retrieved from https://www2.census.gov/programs-surveys/popest/datasets/2010-2018/counties/asrh/.; Wachinger, G., Renn, O., Begg, C., & Kuhlicke, C. (2013). The risk perception paradox-Implications for governance and communication of natural hazards. Risk Analysis, 33(6), 1049-1065.; Wallace, J. W., Poole, C., & Horney, J. A. (2016). The association between actual and perceived flood risk and evacuation from Hurricane Irene, Beaufort County, North Carolina. Journal of Flood Risk Management, 9(2), 125-135.; Weinstein, N. D., Lyon, J. E., Rothman, A. J., & Cuite, C. L. (2000). Changes in perceived vulnerability following natural disaster. Journal of Social and Clinical Psychology, 19(3), 372-395.; Wenger, D. E., & Weller, J. M. (1973). Disaster subcultures: The cultural residues of community disasters. Preliminary Paper No. 9. University of Delaware Disaster Research Center. Retrieved from http://udspace.udel.edu/handle/19716/399.; Whitmarsh, L. (2008). Are flood victims more concerned about climate change than other people? The role of direct experience in risk perception and behavioural response. Journal of Risk Research, 11(3), 351-374.; Zhang, X., Holt, J. B., Yun, S., Lu, H., Greenlund, K. J., & Croft, J. B. (2015). Validation of multilevel regression and poststratification methodology for small area estimation of health indicators from the behavioral risk factor surveillance system. American Journal of Epidemiology, 182(2), 127-137.. Linking ISSN: 02724332. Subset: PubMed not MEDLINE; MEDLINE; Grant Information: International OU Office of the Vice President for Research; International National Oceanic and Atmospheric Administration Date of Electronic Publication: 2020 Jul 28. Current Imprints: Publication: 2002- : Malden, MA : Blackwell Publishers; Original Imprints: Publication: New York : Plenum Press, c1981-
+AB  - Weather and climate disasters pose an increasing risk to life and property in the United States. Managing this risk requires objective information about the nature of the threat and subjective information about how people perceive it. Meteorologists and climatologists have a relatively firm grasp of the historical objective risk. For example, we know which parts of the United States are most likely to experience drought, heat waves, flooding, snow or ice storms, tornadoes, and hurricanes. We know less about the geographic distribution of the perceived risks of meteorological events and trends. Do subjective perceptions align with exposure to weather risks? This question is difficult to answer because analysts have yet to develop a comprehensive and spatially consistent methodology for measuring risk perceptions across geographic areas in the United States. In this project, we propose a methodology that uses multilevel regression and poststratification to estimate extreme weather and climate risk perceptions by geographic area (i.e., region, state, forecast area, and county). Then we apply the methodology using data from three national surveys (n = 9,542). This enables us to measure, map, and compare perceptions of risk from multiple weather hazards in geographic areas across the country. (© 2020 Society for Risk Analysis.)
+KW  - Extreme weather*
+KW  - geography*
+KW  - risk perceptions*
+DO  - 10.1111/risa.13569
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=32722870&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Allan, Jinan N.
+AU  - Ripberger, Joseph T.
+AU  - Wehde, Wesley
+AU  - Krocak, Makenzie
+AU  - Silva, Carol L.
+AU  - Jenkins‐Smith, Hank C.
+T1  - Geographic Distributions of Extreme Weather Risk Perceptions in the United States.
+JO  - Risk Analysis: An International Journal
+JF  - Risk Analysis: An International Journal
+Y1  - 2020/12//
+VL  - 40
+IS  - 12
+M3  - Article
+SP  - 2498
+EP  - 2508
+SN  - 02724332
+AB  - Weather and climate disasters pose an increasing risk to life and property in the United States. Managing this risk requires objective information about the nature of the threat and subjective information about how people perceive it. Meteorologists and climatologists have a relatively firm grasp of the historical objective risk. For example, we know which parts of the United States are most likely to experience drought, heat waves, flooding, snow or ice storms, tornadoes, and hurricanes. We know less about the geographic distribution of the perceived risks of meteorological events and trends. Do subjective perceptions align with exposure to weather risks? This question is difficult to answer because analysts have yet to develop a comprehensive and spatially consistent methodology for measuring risk perceptions across geographic areas in the United States. In this project, we propose a methodology that uses multilevel regression and poststratification to estimate extreme weather and climate risk perceptions by geographic area (i.e., region, state, forecast area, and county). Then we apply the methodology using data from three national surveys (n = 9,542). This enables us to measure, map, and compare perceptions of risk from multiple weather hazards in geographic areas across the country. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Risk Analysis: An International Journal is the property of Wiley-Blackwell and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Risk perception
+KW  - Weather hazards
+KW  - Weather
+KW  - Snowstorms
+KW  - Ice storms
+KW  - United States
+KW  - Extreme weather
+KW  - geography
+KW  - risk perceptions
+N1  - Accession Number: 147673380; Allan, Jinan N. 1,2; Email Address: jnallan@ou.edu; Ripberger, Joseph T. 1,3; Wehde, Wesley 4; Krocak, Makenzie 1,5; Silva, Carol L. 1,3; Jenkins‐Smith, Hank C. 1,3; Affiliations: 1: National Institute for Risk & Resilience, Norman OK,, USA; 2: Department of Psychology, University of Oklahoma, Norman OK,, USA; 3: Department of Political Science, University of Oklahoma, Norman OK,, USA; 4: Department of Political Science, International Affairs, and Public Administration, East Tennessee State University, Johnson City TN,, USA; 5: The Cooperative Institute for Mesoscale Meteorological Studies and the NOAA Storm Prediction Center, Norman OK,, USA; Issue Info: Dec2020, Vol. 40 Issue 12, p2498; Subject Term: Risk perception; Subject Term: Weather hazards; Subject Term: Weather; Subject Term: Snowstorms; Subject Term: Ice storms; Subject: United States; Author-Supplied Keyword: Extreme weather; Author-Supplied Keyword: geography; Author-Supplied Keyword: risk perceptions; Number of Pages: 11p; Illustrations: 2 Graphs, 1 Map; Document Type: Article
+L3  - 10.1111/risa.13569
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=147673380&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+ID  - 120925632
+T1  - Health-related quality of life among adults 65 years and older in the United States, 2011-2012: a multilevel small area estimation approach.
+AU  - Lin, Yu-Hsiu
+AU  - McLain, Alexander C.
+AU  - Probst, Janice C.
+AU  - Bennett, Kevin J.
+AU  - Qureshi, Zaina P.
+AU  - Eberth, Jan M.
+Y1  - 2017/01//
+N1  - Accession Number: 120925632. Language: English. Entry Date: 20180727. Revision Date: 20180727. Publication Type: journal article; research. Journal Subset: Biomedical; Editorial Board Reviewed; Expert Peer Reviewed; Peer Reviewed; Public Health; USA. Instrumentation: Health-Related Quality of Life (HRQOL); Behavioral Risk Factor Surveillance System (BRFSS). NLM UID: 9100013. 
+KW  - Cluster Analysis
+KW  - Quality of Life
+KW  - Health Status
+KW  - Geriatric Assessment -- Methods
+KW  - Mental Health
+KW  - Human
+KW  - Aged, 80 and Over
+KW  - Reproducibility of Results
+KW  - Risk Assessment
+KW  - Health Behavior -- Ethnology
+KW  - United States
+KW  - Retrospective Design
+KW  - Logistic Regression
+KW  - Aged
+KW  - Female
+KW  - Cross Sectional Studies
+KW  - Male
+KW  - Validation Studies
+KW  - Comparative Studies
+KW  - Evaluation Research
+KW  - Multicenter Studies
+KW  - Scales
+KW  - Questionnaires
+SP  - 52
+EP  - 58
+JO  - Annals of Epidemiology
+JF  - Annals of Epidemiology
+JA  - ANN EPIDEMIOL
+VL  - 27
+IS  - 1
+CY  - New York, New York
+PB  - Elsevier B.V.
+AB  - Purpose: The purpose of this study was to develop county-level estimates of poor health-related quality of life (HRQOL) among aged 65 years and older U.S. adults and to identify spatial clusters of poor HRQOL using a multilevel, poststratification approach.Methods: Multilevel, random-intercept models were fit to HRQOL data (two domains: physical health and mental health) from the 2011-2012 Behavioral Risk Factor Surveillance System. Using a poststratification, small area estimation approach, we generated county-level probabilities of having poor HRQOL for each domain in U.S. adults aged 65 and older, and validated our model-based estimates against state and county direct estimates.Results: County-level estimates of poor HRQOL in the United States ranged from 18.07% to 44.81% for physical health and 14.77% to 37.86% for mental health. Correlations between model-based and direct estimates were higher for physical than mental HRQOL. Counties located in the Arkansas, Kentucky, and Mississippi exhibited the worst physical HRQOL scores, but this pattern did not hold for mental HRQOL, which had the highest probability of mentally unhealthy days in Illinois, Indiana, and Vermont.Conclusions: Substantial geographic variation in physical and mental HRQOL scores exists among older U.S. adults. State and local policy makers should consider these local conditions in targeting interventions and policies to counties with high levels of poor HRQOL scores.
+SN  - 1047-2797
+AD  - National Institute of Environmental Health Research Center, National Health Research Institutes, Taiwan
+AD  - Department of Epidemiology and Biostatistics, Arnold School of Public Health, University of South Carolina, Columbia
+AD  - Department of Health Services Policy & Management, University of South Carolina, Columbia
+AD  - South Carolina Rural Health Research Center, University of South Carolina, Columbia
+AD  - Department of Family and Preventive Medicine, School of Medicine, University of South Carolina, Columbia
+AD  - Cancer Prevention and Control Program, University of South Carolina, Columbia
+U2  - PMID: NLM27814940.
+DO  - 10.1016/j.annepidem.2016.09.016
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=120925632&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+AU  - Lax, Jeffrey R.
+AU  - Phillips, Justin H.
+T1  - How Should We Estimate Public Opinion in The States?
+JO  - American Journal of Political Science (Wiley-Blackwell)
+JF  - American Journal of Political Science (Wiley-Blackwell)
+Y1  - 2009/01//
+VL  - 53
+IS  - 1
+M3  - Article
+SP  - 107
+EP  - 121
+SN  - 00925853
+AB  - We compare two approaches for estimating state-level public opinion: disaggregation by state of national surveys and a simulation approach using multilevel modeling of individual opinion and poststratification by population share. We present the first systematic assessment of the predictive accuracy of each and give practical advice about when and how each method should be used. To do so, we use an original data set of over 100 surveys on gay rights issues as well as 1988 presidential election data. Under optimal conditions, both methods work well, but multilevel modeling performs better generally. Compared to baseline opinion measures, it yields smaller errors, higher correlations, and more reliable estimates. Multilevel modeling is clearly superior when samples are smaller—indeed, one can accurately estimate state opinion using only a single large national survey. This greatly expands the scope of issues for which researchers can study subnational opinion directly or as an influence on policymaking. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of American Journal of Political Science (Wiley-Blackwell) is the property of Wiley-Blackwell and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Public opinion
+KW  - Elections
+KW  - Political science
+KW  - Surveys
+KW  - Multilevel models
+KW  - Social science methodology
+N1  - Accession Number: 35854195; Lax, Jeffrey R. 1; Phillips, Justin H. 1; Affiliations: 1: Columbia University; Issue Info: Jan2009, Vol. 53 Issue 1, p107; Thesaurus Term: Public opinion; Subject Term: Elections; Subject Term: Political science; Subject Term: Surveys; Subject Term: Multilevel models; Subject Term: Social science methodology; NAICS/Industry Codes: 541720 Research and Development in the Social Sciences and Humanities; Number of Pages: 15p; Illustrations: 5 Graphs; Document Type: Article
+L3  - 10.1111/j.1540-5907.2008.00360.x
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=35854195&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Claassen, Christopher
+AU  - Traunmüller, Richard
+T1  - Improving and Validating Survey Estimates of Religious Demography Using Bayesian Multilevel Models and Poststratification.
+JO  - Sociological Methods & Research
+JF  - Sociological Methods & Research
+Y1  - 2020/08//
+VL  - 49
+IS  - 3
+M3  - Article
+SP  - 603
+EP  - 636
+SN  - 00491241
+AB  - Religious group size, demographic composition, and the dynamics thereof are of interest in many areas of social science including migration, social cohesion, parties and voting, and violent conflict. Existing estimates however are of varying and perhaps poor quality because many countries do not collect official data on religious identity. We propose a method for accurately measuring religious group demographics using existing survey data: Bayesian multilevel regression models with poststratification. We illustrate this method by estimating the demography of Muslims, Hindus, and Jews in Great Britain over a 20-year period and validate it by comparing our estimates to UK census data on religious demography. Our estimates are very accurate, differing from true population proportions by as little as 0.29 (Muslim) to 0.04 (Jewish) percentage points. These findings have implications for the measurement of religious demography as well as small group attributes more generally. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Sociological Methods & Research is the property of Sage Publications Inc. and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - MULTILEVEL models
+KW  - DEMOGRAPHY
+KW  - RELIGIOUS groups
+KW  - CENSUS
+KW  - RELIGIOUS identity
+KW  - REGRESSION analysis
+KW  - GREAT Britain
+KW  - Bayesian methods
+KW  - demography
+KW  - multilevel regression with poststratification (MRP)
+KW  - religion
+KW  - survey methods
+KW  - United Kingdom
+N1  - Accession Number: 144578244; Claassen, Christopher 1; Email Address: christopher.claassen@glasgow.ac.uk; Traunmüller, Richard 2; Affiliations: 1 : School of Social and Political Sciences, University of Glasgow, Glasgow, Scotland, United Kingdom; 2 : Department of Social Sciences, Goethe-Universitat Frankfurt am Main, Frankfurt am Main, Hessen, Germany;  Source Info: Aug2020, Vol. 49 Issue 3, p603; Subject Term: MULTILEVEL models; Subject Term: DEMOGRAPHY; Subject Term: RELIGIOUS groups; Subject Term: CENSUS; Subject Term: RELIGIOUS identity; Subject Term: REGRESSION analysis; Subject: GREAT Britain; Author-Supplied Keyword: Bayesian methods; Author-Supplied Keyword: demography; Author-Supplied Keyword: multilevel regression with poststratification (MRP); Author-Supplied Keyword: religion; Author-Supplied Keyword: survey methods; Author-Supplied Keyword: United Kingdom; Number of Pages: 34p; Document Type: Article; Full Text Word Count: 11198
+L3  - 10.1177/0049124118769086
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=i3h&AN=144578244&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Criminal Justice Abstracts with Full Text
+ER  - 
+
+TY  - JOUR
+AU  - Lauderdale, Benjamin E.
+AU  - Bailey, Delia
+AU  - Blumenau, Jack
+AU  - Rivers, Douglas
+T1  - Model-based pre-election polling for national and sub-national outcomes in the US and UK.
+JO  - International Journal of Forecasting
+JF  - International Journal of Forecasting
+Y1  - 2020/04//
+VL  - 36
+IS  - 2
+M3  - Article
+SP  - 399
+EP  - 413
+SN  - 01692070
+AB  - We describe a strategy for applying multilevel regression and post-stratification (MRP) methods to pre-election polling. Using a combination of contemporaneous polling, census data, past election polling, past election results, and other sources of information, we are able to construct probabilistic, internally consistent estimates of national votes and the sub-national electoral districts that determine seats or electoral votes in many electoral systems. We report on the performance of the general framework in three applications that were conducted and released publicly in advance of the 2016 UK Referendum on EU Membership, the 2016 US Presidential Election, and the 2017 UK General Election. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of International Journal of Forecasting is the property of Elsevier B.V. and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Census
+KW  - Information resources
+KW  - Election forecasting
+KW  - Elections
+KW  - Presidential elections
+KW  - Voter turnout
+KW  - Referendum
+KW  - Great Britain
+KW  - Multilevel regression and stratification
+KW  - Polling
+KW  - UK politics
+KW  - US politics
+N1  - Accession Number: 142106964; Lauderdale, Benjamin E. 1; Email Address: b.lauderdale@ucl.ac.uk; Bailey, Delia 2; Blumenau, Jack 1; Rivers, Douglas 2,3; Affiliations: 1: University College London, United Kingdom of Great Britain and Northern Ireland; 2: YouGov, United Kingdom of Great Britain and Northern Ireland; 3: Stanford University, United States of America; Issue Info: Apr2020, Vol. 36 Issue 2, p399; Thesaurus Term: Census; Thesaurus Term: Information resources; Subject Term: Election forecasting; Subject Term: Elections; Subject Term: Presidential elections; Subject Term: Voter turnout; Subject Term: Referendum; Subject: Great Britain; Author-Supplied Keyword: Multilevel regression and stratification; Author-Supplied Keyword: Polling; Author-Supplied Keyword: UK politics; Author-Supplied Keyword: US politics; Number of Pages: 15p; Document Type: Article
+L3  - 10.1016/j.ijforecast.2019.05.012
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=142106964&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+ID  - 129335656
+T1  - Multilevel model to estimate county-level untreated dental caries among US children aged 6-9years using the National Health and Nutrition Examination Survey.
+AU  - Lin, Mei
+AU  - Zhang, Xingyou
+AU  - Holt, James B.
+AU  - Robison, Valerie
+AU  - Li, Chien-Hsun
+AU  - Griffin, Susan O.
+Y1  - 2018/06//
+N1  - Accession Number: 129335656. Language: English. Entry Date: 20190211. Revision Date: 20200529. Publication Type: journal article; research. Journal Subset: Biomedical; Peer Reviewed; USA. NLM UID: 0322116. 
+KW  - Oral Health
+KW  - Dental Caries -- Epidemiology
+KW  - Statistics
+KW  - New York
+KW  - Male
+KW  - Surveys
+KW  - Female
+KW  - United States
+KW  - Child
+KW  - Prevalence
+SP  - 291
+EP  - 298
+JO  - Preventive Medicine
+JF  - Preventive Medicine
+JA  - PREV MED
+VL  - 111
+CY  - Burlington, Massachusetts
+PB  - Academic Press Inc.
+AB  - Because conducting population-based oral health screening is resource intensive, oral health data at small-area levels (e.g., county-level) are not commonly available. We applied the multilevel logistic regression and poststratification method to estimate county-level prevalence of untreated dental caries among children aged 6-9years in the United States using data from the National Health and Nutrition Examination Survey (NHANES) 2005-2010 linked with various area-level data at census tract, county and state levels. We validated model-based national estimates against direct estimates from NHANES. We also compared model-based estimates with direct estimates from select State Oral Health Surveys (SOHS) at state and county levels. The model with individual-level covariates only and the model with individual-, census tract- and county-level covariates explained 7.2% and 96.3% respectively of overall county-level variation in untreated caries. Model-based county-level prevalence estimates ranged from 4.9% to 65.2% with median of 22.1%. The model-based national estimate (19.9%) matched the NHANES direct estimate (19.8%). We found significantly positive correlations between model-based estimates for 8-year-olds and direct estimates from the third-grade State Oral Health Surveys (SOHS) at state level for 34 states (Pearson coefficient: 0.54, P=0.001) and SOHS estimates at county level for 53 New York counties (Pearson coefficient: 0.38, P=0.006). This methodology could be a useful tool to characterize county-level disparities in untreated dental caries among children aged 6-9years and complement oral health surveillance to inform public health programs especially when local-level data are not available although the lack of external validation due to data unavailability should be acknowledged.
+SN  - 0091-7435
+AD  - Division of Oral Health, Centers for Disease Control and Prevention (CDC), 4770 Buford HWY NE, MS-F80, Atlanta, GA 30341, United States
+AD  - Economic Research Service, US Department of Agriculture, 355 E Street, SW, Washington, DC 20024, United States
+AD  - Division of Population Health, CDC, 4770 Buford HWY NE, MS-F78, Atlanta, GA 30341, United States
+AD  - CyberData Technologies, Inc., 455 Springpark Place, Suite 300, Herndon, VA 20170, United States
+U2  - PMID: NLM29155223.
+DO  - 10.1016/j.ypmed.2017.11.015
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=129335656&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+AU  - Downes, Marnie
+AU  - Carlin, John B
+AN  - 31172582
+ID  - 31172582
+T1  - Multilevel regression and poststratification as a modeling approach for estimating population quantities in large population health studies: A simulation study.
+JO  - Biometrical journal. Biometrische Zeitschrift
+JF  - Biometrical journal. Biometrische Zeitschrift
+JA  - Biom J
+Y1  - 2020/03//
+VL  - 62
+IS  - 2
+SP  - 479
+EP  - 491
+CY  - Germany
+PB  - Wiley-VCH Verlag GmbH & Co. KGaA
+SN  - 1521-4036
+AD  - Department of Paediatrics, The University of Melbourne, Melbourne, Victoria, Australia.; Murdoch Children's Research Institute, Melbourne, Victoria, Australia.
+AD  - Department of Paediatrics, The University of Melbourne, Melbourne, Victoria, Australia.; Murdoch Children's Research Institute, Melbourne, Victoria, Australia.; Centre of Epidemiology and Biostatistics, Melbourne School of Population and Global Health, The University of Melbourne, Melbourne, Victoria, Australia.
+N1  - Accession Number: 31172582. Language: English. Date Revised: 20210111. Date Created: 20190608. Date Completed: 20210111. Update Code: 20210210. Publication Type: Journal Article, Research Support, Non-U.S. Gov't. Journal ID: 7708048. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Biom J. Linked References: Australian Bureau of Statistics (2011). How Australia takes a Census 2011. Report No.: 2903.0. Canberra, ACT: Australian Bureau of Statistics.; Australian Bureau of Statistics (2013). Australian Statistical Geography Standard (ASGS): Volume 5 - Remoteness Structure, July 2011. Report No.: 1270.0.55.005. Canberra, ACT: Australian Bureau of Statistics.; Australian Government Bureau of Meteorology (2018). Climate data online. Retrieved from http://www.bom.gov.au/climate/data/index.shtml.; Australian Government Geoscience Australia (2019). Land areas of states and territories. Retrieved from https://www.ga.gov.au/scientific-topics/national-location-information/dimensions/area-of-australia-states-and-territories.; Australian Institute of Health and Welfare (2003). The Active Australia Survey: A guide and manual for implementation, analysis and reporting. Canberra, Australia: Australian Institute of Health and Welfare.; Bates, D., Maechler, M., & Bolker, B. (2013). lme4: Linear mixed-effects models using S4 classes. Retrieved from http://CRAN.R-project.org/package=lme4 R package version 0.999999-2.; Buttice, M. K., & Highton, B. (2013). How does multilevel regression and poststratification perform with conventional national surveys? Political Analysis, 21, 449-467.; Currier, D., Pirkis, J., Carlin, J., Degenhardt, L., Dharmage, S. C., Giles-Corti, B., … English, D. R. (2016). The Australian longitudinal study on male health- Methods. BMC Public Health, 16(Suppl 3:1043), 6-13.; Downes, M., Gurrin, L., English, D., Pirkis, J., Currier, D., Spittal, M. J., & Carlin, J. B. (2018). Multilevel regression and poststratification: A modelling approach to estimating population quantities from highly selected survey samples. American Journal of Epidemiology, 187, 1780-1790.; Eke, P. I., Zhang, X., Lu, H., Wei, L., Thornton-Evans, G., Greenlund, K. J., … Croft, J. B. (2016). Predicting periodontitis at state and local levels in the United States. Journal of Dental Research, 95, 515-522.; Gelman, A. (2007). Struggles with survey weighting and regression modeling. Statistical Science, 22, 153-164.; Gelman, A., & Carlin, J. (2002). Poststratification and weighting adjustments. In R. M. Groves, D. A. Dillman, J. L. Eltinge, & R. J. A. Little (Eds.), Survey Nonresponse (pp. 289-302). New York, NY: Wiley.; Gelman, A., & Hill, J. (2007). Data Analysis Using Regression and Multilevel/Hierarchical Models. Cambridge, NY: Cambridge University Press.; Gelman, A., & Little, T. C. (1997). Poststratification into many categories using hierarchical logistic regression. Survey Methodology, 23, 127-135.; Keiding, N., & Louis, T. A. (2016). Perils and potentials of self-selected entry to epidemiological studies and surveys. Journal of the Royal Statistical Society Series a-Statistics in Society, 179, 319-376.; Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the States? American Journal of Political Science, 53, 107-121.; Lax, J. R., & Phillips, J. H. (2013). How should we estimate subnational opinion using MRP? Preliminary findings and recommendations. Presented at Midwest Political Science Association. Retrieved from http://www.columbia.edu/~jrl2124/mrp2.pdf.; Lin, M., Zhang, X., Holt, J. B., Robison, V., Li, C. H., & Griffin, S. O. (2018). Multilevel model to estimate county-level untreated dental caries among US children aged 6-9 years using the National Health and Nutrition Examination Survey. Preventive Medicine, 111, 291-298.; Morris, T. P., White, I. R., & Crowther, M. J. (2019). Using simulation studies to evaluate statistical methods. Statistics in Medicine, 38, 2074-2102.; Park, D. K., Gelman, A., & Bafumi, J. (2004). Bayesian multilevel estimation with poststratification: State-level estimates from national polls. Political Analysis, 12, 375-385.; Pirkis, J., Currier, D., Carlin, J., Degenhardt, L., Dharmage, S. C., Giles-Corti, B., … English, D. R. (2017). Cohort profile: Ten to men (The Australian Longitudinal Study on Male Health). International Journal of Epidemiology, 46, 793-794.; Selb, P., & Munzert, S. (2011). Estimating constituency preferences from sparse survey data using auxillary geographic information. Political Analysis, 19, 455-470.; Spittal, M., Carlin, J., Currier, D., Downes, M., English, D. R., Gordon, I., … Gurrin, L. (2016). The Australian Longitudinal Study on Male Health sampling design and survey weighting: Implications for analysis and interpretation of clustered data. BMC Public Health, 16(Suppl 3:1043), 15-22.; Stan Development Team (2016). RStan: The R interface to Stan, Version 2.9.0. 2016. Retrieved from http://mc-stan.org.; Wang, W., Rothschild, D., Goel, S., & Gelman, A. (2015). Forecasting elections with non-representative polls. International Journal of Forecasting, 31, 980-991.; Warshaw, C., & Rodden, J. (2012). How should we measure district-level public opinion on individual issues? The Journal of Politics, 74, 203-219.; Zhang, X., Holt, J. B., Lu, H., Wheaton, A. G., Ford, E. S., Greenlund, K. J., & Croft, J. B. (2014). Multilevel regression and poststratification for small-area estimation of population health outcomes: A case study of chronic obstructive pulmonary disease prevalence using the behavioral risk factor surveillance system. American Journal of Epidemiology, 179, 1025-1033.; Zhang, X., Holt, J. B., Yun, S., Lu, H., Greenlund, K. J., & Croft, J. B. (2015). Validation of multilevel regression and poststratification methodology for small area estimation of health indicators from the behavioral risk factor surveillance system. American Journal of Epidemiology, 182, 127-137.. Linking ISSN: 03233847. Subset: MEDLINE; Date of Electronic Publication: 2019 Jun 06. Current Imprints: Publication: <2005-> : Weinheim : Wiley-VCH Verlag GmbH & Co. KGaA; Original Imprints: Publication: Weinheim, Wiley-VCH Verlag GmbH & Co. KGaA
+AB  - There are now a growing number of applications of multilevel regression and poststratification (MRP) in population health and epidemiological studies. MRP uses multilevel regression to model individual survey responses as a function of demographic and geographic covariates. Estimated mean outcome values for each demographic-geographic respondent subtype are then weighted by the proportions of each subtype in the population to produce an overall population-level estimate. We recently reported an extensive case study of a large nationwide survey and found that MRP performed favorably compared to conventional survey sampling weights for the estimation of population descriptive quantities in a highly selected sample. In this study, we aimed to evaluate, by way of a simulation experiment, both the accuracy and precision of MRP versus survey sampling weights in the context of large population health studies. While much of the research into MRP has been focused on U.S. political and social science, we considered an alternative population structure of smaller size and with notably fewer geographic subsets. We explored the impact on MRP performance of sample size, model misspecification, interactions, and the addition of a geographic-level covariate. MRP was found to achieve generally superior performance in both accuracy and precision at both the national and state levels. Results were generally robust to model misspecification, and MRP performance was further improved by the inclusion of a geographic-level covariate. These findings offer further evidence that MRP provides a promising analytic approach for addressing participation bias in the estimation of population descriptive quantities from large-scale health surveys and cohort studies. (© 2019 WILEY-VCH Verlag GmbH & Co. KGaA, Weinheim.)
+KW  - Health*
+KW  - Models, Statistical*
+KW  - Biometry/*methods
+KW  - Epidemiologic Studies
+KW  - Humans
+KW  - Probability
+KW  - Regression Analysis
+KW  - Sample Size
+KW  - multilevel regression and poststratification*
+KW  - participation bias*
+KW  - selection bias*
+KW  - simulation*
+KW  - survey weighting*
+DO  - 10.1002/bimj.201900023
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=31172582&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Downes, Marnie
+AU  - Carlin, John
+AN  - 32788305
+ID  - 32788305
+T1  - Multilevel regression and poststratification for estimating population quantities from large health studies: a simulation study based on US population structure.
+JO  - Journal of epidemiology and community health
+JF  - Journal of epidemiology and community health
+JA  - J Epidemiol Community Health
+Y1  - 2020/12//
+VL  - 74
+IS  - 12
+SP  - 1060
+EP  - 1068
+CY  - England
+PB  - British Medical Assn
+SN  - 1470-2738
+AD  - Department of Paediatrics, The University of Melbourne, Parkville, Australia marnie.downes@mcri.edu.au.; Murdoch Children's Research Institute, Parkville, Australia.
+AD  - Department of Paediatrics, The University of Melbourne, Parkville, Australia.; Murdoch Children's Research Institute, Parkville, Australia.; Melbourne School of Population and Global Health, The University of Melbourne, Parkville, Australia.
+N1  - Accession Number: 32788305. Language: English. Date Revised: 20210309. Date Created: 20200814. Update Code: 20210309. Publication Type: Journal Article, Research Support, Non-U.S. Gov't. Journal ID: 7909766. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: J Epidemiol Community Health. Linking ISSN: 0143005X. Subset: In Process; MEDLINE; Date of Electronic Publication: 2020 Aug 11. ; Original Imprints: Publication: London, British Medical Assn.
+AB  - Introduction: Recruiting a representative sample of participants is becoming increasingly difficult in large-scale health surveys. Multilevel regression and poststratification (MRP) has been shown to be effective in estimating population descriptive quantities in non-representative samples. We performed a simulation study, previously applied to an Australian population, this time to a US population, to assess MRP performance.; Methods: Data were extracted from the 2017 Current Population Survey representing a population of US adult males aged 18-55 years. Simulated datasets of non-representative samples were generated. State-level prevalence estimates for a dichotomous outcome using MRP were compared with the use of sampling weights (with and without raking adjustment). We also investigated the impact on MRP performance of sample size, model misspecification, interactions and the addition of a geographic-level covariate.; Results: MRP was found to achieve generally superior performance, with large gains in precision vastly outweighing the increased accuracy observed for sampling weights with raking adjustment. MRP estimates were generally robust to model misspecification. We found a tendency of MRP to over-pool between-state variation in the outcome, particularly for the least populous states and small sample sizes. The inclusion of a state-level covariate appeared to mitigate this and further improve MRP performance.; Discussion: MRP has been shown to be effective in estimating population descriptive quantities in two different populations. This provides promising evidence for the general applicability of MRP to populations with different geographic structures. MRP appears to be a valuable analytic strategy for addressing potential participation bias from large-scale health surveys. (© Author(s) (or their employer(s)) 2020. No commercial re-use. See rights and permissions. Published by BMJ.)
+KW  - Multilevel modelling*
+KW  - biostatistics*
+KW  - study design*
+DO  - 10.1136/jech-2020-214346
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=32788305&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Zhang, Xingyou
+AU  - Holt, James B
+AU  - Lu, Hua
+AU  - Wheaton, Anne G
+AU  - Ford, Earl S
+AU  - Greenlund, Kurt J
+AU  - Croft, Janet B
+AN  - 24598867
+ID  - 24598867
+T1  - Multilevel regression and poststratification for small-area estimation of population health outcomes: a case study of chronic obstructive pulmonary disease prevalence using the behavioral risk factor surveillance system.
+JO  - American journal of epidemiology
+JF  - American journal of epidemiology
+JA  - Am J Epidemiol
+Y1  - 2014/04/15/
+VL  - 179
+IS  - 8
+SP  - 1025
+EP  - 1033
+CY  - United States
+PB  - Oxford University Press
+SN  - 1476-6256
+N1  - Accession Number: 24598867. Language: English. Date Revised: 20140327. Date Created: 20140307. Date Completed: 20140512. Update Code: 20210210. Publication Type: Journal Article. Journal ID: 7910653. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Am J Epidemiol. Linking ISSN: 00029262. Subset: MEDLINE; Date of Electronic Publication: 2014 Mar 04. Current Imprints: Publication: Cary, NC : Oxford University Press; Original Imprints: Publication: Baltimore, School of Hygiene and Public Health of Johns Hopkins Univ.
+AB  - A variety of small-area statistical models have been developed for health surveys, but none are sufficiently flexible to generate small-area estimates (SAEs) to meet data needs at different geographic levels. We developed a multilevel logistic model with both state- and nested county-level random effects for chronic obstructive pulmonary disease (COPD) using 2011 data from the Behavioral Risk Factor Surveillance System. We applied poststratification with the (decennial) US Census 2010 counts of census-block population to generate census-block-level SAEs of COPD prevalence which could be conveniently aggregated to all other census geographic units, such as census tracts, counties, and congressional districts. The model-based SAEs and direct survey estimates of COPD prevalence were quite consistent at both the county and state levels. The Pearson correlation coefficient was 0.99 at the state level and ranged from 0.88 to 0.95 at the county level. Our extended multilevel regression modeling and poststratification approach could be adapted for other geocoded national health surveys to generate reliable SAEs for population health outcomes at all administrative and legislative geographic levels of interest in a scalable framework.
+KW  - Data Interpretation, Statistical*
+KW  - Epidemiologic Research Design*
+KW  - Logistic Models*
+KW  - Pulmonary Disease, Chronic Obstructive/*epidemiology
+KW  - Adolescent
+KW  - Adult
+KW  - Aged
+KW  - Aged, 80 and over
+KW  - Behavioral Risk Factor Surveillance System
+KW  - Censuses
+KW  - Female
+KW  - Humans
+KW  - Male
+KW  - Middle Aged
+KW  - Prevalence
+KW  - Self Report
+KW  - United States/epidemiology
+KW  - Young Adult
+KW  - Behavioral Risk Factor Surveillance System
+KW  - chronic obstructive pulmonary disease
+KW  - multilevel regression and poststratification
+KW  - population health outcomes
+KW  - small-area estimation
+DO  - 10.1093/aje/kwu018
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=24598867&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+ID  - 144947362
+T1  - Multilevel Regression and Poststratification Versus Survey Sample Weighting for Estimating Population Quantities in Large Population Health Studies.
+AU  - Downes, Marnie
+AU  - Carlin, John B
+Y1  - 2020/07//
+N1  - Accession Number: 144947362. Language: English. Entry Date: 20200819. Revision Date: 20200819. Publication Type: Article; equations & formulas; research; tables/charts. Journal Subset: Biomedical; Editorial Board Reviewed; Expert Peer Reviewed; Peer Reviewed; Public Health; USA. NLM UID: 7910653. 
+KW  - Study Design -- Methods -- Australia
+KW  - Multiple Regression
+KW  - Surveys
+KW  - Population Density
+KW  - Probability
+KW  - Human
+KW  - Epidemiological Research
+KW  - Bias (Research)
+KW  - Australia
+SP  - 717
+EP  - 725
+JO  - American Journal of Epidemiology
+JF  - American Journal of Epidemiology
+JA  - AM J EPIDEMIOL
+VL  - 189
+IS  - 7
+PB  - Oxford University Press / USA
+AB  - Multilevel regression and poststratification (MRP) is a model-based approach for estimating a population parameter of interest, generally from large-scale surveys. It has been shown to be effective in highly selected samples, which is particularly relevant to investigators of large-scale population health and epidemiologic surveys facing increasing difficulties in recruiting representative samples of participants. We aimed to further examine the accuracy and precision of MRP in a context where census data provided reasonable proxies for true population quantities of interest. We considered 2 outcomes from the baseline wave of the Ten to Men study (Australia, 2013–2014) and obtained relevant population data from the 2011 Australian Census. MRP was found to achieve generally superior performance relative to conventional survey weighting methods for the population as a whole and for population subsets of varying sizes. MRP resulted in less variability among estimates across population subsets relative to sample weighting, and there was some evidence of small gains in precision when using MRP, particularly for smaller population subsets. These findings offer further support for MRP as a promising analytical approach for addressing participation bias in the estimation of population descriptive quantities from large-scale health surveys and cohort studies.
+SN  - 0002-9262
+DO  - 10.1093/aje/kwaa053
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=144947362&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+ID  - 131062265
+T1  - Multilevel Regression and Poststratification: A Modeling Approach to Estimating Population Quantities From Highly Selected Survey Samples.
+AU  - Downes, Marnie
+AU  - Gurrin, Lyle C
+AU  - English, Dallas R
+AU  - Pirkis, Jane
+AU  - Currier, Dianne
+AU  - Spittal, Matthew J
+AU  - Carlin, John B
+Y1  - 2018/08//
+N1  - Accession Number: 131062265. Language: English. Entry Date: 20180807. Revision Date: 20190801. Publication Type: Article; equations & formulas; research; tables/charts. Journal Subset: Biomedical; Editorial Board Reviewed; Expert Peer Reviewed; Peer Reviewed; Public Health; USA. NLM UID: 7910653. 
+KW  - Regression
+KW  - Population Density
+KW  - Elections
+KW  - Descriptive Statistics
+KW  - Consumer Participation
+KW  - Human
+KW  - Surveys
+KW  - Prospective Studies -- Australia
+KW  - Male
+KW  - Australia
+KW  - Data Analysis Software
+KW  - Precision
+KW  - Bias (Research)
+SP  - 1780
+EP  - 1790
+JO  - American Journal of Epidemiology
+JF  - American Journal of Epidemiology
+JA  - AM J EPIDEMIOL
+VL  - 187
+IS  - 8
+PB  - Oxford University Press / USA
+AB  - Investigators in large-scale population health studies face increasing difficulties in recruiting representative samples of participants. Nonparticipation, item nonresponse, and attrition, when follow-up is involved, often result in highly selected samples even in well-designed studies. We aimed to assess the potential value of multilevel regression and poststratification, a method previously used to successfully forecast US presidential election results, for addressing biases due to nonparticipation in the estimation of population descriptive quantities in large cohort studies. The investigation was performed as an extensive case study using baseline data (2013–2014) from a large national health survey of Australian males (Ten to Men: The Australian Longitudinal Study on Male Health). Analyses were performed in the open-source Bayesian computational package RStan. Results showed greater consistency and precision across population subsets of varying sizes when compared with estimates obtained using conventional survey sampling weights. Estimates for smaller population subsets exhibited a greater degree of shrinkage towards the national estimate. Multilevel regression and poststratification provides a promising analytical approach to addressing potential participation bias in the estimation of population descriptive quantities from large-scale health surveys and cohort studies.
+SN  - 0002-9262
+AD  - Department of Paediatrics, Melbourne Medical School, University of Melbourne, Melbourne, Victoria, Australia Murdoch Children’s Research Institute, Melbourne, Victoria, Australia
+AD  - Centre for Epidemiology and Biostatistics, Melbourne School of Population and Global Health, University of Melbourne, Melbourne, Victoria, Australia
+AD  - Centre for Mental Health, Melbourne School of Population and Global Health, University of Melbourne, Melbourne, Victoria, Australia
+AD  - Department of Paediatrics, Melbourne Medical School, University of Melbourne, Melbourne, Victoria, Australia Murdoch Children’s Research Institute, Melbourne, Victoria, Australia Centre for Epidemiology and Biostatistics, Melbourne School of Population and Global Health, University of Melbourne, Melbourne, Victoria, Australia
+DO  - 10.1093/aje/kwy070
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=131062265&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+ID  - 142799098
+T1  - Performance, motivation, and enjoyment in young female basketball players: An interdisciplinary approach.
+AU  - Soares, André L. A.
+AU  - Leonardi, Thiago J.
+AU  - Silva, Jaqueline
+AU  - Nascimento, Juarez V.
+AU  - Paes, Roberto R.
+AU  - Gonçalves, Carlos E.
+AU  - Carvalho, Humberto M.
+Y1  - 2020/04/15/
+N1  - Accession Number: 142799098. Language: English. Entry Date: 20200422. Revision Date: 20200430. Publication Type: Article; equations & formulas; research; tables/charts. Journal Subset: Allied Health; Biomedical; Europe; Peer Reviewed; UK & Ireland. NLM UID: 8405364. 
+KW  - Physical Performance -- Evaluation
+KW  - Athletic Performance -- Evaluation
+KW  - Happiness -- Evaluation
+KW  - Motivation
+KW  - Body Size
+KW  - Basketball
+KW  - Athletes, Female
+KW  - Human
+KW  - Menarche
+KW  - Competitive Behavior -- Evaluation
+KW  - Adolescence
+KW  - Multiple Regression
+KW  - Coaches, Athletic
+KW  - Age Factors
+KW  - Competency Assessment
+KW  - Athletic Training Programs
+KW  - Commitment
+KW  - Probability
+SP  - 873
+EP  - 885
+JO  - Journal of Sports Sciences
+JF  - Journal of Sports Sciences
+JA  - J SPORTS SCI
+VL  - 38
+IS  - 8
+CY  - Philadelphia, Pennsylvania
+PB  - Taylor & Francis Ltd
+AB  - The purpose of this study was to examine the variation in accumulated basketball training experience, body size, functional performance, deliberate practice motivation, achievement and competitiveness motivation and sources of enjoyment among young female basketball players, partitioning the potential variation by individuals´ biological characteristics (menarche status) and contextual characteristics (competitive age group and competitive level). We considered 114 adolescent female basketball players aged 14.3 (1.8) years. We used multilevel regression and poststratification estimations. The adolescent female basketball players selected for state-level had more accumulated experience, were taller and with better functional performance. Conditional on the data, youth female coaches tend to value (probably overvalue) size and function when selecting/promoting players, even at early age groups, likely contributing to an overrepresentation of early maturing girls in at early age groups. Players from club- and state-level were similarly highly motivated for deliberate practice and to achievement. Only for competitiveness, state-level players had higher values than club level players. The sources of enjoyment were influenced by context (competitive levels) for self-referenced competencies and others-referenced competencies. Structured programs of training and competition in youth female basketball provide a nurturing environment for the development of players´ engagement and commitment to training and excellence attainment.
+SN  - 0264-0414
+AD  - Department of Physical Education, School of Sports, Federal University of Santa Catarina, Florianópolis, Brazil
+AD  - Physical Education School, Federal University of Rio Grande Do Sul, Porto Alegre, Brazil
+AD  - Faculty Physical Education, University of Campinas, Campinas/São Paulo, Brazil
+AD  - Faculty of Sport Sciences and Physical Education, University of Coimbra, Coimbra, Portugal
+DO  - 10.1080/02640414.2020.1736247
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=142799098&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+ID  - 114697694
+T1  - Predicting Periodontitis at State and Local Levels in the United States.
+AU  - Eke, P. I.
+AU  - Zhang, X.
+AU  - Lu, H.
+AU  - Wei, L.
+AU  - Thornton-Evans, G.
+AU  - Greenlund, K. J.
+AU  - Holt, J. B.
+AU  - Croft, J. B.
+Y1  - 2016/05//
+N1  - Accession Number: 114697694. Language: English. Entry Date: 20160908. Revision Date: 20180911. Publication Type: journal article; equations & formulas; pictorial; research; tables/charts. Journal Subset: Biomedical; Blind Peer Reviewed; Expert Peer Reviewed; Peer Reviewed; USA. Instrumentation: Behavioral Risk Factor Surveillance System (BRFSS); National Health and Nutrition Examination Survey (NHANES). Grant Information: CC999999//Intramural CDC HHS/United States. NLM UID: 0354343. 
+KW  - Periodontitis -- Epidemiology
+KW  - Census
+KW  - Poverty
+KW  - Middle Age
+KW  - Black Persons -- Statistics and Numerical Data
+KW  - Male
+KW  - Risk Assessment
+KW  - Smoking -- Epidemiology
+KW  - Forecasting
+KW  - Female
+KW  - Algorithms
+KW  - White Persons -- Statistics and Numerical Data
+KW  - Ethnic Groups -- Statistics and Numerical Data
+KW  - Aged
+KW  - Surveys
+KW  - Sex Factors
+KW  - Adult
+KW  - United States
+KW  - Age Factors
+KW  - Population Surveillance
+KW  - Hispanic Americans -- Statistics and Numerical Data
+KW  - Questionnaires
+KW  - Funding Source
+KW  - Human
+SP  - 515
+EP  - 522
+JO  - Journal of Dental Research
+JF  - Journal of Dental Research
+JA  - J DENT RES
+VL  - 95
+IS  - 5
+CY  - Thousand Oaks, California
+PB  - Sage Publications Inc.
+AB  - The objective of the study was to estimate the prevalence of periodontitis at state and local levels across the United States by using a novel, small area estimation (SAE) method. Extended multilevel regression and poststratification analyses were used to estimate the prevalence of periodontitis among adults aged 30 to 79 y at state, county, congressional district, and census tract levels by using periodontal data from the National Health and Nutrition Examination Survey (NHANES) 2009-2012, population counts from the 2010 US census, and smoking status estimates from the Behavioral Risk Factor Surveillance System in 2012. The SAE method used age, race, gender, smoking, and poverty variables to estimate the prevalence of periodontitis as defined by the Centers for Disease Control and Prevention/American Academy of Periodontology case definitions at the census block levels and aggregated to larger administrative and geographic areas of interest. Model-based SAEs were validated against national estimates directly from NHANES 2009-2012. Estimated prevalence of periodontitis ranged from 37.7% in Utah to 52.8% in New Mexico among the states (mean, 45.1%; median, 44.9%) and from 33.7% to 68% among counties (mean, 46.6%; median, 45.9%). Severe periodontitis ranged from 7.27% in New Hampshire to 10.26% in Louisiana among the states (mean, 8.9%; median, 8.8%) and from 5.2% to 17.9% among counties (mean, 9.2%; median, 8.8%). Overall, the predicted prevalence of periodontitis was highest for southeastern and southwestern states and for geographic areas in the Southeast along the Mississippi Delta, as well as along the US and Mexico border. Aggregated model-based SAEs were consistent with national prevalence estimates from NHANES 2009-2012. This study is the first-ever estimation of periodontitis prevalence at state and local levels in the United States, and this modeling approach complements public health surveillance efforts to identify areas with a high burden of periodontitis.
+SN  - 0022-0345
+AD  - Division of Population Health, Centers for Disease Control and Prevention (CDC), Atlanta, GA, USA
+AD  - DB Consulting Group, Inc., Atlanta, GA, USA
+AD  - Division of Oral Health, Centers for Disease Control and Prevention (CDC), Atlanta, GA, USA
+U2  - PMID: NLM26848071.
+DO  - 10.1177/0022034516629112
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=114697694&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+AU  - Jonge, Chad P Kiewiet de
+AU  - Langer, Gary
+AU  - Sinozich, Sofi
+T1  - Predicting State Presidential Election Results Using National Tracking Polls and Multilevel Regression with Poststratification (MRP).
+JO  - Public Opinion Quarterly
+JF  - Public Opinion Quarterly
+Y1  - 2018///Fall2018
+VL  - 82
+IS  - 3
+M3  - Article
+SP  - 419
+EP  - 446
+PB  - Oxford University Press / USA
+SN  - 0033362X
+AB  - This paper presents state-level estimates of the 2016 presidential election using data from the ABC News/ Washington Post tracking poll and multilevel regression with poststratification (MRP). While previous implementations of MRP for election forecasting have relied on data from prior elections to establish poststratification targets for the composition of the electorate, in this paper we estimate both turnout and vote preference from the same preelection poll. Through Bayesian estimation we are also able to capture uncertainty in both estimated turnout and vote preferences. This approach correctly predicts 50 of 51 contests, showing greater accuracy than comparison models that rely on the 2012 Current Population Survey Voting and Registration Supplement for turnout. While the model does not perfectly estimate turnout as a share of the voting age population, popular vote shares, or vote margins in each state, it is more accurate than predictions published by polling aggregators or other published MRP estimators. The paper also reports how vote preferences changed over the course of the 18-day tracking period, compares subgroup-level estimates of turnout and vote preferences with the 2016 CPS Survey and National Election Pool exit poll, and summarizes the accuracy of the approach applied to the 2000, 2004, 2008, and 2012 elections. The paper concludes by discussing how researchers can make use of this method as an alternative approach to survey weighting and likely voter modeling as well as in forecasting future elections. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Public Opinion Quarterly is the property of Oxford University Press / USA and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - United States presidential election, 2016
+KW  - Election forecasting
+KW  - U.S. states -- Politics & government
+KW  - Voter turnout
+KW  - Voters -- Attitudes
+KW  - United States presidential election, 2008
+KW  - Popular vote
+KW  - United States presidential election, 2012
+N1  - Accession Number: 132533315; Jonge, Chad P Kiewiet de 1; Email Address: chadkdj@gmail.com; Langer, Gary 2; Sinozich, Sofi 2; Affiliations: 1: Division of Political Studies at the Centro de Investigación y Docencia Económicas (CIDE), Mexico City, Mexico; 2: Langer Research Associates, New York, NY, USA; Issue Info: Fall2018, Vol. 82 Issue 3, p419; Subject Term: United States presidential election, 2016; Subject Term: Election forecasting; Subject Term: U.S. states -- Politics & government; Subject Term: Voter turnout; Subject Term: Voters -- Attitudes; Subject Term: United States presidential election, 2008; Subject Term: Popular vote; Subject Term: United States presidential election, 2012; Number of Pages: 28p; Illustrations: 6 Charts, 4 Graphs; Document Type: Article; Full Text Word Count: 9771
+L3  - 10.1093/poq/nfy023
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=ufh&AN=132533315&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Communication & Mass Media Complete
+ER  - 
+
+TY  - JOUR
+AN  - 32395762
+ID  - 32395762
+T1  - RE: "MULTILEVEL REGRESSION AND POSTSTRATIFICATION VERSUS SURVEY SAMPLE WEIGHTING FOR ESTIMATING POPULATION QUANTITIES IN LARGE POPULATION HEALTH STUDIES".
+JO  - American journal of epidemiology
+JF  - American journal of epidemiology
+JA  - Am J Epidemiol
+Y1  - 2020/07/01/
+VL  - 189
+IS  - 7
+SP  - 746
+CY  - United States
+PB  - Oxford University Press
+SN  - 1476-6256
+N1  - Accession Number: 32395762. Language: English. Date Revised: 20200921. Date Created: 20200513. Update Code: 20210301. Publication Type: Journal Article, Published Erratum. Journal ID: 7910653. Publication Model: Print. Cited Medium: Internet. NLM ISO Abbr: Am J Epidemiol. Comment: Erratum for: Am J Epidemiol. 2020 Jul 1;189(7):717-725. (PMID: 32285096). Linking ISSN: 00029262. Subset: PubMed not MEDLINE; MEDLINE; Date of Electronic Publication: 20200701. Current Imprints: Publication: Cary, NC : Oxford University Press; Original Imprints: Publication: Baltimore, School of Hygiene and Public Health of Johns Hopkins Univ.
+DO  - 10.1093/aje/kwaa064
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=32395762&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Mortimore, Roger
+T1  - Recent Articles in the Field of Public Opinion Research.
+JO  - International Journal of Public Opinion Research
+JF  - International Journal of Public Opinion Research
+Y1  - 2014/06//
+VL  - 26
+IS  - 2
+M3  - Article
+SP  - 273
+EP  - 276
+SN  - 09542892
+AB  - The article reviews several articles which includes "How Does Multilevel Regression and Poststratification Perform With Conventional National Surveys" by Matthew K. Buttice and Benjamin Highton which appeared in an issue of "Political Analysis," and "More Than Just an Opinion: The Effect of Verbal Self-Expression on Consumer Choice," by Michail D. Kokkoris and Ulrich Kuhne which appeared in an issue of "Psychology and Marketing."
+KW  - Political science
+KW  - Self-expression
+KW  - Customer satisfaction
+KW  - Regression (Psychology)
+KW  - Self-actualization (Psychology)
+N1  - Accession Number: 96556899; Mortimore, Roger 1; Affiliations: 1: Ipsos MORI; Issue Info: Jun2014, Vol. 26 Issue 2, p273; Thesaurus Term: Political science; Thesaurus Term: Self-expression; Thesaurus Term: Customer satisfaction; Subject Term: Regression (Psychology); Subject Term: Self-actualization (Psychology); Number of Pages: 4p; Document Type: Article
+L3  - 10.1093/ijpor/edu017
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=ufh&AN=96556899&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Communication & Mass Media Complete
+ER  - 
+
+TY  - JOUR
+AU  - Curiel, John A
+AU  - Slade, Gary D
+AU  - Christian, Thu-Mai L
+AU  - Lafferty-Hess, Sophia
+AU  - Carsey, Thomas M
+AU  - Sanders, Anne E
+AN  - 30709861
+ID  - 30709861
+T1  - Referendum opposition to fluoridation and health literacy: a cross-sectional analysis conducted in three large US cities.
+JO  - BMJ open
+JF  - BMJ open
+JA  - BMJ Open
+Y1  - 2019/02/01/
+VL  - 9
+IS  - 2
+SP  - e022580
+CY  - England
+PB  - BMJ Publishing Group Ltd
+SN  - 2044-6055
+AD  - Odum Institute for Research in Social Science, University of North Carolina, Chapel Hill, North Carolina, USA.
+AD  - Department of Dental Ecology, University of North Carolina at Chapel Hill, Chapel Hill, North Carolina, USA.
+AD  - Odum Institute for Research in Social Science, University of North Carolina, Chapel Hill, North Carolina, USA.
+AD  - Odum Institute for Research in Social Science, University of North Carolina, Chapel Hill, North Carolina, USA.
+AD  - Odum Institute for Research in Social Science, University of North Carolina, Chapel Hill, North Carolina, USA.
+AD  - Department of Dental Ecology, University of North Carolina at Chapel Hill, Chapel Hill, North Carolina, USA.
+N1  - Accession Number: 30709861. Language: English. Date Revised: 20200309. Date Created: 20190203. Date Completed: 20200218. Update Code: 20210210. Publication Type: Journal Article, Research Support, N.I.H., Extramural. Journal ID: 101552874. Publication Model: Electronic. Cited Medium: Internet. NLM ISO Abbr: BMJ Open. PubMed Central ID: PMC6367990. Linked References: Am J Public Health. 1985 Aug;75(8):888-91. (PMID: 4025650); JAMA. 1999 Feb 10;281(6):552-7. (PMID: 10022112); J Public Health Policy. 1998;19(3):303-18. (PMID: 9798373); MMWR Morb Mortal Wkly Rep. 1999 Apr 2;48(12):241-3. (PMID: 10220250); Science. 1968 Oct 25;162(3852):427-33. (PMID: 5683048); AJS. 2008 Jan 28;114(2):408-446. (PMID: 24932012). Linking ISSN: 20446055. Subset: MEDLINE; Grant Information: UH2 DE025494 United States DE NIDCR NIH HHS Date of Electronic Publication: 2019 Feb 01. ; Original Imprints: Publication: [London] : BMJ Publishing Group Ltd, 2011-
+AB  - Objective: To explore health literacy as a marker of voter confusion in order to understand the basis for public opposition to community water fluoridation.; Design: A cross-sectional study.; Setting: Conducted in three large US cities of San Antonio, Texas (602 voting precincts); Wichita, Kansas (171 voting precincts); and Portland, Oregon (132 voting precincts). Precinct-level voting data were compiled from community water fluoridation referendums conducted in San Antonio in 2002, Wichita in 2012 and Portland in 2013.; Participants: Voter turnout expressed as a percentage of registered voters was 38% in San Antonio (n=2 92 811), 47% in Wichita (n=129 199) and 38% in Portland (n=164 301).; Main Outcome Measures: The dependent variable was the percentage of votes in favour of fluoridating drinking water. Precinct-level voting data were mapped to precinct scores of health literacy, and to US Census and American Community Survey characteristics of race/ethnicity, age, income and educational attainment. Multilevel regression with post-stratification predicted the precinct mean health literacy scores, with weights generated from the National Association of Adult Literacy health literacy survey, with item response theory computed scoring for health literacy. Predictive models on voter support of community water fluoridation were compared using robust linear regression to determine how precinct-level characteristics influenced voter support in order to determine whether health literacy explained more variance in voting preference than sociodemographic characteristics.; Results: Precinct-level health literacy was positively associated with voter turnout, although sociodemographic characteristics were better predictors of turnout. Approximately 60% of voters opposed community water fluoridation in Wichita and Portland, whereas in San Antonio, a small majority (53%) voted in favour of it. Models suggest that a one SD increase in health literacy scores predicted a 12 percentage point increase support for community water fluoridation.; Conclusion: Educational attainment and health literacy are modifiable characteristics associated with voting precincts' support for community water fluoridation. (© Author(s) (or their employer(s)) 2019. Re-use permitted under CC BY-NC. No commercial re-use. See rights and permissions. Published by BMJ.)
+KW  - Fluoridation/*statistics & numerical data
+KW  - Health Literacy/*statistics & numerical data
+KW  - Adolescent
+KW  - Adult
+KW  - Aged
+KW  - Cities/epidemiology
+KW  - Cross-Sectional Studies
+KW  - Female
+KW  - Fluoridation/psychology
+KW  - Humans
+KW  - Male
+KW  - Middle Aged
+KW  - Politics
+KW  - Public Opinion
+KW  - United States
+KW  - Urban Population/statistics & numerical data
+KW  - Young Adult
+KW  - community water fluoridation*
+KW  - dental disease*
+KW  - public health*
+DO  - 10.1136/bmjopen-2018-022580
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=30709861&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Quinaud, Ricardo T.
+AU  - Fernandes, Ana
+AU  - Gonçalves, Carlos E.
+AU  - Carvalho, Humberto M.
+T1  - Student-Athletes' Motivation and Identity: Variation Among Brazilian and Portuguese University Student-Athletes.
+JO  - Psychological Reports
+JF  - Psychological Reports
+Y1  - 2020/10//
+VL  - 123
+IS  - 5
+M3  - Article
+SP  - 1703
+EP  - 1723
+PB  - Sage Publications Inc.
+SN  - 00332941
+AB  - This study examined the variation of student-athletes' identity and motivation across Portuguese and Brazilian universities, accounting for variation in gender, student-athletes' training hours per week, sports level, student-athletes status within each university, and university type. We initially established the validity of the Baller Identity Measurement Scale questionnaire and the Student-Athletes' Motivation toward Sports and Academics Questionnaire-based observations among 441 Brazilian and Portuguese student-athletes. Then, the validated version of the questionnaires was applied to a total sample of 765 student-athletes from Brazil (n= 568) and Portugal (n = 197). We further considered individual (hours of training and student-athlete status) and contextual characteristics (university type and country). Multilevel regression and poststratification were used to estimate each student-athlete identity and motivation as a function of his or her individual and contextual characteristics. Overall, the predictions showed that cultural (country), academic (type of university), and athletic (training hours) context likely have a substantial influence on student-athletes' identity and motivation. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Psychological Reports is the property of Sage Publications Inc. and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Forecasting
+KW  - Motivation (Psychology)
+KW  - Sports psychology
+KW  - Athletes
+KW  - Athlete training
+KW  - Scaling (Social sciences)
+KW  - College students
+KW  - Portugal
+KW  - Brazil
+KW  - identity
+KW  - motivation
+KW  - multilevel regression and poststratification
+KW  - psychometric
+KW  - questionnaires
+KW  - Sports
+KW  - university
+N1  - Accession Number: 145238892; Quinaud, Ricardo T. 1; Fernandes, Ana; Gonçalves, Carlos E. 2; Carvalho, Humberto M. 1; Email Address: hmoreiracarvalho@gmail.com; Affiliations: 1: Department of Physical Education, School of Sports, Federal University of Santa Catarina, Brazil; 2: Faculty of Sport Sciences and Physical Education, University of Coimbra, Portugal; Issue Info: Oct2020, Vol. 123 Issue 5, p1703; Thesaurus Term: Forecasting; Subject Term: Motivation (Psychology); Subject Term: Sports psychology; Subject Term: Athletes; Subject Term: Athlete training; Subject Term: Scaling (Social sciences); Subject Term: College students; Subject: Portugal; Subject: Brazil; Author-Supplied Keyword: identity; Author-Supplied Keyword: motivation; Author-Supplied Keyword: multilevel regression and poststratification; Author-Supplied Keyword: psychometric; Author-Supplied Keyword: questionnaires; Author-Supplied Keyword: Sports; Author-Supplied Keyword: university; NAICS/Industry Codes: 711219 Other Spectator Sports; NAICS/Industry Codes: 713940 Fitness and Recreational Sports Centers; Number of Pages: 21p; Document Type: Article; Full Text Word Count: 6418
+L3  - 10.1177/0033294119892885
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=145238892&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Lei, Rayleigh
+AU  - Gelman, Andrew
+AU  - Ghitza, Yair
+T1  - The 2008 Election: A Preregistered Replication Analysis.
+JO  - Statistics & Public Policy
+JF  - Statistics & Public Policy
+Y1  - 2017/01//
+VL  - 4
+IS  - 1
+M3  - Article
+SP  - 1
+EP  - 8
+SN  - 2330443X
+AB  - We present an increasingly stringent set of replications, a multilevel regression and poststratification analysis of polls from the 2008 U.S. presidential election campaign, focusing on a set of plots showing the estimated Republican vote share for whites and for all voters, as a function of income level in each of the states.  We start with a nearly exact duplication that uses the posted code and changes only the model-fitting algorithm; we then replicate using already-analyzed data from 2004; and finally we set up preregistered replications using two surveys from 2008 that we had not previously looked at. We have already learned from our preliminary, nonpreregistered replication, which has revealed a potential problem with the earlier published analysis; it appears that our model may not sufficiently account for nonsampling error, and that some of the patterns presented in that earlier article may simply reflect noise.  In addition to the substantive interest in validating earlier findings about demographics, geography, and voting, the present project serves as a demonstration of preregistration in a setting where the subject matter is historical (and thus the replication data exist before the preregistration plan is written) and where the analysis is exploratory (and thus a replication cannot be simply deemed successful or unsuccessful based on the statistical significance of some particular comparison).  Our replication analysis produced graphs that showed the same general pattern of income and voting as we had found in our earlier published work, but with some differences in particular states that we cannot easily explain and which seem too large to be explained by sampling variation. This process thus demonstrates how replication can raise concerns about an earlier published result. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Statistics & Public Policy is the property of Taylor & Francis Ltd and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Public opinion polls
+KW  - Regression analysis
+KW  - Bayes' estimation
+KW  - United States presidential election, 2008
+KW  - Election statistics
+KW  - Bayesian methods
+KW  - Other
+KW  - Process improvement
+N1  - Accession Number: 126867242; Lei, Rayleigh 1; Gelman, Andrew 2; Email Address: gelman@stat.columbia.edu; Ghitza, Yair 3; Affiliations: 1: University of Michigan, Ann Arbor, MI; 2: Columbia University, New York, NY; 3: Catalyst, Chicago, IL; Issue Info: 2017, Vol. 4 Issue 1, p1; Thesaurus Term: Public opinion polls; Thesaurus Term: Regression analysis; Thesaurus Term: Bayes' estimation; Subject Term: United States presidential election, 2008; Subject Term: Election statistics; Author-Supplied Keyword: Bayesian methods; Author-Supplied Keyword: Other; Author-Supplied Keyword: Process improvement; NAICS/Industry Codes: 541910 Marketing Research and Public Opinion Polling; Number of Pages: 8p; Document Type: Article
+L3  - 10.1080/2330443X.2016.1277966
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=126867242&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Hoover, Joe
+AU  - Dehghani, Morteza
+AN  - 31647254
+ID  - 31647254
+T1  - The big, the bad, and the ugly: Geographic estimation with flawed psychological data.
+JO  - Psychological methods
+JF  - Psychological methods
+JA  - Psychol Methods
+Y1  - 2020/08//
+VL  - 25
+IS  - 4
+SP  - 412
+EP  - 429
+CY  - United States
+PB  - American Psychological Association
+SN  - 1939-1463
+AD  - Department of Psychology.
+AD  - Department of Psychology.
+N1  - Accession Number: 31647254. Language: English. Date Revised: 20200828. Date Created: 20191025. Update Code: 20210210. Publication Type: Journal Article. Journal ID: 9606928. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Psychol Methods. Linking ISSN: 1082989X. Subset: In Process; MEDLINE; Grant Information: Army Research Lab Date of Electronic Publication: 2019 Oct 24. ; Original Imprints: Publication: Washington, DC : American Psychological Association, c1996-
+AB  - The geographic distribution of psychological constructs has long been an area of focus for psychological researchers. Recently, however, there has been increased interest in investigations of the so-called subnational distribution of psychological variables, which focus on localized groupings of individuals within spatial units, such as counties or states. By estimating the subnational distribution of a given outcome (e.g., estimating its state- or county-level means), researchers have been able to address questions about the spatial variation of a variety of psychological constructs and investigate the regional association between psychological phenomena and real-world outcomes, such as health outcomes, prosocial behavior, and racial inequity. Unfortunately, however, there are many challenges to estimating a construct's subnational distribution, such as those raised by response biases and subnational sparsity. To help psychological researchers address these issues, we provide a comprehensive discussion of subnational estimation and introduce multilevel regression and poststratification (MrP), a method that is widely considered to be the gold standard for subnational estimation with random samples. As psychologists often do not have access to large, national random samples, we also report 3 studies evaluating MrP's performance under simulated and real-world conditions of sample biases. Ultimately, we find that MrP is likely to outperform the subnational estimation methods that psychological researchers currently use. Based on this, we suggest that psychologists interested in understanding how psychological phenomena vary below the nation level use MrP to conduct these investigations. To help facilitate this, we have made all code and data used for the reported studies publicly available. (PsycInfo Database Record (c) 2020 APA, all rights reserved).
+DO  - 10.1037/met0000240
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=31647254&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Mildenberger, Matto
+AU  - Marlon, Jennifer
+AU  - Howe, Peter
+AU  - Leiserowitz, Anthony
+T1  - The spatial distribution of Republican and Democratic climate opinions at state and local scales.
+JO  - Climatic Change
+JF  - Climatic Change
+Y1  - 2017/12//
+VL  - 145
+IS  - 3/4
+M3  - Article
+SP  - 539
+EP  - 548
+SN  - 01650009
+AB  - Even as US partisan polarization shapes climate and energy attitudes, substantial heterogeneity in climate opinions still exists among both Republicans and Democrats. To date, our understanding of this partisan heterogeneity has been limited to analysis of national- or, less commonly, state-level opinion poll subsamples. However, the dynamics of political representation and issue commitments play out over more finely resolved state and local scales. Here we use previously validated multilevel regression and post-stratification (MRP) models (Howe et al., Nat Clim Chang 5(6):596-603 2015; Mildenberger et al., PLoS One 11(8):e0159774 2016) combined with a novel approach to measuring the distribution of party members to model, for the first time, the spatial distribution of partisan climate and energy opinions. We find substantial geographic variation in Republican climate opinions across states and congressional districts. While Democratic party members consistently think human-caused global warming is happening and support climate policy reforms, the intensity of their climate beliefs also varies spatially at state and local scales. These results have policy-relevant implications for the trajectory of US climate policy reforms. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Climatic Change is the property of Springer Nature and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Climate change
+KW  - Global warming
+KW  - Climatology
+KW  - Law
+KW  - Employees
+KW  - Democratic Party (U.S.)
+KW  - Republican Party (U.S. : 1854- )
+N1  - Accession Number: 126541503; Mildenberger, Matto 1; Email Address: mildenberger@polsci.ucsb.edu; Marlon, Jennifer 2; Howe, Peter 3; Leiserowitz, Anthony 2; Affiliations: 1 : Department of Political Science , University of California Santa Barbara , Santa Barbara 93106-9420 USA; 2 : School of Forestry and Environmental Studies , Yale University , 195 Prospect Street New Haven 06511 USA; 3 : Department of Environment and Society, Quinney College of Natural Resources , Utah State University , 5215 Old Main Hill Logan 84322-5215 USA;  Source Info: Dec2017, Vol. 145 Issue 3/4, p539; Thesaurus Term: Climate change; Thesaurus Term: Global warming; Thesaurus Term: Climatology; Subject Term: Law; Subject Term: Employees; Number of Pages: 10p; Document Type: Article
+L3  - 10.1007/s10584-017-2103-0
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=8gh&AN=126541503&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - GreenFILE
+ER  - 
+
+TY  - JOUR
+AU  - Fowler, Luke
+T1  - The states of public opinion on the environment.
+JO  - Environmental Politics
+JF  - Environmental Politics
+Y1  - 2016/03//
+VL  - 25
+IS  - 2
+M3  - Article
+SP  - 315
+EP  - 337
+SN  - 09644016
+AB  - State-level public opinion on the environment within the US is examined, using data from the General Social Survey (GSS) from 2000 to 2010. A Multilevel Regression and Post-Stratification (MRP) approach is taken to estimate three different survey items on environmental issues at the US state level. This allows for a comparable understanding of state-level public opinion on environmental issues, which is then connected to economic, environmental, and political conditions, and representation in policy making. The findings indicate the MRP technique is a sophisticated way to make accurate estimations of state-level public opinion, and those estimates provide further insight into the shaping of public opinion and public policy. [ABSTRACT FROM PUBLISHER]
+AB  - Copyright of Environmental Politics is the property of Routledge and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Environmental activism
+KW  - Environmental degradation
+KW  - Environmental policy
+KW  - Public opinion -- United States
+KW  - Environmental degradation -- Social aspects
+KW  - Environmental protection -- United States
+KW  - U.S. states
+KW  - Government policy
+KW  - United States
+KW  - multilevel regression
+KW  - public opinion
+KW  - US states
+N1  - Accession Number: 112000161; Fowler, Luke 1; Email Address: nlfowler@valdosta.edu; Affiliations: 1 : Department of Political Science, Valdosta State University, Valdosta, USA;  Source Info: Mar2016, Vol. 25 Issue 2, p315; Thesaurus Term: Environmental activism; Thesaurus Term: Environmental degradation; Thesaurus Term: Environmental policy; Subject Term: Public opinion -- United States; Subject Term: Environmental degradation -- Social aspects; Subject Term: Environmental protection -- United States; Subject Term: U.S. states; Subject Term: Government policy; Subject: United States; Author-Supplied Keyword: multilevel regression; Author-Supplied Keyword: public opinion; Author-Supplied Keyword: US states; Number of Pages: 23p; Document Type: Article
+L3  - 10.1080/09644016.2015.1102351
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=8gh&AN=112000161&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - GreenFILE
+ER  - 
+
+TY  - JOUR
+AU  - Barrington-Leigh, Christopher
+AU  - Millard-Ball, Adam
+AN  - 28797037
+ID  - 28797037
+T1  - The world's user-generated road map is more than 80% complete.
+JO  - PloS one
+JF  - PloS one
+JA  - PLoS One
+Y1  - 2017/08/10/
+VL  - 12
+IS  - 8
+SP  - e0180698
+CY  - United States
+PB  - Public Library of Science
+SN  - 1932-6203
+AD  - Institute for Health and Social Policy; and School of Environment, McGill University, Montreal, Québec, Canada.
+AD  - Environmental Studies Department, University of California Santa Cruz, Santa Cruz, California, United States of America.
+N1  - Accession Number: 28797037. Language: English. Date Revised: 20181202. Date Created: 20170811. Date Completed: 20171006. Update Code: 20210210. Publication Type: Journal Article. Journal ID: 101285081. Publication Model: Electronic-eCollection; eCollection. Cited Medium: Internet. NLM ISO Abbr: PLoS One. PubMed Central ID: PMC5552279. Comment: Erratum in: PLoS One. 2019 Oct 29;14(10):e0224742. (PMID: 31661515). Linked References: Proc Natl Acad Sci U S A. 2015 Jul 7;112(27):8244-9. (PMID: 26080422). Linking ISSN: 19326203. Subset: MEDLINE; Date of Electronic Publication: 2017 Aug 10. ; Original Imprints: Publication: San Francisco, CA : Public Library of Science
+AB  - OpenStreetMap, a crowdsourced geographic database, provides the only global-level, openly licensed source of geospatial road data, and the only national-level source in many countries. However, researchers, policy makers, and citizens who want to make use of OpenStreetMap (OSM) have little information about whether it can be relied upon in a particular geographic setting. In this paper, we use two complementary, independent methods to assess the completeness of OSM road data in each country in the world. First, we undertake a visual assessment of OSM data against satellite imagery, which provides the input for estimates based on a multilevel regression and poststratification model. Second, we fit sigmoid curves to the cumulative length of contributions, and use them to estimate the saturation level for each country. Both techniques may have more general use for assessing the development and saturation of crowd-sourced data. Our results show that in many places, researchers and policymakers can rely on the completeness of OSM, or will soon be able to do so. We find (i) that globally, OSM is ∼83% complete, and more than 40% of countries-including several in the developing world-have a fully mapped street network; (ii) that well-governed countries with good Internet access tend to be more complete, and that completeness has a U-shaped relationship with population density-both sparsely populated areas and dense cities are the best mapped; and (iii) that existing global datasets used by the World Bank undercount roads by more than 30%.
+KW  - Geographic Information Systems*
+KW  - Geographic Mapping*
+KW  - Maps as Topic*
+KW  - Satellite Imagery*
+KW  - Cities
+KW  - Databases, Factual
+KW  - Humans
+KW  - Motor Vehicles
+KW  - Transportation Facilities
+DO  - 10.1371/journal.pone.0180698
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=28797037&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Fowler, Luke
+T1  - Tracking state trends in environmental public opinion.
+JO  - Social Science Journal
+JF  - Social Science Journal
+Y1  - 2017/09//
+VL  - 54
+IS  - 3
+M3  - Article
+SP  - 287
+EP  - 294
+SN  - 03623319
+AB  - Trends in state-level public opinion on the environment within the U.S. are examined, using data from the General Social Survey (GSS) from 1976 to 2008. Multilevel Regression and Post-Stratification (MRP) approach estimates public support for environmental spending at the U.S. state-level over three decades. This allows for an analysis of inter-state homogeneity of environmental public opinion, over the latter half of the twenty century. The findings indicate state-level trends mirror those at the national-level, but state-level public opinion is becoming more analogous over time. [ABSTRACT FROM AUTHOR]
+AB  - Copyright of Social Science Journal is the property of Taylor & Francis Ltd and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)
+KW  - Public spending
+KW  - Public opinion
+KW  - Regression analysis
+KW  - Environmental policy -- United States
+KW  - Social sciences
+KW  - Environmental policy
+KW  - Multi-level modeling
+N1  - Accession Number: 124823174; Fowler, Luke 1; Email Address: lukefowler@boisestate.edu; Affiliations: 1: Department of Public Policy and Administration, Boise State University, USA; Issue Info: Sep2017, Vol. 54 Issue 3, p287; Thesaurus Term: Public spending; Thesaurus Term: Public opinion; Thesaurus Term: Regression analysis; Subject Term: Environmental policy -- United States; Subject Term: Social sciences; Author-Supplied Keyword: Environmental policy; Author-Supplied Keyword: Multi-level modeling; NAICS/Industry Codes: 921130 Public Finance Activities; NAICS/Industry Codes: 541720 Research and Development in the Social Sciences and Humanities; Number of Pages: 8p; Document Type: Article
+L3  - 10.1016/j.soscij.2017.02.003
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=bth&AN=124823174&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - Business Source Complete
+ER  - 
+
+TY  - JOUR
+AU  - Mills, Carrie W
+AU  - Johnson, Glen
+AU  - Huang, Terry T K
+AU  - Balk, Deborah
+AU  - Wyka, Katarzyna
+AN  - 32383746
+ID  - 32383746
+T1  - Use of Small-Area Estimates to Describe County-Level Geographic Variation in Prevalence of Extreme Obesity Among US Adults.
+JO  - JAMA network open
+JF  - JAMA network open
+JA  - JAMA Netw Open
+Y1  - 2020/05/01/
+VL  - 3
+IS  - 5
+SP  - e204289
+CY  - United States
+PB  - American Medical Association
+SN  - 2574-3805
+AD  - Center for Systems and Community Design, The City University of New York Graduate School of Public Health & Health Policy, New York, New York.; CUNY Institute for Demographic Research, The City University of New York, New York, New York.
+AD  - Center for Systems and Community Design, The City University of New York Graduate School of Public Health & Health Policy, New York, New York.
+AD  - Center for Systems and Community Design, The City University of New York Graduate School of Public Health & Health Policy, New York, New York.
+AD  - CUNY Institute for Demographic Research, The City University of New York, New York, New York.; Marxe School of Public and International Affairs, Baruch College, The City University of New York, New York, New York.
+AD  - Center for Systems and Community Design, The City University of New York Graduate School of Public Health & Health Policy, New York, New York.
+N1  - Accession Number: 32383746. Language: English. Date Revised: 20201026. Date Created: 20200509. Date Completed: 20201026. Update Code: 20210301. Publication Type: Journal Article. Journal ID: 101729235. Publication Model: Electronic. Cited Medium: Internet. NLM ISO Abbr: JAMA Netw Open. PubMed Central ID: PMC7210484. Linked References: Int J Obes (Lond). 2013 Jun;37(6):889-91. (PMID: 22986681); Popul Health Metr. 2010 Sep 29;8:26. (PMID: 20920214); JAMA. 2002 Oct 9;288(14):1758-61. (PMID: 12365960); Prev Chronic Dis. 2016 May 05;13:E59. (PMID: 27149070); Obes Res Clin Pract. 2015 Nov-Dec;9(6):553-62. (PMID: 25747553); JAMA. 2016 Jun 7;315(21):2284-91. (PMID: 27272580); Popul Health Metr. 2011 Oct 17;9(1):56. (PMID: 22004984); Popul Health Metr. 2013 Jul 10;11:7. (PMID: 23842197); BMC Public Health. 2014 May 06;14:430. (PMID: 24885210); NCHS Data Brief. 2010 Dec;(50):1-8. (PMID: 21211165); Arch Public Health. 2018 Feb 5;76:10. (PMID: 29441203); Am J Prev Med. 2010 Aug;39(2):e1-12. (PMID: 20621256); Prev Chronic Dis. 2017 Jun 22;14:E49. (PMID: 28641072); BMC Med Res Methodol. 2016 Sep 22;16(1):124. (PMID: 27658820); Am J Epidemiol. 2014 Apr 15;179(8):1025-33. (PMID: 24598867); Obesity (Silver Spring). 2014 Mar;22(3):868-74. (PMID: 23630100); Prev Chronic Dis. 2016 Jul 14;13:E91. (PMID: 27418213); J Rural Health. 2012 Fall;28(4):392-7. (PMID: 23083085); JAMA. 2018 Apr 24;319(16):1723-1725. (PMID: 29570750); Prev Chronic Dis. 2009 Oct;6(4):A121. (PMID: 19754997); JAMA. 2012 Feb 1;307(5):491-7. (PMID: 22253363); Health Rep. 2008 Jun;19(2):61-76. (PMID: 18642520); Am J Prev Med. 2004 Jun;26(5):453-60. (PMID: 15165663); JAMA Intern Med. 2015 Aug;175(8):1412-3. (PMID: 26098405); Prev Chronic Dis. 2011 Jul;8(4):A85. (PMID: 21672409); MMWR Morb Mortal Wkly Rep. 2018 Jun 15;67(23):653-658. (PMID: 29902166); PLoS Med. 2014 Jul 08;11(7):e1001673. (PMID: 25003901). Linking ISSN: 25743805. Subset: MEDLINE; Date of Electronic Publication: 2020 May 01. ; Original Imprints: Publication: Chicago, IL : American Medical Association, [2018]-
+AB  - Importance: The prevalence of extreme obesity continues to increase among adults in the US, yet there is an absence of subnational estimates and geographic description of extreme obesity. This shortcoming prevents a thorough understanding of the geographic distribution of extreme obesity, which in turn limits the ability of public health agencies and policy makers to target areas with a known higher prevalence.; Objectives: To use small-area estimation to create county-level estimates of extreme obesity in the US and apply spatial methods to identify clusters of high and low prevalence.; Design, Setting, and Participants: A cross-sectional analysis was conducted using multilevel regression and poststratification with data from the 2012 Behavioral Risk Factor Surveillance System and the US Census Bureau to create prevalence estimates of county-level extreme obesity (body mass index ≥40 [calculated as weight in kilograms divided by height in meters squared]). Data were included on adults (aged ≥18 years) living in the contiguous US. Analysis was performed from June 4 to December 28, 2018.; Main Outcomes and Measures: Multilevel logistic regression models estimated the probability of extreme obesity based on individual-level and area-level characteristics. Census counts were multiplied by these probabilities and summed by county to create county-level prevalence estimates. Moran index values were calculated to assess spatial autocorrelation and identify spatial clusters of hot and cold spots. Estimates of moderate obesity were obtained for comparison.; Results: Overall, the weighted prevalence of extreme obesity was 4.0% (95% CI, 3.9%-4.1%) and the prevalence of moderate obesity was 23.7% (95% CI, 23.4%-23.9%). County-level prevalence of extreme obesity ranged from 1.3% (95% CI, 1.3%-1.3%) to 15.7% (95% CI, 15.3%-16.0%). The Pearson correlation coefficient comparing model-predicted estimates with direct estimates was 0.81 (P < .001). The Moran index I score was 0.35 (P < .001), indicating spatial clustering. Significant clusters of high and low prevalence were identified. Hot spots indicating clustering of high prevalence of extreme obesity in several regions, including the Mississippi Delta region and the Southeast, were identified, as well as clusters of low prevalence in the Rocky Mountain region and the Northeast.; Conclusions and Relevance: Substantial geographic variation was identified in the prevalence of extreme obesity; there was considerable county-level variation even in states generally known as having high or low prevalence of obesity. The results suggest that extreme obesity prevalence demonstrates spatial dependence and clustering and may support the need for substate analysis and benefit of disaggregation of obesity by group. Findings from this study can inform local and national policies seeking to identify populations most at risk from very high body mass index.
+KW  - Obesity, Morbid/*epidemiology
+KW  - Adolescent
+KW  - Adult
+KW  - Aged
+KW  - Aged, 80 and over
+KW  - Cross-Sectional Studies
+KW  - Demography
+KW  - Female
+KW  - Health Policy
+KW  - Humans
+KW  - Male
+KW  - Middle Aged
+KW  - Obesity, Morbid/etiology
+KW  - Prevalence
+KW  - Risk Factors
+KW  - United States/epidemiology
+KW  - Young Adult
+DO  - 10.1001/jamanetworkopen.2020.4289
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=32383746&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+ID  - 132779619
+T1  - Using 3 Health Surveys to Compare Multilevel Models for Small Area Estimation for Chronic Diseases and Health Behaviors.
+AU  - Yan Wang
+AU  - Holt, James B.
+AU  - Fang Xu
+AU  - Xingyou Zhang
+AU  - Dooley, Daniel P.
+AU  - Hua Lu
+AU  - Croft, Janet B.
+AU  - Wang, Yan
+AU  - Xu, Fang
+AU  - Zhang, Xingyou
+AU  - Lu, Hua
+Y1  - 2018/11//11/1/2018
+N1  - Accession Number: 132779619. Language: English. Entry Date: In Process. Revision Date: 20190307. Publication Type: journal article; research. Journal Subset: Blind Peer Reviewed; Expert Peer Reviewed; Health Promotion/Education; Peer Reviewed; Public Health; USA. Instrumentation: Behavioral Risk Factor Surveillance System (BRFSS); Health-Related Hardiness Scale (HRHS). NLM UID: 101205018. 
+KW  - Population Surveillance -- Methods
+KW  - Risk Assessment
+KW  - Health Behavior
+KW  - Aged
+KW  - Binge Drinking -- Epidemiology
+KW  - Young Adult
+KW  - Cluster Analysis
+KW  - Hypertension -- Epidemiology
+KW  - Middle Age
+KW  - Male
+KW  - Demography
+KW  - Adult
+KW  - Adolescence
+KW  - Logistic Regression
+KW  - Chronic Disease -- Epidemiology
+KW  - Human
+KW  - Massachusetts
+KW  - Female
+KW  - Smoking -- Epidemiology
+KW  - United States
+KW  - Diabetes Mellitus -- Epidemiology
+KW  - Aged, 80 and Over
+KW  - Prevalence
+KW  - Validation Studies
+KW  - Comparative Studies
+KW  - Evaluation Research
+KW  - Multicenter Studies
+KW  - Scales
+SP  - 1
+EP  - 9
+JO  - Preventing Chronic Disease
+JF  - Preventing Chronic Disease
+JA  - PREV CHRONIC DIS
+VL  - 15
+CY  - Atlanta, Georgia
+PB  - National Center for Chronic Disease Prevention & Health Promotion
+AB  - Background: We used a multilevel regression and poststratification approach to generate estimates of health-related outcomes using Behavioral Risk Factor Surveillance System 2013 (BRFSS) data for the 500 US cities. We conducted an empirical study to investigate whether the approach is robust using different health surveys.Methods: We constructed a multilevel logistic model with individual-level age, sex, and race/ethnicity as predictors (Model I), and sequentially added educational attainment (Model II) and area-level poverty (Model III) for 5 health-related outcomes using the nationwide BRFSS, the Massachusetts BRFSS 2013 (a state subset of nationwide BRFSS), and the Boston BRFSS 2010/2013 (an independent survey), respectively. We applied each model to the Boston population (2010 Census) to predict each outcome in Boston and compared each with corresponding Boston BRFSS direct estimates.Results: Using Model I for the nationwide BRFSS, estimates of diabetes, high blood pressure, physical inactivity, and binge drinking fell within the 95% confidence interval of corresponding Boston BRFSS direct estimates. Adding educational attainment and county-level poverty (Models II and III) further improved their accuracy, particularly for current smoking (the model-based estimate was 15.2% by Model I and 18.1% by Model II). The estimates based on state BRFSS and Boston BRFSS models were similar to those based on the nationwide BRFSS, but area-level poverty did not improve the estimates significantly.Conclusion: The estimates of health-related outcomes were similar using different health surveys. Model specification could vary by surveys with different geographic coverage.
+SN  - 1545-1151
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Atlanta, Georgia
+AD  - Economic Research Service, US Department of Agriculture, Washington, DC
+AD  - Boston Public Health Commission, Boston, Massachusetts
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, 4770 Buford Hwy, Atlanta, GA 30341. Email:
+U2  - PMID: NLM30388068.
+DO  - 10.5888/pcd15.180313
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=132779619&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
+
+TY  - JOUR
+AU  - Wang, Yan
+AU  - Holt, James B
+AU  - Xu, Fang
+AU  - Zhang, Xingyou
+AU  - Dooley, Daniel P
+AU  - Lu, Hua
+AU  - Croft, Janet B
+AN  - 30388068
+ID  - 30388068
+T1  - Using 3 Health Surveys to Compare Multilevel Models for Small Area Estimation for Chronic Diseases and Health Behaviors.
+JO  - Preventing chronic disease
+JF  - Preventing chronic disease
+JA  - Prev Chronic Dis
+Y1  - 2018/11/01/
+VL  - 15
+SP  - E133
+CY  - United States
+PB  - U.S. Dept. of Health and Human Services, Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion
+SN  - 1545-1151
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, 4770 Buford Hwy, Atlanta, GA 30341. Email: xxm4@cdc.gov.
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Atlanta, Georgia.
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Atlanta, Georgia.
+AD  - Economic Research Service, US Department of Agriculture, Washington, DC.
+AD  - Boston Public Health Commission, Boston, Massachusetts.
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Atlanta, Georgia.
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Atlanta, Georgia.
+N1  - Accession Number: 30388068. Language: English. Date Revised: 20190227. Date Created: 20181103. Date Completed: 20190227. Update Code: 20210210. Publication Type: Journal Article, Research Support, Non-U.S. Gov't. Journal ID: 101205018. Publication Model: Electronic. Cited Medium: Internet. NLM ISO Abbr: Prev Chronic Dis. PubMed Central ID: PMC6219847. Linked References: Am J Epidemiol. 2015 Jul 15;182(2):127-37. (PMID: 25957312); Stat Methods Med Res. 2018 Jan;27(1):234-249. (PMID: 27313180); Prev Chronic Dis. 2017 Oct 19;14:E99. (PMID: 29049020); Am J Epidemiol. 2014 Apr 15;179(8):1025-33. (PMID: 24598867); Soc Sci Med. 2002 Jul;55(1):125-39. (PMID: 12137182); Am J Public Health. 2001 Nov;91(11):1783-9. (PMID: 11684601). Linking ISSN: 15451151. Subset: MEDLINE; Date of Electronic Publication: 2018 Nov 01. ; Original Imprints: Publication: [Atlanta, Ga.] : U.S. Dept. of Health and Human Services, Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, [2004]-
+AB  - Background: We used a multilevel regression and poststratification approach to generate estimates of health-related outcomes using Behavioral Risk Factor Surveillance System 2013 (BRFSS) data for the 500 US cities. We conducted an empirical study to investigate whether the approach is robust using different health surveys.; Methods: We constructed a multilevel logistic model with individual-level age, sex, and race/ethnicity as predictors (Model I), and sequentially added educational attainment (Model II) and area-level poverty (Model III) for 5 health-related outcomes using the nationwide BRFSS, the Massachusetts BRFSS 2013 (a state subset of nationwide BRFSS), and the Boston BRFSS 2010/2013 (an independent survey), respectively. We applied each model to the Boston population (2010 Census) to predict each outcome in Boston and compared each with corresponding Boston BRFSS direct estimates.; Results: Using Model I for the nationwide BRFSS, estimates of diabetes, high blood pressure, physical inactivity, and binge drinking fell within the 95% confidence interval of corresponding Boston BRFSS direct estimates. Adding educational attainment and county-level poverty (Models II and III) further improved their accuracy, particularly for current smoking (the model-based estimate was 15.2% by Model I and 18.1% by Model II). The estimates based on state BRFSS and Boston BRFSS models were similar to those based on the nationwide BRFSS, but area-level poverty did not improve the estimates significantly.; Conclusion: The estimates of health-related outcomes were similar using different health surveys. Model specification could vary by surveys with different geographic coverage.
+KW  - Behavioral Risk Factor Surveillance System*
+KW  - Health Behavior*
+KW  - Public Health Surveillance/*methods
+KW  - Adolescent
+KW  - Adult
+KW  - Age Distribution
+KW  - Aged
+KW  - Aged, 80 and over
+KW  - Binge Drinking/epidemiology
+KW  - Boston/epidemiology
+KW  - Chronic Disease/epidemiology
+KW  - Diabetes Mellitus/epidemiology
+KW  - Female
+KW  - Humans
+KW  - Hypertension/epidemiology
+KW  - Logistic Models
+KW  - Male
+KW  - Middle Aged
+KW  - Prevalence
+KW  - Sedentary Behavior
+KW  - Small-Area Analysis
+KW  - Smoking/epidemiology
+KW  - United States
+KW  - Young Adult
+DO  - 10.5888/pcd15.180313
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=30388068&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Loux, Travis
+AU  - Nelson, Erik J
+AU  - Arnold, Lauren D
+AU  - Shacham, Enbal
+AU  - Schootman, Mario
+AN  - 31662236
+ID  - 31662236
+T1  - Using multilevel regression with poststratification to obtain regional health estimates from a Facebook-recruited sample.
+JO  - Annals of epidemiology
+JF  - Annals of epidemiology
+JA  - Ann Epidemiol
+Y1  - 2019/11//
+VL  - 39
+SP  - 15
+CY  - United States
+PB  - Elsevier
+SN  - 1873-2585
+AD  - Department of Epidemiology and Biostatistics, Saint Louis University College for Public Health and Social Justice, St. Louis, MO. Electronic address: travis.loux@slu.edu.
+AD  - Department of Epidemiology and Biostatistics, Indiana University School of Public Health-Bloomington, Bloomington, IN.
+AD  - Department of Epidemiology and Biostatistics, Saint Louis University College for Public Health and Social Justice, St. Louis, MO.
+AD  - Department of Behavioral Science and Health Education, Saint Louis University College for Public Health and Social Justice, St. Louis, MO.
+AD  - Department of Epidemiology and Biostatistics, Saint Louis University College for Public Health and Social Justice, St. Louis, MO.
+N1  - Accession Number: 31662236. Language: English. Date Revised: 20200401. Date Created: 20191031. Date Completed: 20200401. Update Code: 20210210. Publication Type: Journal Article. Journal ID: 9100013. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Ann Epidemiol. Linking ISSN: 10472797. Subset: MEDLINE; Date of Electronic Publication: 2019 Sep 25. ; Original Imprints: Publication: New York, NY : Elsevier, c1990-
+AB  - Purpose: We assess the effectiveness of multilevel regression with poststratification (MRP) as a tool to mitigate selection bias from online surveys of small geographical regions.; Methods: We collected self-reported health information from an Internet-based sample of adults residing within the St. Louis, MO, metropolitan area in 2017. We created Bayesian hierarchical models with three sets of predictor variables for each of six common health behaviors and outcomes, with results poststratified using the American Community Survey to estimate region and ZIP Code Tabulation Area-level prevalence.; Results: When comparing MRP estimates with a population-based sample as a reference, we found that adjustment using MRP can reduce bias in prevalence estimates and provide estimates for local area prevalence. 14 of 18 adjusted estimates were closer to the benchmark than the unadjusted estimates and MRP using all three covariate sets resulted in better overall agreement with the benchmark compared with the unadjusted estimates.; Conclusions: MRP can improve prevalence estimates from self-selected Internet-based samples, although a nonnegligible amount of bias may remain. Illustrating the utility and limitations of this method will help researchers develop relevant estimates of the local public health burden, helping local health officials better understand and reduce poor health outcomes. (Copyright © 2019 Elsevier Inc. All rights reserved.)
+KW  - Health Behavior*
+KW  - Internet*
+KW  - Selection Bias*
+KW  - Social Media*
+KW  - Public Health Surveillance/*methods
+KW  - Adolescent
+KW  - Adult
+KW  - Female
+KW  - Humans
+KW  - Male
+KW  - Middle Aged
+KW  - Missouri
+KW  - Models, Statistical
+KW  - Prevalence
+KW  - Regional Health Planning
+KW  - Socioeconomic Factors
+KW  - Urban Population
+KW  - Young Adult
+KW  - Prevalence*
+KW  - Public health surveillance*
+KW  - Selection bias*
+KW  - Social media*
+KW  - Statistical models*
+DO  - 10.1016/j.annepidem.2019.09.005
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=31662236&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+AU  - Zhang, Xingyou
+AU  - Holt, James B
+AU  - Yun, Shumei
+AU  - Lu, Hua
+AU  - Greenlund, Kurt J
+AU  - Croft, Janet B
+AN  - 25957312
+ID  - 25957312
+T1  - Validation of multilevel regression and poststratification methodology for small area estimation of health indicators from the behavioral risk factor surveillance system.
+JO  - American journal of epidemiology
+JF  - American journal of epidemiology
+JA  - Am J Epidemiol
+Y1  - 2015/07/15/
+VL  - 182
+IS  - 2
+SP  - 127
+EP  - 137
+CY  - United States
+PB  - Oxford University Press
+SN  - 1476-6256
+N1  - Accession Number: 25957312. Language: English. Date Revised: 20191210. Date Created: 20150510. Date Completed: 20150925. Update Code: 20210210. Publication Type: Journal Article, Validation Study. Journal ID: 7910653. Publication Model: Print-Electronic. Cited Medium: Internet. NLM ISO Abbr: Am J Epidemiol. PubMed Central ID: PMC4554328. Linked References: Prev Chronic Dis. 2010 Mar;7(2):A33. (PMID: 20158961); MMWR Surveill Summ. 2010 Apr 16;59(3):1-75. (PMID: 20395937); Am J Public Health. 2009 Mar;99(3):511-9. (PMID: 19150906); Am J Prev Med. 2004 Jun;26(5):453-60. (PMID: 15165663); Soc Sci Med. 2002 Mar;54(6):931-7. (PMID: 11996026); J Data Sci. 2013 Apr;11(1):269-280. (PMID: 26279666); Med Care. 1993 May;31(5 Suppl):YS66-70. (PMID: 8492589); Am J Med Sci. 2008 Apr;335(4):271-4. (PMID: 18461729); Int J Health Geogr. 2009 Jan 30;8:6. (PMID: 19183458); Prev Chronic Dis. 2013 May 02;10:E68. (PMID: 23639763); J R Soc Med. 2006 May;99(5):250-7. (PMID: 16672759); Int J Methods Psychiatr Res. 2009 Dec;18(4):251-64. (PMID: 20014156); Popul Health Metr. 2014 Mar 24;12(1):5. (PMID: 24661401); Womens Health Issues. 2013 Mar-Apr;23(2):e131-41. (PMID: 23481692); Public Health Rep. 2008 Mar-Apr;123(2):117-25. (PMID: 18457064); Am J Prev Med. 2006 Oct;31(4):275-280. (PMID: 16979450); Am J Epidemiol. 2014 Apr 15;179(8):1025-33. (PMID: 24598867); Prev Chronic Dis. 2009 Oct;6(4):A125. (PMID: 19755001); Stat Med. 2007 Jun 15;26(13):2699-715. (PMID: 17016862); Spat Spatiotemporal Epidemiol. 2013 Jun;5:27-37. (PMID: 23725885); PLoS One. 2013;8(4):e60308. (PMID: 23577099); Prev Chronic Dis. 2011 Jul;8(4):A85. (PMID: 21672409); Health Place. 2009 Jun;15(2):596-605. (PMID: 19083256); Am J Public Health. 2009 Mar;99(3):470-9. (PMID: 19150913); Obesity (Silver Spring). 2010 Feb;18(2):354-61. (PMID: 19556977); J Urban Health. 2012 Jun;89(3):397-406. (PMID: 21947903); Tex Public Health J. 2013 Jan;65(1):37-40. (PMID: 24466565); Stat Med. 1999 Dec 15;18(23):3189-200. (PMID: 10602144); Int J Obes (Lond). 2014 Jun;38(6):833-9. (PMID: 24037278); Public Health Rep. 2014 Jan-Feb;129(1):8-18. (PMID: 24381355); Popul Health Metr. 2010 Sep 29;8:26. (PMID: 20920214). Linking ISSN: 00029262. Subset: MEDLINE; Grant Information: CC999999 United States Intramural CDC HHS Date of Electronic Publication: 2015 May 07. Current Imprints: Publication: Cary, NC : Oxford University Press; Original Imprints: Publication: Baltimore, School of Hygiene and Public Health of Johns Hopkins Univ.
+AB  - Small area estimation is a statistical technique used to produce reliable estimates for smaller geographic areas than those for which the original surveys were designed. Such small area estimates (SAEs) often lack rigorous external validation. In this study, we validated our multilevel regression and poststratification SAEs from 2011 Behavioral Risk Factor Surveillance System data using direct estimates from 2011 Missouri County-Level Study and American Community Survey data at both the state and county levels. Coefficients for correlation between model-based SAEs and Missouri County-Level Study direct estimates for 115 counties in Missouri were all significantly positive (0.28 for obesity and no health-care coverage, 0.40 for current smoking, 0.51 for diabetes, and 0.69 for chronic obstructive pulmonary disease). Coefficients for correlation between model-based SAEs and American Community Survey direct estimates of no health-care coverage were 0.85 at the county level (811 counties) and 0.95 at the state level. Unweighted and weighted model-based SAEs were compared with direct estimates; unweighted models performed better. External validation results suggest that multilevel regression and poststratification model-based SAEs using single-year Behavioral Risk Factor Surveillance System data are valid and could be used to characterize geographic variations in health indictors at local levels (such as counties) when high-quality local survey data are not available. (Published by Oxford University Press on behalf of the Johns Hopkins Bloomberg School of Public Health 2015. This work is written by (a) US Government employee(s) and is in the public domain in the US.)
+KW  - Behavioral Risk Factor Surveillance System*
+KW  - Statistics as Topic*
+KW  - Regression Analysis
+KW  - American Community Survey
+KW  - Behavioral Risk Factor Surveillance System
+KW  - Missouri County-Level Study
+KW  - external validation
+KW  - multilevel regression and poststratification
+KW  - small area estimation
+DO  - 10.1093/aje/kwv002
+U3  - Indexing Agency: NLM Local ID #: HHSPA717900. 
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=cmedm&AN=25957312&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - MEDLINE
+ER  - 
+
+TY  - JOUR
+ID  - 109499226
+T1  - Validation of Multilevel Regression and Poststratification Methodology for Small Area Estimation of Health Indicators From the Behavioral Risk Factor Surveillance System.
+AU  - Xingyou Zhang
+AU  - Holt, James B.
+AU  - Shumei Yun
+AU  - Hua Lu
+AU  - Greenlund, Kurt J.
+AU  - Croft, Janet B.
+Y1  - 2015/07/15/
+N1  - Accession Number: 109499226. Language: English. Entry Date: 20151027. Revision Date: 20160714. Publication Type: Article; pictorial; research; tables/charts. Journal Subset: Biomedical; Editorial Board Reviewed; Expert Peer Reviewed; Peer Reviewed; Public Health; USA. NLM UID: 7910653. 
+KW  - Regression -- Methods
+KW  - Stratified Random Sample
+KW  - Health Status Indicators
+KW  - Population Surveillance
+KW  - Insurance, Health -- Statistics and Numerical Data -- United States
+KW  - Human
+KW  - United States
+KW  - External Validity
+KW  - Missouri
+KW  - Insurance Coverage
+KW  - Data Analysis Software
+KW  - Descriptive Statistics
+KW  - Maps
+KW  - Pearson's Correlation Coefficient
+KW  - Spearman's Rank Correlation Coefficient
+KW  - Adult
+KW  - Middle Age
+SP  - 127
+EP  - 137
+JO  - American Journal of Epidemiology
+JF  - American Journal of Epidemiology
+JA  - AM J EPIDEMIOL
+VL  - 182
+IS  - 2
+PB  - Oxford University Press / USA
+AB  - Small area estimation is a statistical technique used to produce reliable estimates for smaller geographic areas than those for which the original surveys were designed. Such small area estimates (SAEs) often lack rigorous external validation. In this study, we validated our multilevel regression and poststratification SAEs from 2011 Behavioral Risk Factor Surveillance System data using direct estimates from 2011 Missouri County-Level Study and American Community Survey data at both the state and county levels. Coefficients for correlation between modelbased SAEs and Missouri County-Level Study direct estimates for 115 counties in Missouri were all significantly positive (0.28 for obesity and no health-care coverage, 0.40 for current smoking, 0.51 for diabetes, and 0.69 for chronic obstructive pulmonary disease). Coefficients for correlation between model-based SAEs and American Community Survey direct estimates of no health-care coverage were 0.85 at the county level (811 counties) and 0.95 at the state level. Unweighted and weighted model-based SAEs were compared with direct estimates; unweighted models performed better. External validation results suggest that multilevel regression and poststratification model-based SAEs using single-year Behavioral Risk Factor Surveillance System data are valid and could be used to characterize geographic variations in health indictors at local levels (such as counties) when high-quality local survey data are not available.
+SN  - 0002-9262
+AD  - Division of Population Health, National Center for Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Atlanta, Georgia
+AD  - Office of Epidemiology, Missouri Department of Health and Senior Services, Jefferson City, Missouri
+U2  - PMID: NLM25957312.
+DO  - 10.1093/aje/kwv002
+UR  - https://search.ebscohost.com/login.aspx?direct=true&AuthType=shib&db=jlh&AN=109499226&site=ehost-live&scope=site&custid=s8849760
+DP  - EBSCOhost
+DB  - CINAHL Plus
+ER  - 
