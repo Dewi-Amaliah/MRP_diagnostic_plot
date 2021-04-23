@@ -1,5 +1,18 @@
 # MRP diagnostic visualisation
 
+## Meeting Notes 23 April 2021
+
+After removing duplicates, we have 222 papers. Visual inspection shows good coverage of well-known papers
+
+Using the diagnostic criteria from 16 April with some randomly selected samples, it appears it will not exclude anything important so we will go ahead. 
+Synced libraries
+
+Next steps:
+
+1. Read through abstract with diagnostic criteria  
+2. Invite Shiro to repo
+3. Aim for 30 abstracts
+
 ## Meeeting Notes 16 April 2021
 
 1. Doing additional source on the data bases to be ["multilevel regression" AND "post-stratification"] OR ["multilevel model" AND "post-stratification"]
