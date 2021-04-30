@@ -1,5 +1,15 @@
 # MRP diagnostic visualisation
 
+## Meeting Notes 30 April, 2021
+
+An interesting paper on weights with mulitlevel models - https://notstatschat.rbind.io/2019/01/18/another-way-to-see-why-mixed-models-in-survey-data-are-hard/
+
+This meeting we:
+Reviewed papers that were not agreed upon
+
+- Dewi is going to add papers with search term "hierarchical model*"
+- AIMS: Finish reviewing abstracts! :)
+
 ## Meeting Notes 23 April 2021
 
 After removing duplicates, we have 222 papers. Visual inspection shows good coverage of well-known papers
