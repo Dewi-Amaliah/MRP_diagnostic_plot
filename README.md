@@ -1,5 +1,24 @@
 # MRP diagnostic visualisation
 
+## Meeting Notes 7th May 2021
+
+Reviewed exclusion disagreements 
+
+Reviewed inclusion disagreements
+
+To dos:
+- Go through inclusion mismatch from lewis to tausonovitch (make notes in word doc)
+- Create final incluson/exclusion list and check numbers
+
+Next steps:
+
+- Set a csv with column for paper details, column for a link the image, and image metadata
+- Think about inclusion and data to collect (make a list)
+   1. Conditions for inclusion on our study?
+   2. What data do we want to collect? 
+- Check against a few papers
+
+
 ## Meeting Notes 30 April, 2021
 
 An interesting paper on weights with mulitlevel models - https://notstatschat.rbind.io/2019/01/18/another-way-to-see-why-mixed-models-in-survey-data-are-hard/
