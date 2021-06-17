@@ -1,0 +1,160 @@
+---
+title: "Prelimenary Result"
+author: "Dewi Lestari Amaliah - 31251587"
+date: "17/06/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(janitor)
+library(kableExtra)
+library(patchwork)
+```
+
+
+```{r}
+papers <- read_csv(here::here("metadata_june_17.csv"))
+
+```
+
+# Result 
+
+### Plot type - whether it is diagnostic plot or not 
+
+```{r}
+papers <- papers %>%
+  mutate(Diagnostic = as.factor(Diagnostic))
+
+papers %>%
+  group_by(Diagnostic) %>%
+  count() %>%
+  mutate(pct = round(n/nrow(papers) * 100, 2)) %>%
+  kable() %>%
+  kable_styling()
+```
+
+
+### The facets
+
+```{r}
+filter_facet_all <- papers %>%
+  filter(Facets > 1) %>%
+  pivot_longer(c(Facet_x, Facet_y), names_to = "facet_axis", values_to = "facet_type") %>%
+  group_by(facet_type) %>%
+  count()
+
+ggplot(filter(filter_facet_all, !is.na(facet_type))) +
+  geom_bar(aes(x = reorder(facet_type, -n), y = n), stat = "identity") +
+  theme(axis.text.x = element_text(angle = 10)) +
+  xlab("whats in the facet") +
+  ylab("count") +
+  ggtitle("Overall facet")
+
+
+```
+
+### Plot types
+
+```{r}
+ggplot(papers) +
+  geom_bar(aes(y = plot_type, fill = Diagnostic)) +
+  facet_wrap(~Diagnostic) +
+  theme(legend.position = "none")
+```
+
+### Axis type
+
+```{r}
+paper_axis_longer <- papers %>%
+  pivot_longer(c(x_axis, y_axis), names_to = "axis_type", values_to = "type")
+```
+
+
+```{r}
+ggplot(filter(paper_axis_longer, Diagnostic == 0)) + 
+  geom_bar(aes(y = type, fill = axis_type)) +
+  facet_wrap(~axis_type) +
+  ggtitle("Type of Axis in Communication Plot")
+```
+
+```{r}
+ggplot(filter(paper_axis_longer, Diagnostic == 1)) + 
+  geom_bar(aes(y = type, fill = axis_type)) +
+  facet_wrap(~axis_type) +
+  ggtitle("Type of Axis in Diagnostic Plot")
+```
+
+### Colors
+
+```{r}
+ggplot(papers) + 
+  geom_bar(aes(y = color, fill = Diagnostic)) +
+  facet_wrap(~Diagnostic) +
+  ggtitle("Type of Color")
+```
+
+
+### Shapes
+
+```{r}
+ggplot(papers) + 
+  geom_bar(aes(y = shape, fill = Diagnostic)) +
+  facet_wrap(~Diagnostic) +
+  ggtitle("Type of Shapes")
+```
+
+### Performance Criteria 
+
+```{r}
+paper_perf_crit <- papers %>%
+  filter(performance_criteria_bias !=0 |
+           performance_criteria_correlation != 0 |
+           perfomance_criteria_MAE !=0 |
+           performance_criteria_SE != 0 |
+           `performance_criteria_MSE/RMSE` != 0) %>%
+  pivot_longer(c(performance_criteria_bias,
+                 performance_criteria_correlation,
+                 perfomance_criteria_MAE,
+                 `performance_criteria_MSE/RMSE`,
+                 performance_criteria_SE), names_to = "perf_crit",
+               values_to = "is_use_perf_crit") %>%
+  mutate(is_use_perf_crit = as.factor(is_use_perf_crit))
+
+
+ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=perf_crit)) + 
+    geom_bar(position="stack") +
+  theme(axis.text.x = element_text(angle = 15)) +
+  ggtitle("Type of statistics used as MRP performance criteria") +
+  xlab("performance criteria")
+```
+
+
+
+### What estimates are compared with MRP?
+
+```{r}
+paper_comp <- papers %>%
+  filter(comparison_MRP != 0 |
+           comparison_other_method != 0 |
+           comparison_other_study != 0 |
+           comparison_raw != 0 |
+           comparison_truth != 0 |
+           comparison_weight != 0) %>%
+  pivot_longer(c(comparison_MRP,
+                 comparison_other_method,
+                 comparison_other_study,
+                 comparison_raw,
+                 comparison_truth, comparison_weight),
+                 names_to = "comp_with",
+                 values_to = "is_comp_with") %>%
+  mutate(is_comp_with = as.factor(is_comp_with))
+
+ggplot(paper_comp, aes(fill=is_comp_with, x=comp_with)) + 
+    geom_bar(position="stack") +
+  theme(axis.text.x = element_text(angle = 15)) +
+  ggtitle("MRP estimates are compared to") +
+  xlab("comparison of MRP estimates with")
+```
+
