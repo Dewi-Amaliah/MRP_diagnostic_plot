@@ -127,7 +127,38 @@ ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=perf_crit)) +
     geom_bar(position="stack") +
   theme(axis.text.x = element_text(angle = 15)) +
   ggtitle("Type of statistics used as MRP performance criteria") +
-  xlab("performance criteria")
+  xlab("performance criteria") +
+  theme(legend.position = "none")
+```
+
+
+```{r}
+paper_perf_crit_wide <- papers %>%
+  filter(performance_criteria_bias !=0 |
+           performance_criteria_correlation != 0 |
+           perfomance_criteria_MAE !=0 |
+           performance_criteria_SE != 0 |
+           `performance_criteria_MSE/RMSE` != 0)
+
+ggplot(paper_perf_crit_wide) +
+  geom_bar(aes(y = plot_type)) +
+  ggtitle("plot type using performance criteria")
+
+```
+
+```{r}
+
+a<- ggplot(paper_perf_crit_wide) +
+  geom_bar(aes(x = x_axis)) +
+  theme(axis.text.x = element_text(angle = 15)) +
+  ggtitle("x axis of plots which use perf crit")
+
+b<- ggplot(paper_perf_crit_wide) +
+  geom_bar(aes(x = y_axis)) +
+  theme(axis.text.x = element_text(angle = 15)) +
+  ggtitle("y axis of plots which use perf crit")
+
+a+b
 ```
 
 
@@ -155,6 +186,24 @@ ggplot(paper_comp, aes(fill=is_comp_with, x=comp_with)) +
     geom_bar(position="stack") +
   theme(axis.text.x = element_text(angle = 15)) +
   ggtitle("MRP estimates are compared to") +
-  xlab("comparison of MRP estimates with")
+  xlab("comparison of MRP estimates with") +
+  theme(legend.position = "none")
+```
+
+
+```{r}
+paper_comp_wide <- papers %>%
+  filter(comparison_MRP != 0 |
+           comparison_other_method != 0 |
+           comparison_other_study != 0 |
+           comparison_raw != 0 |
+           comparison_truth != 0 |
+           comparison_weight != 0)
+
+ggplot(paper_comp_wide) +
+  geom_bar(aes(y = plot_type)) +
+  ggtitle("plot type of comparison plots")
+
+
 ```
 
