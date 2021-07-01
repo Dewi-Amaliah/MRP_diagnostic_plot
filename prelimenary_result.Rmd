@@ -15,7 +15,7 @@ library(patchwork)
 
 
 ```{r}
-papers <- read_csv(here::here("metadata_june_17.csv"))
+papers <- read_csv(here::here("metadata_july_2.csv"))
 
 ```
 
@@ -64,7 +64,20 @@ ggplot(papers) +
   theme(legend.position = "none")
 ```
 
-### Axis type
+In this plot, 0 means "communication plot"; 1 means "diagnostic plot"
+
+
+### Axis type in Communication Plot
+
+```{r}
+make_plot_0 <- function(filter_by){
+  ggplot(filter(papers, x_axis == filter_by & Diagnostic == 0)) +
+    geom_bar(aes(x = y_axis)) +
+    ggtitle(paste0("x-axis = ", filter_by))
+}
+```
+
+
 
 ```{r}
 paper_axis_longer <- papers %>%
@@ -73,18 +86,67 @@ paper_axis_longer <- papers %>%
 
 
 ```{r}
-ggplot(filter(paper_axis_longer, Diagnostic == 0)) + 
-  geom_bar(aes(y = type, fill = axis_type)) +
-  facet_wrap(~axis_type) +
-  ggtitle("Type of Axis in Communication Plot")
+ggplot(filter(papers, Diagnostic == 0)) + 
+  geom_bar(aes(y = x_axis)) +
+  ggtitle("Type of x-axis in communication plot")
+```
+
+#### x and y axis pairs in Communication Plots
+
+
+```{r}
+time_p <- make_plot_0("time")
+small_area_p <- make_plot_0("small area")
+estimates_p <- make_plot_0("estimates")
+case_p <- make_plot_0("case")
+
+time_p + small_area_p + estimates_p + case_p
+```
+
+
+### Axis Type in Diagnostic Plots
+
+```{r}
+ggplot(filter(papers, Diagnostic == 1)) + 
+  geom_bar(aes(y = x_axis)) +
+  ggtitle("Type of x-axis in communication plot")
 ```
 
 ```{r}
-ggplot(filter(paper_axis_longer, Diagnostic == 1)) + 
-  geom_bar(aes(y = type, fill = axis_type)) +
-  facet_wrap(~axis_type) +
-  ggtitle("Type of Axis in Diagnostic Plot")
+make_plot_1 <- function(filter_by){
+  ggplot(filter(papers, x_axis == filter_by & Diagnostic == 1)) +
+    geom_bar(aes(x = y_axis)) +
+    ggtitle(paste0("x-axis = ", filter_by))
+}
 ```
+
+```{r}
+na_p <- ggplot(filter(papers, is.na(x_axis) & Diagnostic == 1)) +
+    geom_bar(aes(x = y_axis)) +
+  ggtitle("x-axis = NA")
+
+truth_p <- make_plot_1("truth")
+time_p1 <- make_plot_1("time")
+small_area_p1 <- make_plot_1("small area")
+estimates_p1 <- make_plot_1("estimates")
+case_p1 <- make_plot_1("case")
+sample_size_p1 <- make_plot_1("sample size")
+perf_crit_p1 <- make_plot_1("performance criteria")
+
+na_p + truth_p + time_p1 + small_area_p1 + case_p1 + sample_size_p1
+```
+
+
+```{r}
+estimates_p1
+```
+
+
+```{r}
+perf_crit_p1
+
+```
+
 
 ### Colors
 
@@ -131,6 +193,11 @@ ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=perf_crit)) +
   theme(legend.position = "none")
 ```
 
+There are 29 (out of 123) plots that use performance criteria as its feature. 
+The turquoise color represents the number of plots that use corresponding performance criteria. 
+Most of the plots using bias as their performance criteria. 
+
+Regarding, the plot type, plots with performance criteria mostly incorporate dot plots.
 
 ```{r}
 paper_perf_crit_wide <- papers %>%
@@ -144,21 +211,6 @@ ggplot(paper_perf_crit_wide) +
   geom_bar(aes(y = plot_type)) +
   ggtitle("plot type using performance criteria")
 
-```
-
-```{r}
-
-a<- ggplot(paper_perf_crit_wide) +
-  geom_bar(aes(x = x_axis)) +
-  theme(axis.text.x = element_text(angle = 15)) +
-  ggtitle("x axis of plots which use perf crit")
-
-b<- ggplot(paper_perf_crit_wide) +
-  geom_bar(aes(x = y_axis)) +
-  theme(axis.text.x = element_text(angle = 15)) +
-  ggtitle("y axis of plots which use perf crit")
-
-a+b
 ```
 
 
@@ -190,6 +242,10 @@ ggplot(paper_comp, aes(fill=is_comp_with, x=comp_with)) +
   theme(legend.position = "none")
 ```
 
+There are 67 plots (out of 123) that use comparison as its feature. 
+The turquoise color represent the number of plots using corresponding comparison. 
+Most of them compare the MRP estimates with the raw data. 
+
 
 ```{r}
 paper_comp_wide <- papers %>%
@@ -206,4 +262,5 @@ ggplot(paper_comp_wide) +
 
 
 ```
+
 
