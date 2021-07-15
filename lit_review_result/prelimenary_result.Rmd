@@ -15,7 +15,7 @@ library(patchwork)
 
 
 ```{r}
-papers <- read_csv(here::here("metadata_july_2.csv"))
+papers <- read_csv(here::here("metadata_july_9.csv"))
 
 ```
 
@@ -70,82 +70,55 @@ In this plot, 0 means "communication plot"; 1 means "diagnostic plot"
 ### Axis type in Communication Plot
 
 ```{r}
-make_plot_0 <- function(filter_by){
-  ggplot(filter(papers, x_axis == filter_by & Diagnostic == 0)) +
-    geom_bar(aes(x = y_axis)) +
-    ggtitle(paste0("x-axis = ", filter_by))
-}
+
+axis_complot <- filter(papers, Diagnostic == 0) %>% 
+  group_by(x_axis, y_axis) %>% count()
+
+ggplot(axis_complot, aes(x_axis, y_axis, fill = n)) + 
+  geom_tile()
 ```
 
 
+If we make it detailed further to the plot type, the result is as follows:
 
 ```{r}
-paper_axis_longer <- papers %>%
-  pivot_longer(c(x_axis, y_axis), names_to = "axis_type", values_to = "type")
+filter(papers, Diagnostic == 0) %>% 
+  group_by(x_axis, y_axis, plot_type) %>% count() %>% 
+  kable(caption = "The summary of axis in communication plot with the plot type") %>% 
+  kable_styling()
 ```
 
-
-```{r}
-ggplot(filter(papers, Diagnostic == 0)) + 
-  geom_bar(aes(y = x_axis)) +
-  ggtitle("Type of x-axis in communication plot")
-```
-
-#### x and y axis pairs in Communication Plots
-
-
-```{r}
-time_p <- make_plot_0("time")
-small_area_p <- make_plot_0("small area")
-estimates_p <- make_plot_0("estimates")
-case_p <- make_plot_0("case")
-
-time_p + small_area_p + estimates_p + case_p
-```
 
 
 ### Axis Type in Diagnostic Plots
 
 ```{r}
-ggplot(filter(papers, Diagnostic == 1)) + 
-  geom_bar(aes(y = x_axis)) +
-  ggtitle("Type of x-axis in communication plot")
+
+axis_diaplot <- filter(papers, Diagnostic == 1) %>% 
+  group_by(x_axis, y_axis) %>% count() 
+
+ggplot(axis_diaplot, aes(x_axis, y_axis, fill = n)) + 
+  geom_tile() +
+  theme(axis.text.x = element_text(angle = 20))
+  
 ```
+
+The summary of x_axis and y_axis including the plot type is: 
 
 ```{r}
-make_plot_1 <- function(filter_by){
-  ggplot(filter(papers, x_axis == filter_by & Diagnostic == 1)) +
-    geom_bar(aes(x = y_axis)) +
-    ggtitle(paste0("x-axis = ", filter_by))
-}
-```
-
-```{r}
-na_p <- ggplot(filter(papers, is.na(x_axis) & Diagnostic == 1)) +
-    geom_bar(aes(x = y_axis)) +
-  ggtitle("x-axis = NA")
-
-truth_p <- make_plot_1("truth")
-time_p1 <- make_plot_1("time")
-small_area_p1 <- make_plot_1("small area")
-estimates_p1 <- make_plot_1("estimates")
-case_p1 <- make_plot_1("case")
-sample_size_p1 <- make_plot_1("sample size")
-perf_crit_p1 <- make_plot_1("performance criteria")
-
-na_p + truth_p + time_p1 + small_area_p1 + case_p1 + sample_size_p1
+filter(papers, Diagnostic == 1) %>% 
+  group_by(x_axis, y_axis, plot_type) %>% count() %>% 
+  kable(caption = "The summary of axis in diagnostic plot with the plot type") %>% 
+  kable_styling()
 ```
 
 
-```{r}
-estimates_p1
-```
 
 
-```{r}
-perf_crit_p1
 
-```
+
+
+
 
 
 ### Colors
