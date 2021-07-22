@@ -1,0 +1,17 @@
+---
+title: "CCES_application"
+author: "Dewi Lestari Amaliah - 31251587"
+date: "21/07/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+```{r}
+cces <- haven::read_dta("cces16.dta")
+```
+
