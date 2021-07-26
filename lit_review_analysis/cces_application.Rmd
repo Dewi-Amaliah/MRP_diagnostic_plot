@@ -12,6 +12,37 @@ library(tidyverse)
 ```
 
 ```{r}
-cces <- haven::read_dta("cces16.dta")
+cces <- haven::read_dta(here::here("cces16.dta"))
+
+glimpse(cces)
+
+#age
+#sex
+#education
+#race_ethnicity <- collapse Native American + Middle Eastern + Other to be Other
+#state
+
+# from this create several MRP models, one of them using the random effect of each race group. 
+
+#Needs:
+# Ground truth from election results.
+# Weight estimates from CCES
+# Couple of different MRP estimates.
+
+# Steps:
+# Clean the CCES data with the 5 demographic variables
+# Clean the ACS data <- make sure it is inline with the CCES 
+
+# Use the PERWT/3 to get the take the estimates of the subgroup total from the 3 years of survey 
+
+# Next week goal:
+# Munging the data so it could be used until the mapping stage in mrpkit. 
+
+# The model would be:
+# 1. Base model
+# 2. Model with additional predictors
+# 3. Model with more levels
+# 4. Model with a slightly different outcome
+
 ```
 
