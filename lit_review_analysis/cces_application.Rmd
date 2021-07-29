@@ -9,12 +9,33 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(forcats)
 ```
 
-```{r}
-cces <- haven::read_dta(here::here("cces16.dta"))
+Needs:
 
-glimpse(cces)
+1. Ground truth from election results.
+2. Weight estimates from CCES
+3. Couple of different MRP estimates, i.e., :
+
+- Base model
+- Model with additional predictors
+- Model with more levels
+- Model with a slightly different outcome
+
+
+Steps:
+1. Clean the CCES data with the 5 demographic variables
+2. Clean the ACS data <- make sure it is inline with the CCES
+3. Use the PERWT/3 to get the take the estimates of the subgroup total from the 3 years of survey 
+
+Next week goal:
+1. Munging the data so it could be used until the mapping stage in mrpkit. 
+
+
+
+```{r}
+cces <- haven::read_dta(here::here("data/cces16.dta")) 
 
 #age
 #sex
@@ -22,27 +43,21 @@ glimpse(cces)
 #race_ethnicity <- collapse Native American + Middle Eastern + Other to be Other
 #state
 
-# from this create several MRP models, one of them using the random effect of each race group. 
-
-#Needs:
-# Ground truth from election results.
-# Weight estimates from CCES
-# Couple of different MRP estimates.
-
-# Steps:
-# Clean the CCES data with the 5 demographic variables
-# Clean the ACS data <- make sure it is inline with the CCES 
-
-# Use the PERWT/3 to get the take the estimates of the subgroup total from the 3 years of survey 
-
-# Next week goal:
-# Munging the data so it could be used until the mapping stage in mrpkit. 
-
-# The model would be:
-# 1. Base model
-# 2. Model with additional predictors
-# 3. Model with more levels
-# 4. Model with a slightly different outcome
-
+cces_use <- cces %>%
+  select(V101, commonweight, commonweight_post, inputstate, birthyr, gender, educ, race, CC16_364c,
+         CC16_364b, CC16_410a, CC16_410a_nv) %>%
+  rename(race_orig = race) %>%
+  mutate(age_orig = 2016 - birthyr) %>%
+  as_factor() %>%
+  mutate(race = fct_collapse(race_orig, Other = c("Native American", "Middle Eastern", "Other")),
+         age = as_factor(case_when(age_orig >= 18 & age_orig <= 25 ~ "18-25",
+                         age_orig > 25 & age_orig <= 35 ~ "26-35",
+                         age_orig > 35 & age_orig <= 45 ~ "36-45",
+                         age_orig > 45 & age_orig <= 55 ~ "46-55",
+                         age_orig > 55 & age_orig <= 65 ~ "56-65",
+                         age_orig > 65 & age_orig <= 75 ~ "66-75",
+                         age_orig > 75 ~ "76 years and over")))
 ```
+
+
 
