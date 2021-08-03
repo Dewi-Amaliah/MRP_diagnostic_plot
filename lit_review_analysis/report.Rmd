@@ -36,9 +36,9 @@ This study is performed using a systematic review method in which an attempt is 
 
 MRP is applied in various scientific fields, ranging from social and political science to public health. Therefore, to identify the literature, this study refers to research databases instead of field-specific journals. Those databases are JSTOR, EBSCO, and PubMed. The first two databases are chosen due to their broad range of field coverage, while the latter is chosen since MRP is sometimes also applied in the health and medical field. Choosing these databases also considers that heterogeneity of included studies is one of the important factors in a systematic literature review [@SchweizerMarinL2017Apgt].
 
-Further, we identify the literature using the combination of several search terms. Mostly the search term includes the term "multilevel regression, "post-stratification", "poststratification", and "multilevel model". Our target literature is articles that are written in English. Regarding the time of publication, we exclude all of the publications before 1997 since the MRP method has not been developed in this period. We have also done two steps in identifying the literature. At first, we only include the abstract in searching the article. However, it will restrict us to only get the article which has the search term in the abstract/title only. Hence, in the second identification, we include "all field" in searching the articles. Note that for EBSCO, we directly apply the search for all fields. The detailed literature identification is shown in Table \@ref(tab:search-term). 
+Further, we identify the literature using the combination of several search terms. Mostly the search term includes the term "multilevel regression, "post-stratification", "poststratification", and "multilevel model". Our target literature is articles that are written in English. Regarding the time of publication, we exclude all of the publications before 1997 since the MRP method has not been developed in this period. Initially we included only the title/abstract when searching these databases. However, using this method limits the set of potential articles to only include those with the search term in the abstract/title. To rectify this, we also include a search with "all field" in the search criteria. Note that for EBSCO, we directly apply the search for all fields. The detailed literature identification is shown in Table \@ref(tab:search-term). 
 
-In total, we get 327 articles. Next, we utilize literature managers, EndNote X9, to manage these articles and to find duplicate articles. After removing those duplicate articles, we get 221 articles to be screened in the next stage. 
+The total number of articles from this search criteria are 327. Next, we utilize the literature manager, EndNote X9, to manage these articles and to find duplicate articles. After removing those duplicate articles, we have 221 articles to be screened in the next stage. 
 
 ```{r search-term}
 
@@ -59,26 +59,45 @@ search %>% kable(format = "latex", booktabs = TRUE, caption = "Detail of literat
 
 ## Screening and Eligibility Criteria
 
-We screen all of the articles whether they fit the criteria to be included in the study or not. During the screening process, we find that 4 articles are apparently not research papers. Hence, we exclude them from the list. Further, there are two sub-stages done in this screening process. First, we screen trough the abstract with the following eligibility criteria:
+We screen all of the articles whether they fit the criteria to be included in the study or not. To screen efficiently, we use two stages. In the first stage DA and LK independently review all articles abstracts. Secondly DA reviews the full article to meet a second, more specific criteria. 
+
+### Stage 1: Review of abstracts
+
+In the first stage (abstract review)...
+- process
+- criteria
+
+with the following eligibility criteria:
 
 1. The abstract should mentions analysis of data or creation of simulation data. 
 2. The abstract should mentions use of MRP or multilevel models to make population estimates or the use of other regression models (BART, spatial, stacked, trees) to make population estimates.
 
-In this stage, we find that 104 articles that do not meet these criteria. Therefore, we exclude them from the list.  
+When the two reviewers (LK and DA) disagreed... 
+- what happened
+- how often did it happen
 
-Hence, there are 113 articles remain for the second sub-stage of the screening process. The aim of this sub-stage is to get the list of the final articles that would be included in the study. We set the criteria of eligibility as follows:
+During the screening process, we find that 4 articles are apparently not research papers. In addition, we find that 104 articles that do not meet the criteria listed above. Therefore, we exclude them from the list.  
+
+### Stage 2: Full manuscript review and coding
+
+This leaves a remaing 113 articles for the second stage of the screening process. The aim of this stage is to get the list of the final articles that would be included in the study. We set the criteria of eligibility as follows:
 
 1. It should apply MRP as its method.
 2. It should contain at least one plot relate to MRP findings. 
+
+
+
+Dewi, I think this is confusing steps 1 and 2 from the two stages. Better to seperate it under the headings I've suggested, I think!
 
 From the first sub-stage alone (i.e., abstract screening) we found that 61 articles fulfill the first criteria, which is using MRP as its method. Hence, we read the full articles for the remaining 52 articles. From this, we exclude 42 articles. Most of these articles are excluded because they do not meet Criteria 1, which is not using MRP as its method. These articles are captured in the first sub-stage mainly because they mention the search term (i.e., "multilevel model" or "post-stratification") in them. Many of them only use a common stratification weighting. Also, some articles using another method, but they mention MRP in their literature review as an alternative method to do the analysis. Other articles are excluded because they do not meet Criteria 2, which is does not convey their MRP result in a single plot.
 
 Finally, we have 71 articles to be reviewed in the next stage. Figure \@ref(fig:prisma-flowchart) displays the PRISMA flow chart of this study. This figure is generated using **`PRISMA2020`** [@prisma2020]. 
 
-
 ## Data Extraction and Analysis
 
 We focus the data extraction to the MRP-related plot. We manually create a metadata for each plot (included in supplementary material of this study). The reasons we create a  metadata for these plots are to ensure the reproducibility of the analysis and to maintain the transparency of the systematic literature review process. 
+
+LK: We also collect this data to allow us to analyse the current reporting practices with MRP
 
 To build a metadata we classify the plot into two types, i.e., communication (coded to 0) and diagnostic plot (coded to 1). For diagnostic plots, we examine whether the plots compare MRP with other estimates, which are:
 
@@ -101,6 +120,8 @@ The diagnostic plot could also display the performance of MRP using several perf
 Just like the comparison, the MRP-related plot would be reviewed whether it is contains each of those performance criteria (coded 1) or not (coded 0). 
 
 We also review other features of the plot using the grammar in **`ggplot2`** [@ggplot2]. We examine the facet, plot type, what is put in the x, y-axis, color, and shape. Besides, the metadata also contains the paper's author/s, paper's year, paper's title, and plot's figure number. 
+
+LK: Also note why we chose to note the grammar and what we hoped to learn from it. 
 
 After the extraction, we analyze the data using graphical visualization with **`ggplot2`**. The result will be discussed in the next section. 
 
