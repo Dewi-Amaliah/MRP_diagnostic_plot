@@ -271,18 +271,17 @@ acs_use_collapse <- acs_use %>%
 
 
 Next week goal: Build the models 
-Outcome: Party, past vote, and future vote
-
-Note: Add pid3 variable in the wrangled data.
-
 Netx week goal 2: 2. Interpete/write paragraph of the result 
 
-1. Base model: age, race_ethnicity, state -> outcome would be future vote (collapsed race_ethnicity)
-2. Additonal predictor: education (collapsed race_ethnicity)
-3. Model with additional level: all of the race_ethnicity and the collapsed race_ethnicity (work with the ACS data to get the hispanic) if someone answer white+hispanic -> hispanic -> outcome would be future vote 
-4. Model 2 with 3 different outcome
+Outcome: Party, past vote, and future vote
 
-- Inspect the time ellapsed to run every method when using mrpkit
+
+1. Base model: age, race_ethnicity (collapsed race_ethnicity), state -> outcome would be future vote 
+2. Additonal predictor: base model + education 
+3. Model with additional level: all of the race_ethnicity/non-collapsed race_ethnicity (work with the ACS data to get the hispanic) if someone answer white+hispanic -> hispanic -> outcome would be future vote 
+4. Model 2 with 3 different outcome i.e., future vote (CC16_410a), early vote (CC16_364b), and party preference (pid3).
+
+Also: Inspect the time ellapsed to run every method when using mrpkit
 
 
 
