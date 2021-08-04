@@ -1,0 +1,267 @@
+---
+title: "mrp_build"
+author: "Dewi Lestari Amaliah - 31251587"
+date: "03/08/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mrpkit)
+library(brms)
+library(tidyverse)
+library(tictoc)
+```
+
+## Using mrpkit to build model
+
+1. Base model: age, race_ethnicity (collapsed race_ethnicity), state, gender. Outcome would be future vote 
+2. Additional predictor: Base model + education
+3. Model with additional level: age, race_ethnicity (original race_ethnicity), state, gender. Outcome would be future vote
+4. Model 2 with 3 different outcome , i.e., future vote (CC16_410a), early vote (CC16_364b), and party preference (pid3).
+
+```{r}
+# read the data
+
+cces <- read_rds("cces_use.rds")
+acs <- read_rds("acs_use_wrangled.rds")
+```
+
+## Model 1
+
+Model 1 is the base model, with age, race_ethnicity (collapsed race_ethnicity), and state as the predictor. The outcome would be the future vote. 
+
+```{r surveydata}
+# pre-process the cces data for base model
+cces_mrp1 <- cces %>%
+  # rename variable as mrpkit workflow
+  rename(wt = commonweight) %>%
+  mutate(vote_post_nonbinary = as.character(CC16_410a)) %>%
+  # mutate the outcome which is vote for Donald Trump (yes/no)
+  mutate(vote_post = as.factor(ifelse(vote_post_nonbinary == "Donald Trump (Republican)", "yes", "no"))) %>%
+  mutate(race_ethnicity = as_factor(race_ethnicity)) %>%
+  select(age, inputstate, race_ethnicity_collp, race_ethnicity, gender, educ, vote_post, wt)
+
+# drop the level since we don't want any unused level be in the SurveyData object
+cces_mrp1$gender <- droplevels(cces_mrp1$gender)
+cces_mrp1$inputstate <- droplevels(cces_mrp1$inputstate)
+cces_mrp1$educ <- droplevels(cces_mrp1$educ)
+
+
+#### CREATE SURVEYDATA OBJECT
+# create survey data object for the survey data
+cces_mod1 <- SurveyData$new(
+  data = cces_mrp1,
+  questions = list(age = "Respondent's age group",
+                   inputstate = "State",
+                   race_ethnicity_collp = "Respondent's race/ethnicity collapsed Native American, Middle Eastern, and Other to Other",
+                   race_ethnicity = "Respondent's race/ethnicity original level",
+                   gender = "Respondent's gender",
+                   educ = "Respondent's education",
+                   vote_post = "Whether the respondent vote for Donald Trump in 2016 President vote (Post)"),
+  responses = list(age = levels(cces_mrp1$age),
+                   inputstate = levels(cces_mrp1$inputstate),
+                   race_ethnicity_collp = levels(cces_mrp1$race_ethnicity_collp),
+                   race_ethnicity = levels(cces_mrp1$race_ethnicity),
+                   gender = levels(cces_mrp1$gender),
+                   educ = levels(cces_mrp1$educ),
+                   vote_post = c("no", "yes")),
+ weights = "wt")
+# this step: 0.039 sec elapsed
+
+
+# pre-process the acs data for base model
+acs_mrp <- acs %>%
+  # filter out the respondents whose age < 18 years because they are not in the scope of CCES survey?
+  filter(age != "Less than 18 years") %>%
+  select(state, wt, age, gender, race_ethnicity, race_ethnicity_collps, educ_collps)
+
+acs_mrp$age <- droplevels(acs_mrp$age)
+
+# create survey data object for the post-stratification data 
+acs_data <- SurveyData$new(
+  data = acs_mrp,
+  questions = list(age = "Respondent's age group",
+                   state = "State",
+                   gender = "Respondent's gender",
+                   race_ethnicity_collps = "Respondent's race/ethnicity recoded",
+                   race_ethnicity = "Respondent's race/ethnicity",
+                   educ_collps = "Respondent's highest educational attainment"),
+  responses = list(age = levels(acs_mrp$age),
+                   state = levels(acs_mrp$state),
+                   gender = levels(acs_mrp$gender),
+                   race_ethnicity_collps = levels(acs_mrp$race_ethnicity_collps),
+                   race_ethnicity = levels(acs_mrp$race_ethnicity),
+                   educ_collps = levels(acs_mrp$educ_collps)),
+  weights = "wt"
+)
+# this step: 0.641 sec elapsed
+
+# print the object
+acs_data$print()
+# this step: 58.992 sec elapsed
+```
+
+
+**Note:**
+1. Re-check if using the `inputstate` (pre-election state name) or inputstate_post (post-election state name)
+
+```{r questionmapping}
+
+#### QUESTION MAPPING
+q_age <- QuestionMap$new(
+  name = "age",
+  col_names = c("age", "age"),
+  values_map = list(
+    "18-25" = "18-25",
+    "26-35" = "26-35",
+    "36-45" = "36-45",
+    "46-55" = "46-55",
+    "56-65" = "56-65",
+    "66-75" = "66-75",
+    "76 years and over" = "76-90",
+    "76 years and over" = "over 90 years"))
+
+q_state <- QuestionMap$new(
+  name = "state",
+  col_names = c("inputstate", "state"),
+  values_map = list(
+    "Alabama" = "Alabama",
+    "Alaska" = "Alaska",
+    "Arizona" = "Arizona",
+    "Arkansas" = "Arkansas",
+    "California" = "California",
+    "Colorado" = "Colorado",
+    "Connecticut" = "Connecticut",
+    "Delaware" = "Delaware",
+    "District of Columbia" = "District of Columbia",
+    "Florida" = "Florida",
+    "Georgia" = "Georgia",
+    "Hawaii" = "Hawaii",
+    "Idaho" = "Idaho",
+    "Illinois" = "Illinois",
+    "Indiana" = "Indiana",
+    "Iowa" = "Iowa",
+    "Kansas" = "Kansas",
+    "Kentucky" = "Kentucky",
+    "Louisiana" = "Louisiana",
+    "Maine" = "Maine",
+    "Maryland" = "Maryland",
+    "Massachusetts" = "Massachusetts",
+    "Michigan" = "Michigan",
+    "Minnesota" = "Minnesota",
+    "Mississippi" = "Mississippi",
+    "Missouri" = "Missouri",
+    "Montana" = "Montana",
+    "Nebraska" = "Nebraska",
+    "Nevada" = "Nevada",
+    "New Hampshire" = "New Hampshire",
+    "New Jersey" = "New Jersey",
+    "New Mexico" = "New Mexico",
+    "New York" = "New York",
+    "North Carolina" = "North Carolina",
+    "North Dakota" = "North Dakota",
+    "Ohio" = "Ohio",
+    "Oklahoma" = "Oklahoma",
+    "Oregon" = "Oregon",
+    "Pennsylvania" = "Pennsylvania",
+    "Rhode Island" = "Rhode Island",
+    "South Carolina" = "South Carolina",
+    "South Dakota" = "South Dakota",
+    "Tennessee" = "Tennessee",
+    "Texas" = "Texas",
+    "Utah" = "Utah",
+    "Vermont" = "Vermont",
+    "Virginia" = "Virginia",
+    "Washington" = "Washington",
+    "West Virginia" = "West Virginia",
+    "Wisconsin" = "Wisconsin",
+    "Wyoming" = "Wyoming"))
+
+q_gender <- QuestionMap$new(
+  name = "gender",
+  col_names = c("gender", "gender"),
+  values_map = list(
+    "Male" = "Male",
+    "Female" = "Female"))
+
+q_recollapsed <- QuestionMap$new(
+  name = "collapsed_re",
+  col_names = c("race_ethnicity_collp", "race_ethnicity_collps"),
+  values_map = list(
+    "Asian" = "Asian alone",
+    "Black" = "Black or African American alone",
+    "Hispanic" = "Hispanic",
+    "Other" = "Other",
+    "Mixed" = "Two or More Races",
+    "White" = "White alone"))
+
+q_re <- QuestionMap$new(
+  name = "original_re",
+  col_names = c("race_ethnicity", "race_ethnicity"),
+  values_map = list(
+    "White" = "White alone",
+    "Asian" = "Asian alone",
+    "Hispanic" = "Hispanic",
+    "Black" = "Black or African American alone",
+    "Mixed" = "Two or More Races",
+    "Native American" = "American Indian and Alaska Native tribes",
+    "Native American" = "American Indian alone",
+    "Native American" = "Alaska Native alone",
+    "Other" = "Some Other Race alone",
+    "Other" = "Native Hawaiian and Other Pacific Islander alone",
+    "Middle Eastern" = "Some Other Race alone"))
+
+q_educ <- QuestionMap$new(
+  name = "education",
+  col_names = c("educ", "educ_collps"),
+  values_map = list(
+    "No HS" = "No high school",
+    "High school graduate" = "Regular high school diploma",
+    "Some college" = "Some college",
+    "2-year" = "Associate's degree",
+    "4-year" = "Bachelor's degree",
+    "Post-grad" = "Post-graduate"))
+```
+
+```{r}
+## SURVEY MAPPING STEP
+map_model <- SurveyMap$new(sample = cces_mod1,
+                            population = acs_data,
+                            q_age,
+                            q_state,
+                            q_gender,
+                            q_recollapsed, 
+                            q_re,
+                            q_educ)
+
+map_model$validate()
+map_model$mapping()
+map_model$tabulate()
+
+# Recheck: Is it okay to map all the variable here even though it is not included in the model?
+
+### FIT THE MODEL
+
+# Model 1
+tic()
+fit1 <- map_model$fit(
+  fun = brms::brm,
+  formula = vote_post ~ (1|age) + (1|gender) + (1+state) + (1|collapsed_re),
+  family = "bernoulli",
+  refresh = 100,
+  cores = 2,
+  backend = "cmdstanr"
+)
+toc()
+# Total execution time: 26589.7 seconds.
+
+# save the model 
+saveRDS(fit1, "fit1.rds")
+```
+
+```{r}
+fit1_predict <- fit1$population_predict()
+# 65.759 sec elapsed
+```
+
