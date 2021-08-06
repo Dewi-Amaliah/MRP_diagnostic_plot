@@ -278,7 +278,7 @@ saveRDS(map_model, here::here("results/map_model.rds"))
 # Model 1
 fit1 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1+state) + (1|collapsed_re),
+  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -288,7 +288,7 @@ fit1 <- map_model$fit(
 # Model 2
 fit2 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1+state) + (1|collapsed_re) + (1|education),
+  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -298,7 +298,7 @@ fit2 <- map_model$fit(
 # Model 3
 fit3 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1+state) + (1|original_re),
+  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|original_re),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -306,9 +306,9 @@ fit3 <- map_model$fit(
 )
 
 # Model 4a
-fit4a <- map_model4a$fit(
+fit4a <- map_model$fit(
   fun = brms::brm,
-  formula = vote_early ~ (1|age) + (1|gender) + (1+state) + (1|collapsed_re) + (1|education),
+  formula = vote_early ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -316,9 +316,9 @@ fit4a <- map_model4a$fit(
 )
 
 # Model 4b
-fit4b <- map_model4b$fit(
+fit4b <- map_model$fit(
   fun = brms::brm,
-  formula = party ~ (1|age) + (1|gender) + (1+state) + (1|collapsed_re) + (1|education),
+  formula = party ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
