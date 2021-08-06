@@ -1,0 +1,287 @@
+---
+title: "CCES_application"
+author: "Dewi Lestari Amaliah - 31251587"
+date: "21/07/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(forcats)
+library(data.table)
+```
+
+Needs:
+
+1. Ground truth from election results.
+2. Weight estimates from CCES
+3. Couple of different MRP estimates, i.e., :
+
+- Base model
+- Model with additional predictors
+- Model with more levels
+- Model with a slightly different outcome
+
+
+Steps:
+1. Clean the CCES data with the 5 demographic variables
+2. Clean the ACS data <- make sure it is inline with the CCES
+3. Use the PERWT/3 to get the take the estimates of the subgroup total from the 3 years of survey 
+
+Next week goal:
+1. Munging the data so it could be used until the mapping stage in mrpkit. 
+
+
+## Munging the CCES data
+
+```{r}
+cces <- haven::read_dta(here::here("data/data_raw/cces16.dta"))
+
+#age
+#sex
+#education
+#race_ethnicity <- collapse Native American + Middle Eastern + Other to be Other
+#state
+
+cces_use <- cces %>%
+  select(V101, commonweight, commonweight_post, inputstate, inputstate_post, birthyr, gender, educ, race, hispanic, pid3,
+         CC16_364c, CC16_364b, CC16_410a, CC16_410a_nv) %>%
+  mutate(age_orig = 2016 - birthyr) %>%
+  as_factor() %>%
+  mutate(race = as.character(race),
+         hispanic = as.character(hispanic)) %>%
+  # change the label if the respondent said yes in hispanic origin
+  mutate(race_ethnicity = ifelse(hispanic == "No" | is.na(hispanic), race, "Hispanic")) %>%
+  mutate(race_ethnicity_collp = fct_collapse(race_ethnicity,
+                                             Other = c("Native American", "Middle Eastern", "Other")),
+         age = as_factor(case_when(age_orig >= 18 & age_orig <= 25 ~ "18-25",
+                         age_orig > 25 & age_orig <= 35 ~ "26-35",
+                         age_orig > 35 & age_orig <= 45 ~ "36-45",
+                         age_orig > 45 & age_orig <= 55 ~ "46-55",
+                         age_orig > 55 & age_orig <= 65 ~ "56-65",
+                         age_orig > 65 & age_orig <= 75 ~ "66-75",
+                         age_orig > 75 ~ "76 years and over")))
+
+
+write_rds(cces_use, here::here("data/cces_use.rds"))
+```
+
+
+## Munging the ACS data
+
+
+```{r}
+# acs_2015_a <- fread(here::here("data/data_raw/ss15pusa.csv"))
+# acs_2015_b <- fread(here::here("data/data_raw/ss15pusb.csv"))
+# 
+# acs_15 <- rbind(acs_2015_a, acs_2015_b) %>%
+#   mutate(year = 2015)
+# 
+# write_rds(acs_15, here::here("data/data_raw/acs_15.rds"), compress = "gz")
+```
+
+```{r}
+# acs_2016_a <- fread(here::here("data/data_raw/ss16pusa.csv"))
+# acs_2016_b <- fread(here::here("data/data_raw/ss16pusb.csv"))
+# 
+# acs_16 <- rbind(acs_2016_a, acs_2016_b) %>%
+#   mutate(year = 2016)
+# 
+# write_rds(acs_16, here::here("data/data_raw/acs_16.rds"), compress = "gz")
+```
+
+```{r}
+acs_2017_a <- fread(here::here("data/data_raw/psam_pusa_2017.csv"))
+acs_2017_b <- fread(here::here("data/data_raw/psam_pusb_2017.csv"))
+
+acs_17 <- rbind(acs_2017_a, acs_2017_b) %>%
+  mutate(year = 2017)
+
+# write_rds(acs_17, here::here("data/data_raw/acs_17.rds"), compress = "gz")
+```
+
+```{r}
+acs_15 <- readRDS(here::here("data/data_raw/acs_15.rds"))
+acs_16 <- readRDS(here::here("data/data_raw/acs_16.rds"))
+acs_17 <- readRDS(here::here("data/data_raw/acs_17.rds"))
+
+# select the variable that will only be used in the analysis
+
+acs_15_use <- acs_15 %>%
+  select(SERIALNO, ST, PWGTP, SCHL, SEX, RAC1P, HISP, AGEP, year)
+
+acs_16_use <- acs_16 %>%
+  select(SERIALNO, ST, PWGTP, SCHL, SEX, RAC1P, HISP, AGEP, year)
+
+acs_17_use <- acs_17 %>%
+  select(SERIALNO, ST, PWGTP, SCHL, SEX, RAC1P, HISP, AGEP, year)
+
+# bind the three years
+acs_use <- bind_rows(acs_15_use, acs_16_use, acs_17_use)
+# write_rds(acs_use, here::here("data/data_raw/acs_use.rds"), compress = "gz")
+```
+
+```{r}
+# recode the variables in cces data since they are coded in integer 
+
+acs <- read_rds(here::here("data/data_raw/acs_use.rds"))
+acs_race <- acs %>%
+  # include Hispanic in the race and ethnicity variable
+  # if someone is identified has hispanic descendant, he/she will be coded to Hispanic
+  mutate(RAC1P_ethnic = ifelse(HISP != 1, 10, RAC1P))
+
+acs_use <- acs_race %>%
+  mutate(state = as_factor(case_when(ST == 1 ~ "Alabama",
+                           ST == 2 ~ "Alaska",
+                           ST == 4 ~ "Arizona",
+                           ST == 5 ~ "Arkansas",
+                           ST == 6 ~ "California",
+                           ST == 8 ~ "Colorado",
+                           ST == 9 ~ "Connecticut",
+                           ST == 10 ~ "Delaware",
+                           ST == 11 ~ "District of Columbia",
+                           ST == 12 ~ "Florida",
+                           ST == 13 ~ "Georgia",
+                           ST == 15 ~ "Hawaii",
+                           ST == 16 ~ "Idaho",
+                           ST == 17 ~ "Illinois",
+                           ST == 18 ~ "Indiana",
+                           ST == 19 ~ "Iowa",
+                           ST == 20 ~ "Kansas",
+                           ST == 21 ~ "Kentucky",
+                           ST == 22 ~ "Louisiana",
+                           ST == 23 ~ "Maine",
+                           ST == 24 ~ "Maryland",
+                           ST == 25 ~ "Massachusetts",
+                           ST == 26 ~ "Michigan",
+                           ST == 27 ~ "Minnesota",
+                           ST == 28 ~ "Mississippi",
+                           ST == 29 ~ "Missouri",
+                           ST == 30 ~ "Montana",
+                           ST == 31 ~ "Nebraska",
+                           ST == 32 ~ "Nevada",
+                           ST == 33 ~ "New Hampshire",
+                           ST == 34 ~ "New Jersey",
+                           ST == 35 ~ "New Mexico",
+                           ST == 36 ~ "New York",
+                           ST == 37 ~ "North Carolina",
+                           ST == 38 ~ "North Dakota",
+                           ST == 39 ~ "Ohio",
+                           ST == 40 ~ "Oklahoma",
+                           ST == 41 ~ "Oregon",
+                           ST == 42 ~ "Pennsylvania",
+                           ST == 44 ~ "Rhode Island",
+                           ST == 45 ~ "South Carolina",
+                           ST == 46 ~ "South Dakota",
+                           ST == 47 ~ "Tennessee",
+                           ST == 48 ~ "Texas",
+                           ST == 49 ~ "Utah",
+                           ST == 50 ~ "Vermont",
+                           ST == 51 ~ "Virginia",
+                           ST == 53 ~ "Washington",
+                           ST == 54 ~ "West Virginia",
+                           ST == 55 ~ "Wisconsin",
+                           ST == 56 ~ "Wyoming",
+                           ST == 72 ~ "Puerto Rico")),
+         educ = as_factor(case_when(SCHL == 1 ~ "No schooling completed",
+                          SCHL == 2 ~ "Nursery schoool, preschool",
+                          SCHL == 3 ~ "Kindergarten",
+                          SCHL == 4 ~ "Grade 1",
+                          SCHL == 5 ~ "Grade 2",
+                          SCHL == 6 ~ "Grade 3",
+                          SCHL == 7 ~ "Grade 4",
+                          SCHL == 8 ~ "Grade 5",
+                          SCHL == 9 ~ "Grade 6",
+                          SCHL == 10 ~ "Grade 7",
+                          SCHL == 11 ~ "Grade 8",
+                          SCHL == 12 ~ "Grade 9",
+                          SCHL == 13 ~ "Grade 10",
+                          SCHL == 14 ~ "Grade 11",
+                          SCHL == 15 ~ "12th grade - no diploma",
+                          SCHL == 16 ~ "Regular high school diploma",
+                          SCHL == 17 ~ "GED or alternative credential",
+                          SCHL == 18 ~ "Some college, but less than 1 year",
+                          SCHL == 19 ~ "1 or more years of college credit. no degree",
+                          SCHL == 20 ~ "Associate's degree",
+                          SCHL == 21 ~ "Bachelor's degree",
+                          SCHL == 22 ~ "Master's degree",
+                          SCHL == 23 ~ "Professional degree beyond a bachelor's degree",
+                          SCHL == 24 ~ "Doctorate degree")),
+         sex = as_factor(case_when(SEX == 1 ~ "Male",
+                            SEX == 2 ~ "Female")),
+         race_ethnicity = as_factor(case_when(RAC1P_ethnic == 1 ~ "White alone",
+                          RAC1P_ethnic == 2 ~ "Black or African American alone",
+                          RAC1P_ethnic == 3 ~ "American Indian alone",
+                          RAC1P_ethnic == 4 ~ "Alaska Native alone",
+                          RAC1P_ethnic == 5 ~ "American Indian and Alaska Native tribes",
+                          RAC1P_ethnic == 6 ~ "Asian alone",
+                          RAC1P_ethnic == 7 ~ "Native Hawaiian and Other Pacific Islander alone",
+                          RAC1P_ethnic == 8 ~ "Some Other Race alone",
+                          RAC1P_ethnic == 9 ~ "Two or More Races",
+                          RAC1P_ethnic == 10 ~ "Hispanic")),
+         age = as_factor(case_when(AGEP < 18 ~ "Less than 18 years",
+                                   AGEP >= 18 & AGEP <= 25 ~ "18-25",
+                                   AGEP > 25 & AGEP <= 35 ~ "26-35",
+                                   AGEP > 35 & AGEP <= 45 ~ "36-45",
+                                   AGEP > 45 & AGEP <= 55 ~ "46-55",
+                                   AGEP > 55 & AGEP <= 65 ~ "56-65",
+                                   AGEP > 65 & AGEP <= 75 ~ "66-75",
+                                   AGEP > 75 & AGEP <= 90 ~ "76-90",
+                                   AGEP > 90 ~ "over 90 years")))
+```
+
+
+```{r}
+# collapse the levels in factor variable
+acs_use_collapse <- acs_use %>%
+  mutate(educ_collps = fct_collapse(educ, `No high school` = c("No schooling completed",
+                                                                "Nursery schoool, preschool",
+                                                                "Kindergarten",
+                                                                "Grade 1",
+                                                                "Grade 2",
+                                                                "Grade 3",
+                                                                "Grade 4",
+                                                                "Grade 5",
+                                                                "Grade 6",
+                                                                "Grade 7",
+                                                                "Grade 8",
+                                                                "Grade 9",
+                                                                "Grade 10",
+                                                                "Grade 11",
+                                                                "12th grade - no diploma"),
+                                     `Some college` = c("GED or alternative credential",
+                                                        "Some college, but less than 1 year",
+                                                        "1 or more years of college credit. no degree"),
+                                     `Post-graduate` = c("Master's degree",
+                                                         "Professional degree beyond a bachelor's degree",
+                                                         "Doctorate degree")),
+         race_ethnicity_collps = fct_collapse(race_ethnicity, Other = c("American Indian alone",
+                                                       "Alaska Native alone",
+                                                       "American Indian and Alaska Native tribes",
+                                                       "Native Hawaiian and Other Pacific Islander alone",
+                                                       "Some Other Race alone")),
+         wt = PWGTP/3) %>%
+  select(SERIALNO, ST, wt, year, HISP, AGEP, state, educ, educ_collps,
+         sex,race_ethnicity,race_ethnicity_collps, age)
+
+write_rds(acs_use_collapse, here::here("data/acs_use_wrangled.rds"))
+```
+
+
+Next week goal: Build the models 
+Netx week goal 2: 2. Interpete/write paragraph of the result 
+
+Outcome: Party, past vote, and future vote
+
+
+1. Base model: age, race_ethnicity (collapsed race_ethnicity), state -> outcome would be future vote 
+2. Additonal predictor: base model + education 
+3. Model with additional level: all of the race_ethnicity/non-collapsed race_ethnicity (work with the ACS data to get the hispanic) if someone answer white+hispanic -> hispanic -> outcome would be future vote 
+4. Model 2 with 3 different outcome i.e., future vote (CC16_410a), early vote (CC16_364b), and party preference (pid3).
+
+Also: Inspect the time ellapsed to run every method when using mrpkit
+
+
+
