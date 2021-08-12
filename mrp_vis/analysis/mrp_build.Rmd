@@ -15,10 +15,10 @@ library(tictoc)
 
 ## Using mrpkit to build model
 
-1. Base model: age, race_ethnicity (collapsed race_ethnicity), state, gender. Outcome would be future vote 
+1. Base model: age, race_ethnicity (collapsed race_ethnicity), state, gender. Outcome would be vote (voted_pres_16)
 2. Additional predictor: Base model + education
-3. Model with additional level: age, race_ethnicity (original race_ethnicity), state, gender. Outcome would be future vote
-4. Model 2 with 3 different outcome , i.e., future vote (CC16_410a), early vote (CC16_364b), and party preference (pid3).
+3. Model with additional level: age, race_ethnicity (original race_ethnicity), state, gender. Outcome would be vote (voted_pres_16)
+4. Model 2 with 2 other outcome , i.e., intent(intent_pres_16) and party identity (pid3).
 
 ```{r}
 # read the data
@@ -35,50 +35,38 @@ Model 1 is the base model, with age, race_ethnicity (collapsed race_ethnicity), 
 # pre-process the cces data for base model
 cces_mrp <- cces %>%
   # rename variable as mrpkit workflow
-  rename(wt = commonweight) %>%
-  mutate(vote_post_nonbinary = as.character(CC16_410a),
-         vote_early_nonbinary = as.character(CC16_364b),
-         party_nonbinary = as.character(pid3)) %>%
+  rename(wt = weight) %>%
   # mutate the outcome which is vote for Donald Trump (yes/no) in post vote
   # mutate the outcome which is vote for Donald Trump (yes/no) in early vote
   # mutate the outcome which is identified as Republican (yes) or no
   mutate( 
-    vote_post = as.factor(ifelse(vote_post_nonbinary == "Donald Trump (Republican)", "yes, vote Trump", "no, will not vote Trump")),
-    vote_early = as.factor(ifelse(vote_early_nonbinary == "Donald Trump (Republican)", "yes, vote Trump", "no, did not vote Trump")),
-    party = as.factor(ifelse(party_nonbinary == "Republican", "yes, I am", "no, I am not"))
-    ) %>%
-  mutate(race_ethnicity = as_factor(race_ethnicity)) %>%
-  select(age, inputstate, race_ethnicity_collp, race_ethnicity, gender, educ, 
-         vote_post, vote_early, party, wt)
-
-# drop the level since we don't want any unused level be in the SurveyData object
-cces_mrp$gender <- droplevels(cces_mrp$gender)
-cces_mrp$inputstate <- droplevels(cces_mrp$inputstate)
-cces_mrp$educ <- droplevels(cces_mrp$educ)
-
+    vote = as.factor(ifelse(voted_pres_16 == "Donald Trump", "yes", "no")),
+    intent = as.factor(ifelse(intent_pres_16 == "Donald Trump (Republican)", "yup", "nah")),
+    party = as.factor(ifelse(pid3 == "Republican", "Republican", "not Republican"))
+    )
 
 #### CREATE SURVEYDATA OBJECT
 # create survey data object for the survey data
 cces_data_obj <- SurveyData$new(
   data = cces_mrp,
   questions = list(age = "Respondent's age group",
-                   inputstate = "State",
+                   state = "State",
                    race_ethnicity_collp = "Respondent's race/ethnicity collapsed Native American, Middle Eastern, and Other to Other",
-                   race_ethnicity = "Respondent's race/ethnicity original level",
+                   race = "Respondent's race/ethnicity original level",
                    gender = "Respondent's gender",
                    educ = "Respondent's education",
-                   vote_post = "Whether the respondent vote for Donald Trump in 2016 President vote (Post)",
-                   vote_early = "Whether the respondent vote for Donald Trump in 2016 President vote (Early)",
+                   vote = "Whether the respondent vote for Donald Trump in 2016 Presidential vote (Post)",
+                   intent = "Whether the respondent intent to vote for Donald Trump in 2016 Presidential vote",
                    party = "Whether the respondent identify him/herself as Republican or not"),
-  responses = list(age = levels(cces_mrp1$age),
-                   inputstate = levels(cces_mrp1$inputstate),
-                   race_ethnicity_collp = levels(cces_mrp1$race_ethnicity_collp),
-                   race_ethnicity = levels(cces_mrp1$race_ethnicity),
-                   gender = levels(cces_mrp1$gender),
-                   educ = levels(cces_mrp1$educ),
-                   vote_post = c("no, will not vote Trump", "yes, vote Trump"),
-                   vote_early = c("no, did not vote Trump", "yes, vote Trump"),
-                   party = c("no, I am not", "yes, I am")),
+  responses = list(age = levels(cces_mrp$age),
+                   state = levels(cces_mrp$state),
+                   race_ethnicity_collp = levels(cces_mrp$race_ethnicity_collp),
+                   race = levels(cces_mrp$race),
+                   gender = levels(cces_mrp$gender),
+                   educ = levels(cces_mrp$educ),
+                   vote = c("no", "yes"),
+                   intent = c("nah", "yup"),
+                   party = c("Republican", "not Republican")),
  weights = "wt")
 # this step: 0.039 sec elapsed
 
@@ -132,18 +120,18 @@ q_age <- QuestionMap$new(
   name = "age",
   col_names = c("age", "age"),
   values_map = list(
-    "18-25" = "18-25",
-    "26-35" = "26-35",
-    "36-45" = "36-45",
-    "46-55" = "46-55",
-    "56-65" = "56-65",
-    "66-75" = "66-75",
-    "76 years and over" = "76-90",
-    "76 years and over" = "over 90 years"))
-
+    "18 to 24 years" = "18-24",
+    "25 to 34 years" = "25-34",
+    "35 to 44 years" = "35-44",
+    "45 to 64 years" = "45-54",
+    "45 to 64 years" = "55-64",
+    "65 years and over" = "65-74",
+    "65 years and over" = "75-89",
+    "65 years and over" = "90 years and over"))
+   
 q_state <- QuestionMap$new(
   name = "state",
-  col_names = c("inputstate", "state"),
+  col_names = c("state", "state"),
   values_map = list(
     "Alabama" = "Alabama",
     "Alaska" = "Alaska",
@@ -212,35 +200,35 @@ q_recollapsed <- QuestionMap$new(
     "Black" = "Black or African American alone",
     "Hispanic" = "Hispanic",
     "Other" = "Other",
-    "Mixed" = "Two or More Races",
+    "Other" = "Two or More Races",
     "White" = "White alone"))
 
 q_re <- QuestionMap$new(
   name = "original_re",
-  col_names = c("race_ethnicity", "race_ethnicity"),
+  col_names = c("race", "race_ethnicity"),
   values_map = list(
-    "White" = "White alone",
-    "Asian" = "Asian alone",
-    "Hispanic" = "Hispanic",
     "Black" = "Black or African American alone",
-    "Mixed" = "Two or More Races",
+    "White" = "White alone",
+    "Hispanic" = "Hispanic",
+    "All Other" = "Some Other Race alone",
     "Native American" = "American Indian and Alaska Native tribes",
+    "All Other" = "Two or More Races",
+    "Asian" = "Asian alone",
     "Native American" = "American Indian alone",
-    "Native American" = "Alaska Native alone",
-    "Other" = "Some Other Race alone",
-    "Other" = "Native Hawaiian and Other Pacific Islander alone",
-    "Middle Eastern" = "Some Other Race alone"))
+    "All Other" = "Native Hawaiian and Other Pacific Islander alone",
+    "Native American" = "Alaska Native alone"))
+    
 
 q_educ <- QuestionMap$new(
   name = "education",
   col_names = c("educ", "educ_collps"),
   values_map = list(
-    "No HS" = "No high school",
-    "High school graduate" = "Regular high school diploma",
-    "Some college" = "Some college",
-    "2-year" = "Associate's degree",
-    "4-year" = "Bachelor's degree",
-    "Post-grad" = "Post-graduate"))
+    "HS or Less" = "No high school",
+    "HS or Less" = "Regular high school diploma",
+    "Some College" = "Some college",
+    "Some College" = "Associate's degree",
+    "4-Year" = "Bachelor's degree",
+    "Post-Grad" = "Post-graduate"))
 ```
 
 
@@ -259,7 +247,6 @@ map_model <- SurveyMap$new(sample = cces_data_obj,
                             q_re,
                             q_educ)
 
-map_model$validate()
 map_model$mapping()
 map_model$tabulate()
 
@@ -278,7 +265,7 @@ saveRDS(map_model, here::here("results/map_model.rds"))
 # Model 1
 fit1 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re),
+  formula = vote ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -288,7 +275,7 @@ fit1 <- map_model$fit(
 # Model 2
 fit2 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
+  formula = vote ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -298,7 +285,7 @@ fit2 <- map_model$fit(
 # Model 3
 fit3 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|original_re),
+  formula = vote ~ (1|age) + (1|gender) + (1|state) + (1|original_re),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -308,7 +295,7 @@ fit3 <- map_model$fit(
 # Model 4a
 fit4a <- map_model$fit(
   fun = brms::brm,
-  formula = vote_early ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
+  formula = intent ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -326,11 +313,22 @@ fit4b <- map_model$fit(
 )
 ```
 
+
+# Model 1 
+
 ```{r}
 # read the fit1.rds
-fit1 <- readRDS("results/fit1.rds")
+fit1 <- readRDS(here::here("results/fit1.rds"))
+
 fit1_predict <- fit1$population_predict()
-# 65.759 sec elapsed
+# 72.515 sec elapsed
+
+age_estimation <- fit1$aggregate(fit1_predict, by = "age")
+# 15.954 sec elapsed
+
+state_estimation <- fit1$aggregate(fit1_predict, by = "state")
+# 22.426 sec elapsed
+
 ```
 
 

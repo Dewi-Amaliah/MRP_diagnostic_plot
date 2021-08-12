@@ -1,11 +1,11 @@
 library(mrpkit)
 library(brms)
 
-map_model <- readRDS("results/map_model.rds")
+map_model <- readRDS("/mnt/lustre/projects/Mona0070/dama0007/mrp_vis/map_model.rds")
 
 fit2 <- map_model$fit(
   fun = brms::brm,
-  formula = vote_post ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
+  formula = vote ~ (1|age) + (1|gender) + (1|state) + (1|collapsed_re) + (1|education),
   family = "bernoulli",
   refresh = 100,
   cores = 2,
@@ -13,4 +13,4 @@ fit2 <- map_model$fit(
 )
 
 # save the model 
-saveRDS(fit2, "fit2.rds")
+saveRDS(fit2, "/mnt/lustre/projects/Mona0070/dama0007/mrp_vis_output/fit2.rds")

@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(forcats)
 library(data.table)
+library(ccesMRPprep)
 ```
 
 Needs:
@@ -45,27 +46,43 @@ cces <- haven::read_dta(here::here("data/data_raw/cces16.dta"))
 #race_ethnicity <- collapse Native American + Middle Eastern + Other to be Other
 #state
 
-cces_use <- cces %>%
-  select(V101, commonweight, commonweight_post, inputstate, inputstate_post, birthyr, gender, educ, race, hispanic, pid3,
-         CC16_364c, CC16_364b, CC16_410a, CC16_410a_nv) %>%
-  mutate(age_orig = 2016 - birthyr) %>%
+# cces_use <- cces %>%
+#   select(V101, commonweight, commonweight_post, inputstate, inputstate_post, birthyr, gender, educ, race, hispanic, pid3,
+#          CC16_364c, CC16_364b, CC16_410a, CC16_410a_nv) %>%
+#   mutate(age_orig = 2016 - birthyr) %>%
+#   as_factor() %>%
+#   mutate(race = as.character(race),
+#          hispanic = as.character(hispanic)) %>%
+#   # change the label if the respondent said yes in hispanic origin
+#   mutate(race_ethnicity = ifelse(hispanic == "No" | is.na(hispanic), race, "Hispanic")) %>%
+#   mutate(race_ethnicity_collp = fct_collapse(race_ethnicity,
+#                                              Other = c("Native American", "Middle Eastern", "Other")),
+#          age = as_factor(case_when(age_orig >= 18 & age_orig <= 25 ~ "18-25",
+#                          age_orig > 25 & age_orig <= 35 ~ "26-35",
+#                          age_orig > 35 & age_orig <= 45 ~ "36-45",
+#                          age_orig > 45 & age_orig <= 55 ~ "46-55",
+#                          age_orig > 55 & age_orig <= 65 ~ "56-65",
+#                          age_orig > 65 & age_orig <= 75 ~ "66-75",
+#                          age_orig > 75 ~ "76 years and over")))
+
+# using the ready-to-use data from cceesMRPprep package 
+cces <- get_cces_dataverse("cumulative")
+
+# filter to only have 2016 data
+cces_2016 <- cces %>%
+  filter(year == "2016") %>%
+  ccc_std_demographics()
+
+# wrangle the variable to be used (some is automotaed by ccc_std_demographics)
+cces_use <- cces_2016 %>%
+  select(case_id, year, weight, state, gender, age, educ, 
+         race, pid3, intent_pres_16, voted_pres_16) %>%
   as_factor() %>%
-  mutate(race = as.character(race),
-         hispanic = as.character(hispanic)) %>%
-  # change the label if the respondent said yes in hispanic origin
-  mutate(race_ethnicity = ifelse(hispanic == "No" | is.na(hispanic), race, "Hispanic")) %>%
-  mutate(race_ethnicity_collp = fct_collapse(race_ethnicity,
-                                             Other = c("Native American", "Middle Eastern", "Other")),
-         age = as_factor(case_when(age_orig >= 18 & age_orig <= 25 ~ "18-25",
-                         age_orig > 25 & age_orig <= 35 ~ "26-35",
-                         age_orig > 35 & age_orig <= 45 ~ "36-45",
-                         age_orig > 45 & age_orig <= 55 ~ "46-55",
-                         age_orig > 55 & age_orig <= 65 ~ "56-65",
-                         age_orig > 65 & age_orig <= 75 ~ "66-75",
-                         age_orig > 75 ~ "76 years and over")))
+  mutate(state = as_factor(state)) %>%
+  mutate(race_ethnicity_collp = fct_collapse(race, 
+                                             Other = c("Native American", "All Other")))
 
-
-write_rds(cces_use, here::here("data/cces_use.rds"))
+write_rds(cces_use, here::here("data/cces_use.rds")) 
 ```
 
 
@@ -222,14 +239,14 @@ acs_use <- acs_race %>%
                           RAC1P_ethnic == 9 ~ "Two or More Races",
                           RAC1P_ethnic == 10 ~ "Hispanic")),
          age = as_factor(case_when(AGEP < 18 ~ "Less than 18 years",
-                                   AGEP >= 18 & AGEP <= 25 ~ "18-25",
-                                   AGEP > 25 & AGEP <= 35 ~ "26-35",
-                                   AGEP > 35 & AGEP <= 45 ~ "36-45",
-                                   AGEP > 45 & AGEP <= 55 ~ "46-55",
-                                   AGEP > 55 & AGEP <= 65 ~ "56-65",
-                                   AGEP > 65 & AGEP <= 75 ~ "66-75",
-                                   AGEP > 75 & AGEP <= 90 ~ "76-90",
-                                   AGEP > 90 ~ "over 90 years")))
+                                   AGEP >= 18 & AGEP < 25 ~ "18-24",
+                                   AGEP >= 25 & AGEP < 35 ~ "25-34",
+                                   AGEP >= 35 & AGEP < 45 ~ "35-44",
+                                   AGEP >= 45 & AGEP < 55 ~ "45-54",
+                                   AGEP >= 55 & AGEP < 65 ~ "55-64",
+                                   AGEP >= 65 & AGEP < 75 ~ "65-74",
+                                   AGEP >= 75 & AGEP < 90 ~ "75-89",
+                                   AGEP >= 90 ~ "90 years and over")))
 ```
 
 
