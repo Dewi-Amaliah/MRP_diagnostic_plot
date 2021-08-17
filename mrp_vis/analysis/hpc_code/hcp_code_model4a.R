@@ -1,7 +1,7 @@
 library(mrpkit)
 library(brms)
 
-map_model <- readRDS("results/map_model.rds")
+map_model <- readRDS("/mnt/lustre/projects/Mona0070/dama0007/mrp_vis/map_model.rds")
 
 fit4a <- map_model$fit(
   fun = brms::brm,
@@ -12,5 +12,5 @@ fit4a <- map_model$fit(
   backend = "cmdstanr"
 )
 
-# save the model 
-saveRDS(fit4a, "fit4a.rds")
+# save the model
+saveRDS(fit4a, "/mnt/lustre/projects/Mona0070/dama0007/mrp_vis_output/fit4a.rds")
