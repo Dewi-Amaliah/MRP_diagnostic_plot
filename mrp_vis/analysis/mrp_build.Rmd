@@ -11,6 +11,7 @@ library(mrpkit)
 library(brms)
 library(tidyverse)
 library(tictoc)
+library(ggplot2)
 ```
 
 ## Using mrpkit to build model
@@ -250,7 +251,7 @@ map_model <- SurveyMap$new(sample = cces_data_obj,
 map_model$mapping()
 map_model$tabulate()
 
-saveRDS(map_model, here::here("results/map_model.rds"))
+#saveRDS(map_model, here::here("results/map_model.rds"))
 ```
 
 
@@ -321,16 +322,49 @@ fit4b <- map_model$fit(
 fit1 <- readRDS(here::here("results/fit1.rds"))
 
 fit1_predict <- fit1$population_predict()
-# 72.515 sec elapsed
+# 13.626 sec elapsed
+
 
 age_estimation <- fit1$aggregate(fit1_predict, by = "age")
-# 15.954 sec elapsed
+# 3.771 sec elapsed
 
 state_estimation <- fit1$aggregate(fit1_predict, by = "state")
-# 22.426 sec elapsed
+# 9.03 sec elapsed
 
+popn_estimation <- fit1$aggregate(fit1_predict)
+# 1.194 sec elapsed
+
+state_estimation %>%
+  group_by(state) %>%
+  summarize(mean = mean(value), sd = sd(value))
 ```
 
+```{r}
+plot_popn <- fit1$plot(popn_estimation) 
+plot_popn
+```
+
+```{r}
+fit1$plot(age_estimation, weights = TRUE)
+```
+
+
+Next goal:
+
+## Use the g2016 for the ground truth 
+## Replicate the plot:
+1. State on the y-axis and mrp-estimate on the x-axis / choropleth map 
+2. Scatter plot between MRP estimate and ground truth
+5. Comparison between the 3 outcomes
+6. Comparison between the different predictors (original re, collapsed re, and education)
+
+Next: 
+3. Scatter plot between MRP estimate and direct estimate (to get the uncertainty use the survey package)
+survey::svydesign(ids=~1, weight = "w in original data frame", mean)
+mean = survey::surveymean
+4. plot the MRP estimate with the performance criteria (MSE)
+7. Descriptive statistic about the obs using in the model (i.e., the n vote trump, not vote, and missing for the 3 outcomes)
+8. Check again the levels in the outcome. 
 
 ## Question to clarify:
 
