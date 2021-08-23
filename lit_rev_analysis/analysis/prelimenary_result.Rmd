@@ -11,12 +11,12 @@ library(tidyverse)
 library(janitor)
 library(kableExtra)
 library(patchwork)
+library(ggthemes)
 ```
 
 
 ```{r}
-papers <- read_csv(here::here("metadata_july_15.csv"))
-
+papers <- read_csv(here::here("paper_metadata/metadata_july_22.csv"))
 ```
 
 # Result 
@@ -51,17 +51,64 @@ ggplot(filter(filter_facet_all, !is.na(facet_type))) +
   xlab("whats in the facet") +
   ylab("count") +
   ggtitle("Overall facet")
-
-
 ```
 
 ### Plot types
 
 ```{r}
+plot_type_sum <- papers %>%
+  mutate(uncertainty = ifelse(str_detect(plot_type, "error|CI bar|CIB"), "yes", "no"),
+         plot_type = as.factor(plot_type)) %>%
+  mutate(plot_type_wrangled = fct_collapse(plot_type, `bar plot` = c("bar & dot plot with error bar", 
+                                                                     "bar plot"),
+                                           `dot plot` = c("dot plot", 
+                                                          "dot plot with CI bar", 
+                                                          "dot plot with CIB", 
+                                                          "dot plot with error bar"),
+                                           `line plot` = c("line and dot plot", 
+                                                           "line and dot plot with error bar", 
+                                                           "line plot"),
+                                           `scatter plot` = c("scatter plot with error bar", 
+                                                              "scatter plot"),
+                                           `histogram & density plot` = c("density plot",
+                                                                          "histogram with density plot",
+                                                                          "histogram"),
+                                           `other` = c("boxplot",
+                                                       "bubble plot",
+                                                       "heatmap",
+                                                       "logit curve")
+                                           )) %>%
+  mutate(diagnostic = ifelse(Diagnostic == 0, "Communication", "Diagnostic")) %>%
+  mutate(plot_type_wrangled = factor(plot_type_wrangled, levels = c("other", 
+                                                                    "histogram & density plot",
+                                                                    "bar plot",
+                                                                    "choropleth map",
+                                                                    "line plot", 
+                                                                    "scatter plot",
+                                                                    "dot plot")))
+```
+
+```{r}
+ggplot(plot_type_sum) +
+  geom_bar(aes(y = plot_type_wrangled, fill = uncertainty), position="stack") +
+  facet_wrap(~diagnostic) +
+  theme(legend.position = "bottom") +
+  ylab(" ") +
+  xlab(" ") +
+  scale_fill_manual(values = c("#585858", "#DA81F5")) 
+```
+
+
+
+
+
+```{r}
 ggplot(papers) +
   geom_bar(aes(y = plot_type, fill = Diagnostic)) +
   facet_wrap(~Diagnostic) +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  ylab(" ") +
+  xlab(" ") 
 ```
 
 In this plot, 0 means "communication plot"; 1 means "diagnostic plot"
@@ -235,5 +282,6 @@ ggplot(paper_comp_wide) +
 
 
 ```
+
 
 

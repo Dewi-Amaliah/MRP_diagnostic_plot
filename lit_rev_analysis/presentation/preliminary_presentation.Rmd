@@ -1,0 +1,107 @@
+---
+title: "Preliminary Presentation"
+subtitle: ""
+author: "Dewi Amaliah"
+institute: "Monash University"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    seal: FALSE
+    css: ["kunoichi","ninjutsu"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+layout: true
+class: split-two with-border
+
+.column.bg-main1[
+  .split-three[
+  .row.bg-main1[.content[
+    ### What is MRP?
+    
+    
+* .yellow[Multilevel regression with post-stratification (MRP)] is a model-based approach to estimate population.
+* Usually used for small area estimation or to adjust the estimation from unrepresentative survey. 
+* Example: Predicting the outcome of the U.S. presidential election using XBOX gamers survey (Wang, et.al., 2014)
+    
+  ]]
+  .row.bg-main2[.content[
+    ###Aim of the study
+    
+* Understand the current practice of visualisation of MRP models. 
+* Understanding the implication of existing visualisation choices with real-world data.
+* Improve the common practice in MRP visualisation.
+
+  ]]
+  .row.bg-main3[.content[
+    ###Methods
+* Systematic literature review. 
+* Visualize MRP estimation using existing visualisation (Case: Estimating the US 2016 Presidential Vote outcomes using CCES and ACS data)
+* Create better way to visualise the result MRP. 
+  ]]
+]]
+.column[.content[
+  ###Preliminary result
+    
+Based on the systematic literature review, this plot displays the existing practice of visualizing MRP. 
+
+```{r res, echo=FALSE, message=FALSE}
+library(tidyverse)
+
+papers <- read_csv(here::here("paper_metadata/metadata_july_22.csv"))
+
+plot_type_sum <- papers %>%
+  mutate(uncertainty = ifelse(str_detect(plot_type, "error|CI bar|CIB"), "yes", "no"),
+         plot_type = as.factor(plot_type)) %>%
+  mutate(plot_type_wrangled = fct_collapse(plot_type, `bar plot` = c("bar & dot plot with error bar", 
+                                                                     "bar plot"),
+                                           `dot plot` = c("dot plot", 
+                                                          "dot plot with CI bar", 
+                                                          "dot plot with CIB", 
+                                                          "dot plot with error bar"),
+                                           `line plot` = c("line and dot plot", 
+                                                           "line and dot plot with error bar", 
+                                                           "line plot"),
+                                           `scatter plot` = c("scatter plot with error bar", 
+                                                              "scatter plot"),
+                                           `histogram & density plot` = c("density plot",
+                                                                          "histogram with density plot",
+                                                                          "histogram"),
+                                           `other` = c("boxplot",
+                                                       "bubble plot",
+                                                       "heatmap",
+                                                       "logit curve")
+                                           )) %>%
+  mutate(diagnostic = ifelse(Diagnostic == 0, "Communication", "Diagnostic")) %>%
+  mutate(plot_type_wrangled = factor(plot_type_wrangled, levels = c("other", 
+                                                                    "histogram & density plot",
+                                                                    "bar plot",
+                                                                    "choropleth map",
+                                                                    "line plot", 
+                                                                    "scatter plot",
+                                                                    "dot plot")))
+
+ggplot(plot_type_sum) +
+  geom_bar(aes(y = plot_type_wrangled, fill = uncertainty), position="stack") +
+  facet_wrap(~diagnostic) +
+  theme(legend.position = "bottom") +
+  ylab(" ") +
+  xlab(" ") +
+  scale_fill_manual(values = c("#585858", "#DA81F5"))
+```
+  
+]]
+
+---
+class: gray-row2-col1 gray-row3-col1 
+---
+count: false
+class: gray-row1-col1 gray-row3-col1 
+---
+count: false
+class: gray-row1-col1 gray-row2-col1 
+---
