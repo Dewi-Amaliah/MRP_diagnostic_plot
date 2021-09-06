@@ -76,7 +76,7 @@ cces_2016 <- cces %>%
 # wrangle the variable to be used (some is automotaed by ccc_std_demographics)
 cces_use <- cces_2016 %>%
   select(case_id, year, weight, state, gender, age, educ, 
-         race, pid3, intent_pres_16, voted_pres_16) %>%
+         race, pid3, pid3_leaner, pid7, intent_pres_16, voted_pres_16) %>%
   as_factor() %>%
   mutate(state = as_factor(state)) %>%
   mutate(race_ethnicity_collp = fct_collapse(race, 
