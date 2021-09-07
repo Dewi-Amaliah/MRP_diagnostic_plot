@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.path = "figures/")
 library(mrpkit)
 library(brms)
 library(tidyverse)
@@ -388,7 +388,7 @@ state_est_base <- state_estimation_base %>%
 
 # State Comparison
 
-```{r}
+```{r map}
 library(scales)
 state_estimation_data <- left_join(urbnmapr::states, state_est_base, 
                                    by = c("state_name" = "state"))
@@ -495,7 +495,7 @@ mad_party <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_da
 
 # MRP estimates vs ground truth
 
-```{r, fig.width=9, fig.height=8}
+```{r scatter-est-truth, fig.width=9, fig.height=8}
 p1 <- ggplot(comparison_data, aes(x = base_model, y = truth, xmin = base_model-sd_base_model, xmax = base_model+sd_base_model)) +
   geom_point(color = "#DE0100", size = 1) +
   geom_abline(intercept = 0, linetype = "dotted") +
@@ -635,7 +635,7 @@ p1 + p4 + p5 + p2 + p3 + plot_layout(nrow = 2)
 
 
 
-```{r}
+```{r cor-outcome}
 cor_base_intent <- cor(comparison_data$base_model, comparison_data$intent)
 cor_base_party <- cor(comparison_data$base_model, comparison_data$party)
 
@@ -665,7 +665,7 @@ ggplot(com_outcome, aes(x = correlation, y = model)) +
 ```
 
 
-```{r}
+```{r cor-predictors}
 cor_base_modelb <- cor(comparison_data$base_model, comparison_data$modelb)
 cor_base_modelc <- cor(comparison_data$base_model, comparison_data$modelc)
 
@@ -723,7 +723,7 @@ comp_age <- rbind(age_est_base, age_est_mod2, age_est_mod3) %>%
 ```
 
 
-```{r, fig.width=10, fig.height=9}
+```{r violin-levels, fig.width=10, fig.height=9}
 # create the plot for race
 p6 <- ggplot(comp_race, aes(x = original_re, y = value, fill = model)) +
   geom_violin() +
@@ -814,48 +814,145 @@ mrp_age_state_fit3 <- get_MRP_ests(ests_ps_fit3, age)
 
 **Correlation of race between base model and model with more levels on race**
 
-```{r}
-race_metrics <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("state", "original_re"), 
+```{r cor-race}
+# in total 
+get_metrics <- function(vect){
+  cor <- cor(comparison_data$base_model, vect)
+  mae <- mae(comparison_data$base_model, vect)
+  rmse <- rmse(comparison_data$base_model, vect)
+  bias <- bias(comparison_data$base_model, vect)
+  
+  metrics <- tribble(~level, ~metrics, ~values,
+                    "total", "rmse", rmse,
+                    "total", "bias", bias,
+                    "total", "cor", cor,
+                    "total", "mae", mae)
+  return(metrics)
+}
+
+metrics_fit1_fit3 <- get_metrics(comparison_data$modelc) 
+
+# by level
+race_metrics_tmp <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("state", "original_re"), 
                   suffix = c("_fit1", "_fit3")) %>%
   group_by(original_re) %>%
   summarise(cor = cor(median_fit1, median_fit3),
             mae = mae(median_fit1, median_fit3),
             rmse = rmse(median_fit1, median_fit3),
-            bias = bias(median_fit1, median_fit3))
+            bias = bias(median_fit1, median_fit3)) %>%
+  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+  rename(level = original_re)
+
+race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
+  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")),
+         level = factor(level, levels = c("Black", "White", "Hispanic", "Asian", "Native American",
+                                          "All Other", "total")))
+
+
+ggplot(race_metrics, aes(y = metrics, x = values, color = level)) +
+  geom_point(alpha = 0.8) +
+  scale_color_manual(values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", 
+                                "#386cb0", "#f0027f", "#616A6B")) +
+  ggtitle("Estimation performance criteria by race categories",
+          subtitle = "Model with more levels of race compared to base model") +
+  theme_fivethirtyeight() +
+  theme(plot.title = element_text(size = 12),
+        plot.subtitle = element_text(size = 9)) +
+  xlab("values") +
+  ylab("metrics")
+  
 ```
 
 
 **Correlation of education**
-```{r}
-educ_metrics <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("state", "education"), 
+```{r cor-educ}
+metrics_fit1_fit2 <- get_metrics(comparison_data$modelb)
+
+educ_metrics_tmp <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("state", "education"), 
                   suffix = c("_fit1", "_fit2")) %>%
   group_by(education) %>%
   summarise(cor = cor(median_fit1, median_fit2),
             mae = mae(median_fit1, median_fit2),
             rmse = rmse(median_fit1, median_fit2),
-            bias = bias(median_fit1, median_fit2))
+            bias = bias(median_fit1, median_fit2)) %>%
+  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+  rename(level = education)
+
+educ_metrics <- rbind(educ_metrics_tmp, metrics_fit1_fit2) %>%
+  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")))
+
+ggplot(educ_metrics, aes(y = metrics, x = values, color = level)) +
+  geom_point() +
+  scale_color_manual(values = c("#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#616A6B")) +
+  ggtitle("Estimation performance criteria by education level",
+          subtitle = "Model with additional predictor (education) compared to base model") +
+  theme_fivethirtyeight() +
+  theme(plot.title = element_text(size = 12),
+        plot.subtitle = element_text(size = 9)) +
+  xlab("values") +
+  ylab("metrics")
 ```
 
 **Correlation of age**
 
-```{r}
-age_metrics <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("state", "age"),
+```{r cor-age-fit2}
+age_metrics_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("state", "age"),
                      suffix = c("_fit1", "_fit2")) %>%
   group_by(age) %>%
   summarise(cor = cor(median_fit1, median_fit2),
             mae = mae(median_fit1, median_fit2),
             rmse = rmse(median_fit1, median_fit2),
-            bias = bias(median_fit1, median_fit2))
+            bias = bias(median_fit1, median_fit2)) %>%
+  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+  rename(level = age)
 
-age_metrics2 <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("state", "age"),
+age_metrics <- rbind(age_metrics_tmp, metrics_fit1_fit2) %>%
+  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")),
+         level = factor(level, levels = c("18 to 24 years", "25 to 34 years",
+                                      "35 to 44 years", "45 to 64 years",
+                                      "65 years and over", "total"))) 
+
+ggplot(age_metrics, aes(y = metrics, x = values, color = level)) +
+  geom_point() +
+  scale_color_manual(values = c("#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177","#616A6B")) +
+  ggtitle("Estimation performance criteria by age level",
+          subtitle = "Model with additional predictor (education) compared to base model") +
+  theme_fivethirtyeight() +
+  theme(plot.title = element_text(size = 12),
+        plot.subtitle = element_text(size = 9)) +
+  xlab("values") +
+  ylab("metrics")
+```
+
+
+```{r cor-age-fit3}
+age_metrics2_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("state", "age"),
                      suffix = c("_fit1", "_fit3")) %>%
   group_by(age) %>%
   summarise(cor = cor(median_fit1, median_fit3),
             mae = mae(median_fit1, median_fit3),
             rmse = rmse(median_fit1, median_fit3),
-            bias = bias(median_fit1, median_fit3))
-```
+            bias = bias(median_fit1, median_fit3)) %>%
+  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+  rename(level = age)
 
+age_metrics2 <- rbind(age_metrics2_tmp, metrics_fit1_fit3) %>%
+  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")),
+         level = factor(level, levels = c("18 to 24 years", "25 to 34 years",
+                                      "35 to 44 years", "45 to 64 years",
+                                      "65 years and over", "total"))) 
+
+ggplot(age_metrics2, aes(y = metrics, x = values, color = level)) +
+  geom_point() +
+  scale_color_manual(values = c("#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177","#616A6B")) +
+  ggtitle("Estimation performance criteria by age level",
+          subtitle = "Model with more levels on race compared to base model") +
+  theme_fivethirtyeight() +
+  theme(plot.title = element_text(size = 12),
+        plot.subtitle = element_text(size = 9)) +
+  xlab("values") +
+  ylab("metrics")
+```
 
 
 
