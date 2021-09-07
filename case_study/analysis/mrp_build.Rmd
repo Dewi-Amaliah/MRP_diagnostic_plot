@@ -28,9 +28,8 @@ library(Metrics)
 
 ```{r}
 # read the data
-
-cces <- read_rds(here::here("data/cces_use.rds"))
-acs <- read_rds(here::here("data/acs_use_wrangled.rds"))
+cces <- read_rds(here::here("case_study/data/cces_use.rds"))
+acs <- read_rds(here::here("case_study/data/acs_use_wrangled.rds"))
 ```
 
 
@@ -298,7 +297,7 @@ map_model <- SurveyMap$new(sample = cces_data_obj,
 map_model$mapping()
 map_model$tabulate()
 
-#saveRDS(map_model, here::here("results/map_model.rds"))
+#saveRDS(map_model, here::here("case_study/results/map_model.rds"))
 ```
 
 
@@ -366,7 +365,7 @@ fit4b <- map_model$fit(
 
 ```{r}
 # read the fit1.rds
-fit1 <- readRDS(here::here("results/fit1.rds"))
+fit1 <- readRDS(here::here("case_study/results/fit1.rds"))
 
 fit1_predict <- fit1$population_predict()
 # 13.626 sec elapsed
@@ -415,7 +414,7 @@ comparison_data <- left_join(ground_truth, state_est_base, by = "state") %>%
          sd_base_model = sd)
 
 # read the fit4a.rds
-fit4a <- readRDS(here::here("results/fit4a.rds"))
+fit4a <- readRDS(here::here("case_study/results/fit4a.rds"))
 
 fit4a_predict <- fit4a$population_predict()
 
@@ -430,7 +429,7 @@ state_est_intent <- state_estimation_intent %>%
 comparison_data <- left_join(comparison_data, state_est_intent, by = "state")
 
 # read the fit4b.rds
-fit4b <- readRDS(here::here("results/fit4b.rds"))
+fit4b <- readRDS(here::here("case_study/results/fit4b.rds"))
 
 fit4b_predict <- fit4b$population_predict()
 
@@ -445,7 +444,7 @@ state_est_party <- state_estimation_party %>%
 comparison_data <- left_join(comparison_data, state_est_party, by = "state")
 
 # read the fit2.rds
-fit2 <- readRDS(here::here("results/fit2.rds"))
+fit2 <- readRDS(here::here("case_study/results/fit2.rds"))
 
 fit2_predict <- fit2$population_predict()
 
@@ -460,7 +459,7 @@ state_est_modelb <- state_estimation_modelb %>%
 comparison_data <- left_join(comparison_data, state_est_modelb, by = "state")
 
 # read the fit3.rds
-fit3 <- readRDS(here::here("results/fit3.rds"))
+fit3 <- readRDS(here::here("case_study/results/fit3.rds"))
 
 fit3_predict <- fit3$population_predict()
 

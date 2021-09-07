@@ -38,7 +38,7 @@ Next week goal:
 ## Munging the CCES data
 
 ```{r}
-cces <- haven::read_dta(here::here("data/data_raw/cces16.dta"))
+cces <- haven::read_dta(here::here("case_study/data/data_raw/cces16.dta"))
 
 #age
 #sex
@@ -82,7 +82,7 @@ cces_use <- cces_2016 %>%
   mutate(race_ethnicity_collp = fct_collapse(race, 
                                              Other = c("Native American", "All Other")))
 
-write_rds(cces_use, here::here("data/cces_use.rds")) 
+write_rds(cces_use, here::here("case_study/data/cces_use.rds")) 
 ```
 
 
@@ -90,39 +90,39 @@ write_rds(cces_use, here::here("data/cces_use.rds"))
 
 
 ```{r}
-# acs_2015_a <- fread(here::here("data/data_raw/ss15pusa.csv"))
-# acs_2015_b <- fread(here::here("data/data_raw/ss15pusb.csv"))
+# acs_2015_a <- fread(here::here("case_study/data/data_raw/ss15pusa.csv"))
+# acs_2015_b <- fread(here::here("case_study/data/data_raw/ss15pusb.csv"))
 # 
 # acs_15 <- rbind(acs_2015_a, acs_2015_b) %>%
 #   mutate(year = 2015)
 # 
-# write_rds(acs_15, here::here("data/data_raw/acs_15.rds"), compress = "gz")
+# write_rds(acs_15, here::here("case_study/data/data_raw/acs_15.rds"), compress = "gz")
 ```
 
 ```{r}
-# acs_2016_a <- fread(here::here("data/data_raw/ss16pusa.csv"))
-# acs_2016_b <- fread(here::here("data/data_raw/ss16pusb.csv"))
+# acs_2016_a <- fread(here::here("case_study/data/data_raw/ss16pusa.csv"))
+# acs_2016_b <- fread(here::here("case_study/data/data_raw/ss16pusb.csv"))
 # 
 # acs_16 <- rbind(acs_2016_a, acs_2016_b) %>%
 #   mutate(year = 2016)
 # 
-# write_rds(acs_16, here::here("data/data_raw/acs_16.rds"), compress = "gz")
+# write_rds(acs_16, here::here("case_study/data/data_raw/acs_16.rds"), compress = "gz")
 ```
 
 ```{r}
-acs_2017_a <- fread(here::here("data/data_raw/psam_pusa_2017.csv"))
-acs_2017_b <- fread(here::here("data/data_raw/psam_pusb_2017.csv"))
+acs_2017_a <- fread(here::here("case_study/data/data_raw/psam_pusa_2017.csv"))
+acs_2017_b <- fread(here::here("case_study/data/data_raw/psam_pusb_2017.csv"))
 
 acs_17 <- rbind(acs_2017_a, acs_2017_b) %>%
   mutate(year = 2017)
 
-# write_rds(acs_17, here::here("data/data_raw/acs_17.rds"), compress = "gz")
+# write_rds(acs_17, here::here("case_study/data/data_raw/acs_17.rds"), compress = "gz")
 ```
 
 ```{r}
-acs_15 <- readRDS(here::here("data/data_raw/acs_15.rds"))
-acs_16 <- readRDS(here::here("data/data_raw/acs_16.rds"))
-acs_17 <- readRDS(here::here("data/data_raw/acs_17.rds"))
+acs_15 <- readRDS(here::here("case_study/data/data_raw/acs_15.rds"))
+acs_16 <- readRDS(here::here("case_study/data/data_raw/acs_16.rds"))
+acs_17 <- readRDS(here::here("case_study/data/data_raw/acs_17.rds"))
 
 # select the variable that will only be used in the analysis
 
@@ -137,13 +137,13 @@ acs_17_use <- acs_17 %>%
 
 # bind the three years
 acs_use <- bind_rows(acs_15_use, acs_16_use, acs_17_use)
-# write_rds(acs_use, here::here("data/data_raw/acs_use.rds"), compress = "gz")
+# write_rds(acs_use, here::here("case_study/data/data_raw/acs_use.rds"), compress = "gz")
 ```
 
 ```{r}
 # recode the variables in cces data since they are coded in integer 
 
-acs <- read_rds(here::here("data/data_raw/acs_use.rds"))
+acs <- read_rds(here::here("case_study/data/data_raw/acs_use.rds"))
 acs_race <- acs %>%
   # include Hispanic in the race and ethnicity variable
   # if someone is identified has hispanic descendant, he/she will be coded to Hispanic
@@ -283,7 +283,7 @@ acs_use_collapse <- acs_use %>%
   select(SERIALNO, ST, wt, year, HISP, AGEP, state, educ, educ_collps,
          sex,race_ethnicity,race_ethnicity_collps, age)
 
-write_rds(acs_use_collapse, here::here("data/acs_use_wrangled.rds"))
+write_rds(acs_use_collapse, here::here("case_study/data/acs_use_wrangled.rds"))
 ```
 
 
