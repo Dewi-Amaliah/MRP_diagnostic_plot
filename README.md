@@ -1,4 +1,4 @@
-# MRP diagnostic visualisation
+# MRP Diagnostic Visualisation
 
 ## :clipboard: About
 
