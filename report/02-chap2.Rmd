@@ -3,91 +3,73 @@ chapter: 2
 knit: "bookdown::render_book"
 ---
 
-```{r setup-chap2, include=FALSE}
+```{r setup-chap2, include=FALSE, cache=FALSE}
 library(knitr)
-# knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
-
 read_chunk(here::here("lit_rev_analysis/analysis/slr_analysis.R"))
 ```
 
-```{r pkg-chap2}
+```{r pkgs}
 ```
 
 
 # Systematic Literature Review {#sec:syslitrev}
 
-This study is performed using a systematic review method in which an attempt is made to collect empirical evidence explicitly and systematically using pre-specified eligibility criteria to answer a specific research question [@cochrane]. Further, according to @brown_uni, the key criteria of the systematic literature review are: *"a clearly defined question with inclusion & exclusion criteria; rigorous & systematic search of the literature; critical appraisal of included studies; data extraction and management; analysis & interpretation of results; and report for publication."* Hence, to conform with these criteria, this study incorporates the Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA)’s checklist and flow diagram. The following subsections discuss the steps conducted following those criteria. 
+This study is performed using a systematic review method in which an attempt is made to collect empirical evidence explicitly and systematically using pre-specified eligibility criteria to answer a specific research question [@cochrane]. Systematic literature review also enable the process of finding the gap in certain field of science, in terms of what has been done and what needs to be done [@LinnenlueckeMartinaK2020Cslr]. Hence, in this case, systematic literature review could assist us to understand the common practice in MRP visualisations and how can we improve that. 
 
-## Literature Identification
+According to @brown_uni, the key criteria of the systematic literature review are: *"a clearly defined question with inclusion & exclusion criteria; rigorous & systematic search of the literature; critical appraisal of included studies; data extraction and management; analysis & interpretation of results; and report for publication."* Hence, to conform with these criteria, this study incorporates the Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA)’s checklist and flow diagram. The following subsections discuss the steps conducted following those criteria. 
+
+## Literature Identification 
 
 MRP is applied in various scientific fields, ranging from social and political science to public health. Therefore, to identify the literature, this study refers to research databases instead of field-specific journals. Those databases are JSTOR, EBSCO, and PubMed. The first two databases are chosen due to their broad range of field coverage, while the latter is chosen since MRP is sometimes also applied in the health and medical field. Choosing these databases also considers that heterogeneity of included studies is one of the important factors in a systematic literature review [@SchweizerMarinL2017Apgt].
 
-Further, we identify the literature using the combination of several search terms. Mostly the search term includes the term "multilevel regression, "post-stratification", "poststratification", and "multilevel model". Our target literature is articles that are written in English. Regarding the time of publication, we exclude all of the publications before 1997 since the MRP method has not been developed in this period. Initially we included only the title/abstract when searching these databases. However, using this method limits the set of potential articles to only include those with the search term in the abstract/title. To rectify this, we also include a search with "all field" in the search criteria. Note that for EBSCO, we directly apply the search for all fields. The detailed literature identification is shown in Table \@ref(tab:search-term). 
+Further, we identify the literature using the combination of several search terms. Mostly the search term includes the term "multilevel regression", "post-stratification", "poststratification", and "multilevel model". Our target literature is articles that are written in English. Regarding the time of publication, we exclude all of the publications before 1997 since the MRP method has not been developed in this period. Initially we included only the title/abstract when searching these databases. However, using this method limits the set of potential articles to only include those with the search term in the abstract/title. To rectify this, we also include a search with "all field" in the search criteria. Note that for EBSCO, we directly apply the search for all fields. The detailed literature identification is shown in Table \@ref(tab:search-term). 
 
-The total number of articles from this search criteria are 327. Next, we utilize the literature manager, EndNote X9, to manage these articles and to find duplicate articles. After removing those duplicate articles, we have 221 articles to be screened in the next stage. 
+The total number of articles from this search criteria are 327. Next, we utilize the literature manager, EndNote X9, to manage these articles and to find duplicate articles. After removing those duplicate articles, we have 212 articles to be screened in the next stage. 
 
 ```{r search-term}
 ```
 
-
 ## Screening and Eligibility Criteria
 
-We screen all of the articles whether they fit the criteria to be included in the study or not. To screen efficiently, we use two stages. In the first stage DA and LK independently review all articles abstracts. Secondly DA reviews the full article to meet a second, more specific criteria. 
+We screen all of the articles whether they fit the criteria to be included in the study or not. We find that 3 articles are apparently not research papers. Hence, there are 209 abstracts to be screened. To screen efficiently, we use two stages as follow. 
 
- ### Stage 1: Review of abstracts
+### Stage 1: Review of abstracts
 
- In the first stage (abstract review)...
- - process
- - criteria
-
- with the following eligibility criteria:
+In the first stage DA and LK independently review all articles abstracts with the following eligibility criteria:
 
 1. The abstract should mentions analysis of data or creation of simulation data. 
 2. The abstract should mentions use of MRP or multilevel models to make population estimates or the use of other regression models (BART, spatial, stacked, trees) to make population estimates.
 
-When the two reviewers (LK and DA) disagreed... 
- - what happened
- - how often did it happen
+During the screening, we agreed that 61 articles meet the eligibility criteria listed above, while 104 articles do not meet the criteria. Further, we disagreed on 44 articles. Accordingly, DA and LK skim the full manuscript to decide whether the paper could be included in the next stage or not. As the result, we include 22 more articles to be reviewed in stage 2. 
 
-During the screening process, we find that 4 articles are apparently not research papers. In addition, we find that 104 articles that do not meet the criteria listed above. Therefore, we exclude them from the list.  
+### Stage 2: Full manuscript review
 
- ### Stage 2: Full manuscript review and coding
-
- This leaves a remaing 113 articles for the second stage of the screening process. The aim of this stage is to get the list of the final articles that would be included in the study. We set the criteria of eligibility as follows:
+DA reviews the full manuscript on 83 articles meet a second, more specific criteria. The aim of this stage is to get the list of the final articles that would be included in the study. We set the criteria of inclusion as follow:
 
 1. It should apply MRP as its method.
 2. It should contain at least one plot relate to MRP findings. 
 
+During this stage, we exclude 4 articles as they do not meet the first criteria. Further, 7 articles are excluded as they do not meet the second criteria. Also, an article is not included because it is a duplicate from other article that is already in the eligible list. However, this duplicate was not detected automatically by Endnote X9. Finally, we have 71 articles to be reviewed in the next stage. Figure \@ref(fig:prisma-flowchart) displays the PRISMA flow chart of this study. This figure is generated using `PRISMA2020` [@prisma2020]. 
 
-
-Dewi, I think this is confusing steps 1 and 2 from the two stages. Better to seperate it under the headings I've suggested, I think!
-
-
-
-
-From the first sub-stage alone (i.e., abstract screening) we found that 61 articles fulfill the first criteria, which is using MRP as its method. Hence, we read the full articles for the remaining 52 articles. From this, we exclude 42 articles. Most of these articles are excluded because they do not meet Criteria 1, which is not using MRP as its method. These articles are captured in the first sub-stage mainly because they mention the search term (i.e., "multilevel model" or "post-stratification") in them. Many of them only use a common stratification weighting. Also, some articles using another method, but they mention MRP in their literature review as an alternative method to do the analysis. Other articles are excluded because they do not meet Criteria 2, which is does not convey their MRP result in a single plot.
-
-Finally, we have 71 articles to be reviewed in the next stage. Figure \@ref(fig:prisma-flowchart) displays the PRISMA flow chart of this study. This figure is generated using **`PRISMA2020`** [@prisma2020]. 
-
+```{r prisma-flowchart, fig.cap= "PRISMA flow chart of this systematic literature review.", out.width="90%"}
+knitr::include_graphics("figures/prisma_fc.png")
+```
 
 ## Data Extraction and Analysis
 
-We focus the data extraction to the MRP-related plot. We manually create a metadata for each plot (included in supplementary material of this study). The reasons we create a  metadata for these plots are to ensure the reproducibility of the analysis and to maintain the transparency of the systematic literature review process. 
+We focus the data extraction on the MRP-related plot. We manually create a metadata for each plot (included in the supplementary material). We will use this metadata to analyse the current reporting practices with MRP. Besides, this metadata ensures the reproducibility of the analysis and to maintain the transparency of the systematic literature review process. 
 
-LK: We also collect this data to allow us to analyse the current reporting practices with MRP
+We code the plots according to their type, i.e., communication (coded to 0) and diagnostic plot (coded to 1). For diagnostic plots, we examine whether the plots compare MRP with other estimates, which are:
 
+1. Raw (direct estimates or direct disaggregation);
+2. Ground truth;
+3. Weight estimation;
+4. Estimates of other MRP models, for example, the paper build several MRP models from various simulation scenarios or using different covariates;
+5. Estimates from another study/survey;
+6. Estimates from another method, for example comparing MRP with Bayesian Additive Tress with Post-Stratification. 
 
-To build a metadata we classify the plot into two types, i.e., communication (coded to 0) and diagnostic plot (coded to 1). For diagnostic plots, we examine whether the plots compare MRP with other estimates, which are:
-
-1. raw (direct estimates or direct disaggregation);
-2. truth;
-3. weight estimation;
-4. estimates of other MRP models, for example, the paper build several MRP models from various simulation scenarios or using different covariates;
-5. estimates from another study/survey;
-6. estimates from another method, for example comparing MRP with Bayesian Additive Tress with Post-Stratification. 
-
-Plot that show a comparison of MRP with each of the above list would be coded to 1, otherwise coded to 0.
-The diagnostic plot could also display the performance of MRP using several performance criteria, as follows:
+Plots that show a comparison of MRP with the above list would be coded to 1, otherwise coded to 0.
+The diagnostic plot could also display the performance of MRP using these performance criteria:
 
 1. Bias;
 2. Mean Absolute Error (MAE);
@@ -95,20 +77,53 @@ The diagnostic plot could also display the performance of MRP using several perf
 4. Standard Error (SE);
 5. Correlation. 
 
-Just like the comparison, the MRP-related plot would be reviewed whether it is contains each of those performance criteria (coded 1) or not (coded 0). 
+Just like the comparison, the MRP-related plot would be reviewed whether it is contains each of those metrics (coded 1) or not (coded 0). 
 
-We also review other features of the plot using the grammar in **`ggplot2`** [@ggplot2]. We examine the facet, plot type, what is put in the x, y-axis, color, and shape. Besides, the metadata also contains the paper's author/s, paper's year, paper's title, and plot's figure number. 
+We also review other features of the plot using the grammar in `ggplot2` [@ggplot2]. The common grammar used in practice allows us to understand to what extend MRP models are effectively visualised. It is worth noting that there is no specific convention or well-documented recommendation on how data should be visualised as building a graph more often involve choice or preference [@MIDWAY2020100141]. For example, there is no specific convention on which variable should be put on the x and y-axis in a scatter plot, even though it has been common knowledge to put the response variable on the y-axis and the explanatory variable on the x-axis. Hence, grammar assists us in evaluating well-formed graphics [@layered-grammar]. In addition, @vanderplas mention that classifying and comparing graphs according to their grammar is more robust and more elegant. 
 
-LK: Also note why we chose to note the grammar and what we hoped to learn from it. 
+Accordingly, we examine the facet, geom, axis, color, and shape. Besides, the metadata also contains the article's author/s, article's year, article's title, and figure's number as appearing in the article. After the extraction, we analyze the data using graphical visualization with `ggplot2`. The result will be discussed in the following subsection. 
 
 
-After the extraction, we analyze the data using graphical visualization with **`ggplot2`**. The result will be discussed in the next section. 
+## Common practices in MRP visualisations 
 
-```{r prisma-flowchart, fig.cap= "PRISMA folow chart of this systematic literature review.", out.width="90%"}
+```{r read-data}
+```
 
-knitr::include_graphics("figures/prisma_fc.png")
+```{r nplots}
+```
+
+From 71 articles, we extract the data of `r nplots` plots. `r p_diagplot` % of these plots are diagnostics plots, while the remaining are communication plots. 
+
+### Performance metrics used in MRP 
+
+```{r perform-plot, fig.cap = "Metrics used as MRP performance criteria."}
+
 ```
 
 
-## Results
+### Common estimates to compare with MRP estimates
+
+```{r compare-plot, fig.cap = "Estimates to compare with MRP."}
+
+```
+
+
+### Common grammar in MRP visualisations
+
+**Plot type**
+
+Plot type, referred as `geom` in grammar of graphics represents 
+
+```{r common-plots, fig.cap="Common plot types used in MRP visualisations. Both communication and diagnostics plots rarely displayed uncertainty."}
+```
+
+**Values put in x and y-axis**
+
+```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=6, fig.width=6}
+```
+
+**Feature used**
+
+
+
 

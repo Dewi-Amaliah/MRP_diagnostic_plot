@@ -16,7 +16,7 @@ library(ggthemes)
 
 
 ```{r}
-papers <- read_csv(here::here("paper_metadata/metadata_july_22.csv"))
+papers <- read_csv(here::here("lit_rev_analysis/paper_metadata/metadata_july_22.csv"))
 ```
 
 # Result 
@@ -95,7 +95,8 @@ ggplot(plot_type_sum) +
   theme(legend.position = "bottom") +
   ylab(" ") +
   xlab(" ") +
-  scale_fill_manual(values = c("#585858", "#DA81F5")) 
+  scale_fill_manual(values = c("#585858", "#DA81F5")) +
+  theme_classic()
 ```
 
 
@@ -117,12 +118,20 @@ In this plot, 0 means "communication plot"; 1 means "diagnostic plot"
 ### Axis type in Communication Plot
 
 ```{r}
-
 axis_complot <- filter(papers, Diagnostic == 0) %>% 
   group_by(x_axis, y_axis) %>% count()
 
-ggplot(axis_complot, aes(x_axis, y_axis, fill = n)) + 
-  geom_tile()
+tile_com <- ggplot(axis_complot, aes(x_axis, y_axis, fill = n)) + 
+  geom_tile() +
+  ylab("values in y-axis") +
+  xlab("values in x-axis") +
+  labs(fill = "number of plots") +
+  theme_classic() +
+  ggtitle("a) Communication plots") +
+  theme(plot.title = element_text(size = 11),
+        legend.title = element_text(size = 9),
+        axis.title.x = element_text(size = 9),
+        axis.title.y = element_text(size = 9))
 ```
 
 
@@ -132,7 +141,7 @@ If we make it detailed further to the plot type, the result is as follows:
 filter(papers, Diagnostic == 0) %>% 
   group_by(x_axis, y_axis, plot_type) %>% count() %>% 
   kable(caption = "The summary of axis in communication plot with the plot type") %>% 
-  kable_styling()
+  kable_styling() 
 ```
 
 
@@ -144,11 +153,26 @@ filter(papers, Diagnostic == 0) %>%
 axis_diaplot <- filter(papers, Diagnostic == 1) %>% 
   group_by(x_axis, y_axis) %>% count() 
 
-ggplot(axis_diaplot, aes(x_axis, y_axis, fill = n)) + 
+tile_diag <- ggplot(axis_diaplot, aes(x_axis, y_axis, fill = n)) + 
   geom_tile() +
-  theme(axis.text.x = element_text(angle = 20))
+  ylab("values in y-axis") +
+  xlab("values in x-axis") +
+  labs(fill = "number of plots") +
+  theme_classic() +
+  ggtitle("b) Diagnostic plots") +
+  theme(axis.text.x = element_text(angle = 30)) +
+  theme(plot.title = element_text(size = 11),
+        legend.title = element_text(size = 9),
+        axis.title.x = element_text(size = 9),
+        axis.title.y = element_text(size = 9))
   
 ```
+
+```{r}
+tile_com + tile_diag + plot_layout(nrow = 2)
+```
+
+
 
 The summary of x_axis and y_axis including the plot type is: 
 
@@ -202,14 +226,19 @@ paper_perf_crit <- papers %>%
                  `performance_criteria_MSE/RMSE`,
                  performance_criteria_SE), names_to = "perf_crit",
                values_to = "is_use_perf_crit") %>%
-  mutate(is_use_perf_crit = as.factor(is_use_perf_crit))
+  mutate(metrics = case_when(str_detect(perf_crit, "bias") ~ "bias",
+                             str_detect(perf_crit, "correlation") ~ "correlation",
+                             str_detect(perf_crit, "MAE") ~ "MAE",
+                             str_detect(perf_crit, "MSE") ~ "MSE/RMSE",
+                             str_detect(perf_crit, "SE") ~ "SE")) %>%
+  mutate(is_use_perf_crit = as.factor(is_use_perf_crit),
+         metrics = factor(metrics, levels = c("MAE", "bias", "correlation", "MSE/RMSE", "SE")))
 
-
-ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=perf_crit)) + 
-    geom_bar(position="stack") +
-  theme(axis.text.x = element_text(angle = 15)) +
-  ggtitle("Type of statistics used as MRP performance criteria") +
+ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=metrics)) + 
+  geom_bar(position="stack") +
   xlab("performance criteria") +
+  scale_fill_manual(values = c("#BDC3C7", "#17A589")) +
+  theme_classic() +
   theme(legend.position = "none")
 ```
 
@@ -252,13 +281,20 @@ paper_comp <- papers %>%
                  comparison_truth, comparison_weight),
                  names_to = "comp_with",
                  values_to = "is_comp_with") %>%
-  mutate(is_comp_with = as.factor(is_comp_with))
+  mutate(comp = case_when(str_detect(comp_with, "MRP") ~ "MRP",
+                             str_detect(comp_with, "method") ~ "other method",
+                             str_detect(comp_with, "study") ~ "other study",
+                             str_detect(comp_with, "raw") ~ "raw",
+                             str_detect(comp_with, "truth") ~ "truth",
+                             str_detect(comp_with, "weight") ~ "weight")) %>%
+  mutate(is_comp_with = as.factor(is_comp_with),
+         comp = factor(comp, levels = c("raw","truth", "MRP", "other study", "weight", "other method")))
 
-ggplot(paper_comp, aes(fill=is_comp_with, x=comp_with)) + 
-    geom_bar(position="stack") +
-  theme(axis.text.x = element_text(angle = 15)) +
-  ggtitle("MRP estimates are compared to") +
+ggplot(paper_comp, aes(fill=is_comp_with, x=comp)) + 
+  geom_bar(position="stack") +
   xlab("comparison of MRP estimates with") +
+  scale_fill_manual(values = c("#bababa", "#2c7bb6")) +
+  theme_classic() +
   theme(legend.position = "none")
 ```
 
