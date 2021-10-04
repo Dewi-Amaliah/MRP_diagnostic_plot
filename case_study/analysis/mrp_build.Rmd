@@ -442,31 +442,6 @@ comparison_data <- plyr::join_all(list(ground_truth,
 ```
 
 
-
-```{r}
-# read the fit1.rds
-fit1 <- readRDS(here::here("case_study/results/fit1.rds"))
-
-fit1_predict <- fit1$population_predict()
-# 13.626 sec elapsed
-
-#age_estimation <- fit1$aggregate(fit1_predict, by = "age")
-# 3.771 sec elapsed
-
-state_estimation_base <- fit1$aggregate(fit1_predict, by = "state")
-# 9.03 sec elapsed
-
-#popn_estimation <- fit1$aggregate(fit1_predict)
-# 1.194 sec elapsed
-
-state_est_base <- state_estimation_base %>%
-  group_by(state) %>%
-  summarize(median = median(value),
-            lower = quantile(value, 0.025),
-            upper = quantile(value, 0.975))
-```
-
-
 # Map of Trump Vote Probability 
 
 ```{r map}
@@ -598,7 +573,7 @@ spc4b <- get_scatter_common(comparison_data$party,
 spc1 + spc4a + spc4b + spc2 + spc3 + plot_layout(nrow = 2)
 ```
 
-Next: Doing the other way around for the axis
+Doing the other way around for the axis
 
 ```{r scatter-est-truth-axis, fig.width=9, fig.height=8}
 get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
@@ -677,6 +652,43 @@ sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 2)
 ```
 
 # plot of state against CI
+
+```{r}
+# filter the na in vote variable
+cces_mrp_na_omit <- cces_mrp %>%
+  filter(!is.na(vote))
+
+## ---- raw-est
+
+
+## ---- wtd-est
+
+# create survey object
+wtd_est <- svydesign(ids = ~1, weights = ~wt, data = cces_mrp_na_omit)
+
+# calculate wtd estimate who vote for Trump
+wtd_mean <- data.frame(svyby(~vote, ~state, wtd_est, svymean)) %>%
+  select(voteyes) %>%
+  rename(wtd_est = voteyes) %>%
+  rownames_to_column("state")
+rownames(wtd_mean) <- 1:nrow(wtd_mean)
+
+
+# calculate confidence interval for voter who vote for Trump
+wtd_confint <- data.frame(confint(svyby(~vote, ~state, wtd_est, svymean))) %>%
+  rename(lower_wt = X2.5..,
+         upper_wt = X97.5..) %>%
+  rownames_to_column("state") %>%
+  filter(str_detect(state, "voteyes")) %>%
+  separate(state, c("state", "vote"), ":") %>%
+  select(-vote)
+
+# join mean and confint
+wtd_estimates <- left_join(wtd_mean, wtd_confint, by = "state")
+```
+
+
+
 
 ```{r}
 ggplot(state_est_base, aes(x = state, y = mean, ymin = mean-sd, ymax = mean+sd)) +
