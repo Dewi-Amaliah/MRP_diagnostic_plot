@@ -362,7 +362,86 @@ fit4b <- map_model$fit(
 ```
 
 
-# Visualisation of the result 
+# Predict the population
+
+```{r}
+# read the fit object
+fit1 <- readRDS(here::here("case_study/results/fit1.rds"))
+fit2 <- readRDS(here::here("case_study/results/fit2.rds"))
+fit3 <- readRDS(here::here("case_study/results/fit3.rds"))
+fit4a <- readRDS(here::here("case_study/results/fit4a.rds"))
+fit4b <- readRDS(here::here("case_study/results/fit4b.rds"))
+
+
+# predict population
+fit1_predict <- fit1$population_predict()
+fit2_predict <- fit2$population_predict()
+fit3_predict <- fit3$population_predict()
+fit4a_predict <- fit4a$population_predict()
+fit4b_predict <- fit4b$population_predict()
+```
+
+
+# Predict the outcome by state
+
+```{r}
+# function to get estimation by state
+get_state_pred <- function(fit_object, pop_predict){
+  temp <- fit_object$aggregate(pop_predict, by = "state")
+  temp %>%
+    group_by(state) %>%
+    summarise(median = median(value),
+              lower = quantile(value, 0.025),
+              upper = quantile(value, 0.975)) 
+}
+
+# estimation by state fit1 
+state_est_base <- get_state_pred(fit1, fit1_predict) %>%
+  rename(base_model = median,
+         lower_base_model = lower,
+         upper_base_model = upper)
+
+# estimation by state fit3
+state_est_modelb <- get_state_pred(fit2, fit2_predict) %>%
+  rename(modelb = median,
+         lower_modelb = lower,
+         upper_modelb = upper)
+
+# estimation by state fit3
+state_est_modelc <- get_state_pred(fit3, fit3_predict) %>%
+  rename(modelc = median,
+         lower_modelc = lower,
+         upper_modelc = upper)
+
+# estimation by state fit4a
+state_est_intent <- get_state_pred(fit4a, fit4a_predict) %>%
+  rename(intent = median,
+         lower_intent = lower,
+         upper_intent = upper)
+
+# estimation by state fit4b
+state_est_party <- get_state_pred(fit4b, fit4b_predict) %>%
+  rename(party = median,
+         lower_party = lower,
+         upper_party = upper)
+
+# ground truth data 
+ground_truth <- ddi::g2016 %>%
+  select(c(1, 3)) %>%
+  rename(truth = pct_djt_voters)
+
+comparison_data <- plyr::join_all(list(ground_truth,
+                                 state_est_base,
+                                 state_est_modelb,
+                                 state_est_modelc,
+                                 state_est_intent,
+                                 state_est_party), 
+                            by='state', 
+                            type='left')
+
+```
+
+
 
 ```{r}
 # read the fit1.rds
@@ -382,22 +461,20 @@ state_estimation_base <- fit1$aggregate(fit1_predict, by = "state")
 
 state_est_base <- state_estimation_base %>%
   group_by(state) %>%
-  summarize(mean = mean(value),
-            out = ifelse(value < 0.4, 0, 1),
-            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
-  slice_head(n=1) %>%
-  select(-out)
+  summarize(median = median(value),
+            lower = quantile(value, 0.025),
+            upper = quantile(value, 0.975))
 ```
 
 
-# State Comparison
+# Map of Trump Vote Probability 
 
 ```{r map}
 library(scales)
 state_estimation_data <- left_join(urbnmapr::states, state_est_base, 
                                    by = c("state_name" = "state"))
 ggplot(state_estimation_data, 
-       aes(long, lat, group = group, fill = mean)) +
+       aes(long, lat, group = group, fill = base_model)) +
   geom_polygon(color = "gray90", size = 0.1) +
   coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
   scale_fill_gradientn(colors=c("blue","white","red"),
@@ -408,107 +485,32 @@ ggplot(state_estimation_data,
   labs(fill = "MRP estimates") 
 ```
 
+# The scatter plot
 
 ```{r}
-ground_truth <- ddi::g2016 %>%
-  select(c(1, 3)) %>%
-  rename(truth = pct_djt_voters)
+# function to get RMSE
+get_rmse <- function(vect){
+  paste0("RMSE= ", round(rmse(comparison_data$truth, vect), 4))
+}
 
-comparison_data <- left_join(ground_truth, state_est_base, by = "state") %>%
-  rename(base_model = mean,
-         sd_base_model = sd)
+# function to get MAD
+get_mad <- function(vect){
+  paste0("RMSE= ", round(mae(comparison_data$truth, vect), 4))
+}
 
-# read the fit4a.rds
-fit4a <- readRDS(here::here("case_study/results/fit4a.rds"))
+# RMSE of each model
+rmse_base <- get_rmse(comparison_data$base_model)
+rmse_modelb <- get_rmse(comparison_data$modelb)
+rmse_modelc <- get_rmse(comparison_data$modelc)
+rmse_intent <- get_rmse(comparison_data$intent)
+rmse_party <- get_rmse(comparison_data$party)
 
-fit4a_predict <- fit4a$population_predict()
-
-state_estimation_intent <- fit4a$aggregate(fit4a_predict, by = "state")
-
-state_est_intent <- state_estimation_intent %>%
-  group_by(state) %>%
-  summarize(mean = mean(value),
-            out = ifelse(value < 0.3, 0, 1),
-            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
-  slice_head(n=1) %>%
-  rename(intent = mean,
-         sd_intent = sd) %>%
-  select(-out)
-
-comparison_data <- left_join(comparison_data, state_est_intent, by = "state")
-
-# read the fit4b.rds
-fit4b <- readRDS(here::here("case_study/results/fit4b.rds"))
-
-fit4b_predict <- fit4b$population_predict()
-
-state_estimation_party <- fit4b$aggregate(fit4b_predict, by = "state")
-
-state_est_party <- state_estimation_party %>%
-  group_by(state) %>%
-  summarize(mean = mean(value),
-            out = ifelse(value < 0.3, 0, 1),
-            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
-  slice_head(n=1) %>%
-  rename(party = mean,
-         sd_party = sd) %>%
-  select(-out)
-
-comparison_data <- left_join(comparison_data, state_est_party, by = "state")
-
-# read the fit2.rds
-fit2 <- readRDS(here::here("case_study/results/fit2.rds"))
-
-fit2_predict <- fit2$population_predict()
-
-state_estimation_modelb <- fit2$aggregate(fit2_predict, by = "state")
-
-state_est_modelb <- state_estimation_modelb %>%
-  group_by(state) %>%
-  summarize(mean = mean(value),
-            lower = quantile(value, 0.025),
-            upper = quantile(value, 0.975)) %>%
-  slice_head(n=1) %>%
-  rename(modelb = mean,
-         lower_modelb = lower,
-         upper_modelb = upper) %>%
-  select(-out)
-
-comparison_data <- left_join(comparison_data, state_est_modelb, by = "state")
-
-# read the fit3.rds
-fit3 <- readRDS(here::here("case_study/results/fit3.rds"))
-
-fit3_predict <- fit3$population_predict()
-
-state_estimation_modelc <- fit3$aggregate(fit3_predict, by = "state")
-
-state_est_modelc <- state_estimation_modelc %>%
-  group_by(state) %>%
-  summarize(mean = mean(value),
-            out = ifelse(value < 0.3, 0, 1),
-            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
-  slice_head(n=1) %>%
-  rename(modelc = mean,
-         sd_modelc = sd) %>%
-  select(-out)
-
-comparison_data <- left_join(comparison_data, state_est_modelc, by = "state")
-
-
-## Calculate RMSE 
-
-rmse_base <- paste0("RMSE=", round(sqrt(mean((comparison_data$truth - comparison_data$base_model)^2)),4))
-rmse_modelb <- paste0("RMSE=", round(sqrt(mean((comparison_data$truth - comparison_data$modelb)^2)),4))
-rmse_modelc <- paste0("RMSE=",round(sqrt(mean((comparison_data$truth - comparison_data$modelc)^2)),4))
-rmse_intent <- paste0("RMSE=", round(sqrt(mean((comparison_data$truth - comparison_data$intent)^2)),4))
-rmse_party <- paste0("RMSE=", round(sqrt(mean((comparison_data$truth - comparison_data$party)^2)),4))
-
-mad_base <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_data$base_model)),4))
-mad_modelb <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_data$modelb)),4))
-mad_modelc <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_data$modelc)),4))
-mad_intent <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_data$intent)),4))
-mad_party <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_data$party)),4))
+# MAD of each model
+mad_base <- get_mad(comparison_data$base_model)
+mad_modelb <- get_mad(comparison_data$modelb)
+mad_modelc <- get_mad(comparison_data$modelc)
+mad_intent <- get_mad(comparison_data$intent)
+mad_party <- get_mad(comparison_data$party)
 ```
 
 
@@ -516,146 +518,95 @@ mad_party <- paste0("MAD=", round(mean(abs(comparison_data$truth - comparison_da
 
 # MRP estimates vs ground truth
 
+The common practice 
+
 ```{r scatter-est-truth, fig.width=9, fig.height=8}
-p1 <- ggplot(comparison_data, aes(x = base_model, y = truth, xmin = base_model-sd_base_model, xmax = base_model+sd_base_model)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted") +
-  geom_errorbarh(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8)) +
-  xlab("MRP estimates (Trump vote)") +
-  ylab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("For whom did you vote for President of the US?") +
-  labs(subtitle = "Base model") +
+get_scatter_common <- function(x, title, subtitle, lower, upper, rmse, mad){
+  ggplot(comparison_data,
+         aes(x = x,
+             y = truth,
+             xmin = lower,
+             xmax = upper)) +
+    geom_point(color = "#DE0100", size = 1) +
+    geom_abline(intercept = 0, linetype = "dotted") +
+    geom_errorbarh(color = "#DE0100", size = 0.3) +
+    scale_x_continuous(limits = c(0, 1)) +
+    scale_y_continuous(limits = c(0, 1)) +
+    theme_fivethirtyeight() +
+    theme(axis.title = element_text(size = 8),
+          plot.title = element_text(size = 8),
+          plot.subtitle = element_text(size = 8)) +
+    xlab("MRP estimates (Trump vote)") +
+    ylab("ground truth (Trump vote)") +
+    theme(aspect.ratio=1) +
+    ggtitle( title) +
+    labs(subtitle = subtitle) +
   annotate("text", x = 0.75, 
            y = 0.10, 
-           label = rmse_base, 
+           label = rmse, 
            vjust = -1,
            size = 3) +
   annotate("text", x = 0.75, 
            y = 0.03, 
-           label = mad_base, 
+           label = mad, 
            vjust = -1,
            size = 3) 
-
-p2 <- ggplot(comparison_data, aes(x = intent, y = truth, xmin = intent-sd_intent, xmax = intent+sd_intent)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbarh(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.title = element_text(size = 7.5),
-        plot.subtitle = element_text(size = 7.5)) +
-  xlab("MRP estimates (Trump vote)") +
-  ylab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("Which candidate did you prefer for President of the US?") +
-  labs(subtitle = "Predictor includes education") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_intent, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_intent, 
-           vjust = -1,
-           size = 3) 
-
-p3 <- ggplot(comparison_data, aes(x = party, y = truth, xmin = party-sd_party, xmax = party+sd_party)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbarh(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8)) +
-  xlab("MRP estimates (Republican)") +
-  ylab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("Party identity (including leaners)") +
-  labs(subtitle = "Predictor includes education") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_party, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_party, 
-           vjust = -1,
-           size = 3) 
+}
 
 
-p4 <- ggplot(comparison_data, aes(x = modelb, y = truth, xmin = modelb-sd_modelb, xmax = modelb+sd_modelb)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbarh(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8),
-        plot.title = element_text(size = 8)) +
-  xlab("MRP estimates (Trump vote)") +
-  ylab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("For whom did you vote for President of the US?") +
-  labs(subtitle = "Predictor includes education") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_modelb, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_modelb, 
-           vjust = -1,
-           size = 3) 
-  
+spc1 <- get_scatter_common(comparison_data$base_model, 
+                           "For whom did you vote for President of the US?",
+                           "Base model",
+                           comparison_data$lower_base_model,
+                           comparison_data$upper_base_model,
+                           rmse_base,
+                           mad_base)
 
-p5 <- ggplot(comparison_data, aes(x = modelc, y = truth, xmin = modelc-sd_modelc, xmax = modelc+sd_modelc)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbarh(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8),
-        plot.title = element_text(size = 8)) +
-  xlab("MRP estimates (Trump vote)") +
-  ylab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("For whom did you vote for President of the US?") +
-  labs(subtitle = "Base model with more levels on race") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_modelc, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_modelc, 
-           vjust = -1,
-           size = 3) 
+spc2 <-  get_scatter_common(comparison_data$modelb, 
+                           "For whom did you vote for President of the US?",
+                           "Predictor includes education",
+                           comparison_data$lower_modelb,
+                           comparison_data$upper_modelb,
+                           rmse_modelb,
+                           mad_modelb)
 
-p1 + p4 + p5 + p2 + p3 + plot_layout(nrow = 2)
+spc3 <- get_scatter_common(comparison_data$modelc, 
+                           "For whom did you vote for President of the US?",
+                           "Base model with more levels on race",
+                           comparison_data$lower_modelc,
+                           comparison_data$upper_modelc,
+                           rmse_modelc,
+                           mad_modelc)
+
+spc4a <- get_scatter_common(comparison_data$intent, 
+                           "Which candidate did you prefer for President?",
+                           "Predictor includes education",
+                           comparison_data$lower_intent,
+                           comparison_data$upper_intent,
+                           rmse_intent,
+                           mad_intent)
+
+spc4b <- get_scatter_common(comparison_data$party, 
+                           "Party identity (including leaners)",
+                           "Predictor includes education",
+                           comparison_data$lower_party,
+                           comparison_data$upper_party,
+                           rmse_party,
+                           mad_party)
+
+
+spc1 + spc4a + spc4b + spc2 + spc3 + plot_layout(nrow = 2)
 ```
 
-Next: Doing the other way around for the axis. 
+Next: Doing the other way around for the axis
 
 ```{r scatter-est-truth-axis, fig.width=9, fig.height=8}
-p1 <- ggplot(comparison_data, aes(y = base_model, x = truth, ymin = base_model-sd_base_model, ymax = base_model+sd_base_model)) +
+get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
+  ggplot(comparison_data, 
+         aes(x = truth, 
+             y = y, 
+             ymin = lower, 
+             ymax = upper)) +
   geom_point(color = "#DE0100", size = 1) +
   geom_abline(intercept = 0, linetype = "dotted") +
   geom_errorbar(color = "#DE0100", size = 0.3) +
@@ -668,126 +619,61 @@ p1 <- ggplot(comparison_data, aes(y = base_model, x = truth, ymin = base_model-s
   ylab("MRP estimates (Trump vote)") +
   xlab("ground truth (Trump vote)") +
   theme(aspect.ratio=1) +
-  ggtitle("For whom did you vote for President of the US?") +
-  labs(subtitle = "Base model") +
+  ggtitle(title) +
+  labs(subtitle = subtitle) +
   annotate("text", x = 0.75, 
            y = 0.10, 
-           label = rmse_base, 
+           label = rmse, 
            vjust = -1,
            size = 3) +
   annotate("text", x = 0.75, 
            y = 0.03, 
-           label = mad_base, 
+           label = mad, 
            vjust = -1,
            size = 3) 
+}
 
-p2 <- ggplot(comparison_data, aes(y = intent, x = truth, ymin = intent-sd_intent, ymax = intent+sd_intent)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbar(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.title = element_text(size = 7.5),
-        plot.subtitle = element_text(size = 7.5)) +
-  ylab("MRP estimates (Trump vote)") +
-  xlab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("Which candidate did you prefer for President of the US?") +
-  labs(subtitle = "Predictor includes education") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_intent, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_intent, 
-           vjust = -1,
-           size = 3) 
+sp1 <- get_scatter(comparison_data$base_model, 
+                           "For whom did you vote for President of the US?",
+                           "Base model",
+                           comparison_data$lower_base_model,
+                           comparison_data$upper_base_model,
+                           rmse_base,
+                           mad_base)
 
-p3 <- ggplot(comparison_data, aes(y = party, x = truth, ymin = party-sd_party, ymax = party+sd_party)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbar(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8)) +
-  ylab("MRP estimates (Republican)") +
-  xlab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("Party identity (including leaners)") +
-  labs(subtitle = "Predictor includes education") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_party, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_party, 
-           vjust = -1,
-           size = 3) 
+sp2 <-  get_scatter(comparison_data$modelb, 
+                           "For whom did you vote for President of the US?",
+                           "Predictor includes education",
+                           comparison_data$lower_modelb,
+                           comparison_data$upper_modelb,
+                           rmse_modelb,
+                           mad_modelb)
 
+sp3 <- get_scatter(comparison_data$modelc, 
+                           "For whom did you vote for President of the US?",
+                           "Base model with more levels on race",
+                           comparison_data$lower_modelc,
+                           comparison_data$upper_modelc,
+                           rmse_modelc,
+                           mad_modelc)
 
-p4 <- ggplot(comparison_data, aes(y = modelb, x = truth, ymin = modelb-sd_modelb, ymax = modelb+sd_modelb)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbar(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8),
-        plot.title = element_text(size = 8)) +
-  ylab("MRP estimates (Trump vote)") +
-  xlab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("For whom did you vote for President of the US?") +
-  labs(subtitle = "Predictor includes education") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_modelb, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_modelb, 
-           vjust = -1,
-           size = 3) 
-  
+sp4a <- get_scatter(comparison_data$intent, 
+                           "Which candidate did you prefer for President?",
+                           "Predictor includes education",
+                           comparison_data$lower_intent,
+                           comparison_data$upper_intent,
+                           rmse_intent,
+                           mad_intent)
 
-p5 <- ggplot(comparison_data, aes(y = modelc, x = truth, ymin = modelc-sd_modelc, ymax = modelc+sd_modelc)) +
-  geom_point(color = "#DE0100", size = 1) +
-  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
-  geom_errorbar(color = "#DE0100", size = 0.3) +
-  scale_x_continuous(limits = c(0, 1)) +
-  scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8),
-        plot.title = element_text(size = 8)) +
-  ylab("MRP estimates (Trump vote)") +
-  xlab("ground truth (Trump vote)") +
-  theme(aspect.ratio=1) +
-  ggtitle("For whom did you vote for President of the US?") +
-  labs(subtitle = "Base model with more levels on race") +
-  annotate("text", x = 0.75, 
-           y = 0.10, 
-           label = rmse_modelc, 
-           vjust = -1,
-           size = 3) +
-  annotate("text", x = 0.75, 
-           y = 0.03, 
-           label = mad_modelc, 
-           vjust = -1,
-           size = 3) 
+sp4b <- get_scatter(comparison_data$party, 
+                           "Party identity (including leaners)",
+                           "Predictor includes education",
+                           comparison_data$lower_party,
+                           comparison_data$upper_party,
+                           rmse_party,
+                           mad_party)
 
-p1 + p4 + p5 + p2 + p3 + plot_layout(nrow = 2)
+sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 2)
 ```
 
 # plot of state against CI
