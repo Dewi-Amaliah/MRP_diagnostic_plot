@@ -17,6 +17,7 @@ library(ggthemes)
 library(kableExtra)
 library(patchwork)
 library(Metrics)
+library(survey)
 ```
 
 ## Using mrpkit to build model
@@ -381,7 +382,11 @@ state_estimation_base <- fit1$aggregate(fit1_predict, by = "state")
 
 state_est_base <- state_estimation_base %>%
   group_by(state) %>%
-  summarize(mean = mean(value), sd = sd(value))
+  summarize(mean = mean(value),
+            out = ifelse(value < 0.4, 0, 1),
+            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
+  slice_head(n=1) %>%
+  select(-out)
 ```
 
 
@@ -422,9 +427,13 @@ state_estimation_intent <- fit4a$aggregate(fit4a_predict, by = "state")
 
 state_est_intent <- state_estimation_intent %>%
   group_by(state) %>%
-  summarize(mean = mean(value), sd = sd(value)) %>%
+  summarize(mean = mean(value),
+            out = ifelse(value < 0.3, 0, 1),
+            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
+  slice_head(n=1) %>%
   rename(intent = mean,
-         sd_intent = sd)
+         sd_intent = sd) %>%
+  select(-out)
 
 comparison_data <- left_join(comparison_data, state_est_intent, by = "state")
 
@@ -437,9 +446,13 @@ state_estimation_party <- fit4b$aggregate(fit4b_predict, by = "state")
 
 state_est_party <- state_estimation_party %>%
   group_by(state) %>%
-  summarize(mean = mean(value), sd = sd(value)) %>%
+  summarize(mean = mean(value),
+            out = ifelse(value < 0.3, 0, 1),
+            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
+  slice_head(n=1) %>%
   rename(party = mean,
-         sd_party = sd)
+         sd_party = sd) %>%
+  select(-out)
 
 comparison_data <- left_join(comparison_data, state_est_party, by = "state")
 
@@ -452,9 +465,14 @@ state_estimation_modelb <- fit2$aggregate(fit2_predict, by = "state")
 
 state_est_modelb <- state_estimation_modelb %>%
   group_by(state) %>%
-  summarize(mean = mean(value), sd = sd(value)) %>%
+  summarize(mean = mean(value),
+            lower = quantile(value, 0.025),
+            upper = quantile(value, 0.975)) %>%
+  slice_head(n=1) %>%
   rename(modelb = mean,
-         sd_modelb = sd)
+         lower_modelb = lower,
+         upper_modelb = upper) %>%
+  select(-out)
 
 comparison_data <- left_join(comparison_data, state_est_modelb, by = "state")
 
@@ -467,9 +485,13 @@ state_estimation_modelc <- fit3$aggregate(fit3_predict, by = "state")
 
 state_est_modelc <- state_estimation_modelc %>%
   group_by(state) %>%
-  summarize(mean = mean(value), sd = sd(value)) %>%
+  summarize(mean = mean(value),
+            out = ifelse(value < 0.3, 0, 1),
+            sd = sqrt(mean(out)*(1-mean(out))/4000)) %>%
+  slice_head(n=1) %>%
   rename(modelc = mean,
-         sd_modelc = sd)
+         sd_modelc = sd) %>%
+  select(-out)
 
 comparison_data <- left_join(comparison_data, state_est_modelc, by = "state")
 
@@ -630,8 +652,153 @@ p5 <- ggplot(comparison_data, aes(x = modelc, y = truth, xmin = modelc-sd_modelc
 p1 + p4 + p5 + p2 + p3 + plot_layout(nrow = 2)
 ```
 
+Next: Doing the other way around for the axis. 
+
+```{r scatter-est-truth-axis, fig.width=9, fig.height=8}
+p1 <- ggplot(comparison_data, aes(y = base_model, x = truth, ymin = base_model-sd_base_model, ymax = base_model+sd_base_model)) +
+  geom_point(color = "#DE0100", size = 1) +
+  geom_abline(intercept = 0, linetype = "dotted") +
+  geom_errorbar(color = "#DE0100", size = 0.3) +
+  scale_x_continuous(limits = c(0, 1)) +
+  scale_y_continuous(limits = c(0, 1)) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 8),
+        plot.title = element_text(size = 8),
+        plot.subtitle = element_text(size = 8)) +
+  ylab("MRP estimates (Trump vote)") +
+  xlab("ground truth (Trump vote)") +
+  theme(aspect.ratio=1) +
+  ggtitle("For whom did you vote for President of the US?") +
+  labs(subtitle = "Base model") +
+  annotate("text", x = 0.75, 
+           y = 0.10, 
+           label = rmse_base, 
+           vjust = -1,
+           size = 3) +
+  annotate("text", x = 0.75, 
+           y = 0.03, 
+           label = mad_base, 
+           vjust = -1,
+           size = 3) 
+
+p2 <- ggplot(comparison_data, aes(y = intent, x = truth, ymin = intent-sd_intent, ymax = intent+sd_intent)) +
+  geom_point(color = "#DE0100", size = 1) +
+  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
+  geom_errorbar(color = "#DE0100", size = 0.3) +
+  scale_x_continuous(limits = c(0, 1)) +
+  scale_y_continuous(limits = c(0, 1)) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 8),
+        plot.title = element_text(size = 7.5),
+        plot.subtitle = element_text(size = 7.5)) +
+  ylab("MRP estimates (Trump vote)") +
+  xlab("ground truth (Trump vote)") +
+  theme(aspect.ratio=1) +
+  ggtitle("Which candidate did you prefer for President of the US?") +
+  labs(subtitle = "Predictor includes education") +
+  annotate("text", x = 0.75, 
+           y = 0.10, 
+           label = rmse_intent, 
+           vjust = -1,
+           size = 3) +
+  annotate("text", x = 0.75, 
+           y = 0.03, 
+           label = mad_intent, 
+           vjust = -1,
+           size = 3) 
+
+p3 <- ggplot(comparison_data, aes(y = party, x = truth, ymin = party-sd_party, ymax = party+sd_party)) +
+  geom_point(color = "#DE0100", size = 1) +
+  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
+  geom_errorbar(color = "#DE0100", size = 0.3) +
+  scale_x_continuous(limits = c(0, 1)) +
+  scale_y_continuous(limits = c(0, 1)) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 8),
+        plot.title = element_text(size = 8),
+        plot.subtitle = element_text(size = 8)) +
+  ylab("MRP estimates (Republican)") +
+  xlab("ground truth (Trump vote)") +
+  theme(aspect.ratio=1) +
+  ggtitle("Party identity (including leaners)") +
+  labs(subtitle = "Predictor includes education") +
+  annotate("text", x = 0.75, 
+           y = 0.10, 
+           label = rmse_party, 
+           vjust = -1,
+           size = 3) +
+  annotate("text", x = 0.75, 
+           y = 0.03, 
+           label = mad_party, 
+           vjust = -1,
+           size = 3) 
 
 
+p4 <- ggplot(comparison_data, aes(y = modelb, x = truth, ymin = modelb-sd_modelb, ymax = modelb+sd_modelb)) +
+  geom_point(color = "#DE0100", size = 1) +
+  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
+  geom_errorbar(color = "#DE0100", size = 0.3) +
+  scale_x_continuous(limits = c(0, 1)) +
+  scale_y_continuous(limits = c(0, 1)) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 8),
+        plot.subtitle = element_text(size = 8),
+        plot.title = element_text(size = 8)) +
+  ylab("MRP estimates (Trump vote)") +
+  xlab("ground truth (Trump vote)") +
+  theme(aspect.ratio=1) +
+  ggtitle("For whom did you vote for President of the US?") +
+  labs(subtitle = "Predictor includes education") +
+  annotate("text", x = 0.75, 
+           y = 0.10, 
+           label = rmse_modelb, 
+           vjust = -1,
+           size = 3) +
+  annotate("text", x = 0.75, 
+           y = 0.03, 
+           label = mad_modelb, 
+           vjust = -1,
+           size = 3) 
+  
+
+p5 <- ggplot(comparison_data, aes(y = modelc, x = truth, ymin = modelc-sd_modelc, ymax = modelc+sd_modelc)) +
+  geom_point(color = "#DE0100", size = 1) +
+  geom_abline(intercept = 0, linetype = "dotted", size = 0.5) +
+  geom_errorbar(color = "#DE0100", size = 0.3) +
+  scale_x_continuous(limits = c(0, 1)) +
+  scale_y_continuous(limits = c(0, 1)) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 8),
+        plot.subtitle = element_text(size = 8),
+        plot.title = element_text(size = 8)) +
+  ylab("MRP estimates (Trump vote)") +
+  xlab("ground truth (Trump vote)") +
+  theme(aspect.ratio=1) +
+  ggtitle("For whom did you vote for President of the US?") +
+  labs(subtitle = "Base model with more levels on race") +
+  annotate("text", x = 0.75, 
+           y = 0.10, 
+           label = rmse_modelc, 
+           vjust = -1,
+           size = 3) +
+  annotate("text", x = 0.75, 
+           y = 0.03, 
+           label = mad_modelc, 
+           vjust = -1,
+           size = 3) 
+
+p1 + p4 + p5 + p2 + p3 + plot_layout(nrow = 2)
+```
+
+# plot of state against CI
+
+```{r}
+ggplot(state_est_base, aes(x = state, y = mean, ymin = mean-sd, ymax = mean+sd)) +
+  geom_point() +
+  geom_errorbar() +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 60)) 
+```
 
 
 ```{r cor-outcome}
@@ -848,19 +1015,30 @@ race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
                                           "All Other", "total")))
 
 
-ggplot(race_metrics, aes(y = metrics, x = values, color = level)) +
+ggplot(race_metrics, aes(y = level, x = values)) +
   geom_point(alpha = 0.8) +
-  scale_color_manual(values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", 
+  scale_color_manual(values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99",
                                 "#386cb0", "#f0027f", "#616A6B")) +
   ggtitle("Estimation performance criteria by race categories",
           subtitle = "Model with more levels of race compared to base model") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(plot.title = element_text(size = 12),
         plot.subtitle = element_text(size = 9)) +
   xlab("values") +
-  ylab("metrics")
-  
+  ylab("level") +
+  facet_wrap(~metrics, scales = "free_x")
+
 ```
+Note:
+
+- Correlation: 1-correlation (since higher correlation is better)
+- Remove bias from the plot note that mae and bias are the same thing
+- There is only one column, so facet is ncol=1, nrow=4
+- Order the data in terms of the value so we can see wether the group/level changing
+- Add credible interval length (upper-lower), the narrower the better 
+- For the posterior estimates, use median instead of mean. 
+- Compare raw vs weighted vs MRP in model with education with states as the level 
+
 
 
 **Correlation of education**
@@ -880,16 +1058,17 @@ educ_metrics_tmp <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("
 educ_metrics <- rbind(educ_metrics_tmp, metrics_fit1_fit2) %>%
   mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")))
 
-ggplot(educ_metrics, aes(y = metrics, x = values, color = level)) +
+ggplot(educ_metrics, aes(y = level, x = values)) +
   geom_point() +
   scale_color_manual(values = c("#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#616A6B")) +
   ggtitle("Estimation performance criteria by education level",
           subtitle = "Model with additional predictor (education) compared to base model") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(plot.title = element_text(size = 12),
         plot.subtitle = element_text(size = 9)) +
   xlab("values") +
-  ylab("metrics")
+  ylab("level") +
+  facet_wrap(~metrics, scales = "free_x")
 ```
 
 **Correlation of age**
@@ -911,16 +1090,17 @@ age_metrics <- rbind(age_metrics_tmp, metrics_fit1_fit2) %>%
                                       "35 to 44 years", "45 to 64 years",
                                       "65 years and over", "total"))) 
 
-ggplot(age_metrics, aes(y = metrics, x = values, color = level)) +
+ggplot(age_metrics, aes(y = level, x = values)) +
   geom_point() +
   scale_color_manual(values = c("#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177","#616A6B")) +
   ggtitle("Estimation performance criteria by age level",
           subtitle = "Model with additional predictor (education) compared to base model") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(plot.title = element_text(size = 12),
         plot.subtitle = element_text(size = 9)) +
   xlab("values") +
-  ylab("metrics")
+  ylab("level") +
+  facet_wrap(~metrics, scales = "free_x")
 ```
 
 
@@ -941,18 +1121,29 @@ age_metrics2 <- rbind(age_metrics2_tmp, metrics_fit1_fit3) %>%
                                       "35 to 44 years", "45 to 64 years",
                                       "65 years and over", "total"))) 
 
-ggplot(age_metrics2, aes(y = metrics, x = values, color = level)) +
+ggplot(age_metrics2, aes(y = level, x = values)) +
   geom_point() +
   scale_color_manual(values = c("#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177","#616A6B")) +
   ggtitle("Estimation performance criteria by age level",
           subtitle = "Model with more levels on race compared to base model") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(plot.title = element_text(size = 12),
         plot.subtitle = element_text(size = 9)) +
   xlab("values") +
-  ylab("metrics")
+  ylab("level") +
+  facet_wrap(~metrics, scales = "free_x")
 ```
+Weight Estimate 
 
+```{r}
+cces_mrp_na_omit <- cces_mrp %>%
+  filter(!is.na(vote))
+wtd_est <- svydesign(ids = ~1, weights = ~wt, data = cces_mrp_na_omit)
+wtd_mean_table <- confint(svyby(~vote, ~state, wtd_est, svymean))
+
+ymax = wtd_mean_table$mean[2] + 1.96*wtd_mean_table$SE[2]
+ymin = wtd_mean_table$mean[2] - 1.96*wtd_mean_table$SE[2]
+```
 
 
 
@@ -972,7 +1163,10 @@ ggplot(mrp_race_state_fit3, aes(x = mean, y = state, color = original_re, xmin =
 
 
 
+Note:
 
+1. Write clearly that the model that the comparison is between 2 models, and not compare to ground truth, so we can not interpret RMSE as the way we used to intreprete it. 
+2. Make separate plots for each metrics, so there is no misinterpretation abou the scale direction. 
 
 
 
