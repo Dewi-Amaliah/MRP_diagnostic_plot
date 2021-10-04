@@ -18,6 +18,7 @@ library(kableExtra)
 library(patchwork)
 library(Metrics)
 library(survey)
+library(ggstance)
 ```
 
 ## Using mrpkit to build model
@@ -654,14 +655,25 @@ sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 2)
 # plot of state against CI
 
 ```{r}
+## ---- est-comparison
+
 # filter the na in vote variable
 cces_mrp_na_omit <- cces_mrp %>%
   filter(!is.na(vote))
 
-## ---- raw-est
+# raw-est
 
+raw_est <- cces_mrp_na_omit %>%
+  mutate(vote_bin = ifelse(vote == "yes", 1, 0)) %>%
+  group_by(state) %>%
+  summarise(mean = mean(vote_bin),
+            sd = sqrt(mean(vote_bin)*(1-mean(vote_bin))/length(vote_bin)),
+            lower = mean - (1.96*sd/sqrt(length(vote_bin))),
+            upper = mean + (1.96*sd/sqrt(length(vote_bin)))) %>%
+  select(-sd) %>%
+  mutate(est_method = "raw")
 
-## ---- wtd-est
+# wtd-est
 
 # create survey object
 wtd_est <- svydesign(ids = ~1, weights = ~wt, data = cces_mrp_na_omit)
@@ -684,18 +696,33 @@ wtd_confint <- data.frame(confint(svyby(~vote, ~state, wtd_est, svymean))) %>%
   select(-vote)
 
 # join mean and confint
-wtd_estimates <- left_join(wtd_mean, wtd_confint, by = "state")
+wtd_estimates <- left_join(wtd_mean, wtd_confint, by = "state") %>%
+  rename(mean = wtd_est,
+         lower = lower_wt,
+         upper = upper_wt) %>%
+  mutate(est_method = "wtd")
+
+# mrp-est
+mrp_estimates <- state_est_modelb %>%
+  rename(mean = modelb,
+         lower = lower_modelb,
+         upper = upper_modelb) %>%
+  mutate(est_method = "mrp")
+
+# est_method_data
+
+est_method_data <- rbind(raw_est, wtd_estimates, mrp_estimates)
 ```
 
 
+The plot is 
 
-
-```{r}
-ggplot(state_est_base, aes(x = state, y = mean, ymin = mean-sd, ymax = mean+sd)) +
-  geom_point() +
-  geom_errorbar() +
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 60)) 
+```{r fig.height=8, fig.width=8}
+ggplot(est_method_data, aes(x = mean, y = state, xmin = lower, xmax = upper,
+                            color = est_method)) +
+  geom_point(position = position_dodgev(height = .5)) +
+  geom_errorbarh(position = position_dodgev(height = .5),
+                 alpha = 0.7)
 ```
 
 
