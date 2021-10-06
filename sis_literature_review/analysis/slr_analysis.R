@@ -6,6 +6,7 @@ library(kableExtra)
 library(janitor)
 library(patchwork)
 library(ggthemes)
+library(flipPlots)
 
 ## ---- search-term
 #table of search term used to find papers 
@@ -25,7 +26,7 @@ search %>%
 
 ## ---- read-data
 # read data
-papers <- read_csv(here::here("lit_rev_analysis/paper_metadata/metadata_july_22.csv"))
+papers <- read_csv(here::here("sis_literature_review/paper_metadata/metadata_july_22.csv"))
 
 # number of plots 
 
@@ -60,9 +61,10 @@ paper_perf_crit <- papers %>%
 ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=metrics)) + 
   geom_bar(position="stack") +
   theme() +
-  xlab("performance criteria") +
+  xlab("Performance criteria") +
+  ylab("Count") +
   scale_fill_manual(values = c("#bababa", "#2c7bb6")) +
-  theme_classic() +
+  theme_bw() +
   theme(legend.position = "none")
 
 ## ---- compare-plot
@@ -91,9 +93,10 @@ paper_comp <- papers %>%
 
 ggplot(paper_comp, aes(fill=is_comp_with, x=comp)) + 
   geom_bar(position="stack") +
-  xlab("comparison of MRP estimates with") +
+  xlab("Comparison of MRP estimates with") +
+  ylab("Count") +
   scale_fill_manual(values = c("#bababa", "#2c7bb6")) +
-  theme_classic() +
+  theme_bw() +
   theme(legend.position = "none")
 
 ## ---- common-plots
@@ -137,7 +140,7 @@ ggplot(plot_type_sum) +
   ylab(" ") +
   xlab(" ") +
   scale_fill_manual(values = c("#bababa", "#2c7bb6")) +
-  theme_classic()
+  theme_bw()
 
 ## ---- common-axis
 # filter communication plot
@@ -146,34 +149,71 @@ axis_complot <- filter(papers, Diagnostic == 0) %>%
 # create the plot
 tile_com <- ggplot(axis_complot, aes(x_axis, y_axis, fill = n)) + 
   geom_tile() +
-  ylab("values in y-axis") +
-  xlab("values in x-axis") +
+  geom_text(aes(label = n),
+            color = "white") +
+  ylab("Values in y-axis") +
+  xlab("Values in x-axis") +
   labs(fill = "number of plots") +
-  theme_classic() +
+  theme_bw() +
   ggtitle("a) Communication plots") +
-  theme(axis.text.x = element_text(angle = 20),
+  theme(axis.text.x = element_text(angle = 20, size = 8),
+        axis.text.y = element_text(size = 8),
         plot.title = element_text(size = 11),
         legend.title = element_text(size = 9),
         axis.title.x = element_text(size = 9),
-        axis.title.y = element_text(size = 9))
+        axis.title.y = element_text(size = 9),
+        legend.position = "none")
 # filter diagnostic plot
 axis_diaplot <- filter(papers, Diagnostic == 1) %>% 
   group_by(x_axis, y_axis) %>% count() 
 # create the plot
 tile_diag <- ggplot(axis_diaplot, aes(x_axis, y_axis, fill = n)) + 
   geom_tile() +
-  ylab("values in y-axis") +
-  xlab("values in x-axis") +
+  geom_text(aes(label = n),
+            color = "white") +
+  ylab("Values in y-axis") +
+  xlab("Values in x-axis") +
   labs(fill = "number of plots") +
-  theme_classic() +
+  theme_bw() +
   ggtitle("b) Diagnostic plots") +
-  theme(axis.text.x = element_text(angle = 30),
+  theme(axis.text.x = element_text(angle = 15, size = 6),
+        axis.text.y = element_text(size = 8),
         plot.title = element_text(size = 11),
         legend.title = element_text(size = 9),
         axis.title.x = element_text(size = 9),
-        axis.title.y = element_text(size = 9))
+        axis.title.y = element_text(size = 9),
+        legend.position = "none")
 # combine the plots
 tile_com + tile_diag + plot_layout(nrow = 2)
+
+
+## ---- facet-plots
+filter_facet_all <- papers %>%
+  filter(Facets > 1) %>%
+  pivot_longer(c(Facet_x, Facet_y), names_to = "facet_axis", values_to = "facet_type") %>%
+  group_by(facet_type) %>%
+  count()
+
+ggplot(filter(filter_facet_all, !is.na(facet_type))) +
+  geom_bar(aes(x = reorder(facet_type, -n), y = n), stat = "identity", fill = "#2c7bb6") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 10, size = 7)) +
+  xlab("Whats in the facet") +
+  ylab("Count") 
+
+## ---- sankey-feature
+papers_sum <- papers %>%
+  rename(aim = Diagnostic) %>%
+  mutate(aim = case_when(aim == 1 ~ "diagnostic",
+                         aim == 0 ~ "communication")) %>%
+  group_by(aim, color, shape) %>%
+  count()
+
+SankeyDiagram(papers_sum[, -4],
+              link.color = "Source", 
+              weights = papers_sum$n,
+              font.size = 7,
+              font.family = "Arial",) 
 
 
 
