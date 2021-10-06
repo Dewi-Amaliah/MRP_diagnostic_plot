@@ -5,7 +5,7 @@ knit: "bookdown::render_book"
 
 ```{r setup-chap2, include=FALSE, cache=FALSE}
 library(knitr)
-read_chunk(here::here("lit_rev_analysis/analysis/slr_analysis.R"))
+read_chunk(here::here("sis_literature_review/analysis/slr_analysis.R"))
 ```
 
 ```{r pkgs}
@@ -97,14 +97,12 @@ From 71 articles, we extract the data of `r nplots` plots. `r p_diagplot` % of t
 ### Performance metrics used in MRP 
 
 ```{r perform-plot, fig.cap = "Metrics used as MRP performance criteria."}
-
 ```
 
 
 ### Common estimates to compare with MRP estimates
 
 ```{r compare-plot, fig.cap = "Estimates to compare with MRP."}
-
 ```
 
 
@@ -119,11 +117,18 @@ Plot type, referred as `geom` in grammar of graphics represents
 
 **Values put in x and y-axis**
 
-```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=6, fig.width=6}
+```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=8, fig.width=6}
 ```
 
-**Feature used**
+**Facet**
 
+```{r facet-plots, fig.cap = "Measures faceted in MRP visualisations"}
+```
+
+**Other features used**
+
+```{r sankey-feature, fig.cap="Color and shape commonly used in MRP visualisations."}
+```
 
 
 
