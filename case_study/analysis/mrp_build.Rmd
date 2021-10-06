@@ -19,6 +19,7 @@ library(patchwork)
 library(Metrics)
 library(survey)
 library(ggstance)
+library(data.table)
 ```
 
 ## Using mrpkit to build model
@@ -513,7 +514,7 @@ get_scatter_common <- function(x, title, subtitle, lower, upper, rmse, mad){
           plot.title = element_text(size = 8),
           plot.subtitle = element_text(size = 8)) +
     xlab("MRP estimates (Trump vote)") +
-    ylab("ground truth (Trump vote)") +
+    ylab("Ground truth (Trump vote)") +
     theme(aspect.ratio=1) +
     ggtitle( title) +
     labs(subtitle = subtitle) +
@@ -593,7 +594,7 @@ get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
         plot.title = element_text(size = 8),
         plot.subtitle = element_text(size = 8)) +
   ylab("MRP estimates (Trump vote)") +
-  xlab("ground truth (Trump vote)") +
+  xlab("Ground truth (Trump vote)") +
   theme(aspect.ratio=1) +
   ggtitle(title) +
   labs(subtitle = subtitle) +
@@ -709,80 +710,37 @@ mrp_estimates <- state_est_modelb %>%
          upper = upper_modelb) %>%
   mutate(est_method = "mrp")
 
+# truth 
+truth <- comparison_data %>%
+  select(state, truth) %>%
+  rename(mean = truth) %>%
+  mutate(lower = NA,
+         upper = NA,
+         est_method = "truth") 
+
 # est_method_data
 
-est_method_data <- rbind(raw_est, wtd_estimates, mrp_estimates)
+est_method_data <- rbind(raw_est, wtd_estimates, mrp_estimates, truth) %>%
+  mutate(est_method = factor(est_method, levels = c("truth", "raw", "wtd", "mrp")))
+
 ```
 
 
-The plot is 
+The plot is:
 
 ```{r fig.height=8, fig.width=8}
 ggplot(est_method_data, aes(x = mean, y = state, xmin = lower, xmax = upper,
                             color = est_method)) +
   geom_point(position = position_dodgev(height = .5)) +
   geom_errorbarh(position = position_dodgev(height = .5),
-                 alpha = 0.7)
+                 alpha = 0.7) +
+  theme_bw() +
+  scale_color_manual(values = c("black", "magenta", "blue", "tomato")) +
+  xlab("Probability of voting Trump") +
+  ggtitle("Probability of voting Trump with different estimation method")
 ```
 
-
-```{r cor-outcome}
-cor_base_intent <- cor(comparison_data$base_model, comparison_data$intent)
-cor_base_party <- cor(comparison_data$base_model, comparison_data$party)
-
-com_outcome <- tribble(~ model, ~correlation,
-                       "MRP outcome: vote intention", cor_base_intent,
-                       "MRP outcome: party identity", cor_base_party)
-
-ggplot(com_outcome, aes(x = correlation, y = model)) +
-  geom_point(size = 3, color = "red") +
-  geom_hline(yintercept = "MRP outcome: vote intention", linetype = "dotted", color = "#DE0100") +
-  geom_hline(yintercept = "MRP outcome: party identity", linetype = "dotted", color = "#DE0100") +
-  xlim(0, 1) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 10),
-        plot.title = element_text(size = 9)) +
-  xlab("correlation with base model (vote_pres_16)") +
-  ylab("model") +
-  annotate("text", x = com_outcome$correlation[1], 
-           y = "MRP outcome: vote intention", 
-           label = round(com_outcome$correlation[1],2), 
-           vjust = -1) +
-  annotate("text", x = com_outcome$correlation[2], 
-           y = "MRP outcome: party identity",
-           label = round(com_outcome$correlation[2],2), 
-           vjust = -1) +
-  ggtitle("Correlation between models with different outcomes (same predictors)")
-```
-
-
-```{r cor-predictors}
-cor_base_modelb <- cor(comparison_data$base_model, comparison_data$modelb)
-cor_base_modelc <- cor(comparison_data$base_model, comparison_data$modelc)
-
-com_predictor <- tribble(~ model, ~correlation,
-                       "MRP with additional predictor", cor_base_modelb,
-                       "MRP with more levels in race", cor_base_modelc)
-
-ggplot(com_predictor, aes(x = correlation, y = model)) +
-  geom_point(size = 3, color = "red") +
-  geom_hline(yintercept = "MRP with additional predictor", linetype = "dotted", color = "#DE0100") +
-  geom_hline(yintercept = "MRP with more levels in race", linetype = "dotted", color = "#DE0100") +
-  xlim(0, 1) +
-  theme_fivethirtyeight() +
-  theme(axis.title = element_text(size = 10)) +
-  xlab("correlation with base model") +
-  ylab("model") +
-  annotate("text", x = com_predictor$correlation[1], 
-           y = "MRP with additional predictor", 
-           label = round(com_predictor$correlation[1],2), 
-           vjust = -1) +
-  annotate("text", x = com_predictor$correlation[2], 
-           y = "MRP with more levels in race",
-           label = round(com_predictor$correlation[2],2), 
-           vjust = -1)
-```
-
+# Violin plot (displaying the effect of using different predictors and levels)
 
 ```{r}
 # estimate probability of voting Trump by race 
@@ -856,7 +814,86 @@ p8 <- ggplot(comp_age, aes(x = age, y = value, fill = model)) +
 ```
 
 
-## Create the plot of predictors in y axis and correlation between levels of predictors in x axis.
+# Performance metrics 
+
+## Correlation (practice)
+
+```{r cor-outcome}
+cor_base_intent <- cor(comparison_data$base_model, comparison_data$intent)
+cor_base_party <- cor(comparison_data$base_model, comparison_data$party)
+
+com_outcome <- tribble(~ model, ~correlation,
+                       "MRP outcome: vote intention", cor_base_intent,
+                       "MRP outcome: party identity", cor_base_party)
+
+cp1 <- ggplot(com_outcome, aes(x = correlation, y = model)) +
+  geom_point(size = 3, color = "red") +
+  geom_hline(yintercept = "MRP outcome: vote intention", linetype = "dotted", color = "#DE0100") +
+  geom_hline(yintercept = "MRP outcome: party identity", linetype = "dotted", color = "#DE0100") +
+  xlim(0, 1) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 10),
+        plot.title = element_text(size = 9)) +
+  xlab("Correlation with base model (vote_pres_16)") +
+  ylab("Model") +
+  annotate("text", x = com_outcome$correlation[1], 
+           y = "MRP outcome: vote intention", 
+           label = round(com_outcome$correlation[1],2), 
+           vjust = -1) +
+  annotate("text", x = com_outcome$correlation[2], 
+           y = "MRP outcome: party identity",
+           label = round(com_outcome$correlation[2],2), 
+           vjust = -1) +
+  ggtitle("Correlation between models with different outcomes (same predictors)")
+```
+
+
+```{r cor-predictors}
+cor_base_modelb <- cor(comparison_data$base_model, comparison_data$modelb)
+cor_base_modelc <- cor(comparison_data$base_model, comparison_data$modelc)
+
+com_predictor <- tribble(~ model, ~correlation,
+                       "MRP with additional predictor", cor_base_modelb,
+                       "MRP with more levels in race", cor_base_modelc)
+
+cp2 <- ggplot(com_predictor, aes(x = correlation, y = model)) +
+  geom_point(size = 3, color = "red") +
+  geom_hline(yintercept = "MRP with additional predictor", linetype = "dotted", color = "#DE0100") +
+  geom_hline(yintercept = "MRP with more levels in race", linetype = "dotted", color = "#DE0100") +
+  xlim(0, 1) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 10),
+        plot.title = element_text(size = 9)) +
+  xlab("Correlation with base model") +
+  ylab("Model") +
+  annotate("text", x = com_predictor$correlation[1], 
+           y = "MRP with additional predictor", 
+           label = round(com_predictor$correlation[1],2), 
+           vjust = -1) +
+  annotate("text", x = com_predictor$correlation[2], 
+           y = "MRP with more levels in race",
+           label = round(com_predictor$correlation[2],2), 
+           vjust = -1) +
+  ggtitle("Correlation between models with different predictors (same outcome)")
+```
+
+```{r}
+cp1 + cp2 + plot_layout(nrow = 2)
+```
+
+
+Note:
+
+- Correlation: 1-correlation (since higher correlation is better)
+- Remove bias from the plot note that mae and bias are the same thing
+- There is only one column, so facet is ncol=1, nrow=4
+- Order the data in terms of the value so we can see wether the group/level changing
+- Add credible interval length (upper-lower), the narrower the better 
+- For the posterior estimates, use median instead of mean. 
+- Compare raw vs weighted vs MRP in model with education with states as the level 
+
+
+## Performance metrics 
 
 ```{r}
 # estimate poststrat function 
@@ -876,9 +913,10 @@ get_MRP_ests <- function(est_data, var){
   
   return_df <- tmp %>%
   group_by(state, {{var}}) %>%
-  summarise(mean = mean(post_strat_ests),
-            median = median(post_strat_ests),
-            sd = sd(post_strat_ests))
+  summarise(median = median(post_strat_ests),
+            lower = quantile(post_strat_ests, 0.025),
+            upper = quantile(post_strat_ests, 0.975),
+            ci_len = upper - lower)
   
   return(return_df)
 }
@@ -903,98 +941,125 @@ mrp_age_state_fit3 <- get_MRP_ests(ests_ps_fit3, age)
 ```
 
 
-**Correlation of race between base model and model with more levels on race**
+**Metrics of race between base model and model with more levels on race**
 
 ```{r cor-race}
 # in total 
-get_metrics <- function(vect){
-  cor <- cor(comparison_data$base_model, vect)
+get_metrics <- function(vect, upper, lower){
+  cor_adj <- 1 - cor(comparison_data$base_model, vect)
   mae <- mae(comparison_data$base_model, vect)
   rmse <- rmse(comparison_data$base_model, vect)
-  bias <- bias(comparison_data$base_model, vect)
+  ci_len <- mean(upper) - mean(lower)
+  
   
   metrics <- tribble(~level, ~metrics, ~values,
-                    "total", "rmse", rmse,
-                    "total", "bias", bias,
-                    "total", "cor", cor,
-                    "total", "mae", mae)
+                    "Total", "rmse", rmse,
+                    "Total", "cor_adj", cor_adj,
+                    "Total", "mae", mae,
+                    "Total", "ci_len", ci_len) %>%
+    mutate(level = as.factor(level),
+           metrics = as.factor(metrics))
+  
   return(metrics)
 }
 
-metrics_fit1_fit3 <- get_metrics(comparison_data$modelc) 
+metrics_fit1_fit3 <- get_metrics(comparison_data$modelc, 
+                                 comparison_data$upper_modelc,
+                                 comparison_data$lower_modelc) 
 
 # by level
 race_metrics_tmp <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("state", "original_re"), 
                   suffix = c("_fit1", "_fit3")) %>%
   group_by(original_re) %>%
-  summarise(cor = cor(median_fit1, median_fit3),
+  summarise(cor_adj = 1 - cor(median_fit1, median_fit3),
             mae = mae(median_fit1, median_fit3),
             rmse = rmse(median_fit1, median_fit3),
-            bias = bias(median_fit1, median_fit3)) %>%
+            ci_len = mean(ci_len_fit3)) %>%
   pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
   rename(level = original_re)
 
 race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
-  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")),
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")),
          level = factor(level, levels = c("Black", "White", "Hispanic", "Asian", "Native American",
-                                          "All Other", "total")))
+                                          "All Other", "Total")))
+```
 
+```{r}
+# function to get plot
+metrics_label <- c(`cor_adj` = "Adj. correlation",
+                   `rmse` = "RMSE",
+                   `mae` = "MAE",
+                   `ci_len` = "Length of CI")
 
-ggplot(race_metrics, aes(y = level, x = values)) +
-  geom_point(alpha = 0.8) +
-  scale_color_manual(values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99",
-                                "#386cb0", "#f0027f", "#616A6B")) +
-  ggtitle("Estimation performance criteria by race categories",
-          subtitle = "Model with more levels of race compared to base model") +
+get_metrics_plot <- function(data, title, subtitle){
+  plot <- data %>%
+  mutate(level = reorder(level, values)) %>%
+  group_by(metrics, level) %>%
+  arrange(desc(values)) %>%
+  ungroup() %>%
+  mutate(level = factor(paste(level, metrics, sep = "__"), 
+                       levels = rev(paste(level, metrics, sep = "__")))) %>%
+  ggplot(aes(level, values)) +
+  geom_segment(aes(xend = level, yend = 0), 
+               colour = "grey50") +
+  geom_point(size = 2, aes(colour = metrics)) + 
+  ggtitle(title,
+          subtitle = subtitle) +
+  facet_grid(metrics ~., scales = "free", space = 'free',
+             labeller = as_labeller(metrics_label)) +
+  scale_x_discrete(labels = function(x) gsub("__.+$", "", x)) +
+  coord_flip() +
+  scale_colour_brewer(palette = "Dark2") +
   theme_bw() +
-  theme(plot.title = element_text(size = 12),
-        plot.subtitle = element_text(size = 9)) +
-  xlab("values") +
-  ylab("level") +
-  facet_wrap(~metrics, scales = "free_x")
+  xlab("Levels") +
+  ylab("Values") +
+  theme(panel.grid.major.y = element_blank()) + 
+  theme(legend.position = "none",
+              axis.ticks.y = element_blank(),
+        plot.title = element_text(size = 11),
+        plot.subtitle = element_text(size = 8))
+  return(plot)
+}
 
 ```
-Note:
-
-- Correlation: 1-correlation (since higher correlation is better)
-- Remove bias from the plot note that mae and bias are the same thing
-- There is only one column, so facet is ncol=1, nrow=4
-- Order the data in terms of the value so we can see wether the group/level changing
-- Add credible interval length (upper-lower), the narrower the better 
-- For the posterior estimates, use median instead of mean. 
-- Compare raw vs weighted vs MRP in model with education with states as the level 
 
 
+```{r cor-race-plot, fig.width=5, fig.height=6}
+get_metrics_plot(race_metrics, 
+                 "Estimation performance criteria by race categories",
+                 "Model with more levels of race compared to base model")
+```
 
-**Correlation of education**
+
+**Metrics of education**
+
 ```{r cor-educ}
-metrics_fit1_fit2 <- get_metrics(comparison_data$modelb)
+metrics_fit1_fit2 <- get_metrics(comparison_data$modelb,
+                                 comparison_data$upper_modelb,
+                                 comparison_data$lower_modelb)
 
 educ_metrics_tmp <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("state", "education"), 
                   suffix = c("_fit1", "_fit2")) %>%
   group_by(education) %>%
-  summarise(cor = cor(median_fit1, median_fit2),
+  summarise(cor_adj = 1 - cor(median_fit1, median_fit2),
             mae = mae(median_fit1, median_fit2),
             rmse = rmse(median_fit1, median_fit2),
-            bias = bias(median_fit1, median_fit2)) %>%
+            ci_len = mean(ci_len_fit2)) %>%
   pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
   rename(level = education)
 
 educ_metrics <- rbind(educ_metrics_tmp, metrics_fit1_fit2) %>%
-  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")))
-
-ggplot(educ_metrics, aes(y = level, x = values)) +
-  geom_point() +
-  scale_color_manual(values = c("#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#616A6B")) +
-  ggtitle("Estimation performance criteria by education level",
-          subtitle = "Model with additional predictor (education) compared to base model") +
-  theme_bw() +
-  theme(plot.title = element_text(size = 12),
-        plot.subtitle = element_text(size = 9)) +
-  xlab("values") +
-  ylab("level") +
-  facet_wrap(~metrics, scales = "free_x")
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")))
 ```
+
+
+```{r, fig.width=5, fig.height=6}
+
+get_metrics_plot(educ_metrics,
+                 "Estimation performance criteria by education level",
+                 "Model with additional predictor (education) compared to base model")
+```
+
 
 **Correlation of age**
 
@@ -1002,30 +1067,26 @@ ggplot(educ_metrics, aes(y = level, x = values)) +
 age_metrics_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("state", "age"),
                      suffix = c("_fit1", "_fit2")) %>%
   group_by(age) %>%
-  summarise(cor = cor(median_fit1, median_fit2),
+  summarise(cor_adj = 1 - cor(median_fit1, median_fit2),
             mae = mae(median_fit1, median_fit2),
             rmse = rmse(median_fit1, median_fit2),
-            bias = bias(median_fit1, median_fit2)) %>%
+            ci_len = mean(ci_len_fit2)) %>%
   pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
   rename(level = age)
 
 age_metrics <- rbind(age_metrics_tmp, metrics_fit1_fit2) %>%
-  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")),
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")),
          level = factor(level, levels = c("18 to 24 years", "25 to 34 years",
                                       "35 to 44 years", "45 to 64 years",
-                                      "65 years and over", "total"))) 
+                                      "65 years and over", "Total")))
+```
 
-ggplot(age_metrics, aes(y = level, x = values)) +
-  geom_point() +
-  scale_color_manual(values = c("#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177","#616A6B")) +
-  ggtitle("Estimation performance criteria by age level",
-          subtitle = "Model with additional predictor (education) compared to base model") +
-  theme_bw() +
-  theme(plot.title = element_text(size = 12),
-        plot.subtitle = element_text(size = 9)) +
-  xlab("values") +
-  ylab("level") +
-  facet_wrap(~metrics, scales = "free_x")
+
+```{r metrcs-age-fit2, fig.width=5, fig.height=6}
+
+get_metrics_plot(age_metrics,
+                 "Estimation performance criteria by age level",
+                 "Model with additional predictor (education) compared to base model")
 ```
 
 
@@ -1033,42 +1094,35 @@ ggplot(age_metrics, aes(y = level, x = values)) +
 age_metrics2_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("state", "age"),
                      suffix = c("_fit1", "_fit3")) %>%
   group_by(age) %>%
-  summarise(cor = cor(median_fit1, median_fit3),
+  summarise(cor_adj = 1 - cor(median_fit1, median_fit3),
             mae = mae(median_fit1, median_fit3),
             rmse = rmse(median_fit1, median_fit3),
-            bias = bias(median_fit1, median_fit3)) %>%
+            ci_len = mean(ci_len_fit3)) %>%
   pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
   rename(level = age)
 
 age_metrics2 <- rbind(age_metrics2_tmp, metrics_fit1_fit3) %>%
-  mutate(metrics = factor(metrics, levels = c("cor", "rmse", "mae", "bias")),
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")),
          level = factor(level, levels = c("18 to 24 years", "25 to 34 years",
                                       "35 to 44 years", "45 to 64 years",
-                                      "65 years and over", "total"))) 
-
-ggplot(age_metrics2, aes(y = level, x = values)) +
-  geom_point() +
-  scale_color_manual(values = c("#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177","#616A6B")) +
-  ggtitle("Estimation performance criteria by age level",
-          subtitle = "Model with more levels on race compared to base model") +
-  theme_bw() +
-  theme(plot.title = element_text(size = 12),
-        plot.subtitle = element_text(size = 9)) +
-  xlab("values") +
-  ylab("level") +
-  facet_wrap(~metrics, scales = "free_x")
+                                      "65 years and over", "Total")))
 ```
-Weight Estimate 
 
-```{r}
-cces_mrp_na_omit <- cces_mrp %>%
-  filter(!is.na(vote))
-wtd_est <- svydesign(ids = ~1, weights = ~wt, data = cces_mrp_na_omit)
-wtd_mean_table <- confint(svyby(~vote, ~state, wtd_est, svymean))
 
-ymax = wtd_mean_table$mean[2] + 1.96*wtd_mean_table$SE[2]
-ymin = wtd_mean_table$mean[2] - 1.96*wtd_mean_table$SE[2]
+```{r metrics-age-fit3, fig.width=5, fig.height=6}
+
+get_metrics_plot(age_metrics2,
+                 "Estimation performance criteria by age level",
+                 "Model with more levels on race compared to base model")
 ```
+
+
+
+
+
+
+
+
 
 
 
