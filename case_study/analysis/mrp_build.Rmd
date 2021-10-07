@@ -986,7 +986,7 @@ race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
 
 ```{r}
 # function to get plot
-metrics_label <- c(`cor_adj` = "Adj. correlation",
+metrics_label <- c(`cor_adj` = "1-correlation",
                    `rmse` = "RMSE",
                    `mae` = "MAE",
                    `ci_len` = "Length of CI")
