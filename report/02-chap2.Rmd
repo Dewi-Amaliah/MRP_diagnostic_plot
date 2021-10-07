@@ -81,7 +81,7 @@ Each plot is assessed based on the use of the performance metric. For each metri
 
 We also review other features of the plot using the grammar in `ggplot2` [@ggplot2] as a framework. The common grammar used in practice allows us to understand to what extend MRP models are effectively visualised. It is worth noting that there is no specific convention or well-documented recommendation on how data should be visualised as building a graph more often involves choice or preference [@MIDWAY2020100141]. For example, there is no specific convention on which variable should be put on the x and y-axis in a scatter plot, even though it has been common knowledge to put the response variable on the y-axis and the explanatory variable on the x-axis. Hence, grammar assists us in evaluating well-formed graphics [@layered-grammar]. In addition, @vanderplas mention that classifying and comparing graphs according to their grammar is more robust and more elegant. 
 
-Accordingly, we examine the facet, geom, axis, color, and shape. For reproducibility, the metadata also contains the article's author/s, publication year, title, and corresponding figure number as it appeared in the article. After the extraction, we analyze the data using graphical visualization with `ggplot2`. The result will be discussed in the following subsection. 
+Accordingly, we examine the facet, geom, axis, color, and shape. For reproducibility, the metadata also contains the article's author/s, publication year, title, and corresponding figure number as it appeared in the article. After the extraction, we analyze the data using graphical visualization with `ggplot2` [@ggplot2]. The result will be discussed in the following subsection. 
 
 
 ## Common practices in MRP visualisations 
@@ -92,42 +92,61 @@ Accordingly, we examine the facet, geom, axis, color, and shape. For reproducibi
 ```{r nplots}
 ```
 
-From 71 articles, we extract the data of `r nplots` plots. `r p_diagplot` % of these plots are diagnostics plots, while the remaining are communication plots. 
+In this study, graphics are classified into two types, i.e., communication and diagnostic plots. A plot is classified as a communication plot if the plot's goal is solely to convey the MRP result. At the same time, a diagnostic plot displays the MRP estimation by showing the performance metrics or compares it with other estimation methods. From 71 articles, we extract the data of `r nplots` plots. `r p_diagplot` % of these plots are diagnostics plots, while the remaining are communication plots. 
 
 ### Performance metrics used in MRP 
 
-```{r perform-plot, fig.cap = "Metrics used as MRP performance criteria."}
+According to @BotchkarevAlexei2019ANTD, performance metrics is *"a logical and mathematical construct designed to measure how close are the actual results from what has been expected or predicted"* RMSE and MAE are among the most common methods used in many studies [@BotchkarevAlexei2019ANTD]. However,  @WillmottCJ2005Aotm states that RMSE should not be reported in any studies since it could be multiinterpreted because it does not describe average error alone and MAE is more appropriate metrics. This argument is denied by @ChaiT2014Rmse who argue that RMSE is not ambiguous and better than MAE if the distribution of model's error is normal. Accordingly, there is no single metrics that fits for all [@ChaiT2014Rmse].
+
+```{r perform-plot, fig.cap = "There are five performance metrics used in study: Mean Absolute Error (MAE), bias, correlation, Mean Square Error/Root Mean Square Error (MSE/RMSE), and Standard Error (SE). The blue shade represents the number of articles that show performace metrics in plot, while the grey shade represents the number of articles that show performance of MRP but did not use the corresponding metrics."}
 ```
 
+In this study, we find that there are `r n_perf` plots out of `r n_diagplot` diagnostic plots (about `r round(n_perf/n_diagplot*100, 0)`%) display performance measures. As seen in Figure \@ref(fig:perform-plot), we find that MAE is the most widely demonstrated performance metric by MRP visualisations. Bias, which is interpreted similarly to MAE, is also widely used. Meanwhile, the square error measures, which are MSE/RMSE and standard error, are only shown by a few plots. It is interesting that correlation, which is not a common metric use as a performance indicator, is more widely used than square error metrics.
+
+It is worth noting that most of these metrics only refer to point estimates, i.e., the distance between the predicted value and the actual values. Also, these metrics mainly measure bias. However, MRP is a model in which bias-variance is applied. Therefore, other measures are also needed that reflect the degree of uncertainty and variations in the predicted value. Measures such as length of confidence or credibility interval can be used, in which the narrower the value, the more precise the estimates.
 
 ### Common estimates to compare with MRP estimates
 
-```{r compare-plot, fig.cap = "Estimates to compare with MRP."}
+The goals of MRP are to estimate the population and usually to adjust the estimation from an unrepresentative survey. Thus, in practice, MRP is usually compared with the actual value, which, in this case, is called truth. Regarding the objective of improving estimates from unrepresentative surveys, MRP estimates are usually compared with direct estimates (raw). In addition, MRP is often compared with weighted estimates.
+
+```{r compare-plot, fig.cap = "Estimates to compare with MRP. The blue shade represents the number of articles compare MRP estimates with the result of other estimation methods, while the grey shade represents the number of articles that also showed comparison of MRP but did not use the corresponding estimates."}
 ```
+
+
+This study finds that from `r n_diagplot` diagnostic plots, `r n_comp`  (about `r round(n_comp/n_diagplot*100, 0)`%) of which compares MRP estimates with estimates from other methods. Figure \@ref(fig:compare-plot) shows the distribution of the estimation methods to compare with MRP estimates. It can be seen that MRP estimates are mostly compared to direct estimates and ground truth. Some studies also compare estimates from several MRP models (usually with different model specifications). We also find that there are not many plots showing the comparison between MRP estimates and weighted estimates.
 
 
 ### Common grammar in MRP visualisations
 
 **Plot type**
 
-Plot type, referred as `geom` in grammar of graphics represents 
-
-```{r common-plots, fig.cap="Common plot types used in MRP visualisations. Both communication and diagnostics plots rarely displayed uncertainty."}
+```{r common-plots, fig.cap="Common plot types used in MRP visualisations. The blue shade display the number of plots that showed uncertainty, while the grey shade display the number of plots that did not show uncertainty. Both communication and diagnostics plots rarely displayed uncertainty."}
 ```
 
+Plot type, referred to as `geom` in the grammar of graphics, represents the shape and features displayed in the graph. Figure \@ref(fig:common-plots) suggests that communication and diagnostic plots have a different pattern in the plot type's distribution. Communicating MRP estimates are mostly done using a choropleth map as MRP is often deployed for small area estimation. For diagnostics purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics. 
+
+Notice that Figure \@ref(fig:common-plots) also displays the usage of uncertainty in MRP model visualisations. According to @MIDWAY2020100141, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder parts of statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study in which the uncertainty is not often seen in the plots. 
+
 **Values put in x and y-axis**
+
+Main things to explain:
+
+- There are no strict rules on what to put in a and y-axis. However there are some conventions, for example fixed value is put in the x-axis, while random variable is put in the y-axis. 
+- Time variable is always put in x axis. 
+
+
 
 ```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=8, fig.width=6}
 ```
 
 **Facet**
 
-```{r facet-plots, fig.cap = "Measures faceted in MRP visualisations"}
+```{r facet-plots, fig.cap = "Measures faceted in MRP visualisations", fig.out = "80%"}
 ```
 
 **Other features used**
 
-```{r sankey-feature, fig.cap="Color and shape commonly used in MRP visualisations."}
+```{r sankey-feature, fig.cap="Color and shape commonly used in MRP visualisations. Both communication and diagnostic plots rarely use color and shape features.", fig.out = "80%"}
 ```
 
 

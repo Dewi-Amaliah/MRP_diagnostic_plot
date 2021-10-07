@@ -16,7 +16,7 @@ library(ggthemes)
 
 
 ```{r}
-papers <- read_csv(here::here("lit_rev_analysis/paper_metadata/metadata_july_22.csv"))
+papers <- read_csv(here::here("sis_literature_review/paper_metadata/metadata_july_22.csv"))
 ```
 
 # Result 

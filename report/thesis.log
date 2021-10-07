@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.9.7)  10 SEP 2021 01:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.9.19)  8 OCT 2021 03:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,73 +998,101 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<figures/prisma_fc.png, id=127, 809.0225pt x 692.5875pt>
+[10
+
+
+]
+<figures/prisma_fc.png, id=141, 809.0225pt x 692.5875pt>
 File: figures/prisma_fc.png Graphic file (type png)
 <use figures/prisma_fc.png>
 Package pdftex.def Info: figures/prisma_fc.png  used on input line 134.
 (pdftex.def)             Requested size: 384.1096pt x 328.83452pt.
-[10
-
-
-] [11 <./figures/prisma_fc.png>] [12]
-<thesis_files/figure-latex/perform-plot-1.pdf, id=176, 454.69875pt x 274.02374p
+[11 <./figures/prisma_fc.png>] [12]
+<thesis_files/figure-latex/perform-plot-1.pdf, id=180, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/perform-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/perform-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/perform-plot-1.pdf  used on 
-input line 195.
+input line 197.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 195--196
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 197--198
  [][] 
  []
 
-<thesis_files/figure-latex/compare-plot-1.pdf, id=177, 454.69875pt x 274.02374p
+[13] [14 <./thesis_files/figure-latex/perform-plot-1.pdf>]
+<thesis_files/figure-latex/compare-plot-1.pdf, id=205, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/compare-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/compare-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/compare-plot-1.pdf  used on 
-input line 204.
+input line 212.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 204--205
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 212--213
  [][] 
  []
 
-<thesis_files/figure-latex/common-plots-1.pdf, id=178, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/common-plots-1.pdf, id=207, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/common-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-plots-1.pdf  used on 
-input line 217.
+input line 225.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 217--218
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 225--226
  [][] 
  []
 
-<thesis_files/figure-latex/common-axis-1.pdf, id=179, 433.62pt x 433.62pt>
+[15 <./thesis_files/figure-latex/compare-plot-1.pdf>] [16 <./thesis_files/figur
+e-latex/common-plots-1.pdf>]
+<thesis_files/figure-latex/common-axis-1.pdf, id=235, 433.62pt x 578.16pt>
 File: thesis_files/figure-latex/common-axis-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-axis-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-axis-1.pdf  used on i
-nput line 225.
-(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+nput line 241.
+(pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 225--226
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 241--242
  [][] 
  []
 
-[13 <./thesis_files/figure-latex/perform-plot-1.pdf>] [14 <./thesis_files/figur
-e-latex/compare-plot-1.pdf> <./thesis_files/figure-latex/common-plots-1.pdf>] [
-15 <./thesis_files/figure-latex/common-axis-1.pdf>] [16
+<thesis_files/figure-latex/facet-plots-1.pdf, id=236, 454.69875pt x 274.02374pt
+>
+File: thesis_files/figure-latex/facet-plots-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/facet-plots-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/facet-plots-1.pdf  used on i
+nput line 249.
+(pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
+
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 249--250
+ [][] 
+ []
+
+<thesis_files/figure-latex/sankey-feature-1.pdf, id=237, 475.7775pt x 295.1025p
+t>
+File: thesis_files/figure-latex/sankey-feature-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/sankey-feature-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/sankey-feature-1.pdf  used o
+n input line 257.
+(pdftex.def)             Requested size: 475.77632pt x 295.10176pt.
+
+Overfull \hbox (48.98497pt too wide) in paragraph at lines 257--258
+ [][] 
+ []
+
+[17] [18 <./thesis_files/figure-latex/common-axis-1.pdf>] [19 <./thesis_files/f
+igure-latex/facet-plots-1.pdf> <./thesis_files/figure-latex/sankey-feature-1.pd
+f>] [20
 
 ]
 Appendix A.
-[17] [18
+[21] [22
 
-] [19] (./thesis.aux)
+] [23] [24] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FEC20CF41026AB6055CFB8ED47A320C3;1728.
+(rerunfilecheck)             Checksum: BF95BC3428BE688B49667EE1DB618508;1729.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
@@ -1074,13 +1102,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### semi simple group (level 1) entered at line 102 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22112 strings out of 480559
- 376528 string characters out of 5902200
- 1149803 words of memory out of 5000000
- 39040 multiletter control sequences out of 15000+600000
- 497991 words of font info for 252 fonts, out of 8000000 for 9000
+ 22182 strings out of 480559
+ 378228 string characters out of 5902199
+ 1151031 words of memory out of 5000000
+ 39071 multiletter control sequences out of 15000+600000
+ 499406 words of font info for 270 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,11n,81p,1131b,17617s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,12n,81p,3114b,17630s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/enc/dvips/b
 ase/8r.enc}</Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public/ber
 a/fvmr8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public/b
@@ -1089,10 +1117,10 @@ era/fvsb8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public
 palatino/uplb8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/u
 rw/palatino/uplr8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (22 pages, 224198 bytes).
+Output written on thesis.pdf (27 pages, 267822 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
- 82 named destinations out of 1000 (max. 500000)
- 83567 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 83577 words of extra memory for PDF output out of 89155 (max. 10000000)
 

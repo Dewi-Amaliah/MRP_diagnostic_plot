@@ -34,6 +34,7 @@ papers <- read_csv(here::here("sis_literature_review/paper_metadata/metadata_jul
 nplots <- nrow(papers)
 p_diagplot <- round(nrow(filter(papers, Diagnostic == 1))/nplots*100,2)
 p_complot <-  round(nrow(filter(papers, Diagnostic == 0))/nplots*100,2)
+n_diagplot <- nrow(filter(papers, Diagnostic == 1))
 
 ## ---- perform-plot
 # wrangle data
@@ -57,6 +58,14 @@ paper_perf_crit <- papers %>%
   mutate(is_use_perf_crit = as.factor(is_use_perf_crit),
          metrics = factor(metrics, levels = c("MAE", "bias", "correlation", "MSE/RMSE", "SE")))
 
+n_perf <- papers %>%
+  filter(performance_criteria_bias !=0 |
+           performance_criteria_correlation != 0 |
+           perfomance_criteria_MAE !=0 |
+           performance_criteria_SE != 0 |
+           `performance_criteria_MSE/RMSE` != 0) %>%
+  nrow()
+  
 #create the plot
 ggplot(paper_perf_crit, aes(fill=is_use_perf_crit, x=metrics)) + 
   geom_bar(position="stack") +
@@ -90,6 +99,17 @@ paper_comp <- papers %>%
                           str_detect(comp_with, "weight") ~ "weight")) %>%
   mutate(is_comp_with = as.factor(is_comp_with),
          comp = factor(comp, levels = c("raw","truth", "MRP", "other study", "weight", "other method")))
+
+# number of plots display comparison
+n_comp <- papers %>%
+  filter(comparison_MRP != 0 |
+           comparison_other_method != 0 |
+           comparison_other_study != 0 |
+           comparison_raw != 0 |
+           comparison_truth != 0 |
+           comparison_weight != 0) %>%
+  nrow()
+
 
 ggplot(paper_comp, aes(fill=is_comp_with, x=comp)) + 
   geom_bar(position="stack") +
@@ -212,7 +232,7 @@ papers_sum <- papers %>%
 SankeyDiagram(papers_sum[, -4],
               link.color = "Source", 
               weights = papers_sum$n,
-              font.size = 7,
+              font.size = 8,
               font.family = "Arial",) 
 
 
