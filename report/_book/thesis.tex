@@ -228,13 +228,11 @@ This study finds that from 115 diagnostic plots, 109 (about 95\%) of which compa
 
 Plot type, referred to as \texttt{geom} in the grammar of graphics, represents the shape and features displayed in the graph. Figure \ref{fig:common-plots} suggests that communication and diagnostic plots have a different pattern in the plot type's distribution. Communicating MRP estimates are mostly done using a choropleth map as MRP is often deployed for small area estimation. For diagnostics purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics.
 
-Notice that Figure \ref{fig:common-plots} also displays the usage of uncertainty in MRP model visualisations. According to \textcite{MIDWAY2020100141}, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder parts of statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study in which the uncertainty is not often seen in the plots.
+Notice that Figure \ref{fig:common-plots} also displays the usage of uncertainty in MRP model visualisations. According to \textcite{MIDWAY2020100141}, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder parts of statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study in which the uncertainty is not often seen in the plots. This is possibly because in the related-field, which is in official statistics communication, the uncertainty is often unreported in the estimates visualisations as well and the fact that it is already accommodated in the design effect explanation.
 
 \textbf{Values put in x and y-axis}
 
-Main things to explain:
-- There are no strict rules on what to put in a and y-axis. However there are some conventions, for example fixed value is put in the x-axis, while random variable is put in the y-axis.
-- Time variable is always put in x axis.
+The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations practice (Figure \ref{fig:common-axis}), estimates, small area, actual value (truth), and time are amongst the value that widely displayed in the plot. We can also see that the values put in x and y-axis are more varied in diagnostic plot. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common knowledge that sometimes the fixed value is put in the x-axis, while the random variable is put in the y-axis. Another example is that time variable is almost always put in the x-axis. This is what we find in this study in which all time values go to the x-axis. Meanwhile, we can see that in terms of plotting estimates and truth, these values often put interchangeable.
 
 \begin{figure}
 \centering
@@ -244,6 +242,8 @@ Main things to explain:
 
 \textbf{Facet}
 
+Paneling or faceting is considered as to one of the effective visualisation techniques to compare the same variables by its grouping factor \autocite{MIDWAY2020100141}. This study observes that faceting is a common practice in MRP visualisations. Figure \ref{fig:facet-plots} conveys that faceting the plots by small area is the most widely practice in MRP visualisations, followed by case. In this case, small area refers to the levels of the predictors in the MRP model, for example, state, county, and religion. In several plots, small area could be referred to another variable that is associated with the MRP estimates, but is not included in the model, such as, the association between health literacy and the opinion on a health-related bill. Health literacy is a variable that is not included in fitting the MRP model, while the latter is the MRP estimates. Further, case is referred to the outcome predicted with MRP.
+
 \begin{figure}
 \centering
 \includegraphics{thesis_files/figure-latex/facet-plots-1.pdf}
@@ -251,6 +251,10 @@ Main things to explain:
 \end{figure}
 
 \textbf{Other features used}
+
+Besides the features explained previously, color and shape are also the components of grammar of graphics. According to a large experimental study on visualisations, it is found that color considered as a memorable feature of the graph \autocite{MIDWAY2020100141}. Further, \textcite{few_2008} states that the aim of color in data visualisations are to highlight particular data, to group items, and to encode quantitative values. In addition, color is sometimes displayed along with shapes to distinguish more features.
+
+We find, as shown in Figure \ref{fig:sankey-feature}, that both communication and diagnostic plots mostly do not incorporate color and shape. Also, when there is only one feature to be displayed, for example, estimation methods, people tend to choose to use color first, rather than shape. This is seen in Figure \ref{fig:sankey-feature} as after incorporating color to distinct estimates, small area, estimation methods, and performance criteria, people tend to not using shape anymore.
 
 \begin{figure}
 \centering

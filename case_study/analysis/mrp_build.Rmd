@@ -737,6 +737,7 @@ ggplot(est_method_data, aes(x = mean, y = state, xmin = lower, xmax = upper,
   theme_bw() +
   scale_color_manual(values = c("black", "magenta", "blue", "tomato")) +
   xlab("Probability of voting Trump") +
+  ylab("State") +
   ggtitle("Probability of voting Trump with different estimation method")
 ```
 
@@ -987,8 +988,8 @@ race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
 ```{r}
 # function to get plot
 metrics_label <- c(`cor_adj` = "1-correlation",
-                   `rmse` = "RMSE",
-                   `mae` = "MAE",
+                   `rmse` = "Root Mean Square Difference",
+                   `mae` = "Mean Absolute Difference",
                    `ci_len` = "Length of CI")
 
 get_metrics_plot <- function(data, title, subtitle){
@@ -1002,10 +1003,10 @@ get_metrics_plot <- function(data, title, subtitle){
   ggplot(aes(level, values)) +
   geom_segment(aes(xend = level, yend = 0), 
                colour = "grey50") +
-  geom_point(size = 2, aes(colour = metrics)) + 
+  geom_point(size = 2) + 
   ggtitle(title,
           subtitle = subtitle) +
-  facet_grid(metrics ~., scales = "free", space = 'free',
+  facet_wrap(~metrics, scales = "free", ncol = 1,
              labeller = as_labeller(metrics_label)) +
   scale_x_discrete(labels = function(x) gsub("__.+$", "", x)) +
   coord_flip() +

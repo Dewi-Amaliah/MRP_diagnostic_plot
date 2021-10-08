@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.9.19)  8 OCT 2021 03:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.9.19)  8 OCT 2021 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1047,18 +1047,18 @@ Overfull \hbox (27.90628pt too wide) in paragraph at lines 225--226
 
 [15 <./thesis_files/figure-latex/compare-plot-1.pdf>] [16 <./thesis_files/figur
 e-latex/common-plots-1.pdf>]
-<thesis_files/figure-latex/common-axis-1.pdf, id=235, 433.62pt x 578.16pt>
+<thesis_files/figure-latex/common-axis-1.pdf, id=236, 433.62pt x 578.16pt>
 File: thesis_files/figure-latex/common-axis-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-axis-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-axis-1.pdf  used on i
-nput line 241.
+nput line 239.
 (pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 241--242
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
-<thesis_files/figure-latex/facet-plots-1.pdf, id=236, 454.69875pt x 274.02374pt
+<thesis_files/figure-latex/facet-plots-1.pdf, id=239, 454.69875pt x 274.02374pt
 >
 File: thesis_files/figure-latex/facet-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/facet-plots-1.pdf>
@@ -1070,25 +1070,25 @@ Overfull \hbox (27.90628pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
-<thesis_files/figure-latex/sankey-feature-1.pdf, id=237, 475.7775pt x 295.1025p
+[17] [18 <./thesis_files/figure-latex/common-axis-1.pdf>]
+<thesis_files/figure-latex/sankey-feature-1.pdf, id=259, 475.7775pt x 295.1025p
 t>
 File: thesis_files/figure-latex/sankey-feature-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/sankey-feature-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/sankey-feature-1.pdf  used o
-n input line 257.
+n input line 261.
 (pdftex.def)             Requested size: 475.77632pt x 295.10176pt.
 
-Overfull \hbox (48.98497pt too wide) in paragraph at lines 257--258
+Overfull \hbox (48.98497pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-[17] [18 <./thesis_files/figure-latex/common-axis-1.pdf>] [19 <./thesis_files/f
-igure-latex/facet-plots-1.pdf> <./thesis_files/figure-latex/sankey-feature-1.pd
-f>] [20
-
-]
+[19 <./thesis_files/figure-latex/facet-plots-1.pdf>] [20 <./thesis_files/figure
+-latex/sankey-feature-1.pdf>]
 Appendix A.
-[21] [22
+[21
+
+] [22
 
 ] [23] [24] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
@@ -1102,13 +1102,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### semi simple group (level 1) entered at line 102 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22182 strings out of 480559
- 378228 string characters out of 5902199
- 1151031 words of memory out of 5000000
- 39071 multiletter control sequences out of 15000+600000
+ 22189 strings out of 480559
+ 378368 string characters out of 5902199
+ 1151096 words of memory out of 5000000
+ 39077 multiletter control sequences out of 15000+600000
  499406 words of font info for 270 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,81p,3114b,17630s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,81p,3114b,17641s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/enc/dvips/b
 ase/8r.enc}</Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public/ber
 a/fvmr8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public/b
@@ -1117,10 +1117,10 @@ era/fvsb8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public
 palatino/uplb8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/u
 rw/palatino/uplr8a.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (27 pages, 267822 bytes).
+Output written on thesis.pdf (27 pages, 270998 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
  83577 words of extra memory for PDF output out of 89155 (max. 10000000)
 
