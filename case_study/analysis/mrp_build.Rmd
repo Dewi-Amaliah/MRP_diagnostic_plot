@@ -1022,14 +1022,11 @@ get_metrics <- function(vect, upper, lower){
   cor_adj <- 1 - cor(comparison_data$base_model, vect)
   mae <- mae(comparison_data$base_model, vect)
   rmse <- rmse(comparison_data$base_model, vect)
-  ci_len <- mean(upper) - mean(lower)
-  
   
   metrics <- tribble(~level, ~metrics, ~values,
-                    "Total", "rmse", rmse,
-                    "Total", "cor_adj", cor_adj,
-                    "Total", "mae", mae,
-                    "Total", "ci_len", ci_len) %>%
+                    "Statewide", "rmse", rmse,
+                    "Statewide", "cor_adj", cor_adj,
+                    "Statewide", "mae", mae) %>%
     mutate(level = as.factor(level),
            metrics = as.factor(metrics))
   
@@ -1046,25 +1043,23 @@ race_metrics_tmp <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("
   group_by(original_re) %>%
   summarise(cor_adj = 1 - cor(median_fit1, median_fit3),
             mae = mae(median_fit1, median_fit3),
-            rmse = rmse(median_fit1, median_fit3),
-            ci_len = mean(ci_len_fit3)) %>%
-  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+            rmse = rmse(median_fit1, median_fit3)) %>%
+  pivot_longer(c(2:4), names_to = "metrics", values_to = "values") %>%
   rename(level = original_re)
 
 race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
   mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")),
          level = factor(level, levels = c("Black", "White", "Hispanic", "Asian", "Native American",
-                                          "All Other", "Total")))
+                                          "All Other", "Statewide")))
 ```
 
 ```{r}
 # function to get plot
 metrics_label <- c(`cor_adj` = "1-correlation",
                    `rmse` = "Root Mean Square Difference",
-                   `mae` = "Mean Absolute Difference",
-                   `ci_len` = "Length of CI")
+                   `mae` = "Mean Absolute Difference")
 
-get_metrics_plot <- function(data, title, subtitle){
+get_metrics_plot <- function(data, title, subtitle, xlab){
   plot <- data %>%
   mutate(level = reorder(level, values)) %>%
   group_by(metrics, level) %>%
@@ -1084,7 +1079,7 @@ get_metrics_plot <- function(data, title, subtitle){
   coord_flip() +
   scale_colour_brewer(palette = "Dark2") +
   theme_bw() +
-  xlab("Levels") +
+  xlab(xlab) +
   ylab("Values") +
   theme(panel.grid.major.y = element_blank()) + 
   theme(legend.position = "none",
@@ -1100,7 +1095,8 @@ get_metrics_plot <- function(data, title, subtitle){
 ```{r cor-race-plot, fig.width=5, fig.height=6}
 get_metrics_plot(race_metrics, 
                  "Estimation performance criteria by race categories",
-                 "Model with more levels of race compared to base model")
+                 "Model with more levels of race compared to base model",
+                 "Race categories")
 ```
 
 
@@ -1116,13 +1112,12 @@ educ_metrics_tmp <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("
   group_by(education) %>%
   summarise(cor_adj = 1 - cor(median_fit1, median_fit2),
             mae = mae(median_fit1, median_fit2),
-            rmse = rmse(median_fit1, median_fit2),
-            ci_len = mean(ci_len_fit2)) %>%
-  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+            rmse = rmse(median_fit1, median_fit2)) %>%
+  pivot_longer(c(2:4), names_to = "metrics", values_to = "values") %>%
   rename(level = education)
 
 educ_metrics <- rbind(educ_metrics_tmp, metrics_fit1_fit2) %>%
-  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")))
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae")))
 ```
 
 
@@ -1130,7 +1125,8 @@ educ_metrics <- rbind(educ_metrics_tmp, metrics_fit1_fit2) %>%
 
 get_metrics_plot(educ_metrics,
                  "Estimation performance criteria by education level",
-                 "Model with additional predictor (education) compared to base model")
+                 "Model with additional predictor (education) compared to base model",
+                 "Education levels")
 ```
 
 
@@ -1142,9 +1138,8 @@ age_metrics_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("sta
   group_by(age) %>%
   summarise(cor_adj = 1 - cor(median_fit1, median_fit2),
             mae = mae(median_fit1, median_fit2),
-            rmse = rmse(median_fit1, median_fit2),
-            ci_len = mean(ci_len_fit2)) %>%
-  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+            rmse = rmse(median_fit1, median_fit2)) %>%
+  pivot_longer(c(2:4), names_to = "metrics", values_to = "values") %>%
   rename(level = age)
 
 age_metrics <- rbind(age_metrics_tmp, metrics_fit1_fit2) %>%
@@ -1159,7 +1154,8 @@ age_metrics <- rbind(age_metrics_tmp, metrics_fit1_fit2) %>%
 
 get_metrics_plot(age_metrics,
                  "Estimation performance criteria by age level",
-                 "Model with additional predictor (education) compared to base model")
+                 "Model with additional predictor (education) compared to base model",
+                 "Age levels")
 ```
 
 
@@ -1169,9 +1165,8 @@ age_metrics2_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("st
   group_by(age) %>%
   summarise(cor_adj = 1 - cor(median_fit1, median_fit3),
             mae = mae(median_fit1, median_fit3),
-            rmse = rmse(median_fit1, median_fit3),
-            ci_len = mean(ci_len_fit3)) %>%
-  pivot_longer(c(2:5), names_to = "metrics", values_to = "values") %>%
+            rmse = rmse(median_fit1, median_fit3)) %>%
+  pivot_longer(c(2:4), names_to = "metrics", values_to = "values") %>%
   rename(level = age)
 
 age_metrics2 <- rbind(age_metrics2_tmp, metrics_fit1_fit3) %>%
@@ -1186,7 +1181,8 @@ age_metrics2 <- rbind(age_metrics2_tmp, metrics_fit1_fit3) %>%
 
 get_metrics_plot(age_metrics2,
                  "Estimation performance criteria by age level",
-                 "Model with more levels on race compared to base model")
+                 "Model with more levels on race compared to base model",
+                 "Age levels")
 ```
 
 
