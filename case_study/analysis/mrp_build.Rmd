@@ -20,6 +20,7 @@ library(Metrics)
 library(survey)
 library(ggstance)
 library(data.table)
+library(ggpmisc)
 ```
 
 ## Using mrpkit to build model
@@ -472,7 +473,7 @@ get_rmse <- function(vect){
 
 # function to get MAD
 get_mad <- function(vect){
-  paste0("RMSE= ", round(mae(comparison_data$truth, vect), 4))
+  paste0("MAE= ", round(mae(comparison_data$truth, vect), 4))
 }
 
 # RMSE of each model
@@ -653,6 +654,7 @@ sp4b <- get_scatter(comparison_data$party,
 sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 2)
 ```
 
+
 # plot of state against CI
 
 ```{r}
@@ -672,7 +674,9 @@ raw_est <- cces_mrp_na_omit %>%
             lower = mean - (1.96*sd/sqrt(length(vote_bin))),
             upper = mean + (1.96*sd/sqrt(length(vote_bin)))) %>%
   select(-sd) %>%
-  mutate(est_method = "raw")
+  mutate(est_method = "raw",
+         state = as.character(state)) %>%
+  arrange(state)
 
 # wtd-est
 
@@ -701,7 +705,9 @@ wtd_estimates <- left_join(wtd_mean, wtd_confint, by = "state") %>%
   rename(mean = wtd_est,
          lower = lower_wt,
          upper = upper_wt) %>%
-  mutate(est_method = "wtd")
+  mutate(est_method = "wtd",
+         state = as.character(state)) %>%
+  arrange(state)
 
 # mrp-est
 mrp_estimates <- state_est_modelb %>%
@@ -710,35 +716,101 @@ mrp_estimates <- state_est_modelb %>%
          upper = upper_modelb) %>%
   mutate(est_method = "mrp")
 
+
+compare_method <- left_join(raw_est, wtd_estimates, by = "state", suffix = c("_raw", "_wtd")) %>%
+  left_join(mrp_estimates, by="state") %>%
+  rename(mean_mrp = mean,
+         lower_mrp = lower,
+         upper_mrp = upper) %>%
+  select(-est_method_raw, -est_method_wtd, est_method)
+  
 # truth 
 truth <- comparison_data %>%
-  select(state, truth) %>%
-  rename(mean = truth) %>%
-  mutate(lower = NA,
-         upper = NA,
-         est_method = "truth") 
+  select(state, truth)
+  # rename(mean = truth) %>%
+  # mutate(lower = NA,
+  #        upper = NA,
+  #        est_method = "truth") 
 
-# est_method_data
+compare_method_df <-  rbind(raw_est, wtd_estimates, mrp_estimates) %>%
+  mutate(est_method = factor(est_method, levels = c("raw", "wtd", "mrp"))) %>%
+  left_join(truth, by = "state") %>%
+  mutate(est_method = factor(est_method, levels = c("truth", "raw", "wtd", "mrp")),
+         deviance = truth - mean)
+  
 
-est_method_data <- rbind(raw_est, wtd_estimates, mrp_estimates, truth) %>%
-  mutate(est_method = factor(est_method, levels = c("truth", "raw", "wtd", "mrp")))
+# # est_method_data
+# 
+# est_method_data <- rbind(raw_est, wtd_estimates, mrp_estimates, truth) %>%
+#   mutate(est_method = factor(est_method, levels = c("truth", "raw", "wtd", "mrp")))
 
 ```
 
+Scatter plot of each estimation method compared to truth
+
+```{r}
+# RMSE of each model
+rmse_raw <- round(rmse(truth$truth, raw_est$mean),3)
+rmse_mrp <- round(rmse(truth$truth, comparison_data$modelb),3)
+rmse_wtd <- round(rmse(truth$truth, wtd_estimates$mean),3)
+
+
+# MAD of each model
+mad_raw <- round(mad(truth$truth, raw_est$mean),3)
+mad_mrp <- round(mad(truth$truth, comparison_data$modelb),3)
+mad_wtd <- round(mad(truth$truth, wtd_estimates$mean),3)
+
+
+metrics_method <- tribble(~"Method", ~ "RMSE", ~ "MAD",
+                          "raw", rmse_raw, mad_raw,
+                          "wtd", rmse_wtd, mad_wtd,
+                          "mrp", rmse_mrp, mad_mrp)
+
+ggplot(compare_method_df, 
+         aes(x = truth, 
+             y = mean, 
+             ymin = lower, 
+             ymax = upper,
+             color = est_method)) +
+  geom_point(size = 1) +
+  geom_abline(intercept = 0, linetype = "dotted") +
+  geom_errorbar(size = 0.3,
+                alpha = 0.5) +
+  annotate(geom = "table",
+           x = 0.99,
+           y = 0,
+           label = list(metrics_method),
+           size = 2.5) +
+  scale_x_continuous(limits = c(0, 1)) +
+  scale_y_continuous(limits = c(0, 1)) +
+  theme_fivethirtyeight() +
+  theme(axis.title = element_text(size = 8),
+        plot.title = element_text(size = 8),
+        plot.subtitle = element_text(size = 8)) +
+  ylab("MRP estimates (Trump vote)") +
+  xlab("Ground truth (Trump vote)") +
+  theme(aspect.ratio=1)
+
+
+```
 
 The plot is:
 
 ```{r fig.height=8, fig.width=8}
-ggplot(est_method_data, aes(x = mean, y = state, xmin = lower, xmax = upper,
-                            color = est_method)) +
-  geom_point(position = position_dodgev(height = .5)) +
-  geom_errorbarh(position = position_dodgev(height = .5),
-                 alpha = 0.7) +
+
+
+
+compare_method_df %>%
+  mutate(state = as.factor(state),
+         state = fct_reorder(state, truth)) %>%
+  ggplot(aes(x = deviance, y = state, color = est_method)) +
+  geom_vline(xintercept = 0) +
+  geom_point() +
   theme_bw() +
-  scale_color_manual(values = c("black", "magenta", "blue", "tomato")) +
-  xlab("Probability of voting Trump") +
-  ylab("State") +
-  ggtitle("Probability of voting Trump with different estimation method")
+  theme(legend.position = "bottom") +
+  xlab("Deviance from the actual value of probability vote for Trump") +
+  ylab("State")
+
 ```
 
 # Violin plot (displaying the effect of using different predictors and levels)
