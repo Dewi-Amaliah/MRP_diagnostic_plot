@@ -1184,15 +1184,116 @@ get_metrics_plot(age_metrics2,
                  "Model with more levels on race compared to base model",
                  "Age levels")
 ```
+# Compare the length of credible interval
+
+
+```{r}
+# function to get the plot
+
+metrics_ci_label <- c(`mean_ratio` = "Mean of CI length ratio",
+                   `mean_ci_dev` = "Mean of CI length difference")
+
+get_ci_plot <- function(data, level, title, subtitle, xlab){
+  plot <- data %>%
+  mutate(level = reorder(level, values)) %>%
+  group_by(metrics, level) %>%
+  arrange(desc(values)) %>%
+  ungroup() %>%
+  mutate(level = factor(paste(level, metrics, sep = "__"), 
+                       levels = rev(paste(level, metrics, sep = "__")))) %>%
+  ggplot(aes(level, values)) +
+  geom_segment(aes(xend = level, yend = 0), 
+               colour = "grey50") +
+  geom_point(size = 2) + 
+  ggtitle(title,
+          subtitle = subtitle) +
+  facet_wrap(~metrics, scales = "free", ncol = 2,
+             labeller = as_labeller(metrics_ci_label)) +
+  scale_x_discrete(labels = function(x) gsub("__.+$", "", x)) +
+  coord_flip() +
+  scale_colour_brewer(palette = "Dark2") +
+  theme_bw() +
+  xlab(xlab) +
+  ylab("Values") +
+  theme(panel.grid.major.y = element_blank()) + 
+  theme(legend.position = "none",
+              axis.ticks.y = element_blank(),
+        plot.title = element_text(size = 11),
+        plot.subtitle = element_text(size = 9))
+  return(plot)
+}
+```
 
 
 
 
+## race categories
 
+```{r}
+compare_ci_len_race <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("state", "original_re"), 
+                            suffix = c("_fit1", "_fit3")) %>%
+  mutate(ci_len_ratio = ci_len_fit3/ci_len_fit1,
+         ci_dev = ci_len_fit3 - ci_len_fit1) %>%
+  group_by(original_re) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
 
+get_ci_plot(compare_ci_len_race, compare_ci_len_race$original_re, "Comparison of credible interval", 
+            "Model with more levels of race compared to base model",
+            "Race categories")
+```
 
+## Education
 
+```{r}
+compare_ci_len_ed <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("state", "education"),
+                            suffix = c("_fit1", "_fit2")) %>%
+  mutate(ci_len_ratio = ci_len_fit2/ci_len_fit1,
+         ci_dev = ci_len_fit2 - ci_len_fit1) %>%
+  group_by(education) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
 
+get_ci_plot(compare_ci_len_ed, compare_ci_len_ed$education, "Comparison of credible interval", 
+            "Model with education level compared to base model",
+            "Education level")
+```
+
+# Age (fit3 vs base model)
+
+```{r}
+compare_ci_len_age3 <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("state", "age"),
+                            suffix = c("_fit1", "_fit3")) %>%
+  mutate(ci_len_ratio = ci_len_fit3/ci_len_fit1,
+         ci_dev = ci_len_fit3 - ci_len_fit1) %>%
+  group_by(age) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
+
+get_ci_plot(compare_ci_len_age3, compare_ci_len_age3$age, "Comparison of credible interval length", 
+            "Model with more race categories compared to base model",
+            "Age group")
+```
+
+# Age (fit2 vs base model)
+
+```{r}
+compare_ci_len_age2 <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("state", "age"),
+                            suffix = c("_fit1", "_fit2")) %>%
+  mutate(ci_len_ratio = ci_len_fit2/ci_len_fit1,
+         ci_dev = ci_len_fit2 - ci_len_fit1) %>%
+  group_by(age) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
+
+get_ci_plot(compare_ci_len_age2, compare_ci_len_age2$age, "Comparison of credible interval length", 
+            "Model with education level as predictor compared to base model",
+            "Age group")
+```
 
 
 # Extra plot (don't need it)
