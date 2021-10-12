@@ -1,4 +1,73 @@
 ---
+title: 'Thesis title'
+degreetype: 'Master of Business Analytics'
+author: 'Dewi Lestari Amaliah'
+studentid: 31251587
+output: bookdown::pdf_book
+site: bookdown::bookdown_site
+link-citations: yes
+knit: "bookdown::render_book"
+---
+
+<!-- 
+Edit these lines as appropriate.
+The actual thesis content is in several Rmd files.
+
+You'll need to edit the _bookdown.yml file to set the order in which you'd like them to appear. 
+
+If you have specific LaTeX packages to add, put them in monashthesis.tex.
+
+You will need to ensure you have installed the knitr and bookdown packages for R.
+
+You will also need LaTeX installed on your computer.
+-->
+
+<!--chapter:end:index.Rmd-->
+
+---
+knit: "bookdown::render_book"
+---
+
+# Abstract {-}
+
+The abstract should outline the main approach and findings of the thesis and must not be more than 500 words.
+
+\newpage
+
+<!--chapter:end:00-abstract.Rmd-->
+
+---
+knit: "bookdown::render_book"
+---
+
+# Acknowledgements {-}
+
+I would like to thank my pet goldfish for \dots
+
+<!--chapter:end:00-acknowledge.Rmd-->
+
+---
+chapter: 1
+knit: "bookdown::render_book"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, cache=TRUE)
+# Load any R packages you need here
+library(forecast)
+library(ggplot2)
+```
+
+# Introduction {#ch:intro}
+
+Start with visualisation
+And then survey
+And MRP
+
+
+<!--chapter:end:01-chap1.Rmd-->
+
+---
 chapter: 2
 knit: "bookdown::render_book"
 ---
@@ -107,13 +176,13 @@ Most of these metrics only refer to point estimates, i.e., the distance between 
 
 ### Common comparisions with MRP
 
-The goal of MRP is to make a population estimate. The method aims to adjust an unrepresentative survey to obtain accurate population and sub-population estimates. Where possible MRP is usually compared with a true value. This is generally only possible in political science applications where an election provides this true estimate. To understand how MRP improves estimates from an unrepresentative survey when compared with no adjustment, MRP estimates are usually compared with direct estimates (raw). Similarly, to understand the improvement of estimates when compared with more traditional methods, MRP is often compared with weighted estimates.
+The goal of MRP is to make a population estimate. The method aims to adjust an unrepresentative survey to obtain accurate population and sub-population estimates. Where possible MRP is usually compared with a true value. This is generally only possible in political science applications where an election provides this true estimate. To understand how MRP improves estimates from an unrepresentative survey, MRP estimates are usually compared with direct estimates (raw). Similarly, MRP is often compared with weighted estimates.
 
-```{r compare-plot, fig.cap = "Estimates that are compared with MRP. The blue shade represents the number of articles that compare MRP estimates with the result of other estimation methods, while the grey shade represents the number of articles that also showed comparison of MRP but did not compare to this particular estimate. Note that the blue bars do not sum to the count because some plots compared to multiple alternative estimates."}
+```{r compare-plot, fig.cap = "Estimates to compare with MRP. The blue shade represents the number of articles compare MRP estimates with the result of other estimation methods, while the grey shade represents the number of articles that also showed comparison of MRP but did not use the corresponding estimates."}
 ```
 
 
-This study finds that from `r n_diagplot` diagnostic plots, `r n_comp`  (about `r round(n_comp/n_diagplot*100, 0)`%) compare MRP estimates with estimates from other methods. Figure \@ref(fig:compare-plot) shows the distribution of alternative estimates. MRP estimates are mostly compared to direct estimates and the ground truth. Some studies also compare estimates from several MRP models (usually with different model specifications). There are not many plots showing the comparison between MRP estimates and weighted estimates.
+This study finds that from `r n_diagplot` diagnostic plots, `r n_comp`  (about `r round(n_comp/n_diagplot*100, 0)`%) of which compares MRP estimates with estimates from other methods. Figure \@ref(fig:compare-plot) shows the distribution of the estimation methods to compare with MRP estimates. It can be seen that MRP estimates are mostly compared to direct estimates and ground truth. Some studies also compare estimates from several MRP models (usually with different model specifications). We also find that there are not many plots showing the comparison between MRP estimates and weighted estimates.
 
 
 ### Common grammar in MRP visualisations
@@ -123,13 +192,13 @@ This study finds that from `r n_diagplot` diagnostic plots, `r n_comp`  (about `
 ```{r common-plots, fig.cap="Common plot types used in MRP visualisations. The blue shade display the number of plots that showed uncertainty, while the grey shade display the number of plots that did not show uncertainty. Both communication and diagnostics plots rarely displayed uncertainty."}
 ```
 
-Plot type, referred to as `geom` in the grammar of graphics, represents the shape and features displayed in the graph. Figure \@ref(fig:common-plots) suggests that communication and diagnostic plots have a different pattern in which plot types are used. Communicating MRP estimates are mostly done using a choropleth map as MRP is often used for small area estimation. For diagnostic purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics. 
+Plot type, referred to as `geom` in the grammar of graphics, represents the shape and features displayed in the graph. Figure \@ref(fig:common-plots) suggests that communication and diagnostic plots have a different pattern in the plot type's distribution. Communicating MRP estimates are mostly done using a choropleth map as MRP is often deployed for small area estimation. For diagnostics purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics. 
 
-Notice that Figure \@ref(fig:common-plots) also displays the use of uncertainty in MRP model visualisations. According to @MIDWAY2020100141, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder some statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study - uncertainty is not often seen in the plots. This is possibly because many of the application areas are more familiar with official statistics. In official statistics uncertainty is often unreported because results that are not sufficiently precise are not reported. 
+Notice that Figure \@ref(fig:common-plots) also displays the usage of uncertainty in MRP model visualisations. According to @MIDWAY2020100141, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder parts of statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study in which the uncertainty is not often seen in the plots. This is possibly because in the related-field, which is in official statistics communication, the uncertainty is often unreported in the estimates visualisations as well and the fact that it is already accommodated in the design effect explanation. 
 
 **Values put in x and y-axis**
 
-The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations (Figure \@ref(fig:common-axis)), estimates, small area, actual value (truth), and time are amoung the values that are displayed in the plot. We can also see that the constructs represented by the x and y-axis are more varied in diagnostic plots. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common that the the fixed value is represented by the x-axis, while the random variable is represented in the y-axis. We do not see this in our results as we find estimates and truth are plotted on the x and y axes interchangeably. Another common rule of thumb is that time is almost always represented on the x-axis, which is supported by the findings of our study. 
+The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations practice (Figure \@ref(fig:common-axis)), estimates, small area, actual value (truth), and time are amongst the value that widely displayed in the plot. We can also see that the values put in x and y-axis are more varied in diagnostic plot. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common knowledge that sometimes the fixed value is put in the x-axis, while the random variable is put in the y-axis. Another example is that time variable is almost always put in the x-axis. This is what we find in this study in which all time values go to the x-axis. Meanwhile, we can see that in terms of plotting estimates and truth, these values often put interchangeable. 
 
 
 ```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=8, fig.width=6}
@@ -137,19 +206,36 @@ The main component of a data visualisation is the axis. x and y-axis represents 
 
 **Facet**
 
-Paneling or faceting is considered as to one of the effective visualisation techniques to compare the same variables by its grouping factor [@MIDWAY2020100141]. We find in our results that faceting is a common practice in MRP visualisations. Figure \@ref(fig:facet-plots) shows that faceting the plots by small area that is being estimated is the most common, followed by case. Small area refers to the levels of the predictors in the MRP model, for example, state, county, and religion. In several plots, small area could be referred to another variable that is associated with the MRP estimates, but is not included in the model, such as the association between health literacy and the opinion on a health-related bill. Health literacy is a variable that is not included in fitting the MRP model, while the latter is the MRP estimates. Further, case is referred to the outcome predicted with MRP. 
+Paneling or faceting is considered as to one of the effective visualisation techniques to compare the same variables by its grouping factor [@MIDWAY2020100141]. This study observes that faceting is a common practice in MRP visualisations. Figure \@ref(fig:facet-plots) conveys that faceting the plots by small area is the most widely practice in MRP visualisations, followed by case. In this case, small area refers to the levels of the predictors in the MRP model, for example, state, county, and religion. In several plots, small area could be referred to another variable that is associated with the MRP estimates, but is not included in the model, such as, the association between health literacy and the opinion on a health-related bill. Health literacy is a variable that is not included in fitting the MRP model, while the latter is the MRP estimates. Further, case is referred to the outcome predicted with MRP. 
 
-```{r facet-plots, fig.cap = "The facetting variable in MRP visualisations", fig.out = "80%"}
+```{r facet-plots, fig.cap = "Measures faceted in MRP visualisations", fig.out = "80%"}
 ```
 
 **Other features used**
 
-Besides the features explained previously, color and shape are also the components of grammar of graphics. According to a large experimental study on visualisations, color is a memorable feature of a graph [@MIDWAY2020100141]. Further, @few_2008 states that the aim of color in data visualisations are to highlight particular data, to group items, and to encode quantitative values. In addition, color is sometimes displayed along with shapes to distinguish more features. 
+Besides the features explained previously, color and shape are also the components of grammar of graphics. According to a large experimental study on visualisations, it is found that color considered as a memorable feature of the graph [@MIDWAY2020100141]. Further, @few_2008 states that the aim of color in data visualisations are to highlight particular data, to group items, and to encode quantitative values. In addition, color is sometimes displayed along with shapes to distinguish more features. 
 
-We find, as shown in Figure \@ref(fig:sankey-feature), that both communication and diagnostic plots incorporate color only about half the time. Shape is used less often. When there is only one feature to be displayed, for example, estimation methods, people tend to choose to use color first, rather than shape. This is seen in Figure \@ref(fig:sankey-feature) as after incorporating color to distinct estimates, small area, estimation methods, and performance criteria, people tend to not use shape anymore.  
+We find, as shown in Figure \@ref(fig:sankey-feature), that both communication and diagnostic plots mostly do not incorporate color and shape. Also, when there is only one feature to be displayed, for example, estimation methods, people tend to choose to use color first, rather than shape. This is seen in Figure \@ref(fig:sankey-feature) as after incorporating color to distinct estimates, small area, estimation methods, and performance criteria, people tend to not using shape anymore.  
 
 ```{r sankey-feature, fig.cap="Color and shape commonly used in MRP visualisations. Both communication and diagnostic plots rarely use color and shape features.", fig.out = "80%"}
 ```
 
 
+
+
+<!--chapter:end:02-chap2.Rmd-->
+
+---
+knit: "bookdown::render_book"
+---
+
+\appendix
+
+# Additional stuff
+
+You might put some computer output here, or maybe additional tables.
+
+Note that line 5 must appear before your first appendix. But other appendices can just start like any other chapter.
+
+<!--chapter:end:A-appA.Rmd-->
 
