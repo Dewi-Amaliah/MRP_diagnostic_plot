@@ -1,0 +1,23 @@
+---
+chapter: 3
+knit: "bookdown::render_book"
+---
+
+```{r setup-chap3, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Case Study: Application of MRP in Presidential Voting Estimation
+
+The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as survey data and the American Community Survey data [@acs_data] as post-stratification data.
+
+## Data
+
+### Cooperative Congressional Election Study (CCES)
+
+### American Community Survey (ACS)
+
+
+## Model Specifications
+
+## Results and Discussion
