@@ -3,21 +3,60 @@ chapter: 3
 knit: "bookdown::render_book"
 ---
 
-```{r setup-chap3, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup-chap3, include=FALSE, cache = FALSE}
+library(knitr)
+read_chunk(here::here("case_study/analysis/mrp_fitting.R"))
+```
+
+
+```{r pkgs-chap3}
 ```
 
 # Case Study: Application of MRP in Presidential Voting Estimation
 
-The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as survey data and the American Community Survey data [@acs_data] as post-stratification data.
+The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as the survey data and the American Community Survey data 2015-2017 [@acs_data] as the population/ post-stratification data.
 
 ## Data
 
-### Cooperative Congressional Election Study (CCES)
+```{r acs-cces-read}
+```
 
-### American Community Survey (ACS)
+```{r ct-data}
+```
 
 
-## Model Specifications
+### Cooperative Congressional Election Study (CCES) 2016 
+
+CCES is an annual survey aims to capture Americans' view on Congress, their voting behavior and experience with regards to political geography, social, and demographic context [@cces_data]. In 2016, CCES covers 64,600 samples spread over 51 states. Accordingly, @cces_data mention that the data is precise enough to measure the distribution of voters' preference in most states. In addition, beyond its reliable sample size, CCES is deemed to be desirable dataset as it measures vote preference before and after in two waves so that it is even more reliable compared to generic question [@kuriwaki]. 
+
+To fit MRP models, we use several variables from this survey. To obtain the data from the CCES website, we utilize an R package, `ccesMRPprep` [@ccesmrpprep]. One of the advantages of using this package is that the data has been pre-processed in particular for MRP purposes, in this case, we use the `ccc_std_demographics` function. Also, the variable names are already recoded so it has a more interpretable names. The code to get the data is available in the supplementary materials of this thesis. 
+
+The outcome variables, which will be explained in detail in Section \@ref(spec), are the vote preference/intention (`CC16_364c`), candidate voted (`CC16_410a`), and party identity (`pid3` including leaners, i.e, coded as Independents in pid3 who expressed leaning towards a party in `pid7`). Table \@ref(tab:outcome-table) shows the distribution of answers in those three variables. In `ccesMRPprep`, these variables have been renamed so that they are equivalent to `intent_pres_16`, `voted_pres_16`, and `pid3_leaner`, respectively. It is worth noting that the MRP models we would like to build use binary responses. Hence, these variables are recoded into yes/no in terms of whether the respondents vote for Trump/Republican or not.
+
+```{r outcome-table, results='asis'}
+```
+
+```{r sidebyside-tab}
+```
+
+```{r tab-res, results='asis', eval=FALSE}
+```
+
+Further, the geography and demographic variables used as covariates in the models are `state`, `age`, `gender`, `education`, and `race`. Table \@ref(tab:covariate-tables) shows the distribution of categories/levels of `age`, `gender`, `education`, and `race`. Initially, age is a discrete variable but in this case it is categorised. Also, `education` and `race` has more levels in the original data but it is collapsed here to obtain fewer levels. The proportion of people answered the survey based on the state is displayed in the appendix of this thesis. 
+
+
+### American Community Survey (ACS) 2015-2017
+
+In this study, we use the ACS 2015-2017 data as the post-stratification data. The ACS provides an annual-basis information about jobs and occupations, demographic and citizenship, educational attainment, home ownership, and other topics [@acs_data_about]. Further, the ACS uses a monthly probabilistic samples to produce the annually estimates. It could be understood that the ACS is a desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. It is also implied by @GaoYuxiang2021IMRa that the ACS is the most accurate representation of the U.S. population every year. 
+
+To fit MRP models, we need the individual data of the ACS, instead the aggregated statistics. Hence, we use the 1-year Public Use Microdata Sample (PUMS) which carry the information/records of individual people on a yearly basis. The 1-year PUMS data reflects approximately one percent of the U.S. population [@pums_metadata]. Therefore, in this study, we use three years period of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (`PWGTP`). Since we use three years period, this weight is then divided by 3.  
+
+The data is publicly available in the [U.S. Census Bureuau website](https://www.census.gov/programs-surveys/acs/microdata/access.2015.html). We downloaded the data in a .csv format (csv_pus.zip) year by year (2015-2019) through access on [FTP site](https://www2.census.gov/programs-surveys/acs/data/pums/2015/1-Year/). After that, we did a data pre-processing to bind the three years of the PUMS data. We only use some variables in this data for the MRP-purposes, i.e, unique identifier of the person (`SERIALNO`), state (`ST`), weight (`PWGTP`), education (`SCHL`), sex (`SEX`), race (`RAC1P`), Hispanic origin (`HISP`), and age (`AGEP`). We also did a data munging to recode and collapse some categories in these variables. Note that the `RAC1P` did not record for Hispanic ethnicity. Hence, we introduce a new category here, which is Hispanic, identified if the person answer other than "1" in the `HISP` variable. The detailed code of the data pre-processing is available in the supplementary materials of this thesis. 
+
+
+## Model Specifications {#spec}
+
+- mrpkit
+- running using hpc 
 
 ## Results and Discussion
