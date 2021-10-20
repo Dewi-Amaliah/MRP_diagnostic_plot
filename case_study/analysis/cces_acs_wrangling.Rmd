@@ -90,23 +90,23 @@ write_rds(cces_use, here::here("case_study/data/cces_use.rds"))
 
 
 ```{r}
-# acs_2015_a <- fread(here::here("case_study/data/data_raw/ss15pusa.csv"))
-# acs_2015_b <- fread(here::here("case_study/data/data_raw/ss15pusb.csv"))
-# 
-# acs_15 <- rbind(acs_2015_a, acs_2015_b) %>%
-#   mutate(year = 2015)
-# 
-# write_rds(acs_15, here::here("case_study/data/data_raw/acs_15.rds"), compress = "gz")
+acs_2015_a <- fread(here::here("case_study/data/data_raw/ss15pusa.csv"))
+acs_2015_b <- fread(here::here("case_study/data/data_raw/ss15pusb.csv"))
+
+acs_15 <- rbind(acs_2015_a, acs_2015_b) %>%
+  mutate(year = 2015)
+
+write_rds(acs_15, here::here("case_study/data/data_raw/acs_15.rds"), compress = "gz")
 ```
 
 ```{r}
-# acs_2016_a <- fread(here::here("case_study/data/data_raw/ss16pusa.csv"))
-# acs_2016_b <- fread(here::here("case_study/data/data_raw/ss16pusb.csv"))
-# 
-# acs_16 <- rbind(acs_2016_a, acs_2016_b) %>%
-#   mutate(year = 2016)
-# 
-# write_rds(acs_16, here::here("case_study/data/data_raw/acs_16.rds"), compress = "gz")
+acs_2016_a <- fread(here::here("case_study/data/data_raw/ss16pusa.csv"))
+acs_2016_b <- fread(here::here("case_study/data/data_raw/ss16pusb.csv"))
+
+acs_16 <- rbind(acs_2016_a, acs_2016_b) %>%
+  mutate(year = 2016)
+
+write_rds(acs_16, here::here("case_study/data/data_raw/acs_16.rds"), compress = "gz")
 ```
 
 ```{r}
@@ -116,7 +116,7 @@ acs_2017_b <- fread(here::here("case_study/data/data_raw/psam_pusb_2017.csv"))
 acs_17 <- rbind(acs_2017_a, acs_2017_b) %>%
   mutate(year = 2017)
 
-# write_rds(acs_17, here::here("case_study/data/data_raw/acs_17.rds"), compress = "gz")
+write_rds(acs_17, here::here("case_study/data/data_raw/acs_17.rds"), compress = "gz")
 ```
 
 ```{r}
