@@ -1,0 +1,1284 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{cces_data}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b4eb159d441c4c0f7b14bb55b6e910c7}{%
+           family={Ansolabehere},
+           familyi={A\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2d040328def7714a83ecc8b3520d5a44}{%
+           family={Schaffner},
+           familyi={S\bibinitperiod},
+           given={Brian\bibnamedelima F.},
+           giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Harvard Dataverse}%
+      }
+      \strng{namehash}{56b6b8aae1c30db836b963e9836abf1f}
+      \strng{fullhash}{56b6b8aae1c30db836b963e9836abf1f}
+      \strng{bibnamehash}{56b6b8aae1c30db836b963e9836abf1f}
+      \strng{authorbibnamehash}{56b6b8aae1c30db836b963e9836abf1f}
+      \strng{authornamehash}{56b6b8aae1c30db836b963e9836abf1f}
+      \strng{authorfullhash}{56b6b8aae1c30db836b963e9836abf1f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CCES Common Content, 2016}}
+      \field{version}{V4}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.7910/DVN/GDF6Z0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7910/DVN/GDF6Z0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7910/DVN/GDF6Z0
+      \endverb
+    \endentry
+    \entry{BotchkarevAlexei2019ANTD}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a7df751b9b0acc6b630820fd497f5ce1}{%
+           family={Botchkarev},
+           familyi={B\bibinitperiod},
+           given={Alexei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{a7df751b9b0acc6b630820fd497f5ce1}
+      \strng{fullhash}{a7df751b9b0acc6b630820fd497f5ce1}
+      \strng{bibnamehash}{a7df751b9b0acc6b630820fd497f5ce1}
+      \strng{authorbibnamehash}{a7df751b9b0acc6b630820fd497f5ce1}
+      \strng{authornamehash}{a7df751b9b0acc6b630820fd497f5ce1}
+      \strng{authorfullhash}{a7df751b9b0acc6b630820fd497f5ce1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Aim/Purpose: The aim of this study was to analyze various performance metrics and approaches to their classification. The main goal of the study was to develop a new typology that will help to advance knowledge of metrics and facilitate their use in machine learning regression algorithms Background: Performance metrics (error measures) are vital components of the evaluation frameworks in various fields. A performance metric can be defined as a logical and mathematical construct designed to measure how close are the actual results from what has been expected or predicted. A vast variety of performance metrics have been described in academic literature. The most commonly mentioned metrics in research studies are Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), etc. Knowledge about metrics properties needs to be systematized to simplify the design and use of the metrics. Methodology: A qualitative study was conducted to achieve the objectives of identifying related peer-reviewed research studies, literature reviews, critical thinking and inductive reasoning. Contribution: The main contribution of this paper is in ordering knowledge of performance metrics and enhancing understanding of their structure and properties by proposing a new typology, generic primary metrics mathematical formula and a visualization chart Findings: Based on the analysis of the structure of numerous performance metrics, we proposed a framework of metrics which includes four (4) categories: primary metrics, extended metrics, composite metrics, and hybrid sets of metrics. The paper identified three (3) key components (dimensions) that determine the structure and properties of primary metrics: method of determining point distance, method of normalization, method of aggregation of point distances over a data set. For each component, implementation options have been identified. The suggested new typology has been shown to cover a total of over 40 commonly used primary metrics Recommendations for Practitioners: Presented findings can be used to facilitate teaching performance metrics to university students and expedite metrics selection and implementation processes for practitioners Recommendation for Researchers: By using the proposed typology, researchers can streamline development of new metrics with predetermined properties Impact on Society: The outcomes of this study could be used for improving evaluation results in machine learning regression, forecasting and prognostics with direct or indirect positive impacts on innovation and productivity in a societal sense Future Research: Future research is needed to examine the properties of the extended metrics, composite metrics, and hybrid sets of metrics. Empirical study of the metrics is needed using R Studio or Azure Machine Learning Studio, to find associations between the properties of primary metrics and their “numerical” behavior in a wide spectrum of data characteristics and business or research requirements}
+      \field{issn}{1555-1229}
+      \field{journaltitle}{Interdisciplinary journal of information, knowledge, and management}
+      \field{title}{A New Typology Design of Performance Metrics to Measure Errors in Machine Learning Regression Algorithms}
+      \field{volume}{14}
+      \field{year}{2019}
+      \field{pages}{45\bibrangedash 76}
+      \range{pages}{32}
+    \endentry
+    \entry{brown_uni}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=97683385d71e5764324d158bdd568155}{%
+           family={{Brown University Library}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{97683385d71e5764324d158bdd568155}
+      \strng{fullhash}{97683385d71e5764324d158bdd568155}
+      \strng{bibnamehash}{97683385d71e5764324d158bdd568155}
+      \strng{authorbibnamehash}{97683385d71e5764324d158bdd568155}
+      \strng{authornamehash}{97683385d71e5764324d158bdd568155}
+      \strng{authorfullhash}{97683385d71e5764324d158bdd568155}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Scientific Literature Review Resources and Services}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://libguides.brown.edu/Reviews/types
+      \endverb
+      \verb{url}
+      \verb https://libguides.brown.edu/Reviews/types
+      \endverb
+    \endentry
+    \entry{brms}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul-Christian},
+           giveni={P\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{fullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{bibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorbibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authornamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorfullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The R Journal}
+      \field{number}{1}
+      \field{title}{Advanced {Bayesian} Multilevel Modeling with the {R} Package {brms}}
+      \field{volume}{10}
+      \field{year}{2018}
+      \field{pages}{395\bibrangedash 411}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.32614/RJ-2018-017
+      \endverb
+    \endentry
+    \entry{ChaiT2014Rmse}{article}{}
+      \name{author}{2}{}{%
+        {{hash=587f1ab9c09463310d40e5cc50478cbf}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a2e3c0dfba94c0ec5173131ec27bd73e}{%
+           family={Draxler},
+           familyi={D\bibinitperiod},
+           given={R.\bibnamedelimi R},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Copernicus GmbH}%
+      }
+      \strng{namehash}{502d0c7c0ce45e5fc7d01baa157e7d2d}
+      \strng{fullhash}{502d0c7c0ce45e5fc7d01baa157e7d2d}
+      \strng{bibnamehash}{502d0c7c0ce45e5fc7d01baa157e7d2d}
+      \strng{authorbibnamehash}{502d0c7c0ce45e5fc7d01baa157e7d2d}
+      \strng{authornamehash}{502d0c7c0ce45e5fc7d01baa157e7d2d}
+      \strng{authorfullhash}{502d0c7c0ce45e5fc7d01baa157e7d2d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Both the root mean square error (RMSE) and the mean absolute error (MAE) are regularly employed in model evaluation studies. Willmott and Matsuura (2005) have suggested that the RMSE is not a good indicator of average model performance and might be a misleading indicator of average error, and thus the MAE would be a better metric for that purpose. While some concerns over using RMSE raised by Willmott and Matsuura (2005) and Willmott et al. (2009) are valid, the proposed avoidance of RMSE in favor of MAE is not the solution. Citing the aforementioned papers, many researchers chose MAE over RMSE to present their model evaluation statistics when presenting or adding the RMSE measures could be more beneficial. In this technical note, we demonstrate that the RMSE is not ambiguous in its meaning, contrary to what was claimed by Willmott et al. (2009). The RMSE is more appropriate to represent model performance than the MAE when the error distribution is expected to be Gaussian. In addition, we show that the RMSE satisfies the triangle inequality requirement for a distance metric, whereas Willmott et al. (2009) indicated that the sums-of-squares-based statistics do not satisfy this rule. In the end, we discussed some circumstances where using the RMSE will be more beneficial. However, we do not contend that the RMSE is superior over the MAE. Instead, a combination of metrics, including but certainly not limited to RMSEs and MAEs, are often required to assess model performance.}
+      \field{issn}{1991-9603}
+      \field{journaltitle}{Geoscientific model development}
+      \field{number}{3}
+      \field{title}{Root mean square error (RMSE) or mean absolute error (MAE)? – Arguments against avoiding RMSE in the literature}
+      \field{volume}{7}
+      \field{year}{2014}
+      \field{pages}{1247\bibrangedash 1250}
+      \range{pages}{4}
+    \endentry
+    \entry{few_2008}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0225846e9c16b1e8389734ceaa2c3c34}{%
+           family={Few},
+           familyi={F\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0225846e9c16b1e8389734ceaa2c3c34}
+      \strng{fullhash}{0225846e9c16b1e8389734ceaa2c3c34}
+      \strng{bibnamehash}{0225846e9c16b1e8389734ceaa2c3c34}
+      \strng{authorbibnamehash}{0225846e9c16b1e8389734ceaa2c3c34}
+      \strng{authornamehash}{0225846e9c16b1e8389734ceaa2c3c34}
+      \strng{authorfullhash}{0225846e9c16b1e8389734ceaa2c3c34}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Practical rules for using color in charts - GitHub Pages}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://nbisweden.github.io/Rcourse/files/rules_for_using_color.pdf
+      \endverb
+      \verb{url}
+      \verb https://nbisweden.github.io/Rcourse/files/rules_for_using_color.pdf
+      \endverb
+    \endentry
+    \entry{cmdstanr}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=d22d0f2897624075bcba3f2195a96094}{%
+           family={Gabry},
+           familyi={G\bibinitperiod},
+           given={Jonah},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1399b58e56975b80ae8f2899339ab3a5}{%
+           family={Češnovar},
+           familyi={Č\bibinitperiod},
+           given={Rok},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6a94501e2a20bb01f4ae544c8e1a973}
+      \strng{fullhash}{e6a94501e2a20bb01f4ae544c8e1a973}
+      \strng{bibnamehash}{e6a94501e2a20bb01f4ae544c8e1a973}
+      \strng{authorbibnamehash}{e6a94501e2a20bb01f4ae544c8e1a973}
+      \strng{authornamehash}{e6a94501e2a20bb01f4ae544c8e1a973}
+      \strng{authorfullhash}{e6a94501e2a20bb01f4ae544c8e1a973}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{https://mc-stan.org/cmdstanr, https://discourse.mc-stan.org}
+      \field{title}{cmdstanr: R Interface to 'CmdStan'}
+      \field{year}{2021}
+    \endentry
+    \entry{GaoYuxiang2021IMRa}{article}{}
+      \name{author}{4}{}{%
+        {{hash=378dcc553118028b0581443ba8d91be8}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yuxiang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bcc69ca3509324893a5dbf5cba60aa14}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod}}}%
+        {{hash=740d117d0458272bb691f40adf15dfdb}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{b9cba88468e035a53b947e2fffd4520b}
+      \strng{fullhash}{7c24b952bd2628128abb51ad11a3c522}
+      \strng{bibnamehash}{7c24b952bd2628128abb51ad11a3c522}
+      \strng{authorbibnamehash}{7c24b952bd2628128abb51ad11a3c522}
+      \strng{authornamehash}{b9cba88468e035a53b947e2fffd4520b}
+      \strng{authorfullhash}{7c24b952bd2628128abb51ad11a3c522}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1936-0975}
+      \field{journaltitle}{Bayesian analysis}
+      \field{number}{1}
+      \field{title}{Improving Multilevel Regression and Poststratification with Structured Priors}
+      \field{volume}{1}
+      \field{year}{2021}
+    \endentry
+    \entry{GelmanAndrew2014HBAC}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Hayward}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{fullhash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{bibnamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{authorbibnamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{authornamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{authorfullhash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In the United States as in other countries, political and economic divisions cut along geographic and demographic lines. Richer people are more likely to vote for Republican candidates while poorer voters lean Democratic; this is consistent with the positions of the two parties on economic issues. At the same time, richer states on the coasts are bastions of the Democrats, while most of the generally lower-income areas in the middle of the country strongly support Republicans. During a research project lasting several years, we reconciled these patterns by fitting a series of multilevel models to perform inference on geographic and demographic subsets of the population. We were using national survey data with relatively small samples in some states, ethnic groups and income categories; this motivated the use of Bayesian inference to partially pool between fitted models and local data. Previous, non-Bayesian analyses of income and voting had failed to connect individual and state-level patterns. Now that our analysis has been done, we believe it could be replicated using non-Bayesian methods, but Bayesian inference helped us crack the problem by directly handling the uncertainty that is inherent in working with sparse data.}
+      \field{issn}{0883-4237}
+      \field{journaltitle}{Statistical science}
+      \field{number}{1}
+      \field{title}{How Bayesian Analysis Cracked the Red-State, Blue-State Problem}
+      \field{volume}{29}
+      \field{year}{2014}
+      \field{pages}{26\bibrangedash 35}
+      \range{pages}{10}
+      \keyw{Bayesian analysis ; Big Bayes Stories: A Collection of Vignettes ; Candidates ; Ethnicity ; Income estimates ; Inference ; Liberalism ; Modeling ; Multilevel models ; Multilevel regression and poststratification (MRP) ; Political parties ; political science ; sample surveys ; sparse data ; States ; Statistical inference ; Survey sampling ; Voter behavior ; Voting ; Voting patterns}
+    \endentry
+    \entry{Gelman97poststratificationinto}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=66aa6716653b1e564ee012d1862a4d3c}{%
+           family={Little},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e38b42cca6473a547e48ceef2b20af3}
+      \strng{fullhash}{4e38b42cca6473a547e48ceef2b20af3}
+      \strng{bibnamehash}{4e38b42cca6473a547e48ceef2b20af3}
+      \strng{authorbibnamehash}{4e38b42cca6473a547e48ceef2b20af3}
+      \strng{authornamehash}{4e38b42cca6473a547e48ceef2b20af3}
+      \strng{authorfullhash}{4e38b42cca6473a547e48ceef2b20af3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Poststratification Into Many Categories Using Hierarchical Logistic Regression}
+      \field{year}{1997}
+    \endentry
+    \entry{GhitzaYair2013DIwM}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a301126e766af94d2100399d3a9bd9f2}{%
+           family={Ghitza},
+           familyi={G\bibinitperiod},
+           given={Yair},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{7c9318eceadaa3ff22d4986d74199218}
+      \strng{fullhash}{7c9318eceadaa3ff22d4986d74199218}
+      \strng{bibnamehash}{7c9318eceadaa3ff22d4986d74199218}
+      \strng{authorbibnamehash}{7c9318eceadaa3ff22d4986d74199218}
+      \strng{authornamehash}{7c9318eceadaa3ff22d4986d74199218}
+      \strng{authorfullhash}{7c9318eceadaa3ff22d4986d74199218}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0092-5853}
+      \field{journaltitle}{American journal of political science}
+      \field{number}{3}
+      \field{title}{Deep Interactions with MRP: Election Turnout and Voting Patterns Among Small Electoral Subgroups: DEEP INTERACTIONS WITH MRP}
+      \field{volume}{57}
+      \field{year}{2013}
+      \field{pages}{762\bibrangedash 776}
+      \range{pages}{15}
+    \endentry
+    \entry{cochrane}{inbook}{}
+      \name{author}{6}{}{%
+        {{hash=8d74f69ce68c983a45ccd5d5de5e59b6}{%
+           family={Green},
+           familyi={G\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b6750ef7d49e3489c3f80cb4562765a7}{%
+           family={Higgins},
+           familyi={H\bibinitperiod},
+           given={Julian\bibnamedelima PT},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=da54fd26a4a71b2799d7055463f6f56d}{%
+           family={Alderson},
+           familyi={A\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=00c09fca53e90c17c5f58df4e3685ca2}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9da5818ae381747539d8a98ecf2d13b1}{%
+           family={Mulrow},
+           familyi={M\bibinitperiod},
+           given={Cynthia\bibnamedelima D},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=ad972c7b953d6f7d418d8afd8e29386e}{%
+           family={Oxman},
+           familyi={O\bibinitperiod},
+           given={Andrew\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Ltd}%
+      }
+      \strng{namehash}{cddd57e6f4f7f74c7e381bf23dc57fab}
+      \strng{fullhash}{18e8d345a20f5db44d8dababec855acd}
+      \strng{bibnamehash}{18e8d345a20f5db44d8dababec855acd}
+      \strng{authorbibnamehash}{18e8d345a20f5db44d8dababec855acd}
+      \strng{authornamehash}{cddd57e6f4f7f74c7e381bf23dc57fab}
+      \strng{authorfullhash}{18e8d345a20f5db44d8dababec855acd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary This chapter contains sections titled: The Cochrane Collaboration Systematic reviews About this Handbook Contributors to the Handbook Chapter information References}
+      \field{booktitle}{Cochrane Handbook for Systematic Reviews of Interventions}
+      \field{chapter}{1}
+      \field{isbn}{9780470712184}
+      \field{title}{Introduction}
+      \field{year}{2008}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi.org/10.1002/9780470712184.ch1
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470712184.ch1
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470712184.ch1
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470712184.ch1
+      \endverb
+      \keyw{Cochrane Collaboration and healthcare,Cochrane Collaboration principles,Cochrane Collaboration and Cochrane Review Groups (CRGs),Cochrane Methods Groups,Cochrane Database of Systematic Reviews (CDSR),Cochrane reviews - systematic review,Cochrane Handbook for Systematic Reviews of Interventions (Version 5),‘The Cochrane Collaboration Tool Kit’}
+    \endentry
+    \entry{prisma2020}{manual}{}
+      \name{author}{3}{}{%
+        {{hash=2d1ada6d2c48c912cb12f21cbcb80095}{%
+           family={Haddaway},
+           familyi={H\bibinitperiod},
+           given={Neal\bibnamedelima R},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=1ff7284f4d9bafe70fb527288d5b27a7}{%
+           family={Pritchard},
+           familyi={P\bibinitperiod},
+           given={Chris\bibnamedelima C},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b7314b4cde4c01764b4b3580e015b768}{%
+           family={McGuinness},
+           familyi={M\bibinitperiod},
+           given={Luke\bibnamedelima A},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{159a5943b5c3115099f576a6a52d05f1}
+      \strng{fullhash}{159a5943b5c3115099f576a6a52d05f1}
+      \strng{bibnamehash}{159a5943b5c3115099f576a6a52d05f1}
+      \strng{authorbibnamehash}{159a5943b5c3115099f576a6a52d05f1}
+      \strng{authornamehash}{159a5943b5c3115099f576a6a52d05f1}
+      \strng{authorfullhash}{159a5943b5c3115099f576a6a52d05f1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PRISMA2020: R package and ShinyApp for producing PRISMA 2020 compliant flow diagrams (Version 0.0.2)}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.5281/zenodo.5082518
+      \endverb
+    \endentry
+    \entry{mrpkit}{manual}{}
+      \name{author}{4}{}{%
+        {{hash=bcc69ca3509324893a5dbf5cba60aa14}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d22d0f2897624075bcba3f2195a96094}{%
+           family={Gabry},
+           familyi={G\bibinitperiod},
+           given={Jonah},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0f23b597e01d0c0a72afc912632cc7e7}{%
+           family={Amaliah},
+           familyi={A\bibinitperiod},
+           given={Dewi},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4593c2604ae4bb09514d68a14447fad0}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={Rohan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{86bf8c12405dfbdd613cb68c8dfb3a30}
+      \strng{fullhash}{6daf61539a012474455e9c0692d66c17}
+      \strng{bibnamehash}{6daf61539a012474455e9c0692d66c17}
+      \strng{authorbibnamehash}{6daf61539a012474455e9c0692d66c17}
+      \strng{authornamehash}{86bf8c12405dfbdd613cb68c8dfb3a30}
+      \strng{authorfullhash}{6daf61539a012474455e9c0692d66c17}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 0.1.0}
+      \field{title}{mrpkit: Multilevel Regression with Post-Stratification}
+      \field{year}{2021}
+    \endentry
+    \entry{KiewietdeJongeChadP2018PSPE}{article}{}
+      \name{author}{3}{}{%
+        {{hash=434bd2fa227773771bd26ef827dcb954}{%
+           family={Kiewiet\bibnamedelimb de\bibnamedelima Jonge},
+           familyi={K\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Chad\bibnamedelima P},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=61963201ae8e5b277000438262eeebdf}{%
+           family={Langer},
+           familyi={L\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+        {{hash=322b255356a268b55406646fa29e0f9a}{%
+           family={Sinozich},
+           familyi={S\bibinitperiod},
+           given={Sofi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {US}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{cf883e616ffe222e3e10131c5bba30b5}
+      \strng{fullhash}{cf883e616ffe222e3e10131c5bba30b5}
+      \strng{bibnamehash}{cf883e616ffe222e3e10131c5bba30b5}
+      \strng{authorbibnamehash}{cf883e616ffe222e3e10131c5bba30b5}
+      \strng{authornamehash}{cf883e616ffe222e3e10131c5bba30b5}
+      \strng{authorfullhash}{cf883e616ffe222e3e10131c5bba30b5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract This paper presents state-level estimates of the 2016 presidential election using data from the ABC News/Washington Post tracking poll and multilevel regression with poststratification (MRP). While previous implementations of MRP for election forecasting have relied on data from prior elections to establish poststratification targets for the composition of the electorate, in this paper we estimate both turnout and vote preference from the same preelection poll. Through Bayesian estimation we are also able to capture uncertainty in both estimated turnout and vote preferences. This approach correctly predicts 50 of 51 contests, showing greater accuracy than comparison models that rely on the 2012 Current Population Survey Voting and Registration Supplement for turnout. While the model does not perfectly estimate turnout as a share of the voting age population, popular vote shares, or vote margins in each state, it is more accurate than predictions published by polling aggregators or other published MRP estimators. The paper also reports how vote preferences changed over the course of the 18-day tracking period, compares subgroup-level estimates of turnout and vote preferences with the 2016 CPS Survey and National Election Pool exit poll, and summarizes the accuracy of the approach applied to the 2000, 2004, 2008, and 2012 elections. The paper concludes by discussing how researchers can make use of this method as an alternative approach to survey weighting and likely voter modeling as well as in forecasting future elections.}
+      \field{issn}{0033-362X}
+      \field{journaltitle}{Public opinion quarterly}
+      \field{number}{3}
+      \field{title}{Predicting State Presidential Election Results Using National Tracking Polls and Multilevel Regression with Poststratification (MRP)}
+      \field{volume}{82}
+      \field{year}{2018}
+      \field{pages}{419\bibrangedash 446}
+      \range{pages}{28}
+    \endentry
+    \entry{ccesmrpprep}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=b0b3d9fe0996dd122388736734eaaa3a}{%
+           family={Kuriwaki},
+           familyi={K\bibinitperiod},
+           given={Shiro},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{fullhash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{bibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authorbibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authornamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authorfullhash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 0.1.8.900}
+      \field{title}{ccesMRPprep: Functions and Data to Prepare CCES data for MRP}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.github.com/kuriwaki/ccesMRPprep
+      \endverb
+      \verb{url}
+      \verb https://www.github.com/kuriwaki/ccesMRPprep
+      \endverb
+    \endentry
+    \entry{kuriwaki}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b0b3d9fe0996dd122388736734eaaa3a}{%
+           family={Kuriwaki},
+           familyi={K\bibinitperiod},
+           given={Shiro},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge MA}%
+      }
+      \list{publisher}{1}{%
+        {Harvard University}%
+      }
+      \strng{namehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{fullhash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{bibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authorbibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authornamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authorfullhash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Swing Voter Paradox: Electoral Politics in a Nationalized Era}
+      \field{type}{phdthesis}
+      \field{year}{2021}
+    \endentry
+    \entry{LauderdaleBenjaminE2020Mppf}{article}{}
+      \name{author}{4}{}{%
+        {{hash=529fac5739a4558bc85b3a46932a5ffa}{%
+           family={Lauderdale},
+           familyi={L\bibinitperiod},
+           given={Benjamin\bibnamedelima E},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=848888b163f1745f738e594f6aa0e8ad}{%
+           family={Bailey},
+           familyi={B\bibinitperiod},
+           given={Delia},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d708ad89ac0582a71f1e6da413ccf8c1}{%
+           family={Blumenau},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=683904edcb8111ad1573a25e1b6f6d56}{%
+           family={Rivers},
+           familyi={R\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {AMSTERDAM}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V}%
+      }
+      \strng{namehash}{ea9f17f4fadcb918b9024771e10cb9b1}
+      \strng{fullhash}{feee758439143e38dc32dfc9f207847f}
+      \strng{bibnamehash}{feee758439143e38dc32dfc9f207847f}
+      \strng{authorbibnamehash}{feee758439143e38dc32dfc9f207847f}
+      \strng{authornamehash}{ea9f17f4fadcb918b9024771e10cb9b1}
+      \strng{authorfullhash}{feee758439143e38dc32dfc9f207847f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe a strategy for applying multilevel regression and post-stratification (MRP) methods to pre-election polling. Using a combination of contemporaneous polling, census data, past election polling, past election results, and other sources of information, we are able to construct probabilistic, internally consistent estimates of national votes and the sub-national electoral districts that determine seats or electoral votes in many electoral systems. We report on the performance of the general framework in three applications that were conducted and released publicly in advance of the 2016 UK Referendum on EU Membership, the 2016 US Presidential Election, and the 2017 UK General Election.}
+      \field{issn}{0169-2070}
+      \field{journaltitle}{International journal of forecasting}
+      \field{number}{2}
+      \field{title}{Model-based pre-election polling for national and sub-national outcomes in the US and UK}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{399\bibrangedash 413}
+      \range{pages}{15}
+      \keyw{Business & Economics ; Economics ; Election forecasting ; Elections ; Management ; Multilevel regression and stratification ; Polling ; Presidents ; Social Sciences ; UK politics ; US politics}
+    \endentry
+    \entry{LeiRayleigh2017T2EA}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9a4c98d6cda4ed11483c65978eec359e}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Rayleigh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a301126e766af94d2100399d3a9bd9f2}{%
+           family={Ghitza},
+           familyi={G\bibinitperiod},
+           given={Yair},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Macclesfield}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{2a72ee01672b90caa650bc142ad31478}
+      \strng{fullhash}{2a72ee01672b90caa650bc142ad31478}
+      \strng{bibnamehash}{2a72ee01672b90caa650bc142ad31478}
+      \strng{authorbibnamehash}{2a72ee01672b90caa650bc142ad31478}
+      \strng{authornamehash}{2a72ee01672b90caa650bc142ad31478}
+      \strng{authorfullhash}{2a72ee01672b90caa650bc142ad31478}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present an increasingly stringent set of replications, a multilevel regression and poststratification analysis of polls from the 2008 U.S. presidential election campaign, focusing on a set of plots showing the estimated Republican vote share for whites and for all voters, as a function of income level in each of the states.  We start with a nearly exact duplication that uses the posted code and changes only the model-fitting algorithm; we then replicate using already-analyzed data from 2004; and finally we set up preregistered replications using two surveys from 2008 that we had not previously looked at. We have already learned from our preliminary, nonpreregistered replication, which has revealed a potential problem with the earlier published analysis; it appears that our model may not sufficiently account for nonsampling error, and that some of the patterns presented in that earlier article may simply reflect noise.  In addition to the substantive interest in validating earlier findings about demographics, geography, and voting, the present project serves as a demonstration of preregistration in a setting where the subject matter is historical (and thus the replication data exist before the preregistration plan is written) and where the analysis is exploratory (and thus a replication cannot be simply deemed successful or unsuccessful based on the statistical significance of some particular comparison).  Our replication analysis produced graphs that showed the same general pattern of income and voting as we had found in our earlier published work, but with some differences in particular states that we cannot easily explain and which seem too large to be explained by sampling variation. This process thus demonstrates how replication can raise concerns about an earlier published result.}
+      \field{issn}{2330-443X}
+      \field{journaltitle}{Statistics and Public Policy}
+      \field{number}{1}
+      \field{title}{The 2008 Election: A Preregistered Replication Analysis}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \keyw{Algorithms ; Bayesian analysis ; Bayesian methods ; Elections ; Graphs ; Other ; Polls & surveys ; Presidential elections ; Process improvement ; Public opinion surveys ; Sampling ; Statistical significance ; Voter behavior ; Voters ; Voting}
+    \endentry
+    \entry{LinnenlueckeMartinaK2020Cslr}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e4a4ffb877160310c084d7419b91e285}{%
+           family={Linnenluecke},
+           familyi={L\bibinitperiod},
+           given={Martina\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=0515da97a0cd0d3def5a6234d533b84a}{%
+           family={Marrone},
+           familyi={M\bibinitperiod},
+           given={Mauricio},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cabd01226fbb347f530c12a0814cdddc}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Abhay\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {London, England}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{67dfd8e2249fd655ad30a4d8d4b408c1}
+      \strng{fullhash}{67dfd8e2249fd655ad30a4d8d4b408c1}
+      \strng{bibnamehash}{67dfd8e2249fd655ad30a4d8d4b408c1}
+      \strng{authorbibnamehash}{67dfd8e2249fd655ad30a4d8d4b408c1}
+      \strng{authornamehash}{67dfd8e2249fd655ad30a4d8d4b408c1}
+      \strng{authorfullhash}{67dfd8e2249fd655ad30a4d8d4b408c1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Literature reviews play an essential role in academic research to gather existing knowledge and to examine the state of a field. However, researchers in business, management and related disciplines continue to rely on cursory and narrative reviews that lack a systematic investigation of the literature. This article details methodological steps for conducting literature reviews in a replicable and scientific fashion. This article also discusses bibliographic mapping approaches to visualise bibliometric information and findings from a systematic literature review. We hope that the insights provided in this article are useful for researchers at different stages of their careers - ranging from doctoral students who wish to assemble a broad overview of their field of interest to guide their work, to senior researchers who wish to publish authoritative literature reviews.}
+      \field{issn}{0312-8962}
+      \field{journaltitle}{Australian journal of management}
+      \field{number}{2}
+      \field{title}{Conducting systematic literature reviews and bibliometric analyses}
+      \field{volume}{45}
+      \field{year}{2020}
+      \field{pages}{175\bibrangedash 194}
+      \range{pages}{20}
+      \keyw{Bibliometrics ; Business ; Business & Economics ; Entity (Philosophy) ; Evaluation ; Literature reviews ; MANAGEMENT ; RESEARCH ; Researchers ; Reviews ; Social Sciences ; Text data mining}
+    \endentry
+    \entry{MIDWAY2020100141}{article}{}
+      \name{author}{1}{}{%
+        {{hash=62bd3502219a887cd8075469acb36da4}{%
+           family={Midway},
+           familyi={M\bibinitperiod},
+           given={Stephen\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{62bd3502219a887cd8075469acb36da4}
+      \strng{fullhash}{62bd3502219a887cd8075469acb36da4}
+      \strng{bibnamehash}{62bd3502219a887cd8075469acb36da4}
+      \strng{authorbibnamehash}{62bd3502219a887cd8075469acb36da4}
+      \strng{authornamehash}{62bd3502219a887cd8075469acb36da4}
+      \strng{authorfullhash}{62bd3502219a887cd8075469acb36da4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary We live in a contemporary society surrounded by visuals, which, along with software options and electronic distribution, has created an increased importance on effective scientific visuals. Unfortunately, across scientific disciplines, many figures incorrectly present information or, when not incorrect, still use suboptimal data visualization practices. Presented here are ten principles that serve as guidance for authors who seek to improve their visual message. Some principles are less technical, such as determining the message before starting the visual, while other principles are more technical, such as how different color combinations imply different information. Because figure making is often not formally taught and figure standards are not readily enforced in science, it is incumbent upon scientists to be aware of best practices in order to most effectively tell the story of their data.}
+      \field{issn}{2666-3899}
+      \field{journaltitle}{Patterns}
+      \field{number}{9}
+      \field{title}{Principles of Effective Data Visualization}
+      \field{volume}{1}
+      \field{year}{2020}
+      \field{pages}{100141}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.patter.2020.100141
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666389920301896
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666389920301896
+      \endverb
+    \endentry
+    \entry{ParkDavidK2004BMEw}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5c96d25ede11534327303b42264bc4f4}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima K},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4d52e3097ffea4d2d4cfc8bbb1b94e69}{%
+           family={Bafumi},
+           familyi={B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {New York, US}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{c6831e68f799f77208c052a547a64f55}
+      \strng{fullhash}{c6831e68f799f77208c052a547a64f55}
+      \strng{bibnamehash}{c6831e68f799f77208c052a547a64f55}
+      \strng{authorbibnamehash}{c6831e68f799f77208c052a547a64f55}
+      \strng{authornamehash}{c6831e68f799f77208c052a547a64f55}
+      \strng{authorfullhash}{c6831e68f799f77208c052a547a64f55}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We fit a multilevel logistic regression model for the mean of a binary response variable conditional on poststratification cells. This approach combines the modeling approach often used in small-area estimation with the population information used in poststratification (see Gelman and Little 1997, Survey Methodology 23:127–135). To validate the method, we apply it to U.S. preelection polls for 1988 and 1992, poststratified by state, region, and the usual demographic variables. We evaluate the model by comparing it to state-level election outcomes. The multilevel model outperforms more commonly used models in political science. We envision the most important usage of this method to be not forecasting elections but estimating public opinion on a variety of issues at the state level.}
+      \field{issn}{1047-1987}
+      \field{journaltitle}{Political analysis}
+      \field{number}{4}
+      \field{title}{Bayesian Multilevel Estimation with Poststratification: State-Level Estimates from National Polls}
+      \field{volume}{12}
+      \field{year}{2004}
+      \field{pages}{375\bibrangedash 385}
+      \range{pages}{11}
+      \keyw{Demography ; Ethnicity ; Modeling ; Multilevel models ; Polls ; Population estimates ; Public opinion ; State elections ; Voter registration ; Voting}
+    \endentry
+    \entry{SchweizerMarinL2017Apgt}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5530c181fea18364634545284ff273d6}{%
+           family={Schweizer},
+           familyi={S\bibinitperiod},
+           given={Marin\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ad341586ba2634f042bb2a8464b64a93}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={Rajeshwari},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Inc}%
+      }
+      \strng{namehash}{b123ec2cf53edee548580788388b7151}
+      \strng{fullhash}{b123ec2cf53edee548580788388b7151}
+      \strng{bibnamehash}{b123ec2cf53edee548580788388b7151}
+      \strng{authorbibnamehash}{b123ec2cf53edee548580788388b7151}
+      \strng{authornamehash}{b123ec2cf53edee548580788388b7151}
+      \strng{authorfullhash}{b123ec2cf53edee548580788388b7151}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Systematic literature reviews and meta-analyses are important research designs used to summarize and derive conclusions about the collective evidence on a focused research question in a structured, reproducible manner. The goal of this Methodology Minute is to describe how to conduct a systematic literature review and meta-analysis using a step-by-step approach to help infection preventionists (IPs) and others in the field perform their own systematic literature review and meta-analysis, and to critically evaluate published systematic literature reviews and meta-analyses.}
+      \field{issn}{0196-6553}
+      \field{journaltitle}{American journal of infection control}
+      \field{number}{11}
+      \field{title}{A practical guide to systematic literature reviews and meta-analyses in infection prevention: Planning, challenges, and execution}
+      \field{volume}{45}
+      \field{year}{2017}
+      \field{pages}{1292\bibrangedash 1294}
+      \range{pages}{3}
+      \keyw{Meta-Analysis as Topic ; Infection Control - methods ; Review Literature as Topic ; Humans ; Career development ; Medical colleges ; Health aspects}
+    \endentry
+    \entry{pums_metadata}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fb461c0c6976b357452502c0cb338c70}{%
+           family={{U.S. Census Bureau}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{U.S. Census Bureau}}%
+      }
+      \strng{namehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{bibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorbibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authornamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhash}{fb461c0c6976b357452502c0cb338c70}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{American Community Survey 2015: ACS 1-Year PUMS Files}}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www2.census.gov/programs-surveys/acs/tech_docs/pums/ACS2015_PUMS_README.pdf
+      \endverb
+      \verb{url}
+      \verb https://www2.census.gov/programs-surveys/acs/tech_docs/pums/ACS2015_PUMS_README.pdf
+      \endverb
+    \endentry
+    \entry{acs_data_about}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fb461c0c6976b357452502c0cb338c70}{%
+           family={{U.S. Census Bureau}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{U.S. Census Bureau}}%
+      }
+      \strng{namehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{bibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorbibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authornamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhash}{fb461c0c6976b357452502c0cb338c70}
+      \field{extraname}{2}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{About the American Community Survey}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.census.gov/programs-surveys/acs/about.html
+      \endverb
+      \verb{url}
+      \verb https://www.census.gov/programs-surveys/acs/about.html
+      \endverb
+    \endentry
+    \entry{acs_coverage_rate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fb461c0c6976b357452502c0cb338c70}{%
+           family={{U.S. Census Bureau}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{U.S. Census Bureau}}%
+      }
+      \strng{namehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{bibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorbibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authornamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhash}{fb461c0c6976b357452502c0cb338c70}
+      \field{extraname}{3}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{American Community Survey: Sample Size and Data Quality}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.census.gov/acs/www/methodology/sample-size-and-data-quality/
+      \endverb
+      \verb{url}
+      \verb https://www.census.gov/acs/www/methodology/sample-size-and-data-quality/
+      \endverb
+    \endentry
+    \entry{acs_data}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fb461c0c6976b357452502c0cb338c70}{%
+           family={{U.S. Census Bureau}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{U.S. Census Bureau}}%
+      }
+      \strng{namehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{bibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorbibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authornamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhash}{fb461c0c6976b357452502c0cb338c70}
+      \field{extraname}{4}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The American Community Survey Public Use Microdata Sample, 2015-2017}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.census.gov/programs-surveys/acs/microdata/
+      \endverb
+      \verb{url}
+      \verb https://www.census.gov/programs-surveys/acs/microdata/
+      \endverb
+    \endentry
+    \entry{vanderplas}{article}{}
+      \name{author}{3}{}{%
+        {{hash=82bab3d60023004f1f5ad64c26995ca8}{%
+           family={Vanderplas},
+           familyi={V\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=703a76ee965b0aabaf5b41a58ab3995c}{%
+           family={Cook},
+           familyi={C\bibinitperiod},
+           given={Dianne},
+           giveni={D\bibinitperiod}}}%
+        {{hash=aab385203b295bcea3e72bd9a22eebae}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ae50e5c22fadfd0be5ab5394e3a81e9}
+      \strng{fullhash}{7ae50e5c22fadfd0be5ab5394e3a81e9}
+      \strng{bibnamehash}{7ae50e5c22fadfd0be5ab5394e3a81e9}
+      \strng{authorbibnamehash}{7ae50e5c22fadfd0be5ab5394e3a81e9}
+      \strng{authornamehash}{7ae50e5c22fadfd0be5ab5394e3a81e9}
+      \strng{authorfullhash}{7ae50e5c22fadfd0be5ab5394e3a81e9}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Statistics and Its Application}
+      \field{number}{1}
+      \field{title}{Testing Statistical Charts: What Makes a Good Graph?}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{61\bibrangedash 88}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1146/annurev-statistics-031219-041252
+      \endverb
+    \endentry
+    \entry{WangWei2015Fewn}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f27ec46ccd272a021fd78bdac92dd490}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=795d5f288e25d76e93208ba0af5b04e7}{%
+           family={Rothschild},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=769c0f637707fcc5e9ebb71ce29eb5d1}{%
+           family={Goel},
+           familyi={G\bibinitperiod},
+           given={Sharad},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V}%
+      }
+      \strng{namehash}{2e448f2e68ab2f1cd9e54269cab56966}
+      \strng{fullhash}{e659b69ba935e48ee3a81d6da4a087c3}
+      \strng{bibnamehash}{e659b69ba935e48ee3a81d6da4a087c3}
+      \strng{authorbibnamehash}{e659b69ba935e48ee3a81d6da4a087c3}
+      \strng{authornamehash}{2e448f2e68ab2f1cd9e54269cab56966}
+      \strng{authorfullhash}{e659b69ba935e48ee3a81d6da4a087c3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Byline: Wei Wang, David Rothschild, Sharad Goel, Andrew Gelman Election forecasts have traditionally been based on representative polls, in which randomly sampled individuals are asked who they intend to vote for. While representative polling has historically proven to be quite effective, it comes at considerable costs of time and money. Moreover, as response rates have declined over the past several decades, the statistical benefits of representative sampling have diminished. In this paper, we show that, with proper statistical adjustment, non-representative polls can be used to generate accurate election forecasts, and that this can often be achieved faster and at a lesser expense than traditional survey methods. We demonstrate this approach by creating forecasts from a novel and highly non-representative survey dataset: a series of daily voter intention polls for the 2012 presidential election conducted on the Xbox gaming platform. After adjusting the Xbox responses via multilevel regression and poststratification, we obtain estimates which are in line with the forecasts from leading poll analysts, which were based on aggregating hundreds of traditional polls conducted during the election cycle. We conclude by arguing that non-representative polling shows promise not only for election forecasting, but also for measuring public opinion on a broad range of social, economic and cultural issues.}
+      \field{issn}{0169-2070}
+      \field{journaltitle}{International journal of forecasting}
+      \field{number}{3}
+      \field{title}{Forecasting elections with non-representative polls}
+      \field{volume}{31}
+      \field{year}{2015}
+      \field{pages}{980\bibrangedash 991}
+      \range{pages}{12}
+      \keyw{Elections ; Forecasting techniques ; Presidential elections ; Public opinion surveys ; Regression analysis ; Studies}
+    \endentry
+    \entry{layered-grammar}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
+           family={Wickham},
+           familyi={W\bibinitperiod},
+           given={Hadley},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{fullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{bibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorbibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authornamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorfullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational and Graphical Statistics}
+      \field{number}{1}
+      \field{title}{A layered grammar of graphics}
+      \field{volume}{19}
+      \field{year}{2010}
+      \field{pages}{3\bibrangedash 28}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1198/jcgs.2009.07098
+      \endverb
+    \endentry
+    \entry{ggplot2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
+           family={Wickham},
+           familyi={W\bibinitperiod},
+           given={Hadley},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag New York}%
+      }
+      \strng{namehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{fullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{bibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorbibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authornamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorfullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-24277-4}
+      \field{title}{ggplot2: Elegant Graphics for Data Analysis}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://ggplot2.tidyverse.org
+      \endverb
+      \verb{url}
+      \verb https://ggplot2.tidyverse.org
+      \endverb
+    \endentry
+    \entry{WillmottCJ2005Aotm}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d40b1ac17e63e099cb07278509735d95}{%
+           family={Willmott},
+           familyi={W\bibinitperiod},
+           given={CJ},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b54330d1b990f0199098e31a46d7ed64}{%
+           family={Matsuura},
+           familyi={M\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Inter-Research}%
+      }
+      \strng{namehash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{fullhash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{bibnamehash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{authorbibnamehash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{authornamehash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{authorfullhash}{d2086b2a9b537f038dd96d5105501d93}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The relative abilities of 2, dimensioned statistics—the root-mean-square error (RMSE) and the mean absolute error (MAE)—to describe average model-performance error are examined. The RMSE is of special interest because it is widely reported in the climatic and environmental literature; nevertheless, it is an inappropriate and misinterpreted measure of average error. RMSE is inappropriate because it is a function of 3 characteristics of a set of errors, rather than of one (the average error). RMSE varies with the variability within the distribution of error magnitudes and with the square root of the number of errors ( ), as well as with the average-error magnitude (MAE). Our findings indicate that MAE is a more natural measure of average error, and (unlike RMSE) is unambiguous. Dimensioned evaluations and inter-comparisons of average model-performance error, therefore, should be based on MAE.}
+      \field{issn}{0936-577X}
+      \field{journaltitle}{Climate research}
+      \field{number}{1}
+      \field{title}{Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance}
+      \field{volume}{30}
+      \field{year}{2005}
+      \field{pages}{79\bibrangedash 82}
+      \range{pages}{4}
+      \keyw{Arithmetic mean ; Error rates ; Errors in statistics ; Estimate reliability ; Geography ; Modeling ; NOTE ; Precipitation ; Root mean square errors ; Statistical variance}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

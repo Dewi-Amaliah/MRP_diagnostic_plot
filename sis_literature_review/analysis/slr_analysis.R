@@ -222,6 +222,10 @@ ggplot(filter(filter_facet_all, !is.na(facet_type))) +
   ylab("Count") 
 
 ## ---- sankey-feature
+
+papers$color[is.na(papers$color)] <- "Not used"
+papers$shape[is.na(papers$shape)] <- "Not used"
+
 papers_sum <- papers %>%
   rename(aim = Diagnostic) %>%
   mutate(aim = case_when(aim == 1 ~ "diagnostic",

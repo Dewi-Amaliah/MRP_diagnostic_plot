@@ -12,7 +12,8 @@ library(ggplot2)
 
 # Introduction {#ch:intro}
 
-Start with visualisation
-And then survey
-And MRP
+## Problem Statement 
+Survey -> MRP -> visualisation 
+
+## MRP Overview
 

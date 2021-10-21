@@ -1,0 +1,49 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{1}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{3}{chapter*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Problem Statement}{5}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}MRP Overview}{5}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Systematic Literature Review}{7}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Literature Identification}{7}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Screening and Eligibility Criteria}{10}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Stage 1: Review of abstracts}{10}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Stage 2: Full manuscript review}{10}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Data Extraction and Analysis}{11}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Common practices in MRP visualisations}{13}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Performance metrics used in MRP}{13}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Common comparisions with MRP}{15}{subsection.2.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}Common grammar in MRP visualisations}{16}{subsection.2.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Case Study: Application of MRP in Presidential Voting Estimation}{21}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Data}{22}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Cooperative Congressional Election Study (CCES) 2016}{22}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}American Community Survey (ACS) 2015-2017}{24}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Model Specifications}{25}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Model Preparation and Fitting}{28}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Results and Discussion}{28}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Appendix}{29}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{31}{appendix*.15}%

@@ -45,11 +45,11 @@ Further, the geography and demographic variables used as covariates in the model
 
 ### American Community Survey (ACS) 2015-2017
 
-In this study, we use the ACS 2015-2017 data as the post-stratification data. The ACS provides an annual-basis information about jobs and occupations, demographic and citizenship, educational attainment, home ownership, and other topics [@acs_data_about]. Further, the ACS uses a monthly probabilistic samples to produce the annually estimates. It could be understood that the ACS is a desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. It is also implied by @GaoYuxiang2021IMRa that the ACS is the most accurate representation of the U.S. population every year. 
+In this study, we use the ACS 2015-2017 data as the post-stratification data. The ACS provides annual-basis information about jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics [@acs_data_about]. Further, the ACS uses monthly probabilistic samples to produce the annual estimates. It could be understood that the ACS is desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. It is also implied by @GaoYuxiang2021IMRa that the ACS is the most accurate representation of the U.S. population every year. 
 
-To fit MRP models, we need the individual data of the ACS, instead of the aggregated statistics. Hence, we use the 1-year Public Use Microdata Sample (PUMS) which carry the information/records of individual people on a yearly basis. The 1-year PUMS data reflects approximately one percent of the U.S. population [@pums_metadata]. Therefore, in this study, we use three years period of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (`PWGTP`). Since we use three years period, this weight is then divided by 3.  
+To fit MRP models, we need the individual data of the ACS instead of the aggregated statistics. Hence, we use the 1-year Public Use Microdata Sample (PUMS), which carries the information/records of individual people on a yearly basis. The 1-year PUMS data reflects approximately one percent of the U.S. population [@pums_metadata]. Therefore, in this study, we use three years periods of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (`PWGTP`). Since we use three years period, this weight is then divided by 3.  
 
-The data is publicly available in the [U.S. Census Bureuau website](https://www.census.gov/programs-surveys/acs/microdata/access.2015.html). We downloaded the data in a .csv format (csv_pus.zip) year by year (2015-2019) through access on [FTP site](https://www2.census.gov/programs-surveys/acs/data/pums/2015/1-Year/). After that, we did a data pre-processing to bind the three years of the PUMS data. We only use some variables in this data for the MRP-purposes, i.e, unique identifier of the person (`SERIALNO`), state (`ST`), weight (`PWGTP`), education (`SCHL`), sex (`SEX`), race (`RAC1P`), Hispanic origin (`HISP`), and age (`AGEP`). We also did a data munging to recode and collapse some categories in these variables. Note that the `RAC1P` did not record for Hispanic ethnicity. Hence, we introduce a new category here, which is Hispanic, identified if the person answer other than "1" in the `HISP` variable. Table \@ref(tab:acs-response-freq) shows the categorised response of the variables obtained from the ACS, i.e., age, race and ethnicity, and education. Also notice that we get some NA values in education. This is actually the education level of under-school-age respondents. In fact, in the MRP models, we will omit "Less than 18 years" age group as this it is not included in the survey data (CCES). Hence, the NAs in education response will be eventually omitted as well. The detailed code of the data pre-processing is available in the supplementary materials of this thesis. 
+The data is publicly available on the [U.S. Census Bureau website](https://www.census.gov/programs-surveys/acs/microdata/access.2015.html). We downloaded the data in a .csv format (csv_pus.zip) year by year (2015-2019) through access on [FTP site](https://www2.census.gov/programs-surveys/acs/data/pums/2015/1-Year/). After that, we did a data pre-processing to bind the three years of the PUMS data. We only use some variables in this data for the MRP-purposes, i.e., unique identifier of the person (`SERIALNO`), state (`ST`), weight (`PWGTP`), education (`SCHL`), sex (`SEX`), race (`RAC1P`), Hispanic origin (`HISP`), and age (`AGEP`). We also did a data munging to recode and collapse some categories in these variables. Note that the `RAC1P` did not record for Hispanic ethnicity. Hence, we introduce a new category here, Hispanic, identified if the person answers other than "1" in the `HISP` variable. Table \@ref(tab:acs-response-freq) shows the categorised response of the variables obtained from the ACS, i.e., age, race and ethnicity, and education. Also, notice that we get some NA values in education. This is actually the education level of under-school-age respondents. In fact, we will omit the "Less than 18 years" age group in the MRP models as it is not included in the survey data (CCES). Hence, the NAs in education response will be eventually omitted as well. The detailed code of the data pre-processing is available in the supplementary materials of this thesis. 
 
 ```{r acs-response-freq}
 ```
@@ -57,11 +57,97 @@ The data is publicly available in the [U.S. Census Bureuau website](https://www.
 
 ## Model Specifications {#spec}
 
-- Specifications
+In Chapter 2, we found that the diagnostic plots shown in many articles compare MRP estimates with other estimates, one of which compares several MRP estimates with different specifications. Therefore, in this case study, we build five different MRP models as follows.
 
-- mrpkit
+\newpage
 
-- hpc
+**Baseline model** 
 
+We begin the model fitting with the baseline model. In this model, we set the binary outcome as whether the respondents vote for Trump or not in the 2016 election. Therefore, we transform the response of `voted_pres_16` into a binary variable called `vote`. The covariates used are `age`, `gender`, `state`, and the re-categorised/collapsed `race` variable into fewer levels. As seen in Table \@ref(tab:covariate-tables), `race` has 6 categories, i.e., `White`, `Black`, `Hispanic`, `Asian`, `Native American`, and `All Other`. In the baseline model, we collapsed the `Native American` and `All Other` into `Other`. Hence, the baseline model equation is: 
+
+\begin{equation} 
+\begin{split}
+\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]}\right), for\ i = 1, ...., n, 
+\end{split}
+(\#eq:baseline-model)
+\end{equation}
+
+and $vote_{j[i]}$ is the observed binary outcome (1 = yes, 0 = no) for individual $i$ in post-stratification cell $j$. $\beta_0$ is the intercept. $\alpha^{age}_{j[i]}$, $\alpha^{gender}_{j[i]}$, $\alpha^{state}_{j[i]}$, and $\alpha^{collapsed\ race}_{j[i]}$ are the random effects for `age`, `gender`, `state`, and `collapsed race`, respectively. The subscript in each coefficient represents the category of the $i-th$ respondent, such as, $\alpha^{collapsed\ race}_{j[i]}$ takes value from {$\alpha^{collapsed\ race}_{White}$, $\alpha^{collapsed\ race}_{Black}$, $\alpha^{collapsed\ race}_{Hispanic}$, $\alpha^{collapsed\ race}_{Asian}$, and $\alpha^{collapsed\ race}_{Other}$}. Each random effect has an independent prior distribution, such as, $\alpha^{collapsed\ race}_{j}$ ~ $N(0, \sigma^2_{collapsed\ race})$.
+
+\vspace{\baselineskip}
+
+**Model with `education` as additional covariate**
+
+Next, we create a bigger model by adding `education` as additional covariate to the baseline model. Hence, the model specification is:
+
+\begin{equation} 
+\begin{split}
+\Pr(vote_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]} + \alpha^{education}_{j[i]}\right), \\
+for\ i &= 1, ...., n.
+\end{split}
+(\#eq:model2)
+\end{equation}
+
+
+\vspace{\baselineskip}
+
+**Model with original race categories**
+
+This model is essentially the same with baseline model, except that there are more race categories, which are `White`, `Black`, `Hispanic`, `Asian`, `Native American`, and `All Other`. The model equation is: 
+
+\begin{equation} 
+\begin{split}
+\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{original\ race}_{j[i]}\right), for\ i = 1, ...., n.
+\end{split}
+(\#eq:model3)
+\end{equation}
+
+
+**Model with different outcomes**
+
+**Vote intention/preference**
+
+This model mimicks the model in Equation \@ref(eq:model2), except that we have different outcome or response variable. The response here is whether the respondent intent to vote for Trump (`yes`) or not (`no`). It is transformed from `intent_pres_16` variable in the CCES data. The model is specified as follows:
+
+\begin{equation} 
+\begin{split}
+\Pr(intent_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]} + \alpha^{education}_{j[i]}\right), \\
+for\ i &= 1, ...., n.
+\end{split}
+(\#eq:model4a)
+\end{equation}
+
+**Party identity**
+
+Beside vote intention, another outcome is the party identity in terms of whether the respondents identify themselves as Republican or not. This variable is derived from `pid3_leaner` variable. The specification of covariates is also the same with model in Equation \@ref(eq:model2). 
+
+\begin{equation} 
+\begin{split}
+\Pr(party_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]} + \alpha^{education}_{j[i]}\right), \\
+for\ i &= 1, ...., n.
+\end{split}
+(\#eq:model4b)
+\end{equation}
+
+
+## Model Preparation and Fitting {#prep}
+
+```{r survey-pop-data}
+```
+
+```{r questionmap}
+```
+
+```{r tabulation}
+```
+
+The MRP models require a synchronous survey and population data. Hence, to achieve this, we need to map the survey data to the population data. In this study, the model preparation and survey-population data mapping conducted with an R package, `mrpkit` [@mrpkit]. This package allows the transparent and reproducible workflow to build MRP model, from the data mapping until the prediction stage, including the model specification setting. The detailed code to build the MRP models is available in the supplementary materials of this thesis. 
+
+After mapping the survey and population data, we can obtain the post-stratification table displayed in Table \@ref(tab:post-strat-table)
+
+```{r post-strat-table}
+```
+
+Next, we implement Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates cmdstanr [@cmdstanr] as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC) infrastructure](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
 
 ## Results and Discussion

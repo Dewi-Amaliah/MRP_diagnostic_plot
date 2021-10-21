@@ -21,6 +21,7 @@ library(survey)
 library(ggstance)
 library(data.table)
 library(ggpmisc)
+library(xtable)
 ```
 
 ## Using mrpkit to build model
@@ -34,34 +35,76 @@ library(ggpmisc)
 # read the data
 cces <- read_rds(here::here("case_study/data/cces_use.rds"))
 acs <- read_rds(here::here("case_study/data/acs_use_wrangled.rds"))
+  
 ```
 
 
 ## Descriptive of outcome variables
 
 ```{r}
-get_ct <- function(x, question){
+get_ct <- function(x){
     cces %>% group_by({{x}}) %>%
     count() %>%
     mutate(percentage = round(n/nrow(cces)*100,2)) %>%
-    select(-n) %>%
-    kable(caption = question,
-          col.names = c("response", "%")) %>%
-    kable_styling(bootstrap_options = "striped")
+    select(-n)
+    }
+
+voted_ct <- get_ct(voted_pres_16)
+intent_ct <- get_ct(intent_pres_16)
+party_id_ct <- get_ct(pid3_leaner)
+gender_ct <- get_ct(gender)
+race_ct <- get_ct(race)
+age_ct <- get_ct(age)
+education_ct <- get_ct(educ)
+```
+
+
+
+## Response in population data 
+
+```{r}
+get_ct_acs <- function(x){
+    acs %>% group_by({{x}}) %>%
+    count() %>%
+    mutate(percentage = round(n/nrow(acs)*100,2)) %>%
+    select(-n)
 }
+
+age_pop <- get_ct_acs(age)
+race_ethnicity_pop <- get_ct_acs(race_ethnicity) %>%
+  rename(`race and etnicity` = race_ethnicity)
+sex_pop <- get_ct_acs(sex)
+educ_collps_pop <- get_ct_acs(educ_collps) %>%
+  rename(education = educ_collps)
 ```
 
 
-```{r}
-get_ct(voted_pres_16, "For whom did you vote for President of the United States?")
-```
+
+
 
 ```{r}
-get_ct(intent_pres_16, "Which candidate did you prefer for President of the United States?")
+knitr::kables(
+  list(
+    knitr::kable(voted_ct,
+                 caption = "For whom did you vote for President of the United States?",
+                 col.names = c("response", "%")),
+    knitr::kable(intent_ct,
+                 caption = "Which candidate did you prefer for President of the United States?",
+                 col.names = c("response", "%")),
+    knitr::kable(party_id_ct,
+                 caption = "Party identity, codes self-identified Independents in pid3 who expressed leaning towards a party in pid7.",
+                 col.names = c("response", "%"))),
+  caption = "Percentage of each answer in CCES 2016. This question will be the MRP models' outcome in this case study. Since the model is binary, these answer will be converted to be yes/no in the context of vote for Trump/Republican.") %>%
+  kable_styling()
 ```
-```{r}
-get_ct(pid3_leaner, "Codes self-identified Independents in pid3 who expressed leaning towards a party in pid7 (Lean Democrats/Republicans) as partisans.")
-```
+
+
+
+
+
+
+
+
 
 ```{r}
 prop.table(table(cces$pid3_leaner,cces$pid3)) %>%
@@ -1298,7 +1341,7 @@ get_ci_plot(compare_ci_len_age2, compare_ci_len_age2$age, "Comparison of credibl
 
 # Extra plot (don't need it)
 
-```{r, fig.height=8, fig.width=8}
+```{r, fig.height=8, fig.width=8, eval = FALSE}
 library(ggstance)
 ggplot(mrp_race_state_fit3, aes(x = mean, y = state, color = original_re, xmin = mean-sd, xmax = mean+sd)) +
   geom_point(position = position_dodgev(height = .5)) +
