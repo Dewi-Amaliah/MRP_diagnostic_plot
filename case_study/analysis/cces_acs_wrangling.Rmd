@@ -281,7 +281,15 @@ acs_use_collapse <- acs_use %>%
                                                        "Some Other Race alone")),
          wt = PWGTP/3) %>%
   select(SERIALNO, ST, wt, year, HISP, AGEP, state, educ, educ_collps,
-         sex,race_ethnicity,race_ethnicity_collps, age)
+         sex,race_ethnicity,race_ethnicity_collps, age) %>%
+  mutate(educ_collps = factor(educ_collps, levels = c("No high school", 
+                                                      "Regular high school diploma",
+                                                      "Some college", 
+                                                      "Associate's degree", 
+                                                      "Bachelor's degree", 
+                                                      "Post-graduate")),
+         age = factor(age, levels = c("Less than 18 years", "18-24", "25-34", "35-44","45-54",
+                                   "55-64", "65-74", "75-89", "90 years and over")))
 
 write_rds(acs_use_collapse, here::here("case_study/data/acs_use_wrangled.rds"))
 ```
