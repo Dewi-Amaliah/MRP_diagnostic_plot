@@ -30,42 +30,66 @@ get_ct <- function(x){
     select(-n)
 }
 
-voted_ct <- get_ct(voted_pres_16)
-intent_ct <- get_ct(intent_pres_16)
-party_id_ct <- get_ct(pid3_leaner)
-gender_ct <- get_ct(gender)
-race_ct <- get_ct(race)
-age_ct <- get_ct(age)
-education_ct <- get_ct(educ)
+voted_ct <- get_ct(voted_pres_16) %>%
+  rename(`Candidate voted` = voted_pres_16)
+intent_ct <- get_ct(intent_pres_16) %>%
+  rename(`Candidate will be voted` = intent_pres_16)
+party_id_ct <- get_ct(pid3_leaner) %>%
+  rename(`Party identity including leaners` = pid3_leaner)
+gender_ct <- get_ct(gender) %>%
+  rename(Gender = gender)
+race_ct <- get_ct(race) %>%
+  rename(Race = race)
+age_ct <- get_ct(age) %>%
+  rename(Age = age)
+education_ct <- get_ct(educ) %>%
+  rename(Education = educ)
 
 
 ## ---- outcome-table
 # table for outcome, this table consists of 3 tables
+knitr::kable(list(voted_ct, intent_ct, party_id_ct), 
+             booktabs = TRUE,
+             caption = "Percentage of each answer in CCES 2016. This question will be the MRP models outcome in this case study. Since the model outcome is binary, these answer will be converted to be yes/no in the context of vote for Trump/Republican.") %>%
+  kable_styling() 
 
-t1 <- kable(voted_ct,  col.names = c("response", "Percentage"), format = "latex", booktabs = TRUE) %>%  kable_styling(latex_options = c("striped"), font_size=5)
-t2 <- kable(intent_ct,  col.names = c("response", "Percentage"), format = "latex", booktabs = TRUE) %>%  kable_styling(latex_options = c("striped"), font_size=5)
-t3 <- kable(party_id_ct,  col.names = c("response", "Percentage"), format = "latex", booktabs = TRUE) %>%  kable_styling(latex_options = c("striped"), font_size=5)
 
-## ---- sidebyside-tab
+## ---- covariate-tables
 
-t1 <- gsub("\\begin{table}[H]", "\\begin{subtable}[b]{0.48\\linewidth}\n\\caption{\\label{tab:1a}a}\n", t1, fixed = TRUE)
-t1 <- gsub("\\end{table}", "\\end{subtable}", t1, fixed = TRUE) 
+knitr::kable(list(gender_ct, race_ct, age_ct, education_ct), 
+             booktabs = TRUE,
+             caption = "The response of covariates. Note that this response has been categorised into certain levels that are reflected in these tables.") %>%
+  kable_styling() 
 
-t2 <- gsub("\\begin{table}[H]", "\\begin{subtable}[b]{0.48\\linewidth}\n\\caption{\\label{tab:1b}b}\n", t2, fixed = TRUE)
-t2 <- gsub("\\end{table}", "\\end{subtable}", t2, fixed = TRUE)
+### ---- acs-response-freq
 
-t3 <- gsub("\\begin{table}[H]", "\\begin{subtable}[b]{0.48\\linewidth}\n\\caption{\\label{tab:1c}c}\n", t3, fixed = TRUE)
-t3 <- gsub("\\end{table}", "\\end{subtable}", t3, fixed = TRUE)
+get_ct_acs <- function(x){
+  acs %>% group_by({{x}}) %>%
+    count() %>%
+    mutate(percentage = round(n/nrow(acs)*100,2)) %>%
+    select(-n)
+}
 
-## ---- tab-res
-cat("",
-    "\\begin{table}[!htb]",
-    "\\centering",
-    "\\caption{\\label{tab:tab1}a}\n",
-    t1,
-    t2,
-    t3,
-    "\\end{table}",
-    "",
-    sep = "\n") 
-
+age_pop <- get_ct_acs(age) %>%
+  mutate(age = factor(age, levels = c("Less than 18 years", "18-24", "25-34", "35-44","45-54",
+                                      "55-64", "65-74", "75-89", "90 years and over"))) %>%
+  arrange(age) %>%
+  rename(Age = age)
+race_ethnicity_pop <- get_ct_acs(race_ethnicity) %>%
+  rename(`Race and ethnicity` = race_ethnicity)
+sex_pop <- get_ct_acs(sex) %>%
+  rename(Sex = sex)
+educ_collps_pop <- get_ct_acs(educ_collps) %>%
+  mutate(educ_collps = factor(educ_collps, levels = c("No high school", 
+                                               "Regular high school diploma",
+                                               "Some college", 
+                                               "Associate's degree", 
+                                               "Bachelor's degree", 
+                                               "Post-graduate"))) %>%
+  arrange(educ_collps) %>%
+  rename(Education = educ_collps)
+  
+knitr::kable(list(sex_pop, race_ethnicity_pop, age_pop, educ_collps_pop), 
+             booktabs = TRUE,
+             caption = "The response categories of post-stratification data.") %>%
+  kable_styling() 
