@@ -815,7 +815,7 @@ ggplot(compare_method_df,
              ymin = lower, 
              ymax = upper,
              color = est_method)) +
-  geom_point(size = 1) +
+  geom_point(size = 0.8, alpha = 0.7) +
   geom_abline(intercept = 0, linetype = "dotted") +
   geom_errorbar(size = 0.3,
                 alpha = 0.5) +
@@ -834,7 +834,7 @@ ggplot(compare_method_df,
   xlab("Ground truth (Trump vote)") +
   theme(aspect.ratio=1)
 
-
+#set the shape and color for color-blind friendly (gg something color-blind)
 ```
 
 The plot is:
@@ -854,6 +854,9 @@ compare_method_df %>%
   xlab("Deviance from the actual value of probability vote for Trump") +
   ylab("State")
 
+# change the color to be color-blind friendly
+# gives uncertainty to the geom-point (give notation of actual - estimates) and the measurement unit
+# the more conservative the state, the higher the errors 
 ```
 
 # Violin plot (displaying the effect of using different predictors and levels)
@@ -1037,6 +1040,25 @@ get_MRP_ests <- function(est_data, var){
   return(return_df)
 }
 
+
+get_MRP_ests_ver2 <- function(est_data, var){
+  tmp <- est_data %>%
+  pivot_longer(as.character(1:4000),
+               names_to = "posterior_draw",
+               values_to = "posterior_sample") %>%
+  group_by({{var}}, posterior_draw) %>% # Add extra grouping vars here
+  summarise(post_strat_ests = sum(posterior_sample*N_j)/sum(N_j))
+  
+  return_df <- tmp %>%
+  group_by({{var}}) %>%
+  summarise(median = median(post_strat_ests),
+            lower = quantile(post_strat_ests, 0.025),
+            upper = quantile(post_strat_ests, 0.975),
+            ci_len = upper - lower)
+  
+  return(return_df)
+}
+
 # estimate poststrat by model 
 ests_ps_fit1 <- get_ests_ps(fit1_predict)
 ests_ps_fit2 <- get_ests_ps(fit2_predict)
@@ -1054,7 +1076,58 @@ mrp_educ_state_fit2 <- get_MRP_ests(ests_ps_fit2, education)
 mrp_age_state_fit1 <- get_MRP_ests(ests_ps_fit1, age)
 mrp_age_state_fit2 <- get_MRP_ests(ests_ps_fit2, age)
 mrp_age_state_fit3 <- get_MRP_ests(ests_ps_fit3, age)
+
+mrp_race_state_fit3_ver2 <- get_MRP_ests_ver2(ests_ps_fit1, original_re)
 ```
+
+
+```{r}
+ests_ps_fit1 <- cbind(map_model$poststrat_data(), fit1_predict)
+
+est_fit1_by_race <- ests_ps_fit1 %>%
+  pivot_longer(as.character(1:4000),
+               names_to = "posterior_draw",
+               values_to = "posterior_sample") %>%
+  group_by(original_re, posterior_draw) %>%
+  summarise(post_strat_ests = sum(posterior_sample*N_j)/sum(N_j))
+
+
+sum_table <- est_fit1_by_race %>%
+  group_by(original_re) %>%
+  summarise(median = median(post_strat_ests),
+            lower = quantile(post_strat_ests, 0.025),
+            upper = quantile(post_strat_ests, 0.975),
+            ci_len = upper - lower)
+
+
+# check with aggregate method from mrpkit
+sum_table_ck <- fit1$aggregate(fit1_predict, by = "original_re") %>%
+  group_by(original_re) %>%
+  summarise(median_ps = median(value),
+            lower = quantile(value, 0.025),
+            upper = quantile(value, 0.975),
+            ci_len = upper - lower)
+
+# Compare Black category, for example
+
+# the code
+black <- ests_ps_fit1 %>%
+  pivot_longer(as.character(1:4000),
+               names_to = "posterior_draw",
+               values_to = "posterior_sample") %>%
+  group_by(original_re, posterior_draw) %>%
+  summarise(post_strat_ests = sum(posterior_sample*N_j)/sum(N_j)) %>%
+  filter(original_re == "Black")
+
+# the aggregate method
+black_ck <- fit1$aggregate(fit1_predict, by = "original_re") %>%
+  filter(original_re == "Black")
+```
+
+
+
+
+
 
 
 **Metrics of race between base model and model with more levels on race**
