@@ -38,7 +38,7 @@ Next week goal:
 ## Munging the CCES data
 
 ```{r}
-cces <- haven::read_dta(here::here("case_study/data/data_raw/cces16.dta"))
+#cces <- haven::read_dta(here::here("case_study/data/data_raw/cces16.dta"))
 
 #age
 #sex
@@ -80,7 +80,20 @@ cces_use <- cces_2016 %>%
   as_factor() %>%
   mutate(state = as_factor(state)) %>%
   mutate(race_ethnicity_collp = fct_collapse(race, 
-                                             Other = c("Native American", "All Other")))
+                                             Other = c("Native American", "All Other"))) %>%
+  mutate(state = factor(state, levels = c("Alabama", "Alaska", "Arizona",
+                                             "Arkansas", "California", "Colorado", "Connecticut",
+                                             "Delaware", "District of Columbia", "Florida",
+                                             "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana",
+                                             "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine",
+                                             "Maryland", "Massachusetts", "Michigan", "Minnesota",
+                                             "Mississippi", "Missouri", "Montana", "Nebraska", 
+                                             "Nevada", "New Hampshire", "New Jersey", "New Mexico",
+                                             "New York", "North Carolina", "North Dakota", "Ohio",
+                                             "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island",
+                                             "South Carolina", "South Dakota", "Tennessee", "Texas",
+                                             "Utah", "Vermont", "Virginia", "Washington", 
+                                             "West Virginia", "Wisconsin", "Wyoming")))
 
 write_rds(cces_use, here::here("case_study/data/cces_use.rds")) 
 ```
@@ -282,14 +295,30 @@ acs_use_collapse <- acs_use %>%
          wt = PWGTP/3) %>%
   select(SERIALNO, ST, wt, year, HISP, AGEP, state, educ, educ_collps,
          sex,race_ethnicity,race_ethnicity_collps, age) %>%
-  mutate(educ_collps = factor(educ_collps, levels = c("No high school", 
+  mutate(educ_collps = factor(educ_collps, levels = c("No high school",
                                                       "Regular high school diploma",
-                                                      "Some college", 
-                                                      "Associate's degree", 
-                                                      "Bachelor's degree", 
+                                                      "Some college",
+                                                      "Associate's degree",
+                                                      "Bachelor's degree",
                                                       "Post-graduate")),
          age = factor(age, levels = c("Less than 18 years", "18-24", "25-34", "35-44","45-54",
-                                   "55-64", "65-74", "75-89", "90 years and over")))
+                                   "55-64", "65-74", "75-89", "90 years and over")),
+         race_ethnicity = factor(race_ethnicity, levels = c("White alone", 
+                                                            "Black or African American alone", 
+                                                            "Hispanic", 
+                                                            "Asian alone", 
+                                                            "American Indian alone", 
+                                                            "Native Hawaiian and Other Pacific Islander alone", 
+                                                            "American Indian and Alaska Native tribes",
+                                                            "Alaska Native alone", 
+                                                            "Some Other Race alone", 
+                                                            "Two or More Races")),
+         race_ethnicity_collps = factor(race_ethnicity_collps, levels = c("White alone", 
+                                                                          "Black or African American alone",
+                                                                          "Asian alone",
+                                                                          "Hispanic",
+                                                                          "Two or More Races",
+                                                                          "Other")))
 
 write_rds(acs_use_collapse, here::here("case_study/data/acs_use_wrangled.rds"))
 ```

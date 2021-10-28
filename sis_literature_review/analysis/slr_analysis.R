@@ -7,6 +7,7 @@ library(janitor)
 library(patchwork)
 library(ggthemes)
 library(flipPlots)
+library(igraph)
 
 ## ---- search-term
 #table of search term used to find papers 
@@ -164,10 +165,29 @@ ggplot(plot_type_sum) +
 
 ## ---- common-axis
 # filter communication plot
+papers$y_axis[is.na(papers$y_axis)] <- "not used"
+
+axis_complot_orig <- filter(papers, Diagnostic == 0) %>% 
+  group_by(x_axis, y_axis) %>% 
+  count() %>%
+  ungroup()
+
 axis_complot <- filter(papers, Diagnostic == 0) %>% 
-  group_by(x_axis, y_axis) %>% count()
+  group_by(x_axis, y_axis) %>% 
+  count() %>%
+  ungroup() %>%
+  graph.data.frame(directed=FALSE) %>%
+  get.adjacency(attr="n", sparse=FALSE) %>%
+  as.data.frame() %>%
+  rownames_to_column("x_axis") %>%
+  pivot_longer(c(-1), names_to = "y_axis", values_to = "n") %>%
+  select(x_axis, y_axis)
+
+axis_commplot <- left_join(axis_complot, axis_complot_orig, by = c("x_axis", "y_axis"))
+
+
 # create the plot
-tile_com <- ggplot(axis_complot, aes(x_axis, y_axis, fill = n)) + 
+tile_com <- ggplot(axis_commplot, aes(x_axis, y_axis, fill = n)) + 
   geom_tile() +
   geom_text(aes(label = n),
             color = "white") +
@@ -182,12 +202,31 @@ tile_com <- ggplot(axis_complot, aes(x_axis, y_axis, fill = n)) +
         legend.title = element_text(size = 9),
         axis.title.x = element_text(size = 9),
         axis.title.y = element_text(size = 9),
-        legend.position = "none")
+        legend.position = "none") +
+  scale_fill_continuous(na.value = "white")
+
 # filter diagnostic plot
+axis_diaplot_orig <- filter(papers, Diagnostic == 1) %>% 
+  group_by(x_axis, y_axis) %>% 
+  count() %>%
+  ungroup() 
+
+
 axis_diaplot <- filter(papers, Diagnostic == 1) %>% 
-  group_by(x_axis, y_axis) %>% count() 
+  group_by(x_axis, y_axis) %>% 
+  count() %>%
+  ungroup() %>%
+  graph.data.frame(directed=FALSE) %>%
+  get.adjacency(attr="n", sparse=FALSE) %>%
+  as.data.frame() %>%
+  rownames_to_column("x_axis") %>%
+  pivot_longer(c(-1), names_to = "y_axis", values_to = "n") %>%
+  select(x_axis, y_axis)
+
+axis_diagplot <- left_join(axis_diaplot, axis_diaplot_orig, by = c("x_axis", "y_axis"))
+
 # create the plot
-tile_diag <- ggplot(axis_diaplot, aes(x_axis, y_axis, fill = n)) + 
+tile_diag <- ggplot(axis_diagplot, aes(x_axis, y_axis, fill = n)) + 
   geom_tile() +
   geom_text(aes(label = n),
             color = "white") +
@@ -202,7 +241,9 @@ tile_diag <- ggplot(axis_diaplot, aes(x_axis, y_axis, fill = n)) +
         legend.title = element_text(size = 9),
         axis.title.x = element_text(size = 9),
         axis.title.y = element_text(size = 9),
-        legend.position = "none")
+        legend.position = "none") +
+  scale_fill_continuous(na.value = "white")
+
 # combine the plots
 tile_com + tile_diag + plot_layout(nrow = 2)
 

@@ -293,7 +293,39 @@ map_model$tabulate()
 
 #saveRDS(map_model, here::here("case_study/results/map_model.rds"))
 
+## ---- vote-dist
+get_ct_bin <- function(x){
+  cces_mrp %>% group_by({{x}}) %>%
+    count() %>%
+    mutate(percentage = round(n/nrow(cces)*100,2)) %>%
+    select(-n)
+}
+
+get_ct_bin(vote) %>%
+  rename(`Candidate voted` = vote) %>%
+  kable(caption = "The distribution of answer in the outcome (vote). It will be the outcome in three models, i.e., baseline model, model with education as additional covariate, and model with more categories in race. We observe a reasonably large percentage of NA.",
+        booktabs = TRUE) %>%
+  kable_styling()
+  
+## ---- intent-dist
+
+get_ct_bin(intent) %>%
+  rename(`Candidate will be voted` = intent) %>%
+  kable(caption = "The distribution of answer in the outcome (intent).",
+        booktabs = TRUE) %>%
+  kable_styling()
+
+## ---- party-dist
+
+get_ct_bin(party) %>%
+  rename(`Party identity` = party) %>%
+  kable(caption = "The distribution of answer in the outcome (party).",
+        booktabs = TRUE) %>%
+  kable_styling()
+
+
 ## ---- post-strat-table
+map_model<- readRDS(here::here("case_study/results/map_model.rds"))
 
 map_model$poststrat_data() %>%
   head(n = 5) %>%

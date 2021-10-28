@@ -11,8 +11,7 @@ read_chunk(here::here("sis_literature_review/analysis/slr_analysis.R"))
 ```{r pkgs}
 ```
 
-
-# Systematic Literature Review {#sec:syslitrev}
+# Systematic Literature Review {#ch:syslitrev}
 
 This study is performed using a systematic review method. This method collects empirical evidence explicitly and systematically using pre-specified eligibility criteria to answer a specific research question [@cochrane]. Systematic literature reviews also enable the process of finding the gap in a field of science, such as understanding what has been done and what needs to be done [@LinnenlueckeMartinaK2020Cslr]. Hence, in this case, systematic literature review could assist us to understand the common practice in MRP visualisations so that we can explore how to improve. 
 
@@ -132,7 +131,7 @@ Notice that Figure \@ref(fig:common-plots) also displays the use of uncertainty 
 The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations (Figure \@ref(fig:common-axis)), estimates, small area, actual value (truth), and time are amoung the values that are displayed in the plot. We can also see that the constructs represented by the x and y-axis are more varied in diagnostic plots. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common that the the fixed value is represented by the x-axis, while the random variable is represented in the y-axis. We do not see this in our results as we find estimates and truth are plotted on the x and y axes interchangeably. Another common rule of thumb is that time is almost always represented on the x-axis, which is supported by the findings of our study. 
 
 
-```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=8, fig.width=6}
+```{r common-axis, fig.cap="Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.", fig.height=8, fig.width=6, warning = FALSE, message = FALSE}
 ```
 
 **Facet**
@@ -141,6 +140,8 @@ Paneling or faceting is considered as to one of the effective visualisation tech
 
 ```{r facet-plots, fig.cap = "The facetting variable in MRP visualisations", fig.out = "80%"}
 ```
+
+\newpage
 
 **Other features used**
 

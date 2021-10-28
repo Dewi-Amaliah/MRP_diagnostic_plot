@@ -344,7 +344,7 @@ map_model <- SurveyMap$new(sample = cces_data_obj,
 map_model$mapping()
 map_model$tabulate()
 
-#saveRDS(map_model, here::here("case_study/results/map_model.rds"))
+saveRDS(map_model, here::here("case_study/results/map_model.rds"))
 ```
 
 
@@ -411,6 +411,8 @@ fit4b <- map_model$fit(
 # Predict the population
 
 ```{r}
+map_model<- readRDS(here::here("case_study/results/map_model.rds"))
+
 # read the fit object
 fit1 <- readRDS(here::here("case_study/results/fit1.rds"))
 fit2 <- readRDS(here::here("case_study/results/fit2.rds"))
@@ -553,7 +555,7 @@ get_scatter_common <- function(x, title, subtitle, lower, upper, rmse, mad){
     geom_errorbarh(color = "#DE0100", size = 0.3) +
     scale_x_continuous(limits = c(0, 1)) +
     scale_y_continuous(limits = c(0, 1)) +
-    theme_fivethirtyeight() +
+    theme_bw() +
     theme(axis.title = element_text(size = 8),
           plot.title = element_text(size = 8),
           plot.subtitle = element_text(size = 8)) +
@@ -633,7 +635,7 @@ get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
   geom_errorbar(color = "#DE0100", size = 0.3) +
   scale_x_continuous(limits = c(0, 1)) +
   scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(axis.title = element_text(size = 8),
         plot.title = element_text(size = 8),
         plot.subtitle = element_text(size = 8)) +
@@ -826,7 +828,7 @@ ggplot(compare_method_df,
            size = 2.5) +
   scale_x_continuous(limits = c(0, 1)) +
   scale_y_continuous(limits = c(0, 1)) +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(axis.title = element_text(size = 8),
         plot.title = element_text(size = 8),
         plot.subtitle = element_text(size = 8)) +
@@ -897,11 +899,12 @@ p6 <- ggplot(comp_race, aes(x = original_re, y = value, fill = model)) +
   geom_violin() +
   xlab("Race") +
   ylab("MRP estimates") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(axis.title = element_text(size = 10),
         plot.title = element_text(size = 10),
         axis.text.x = element_text(angle = 20),
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        legend.position = "bottom") +
   ggtitle("Probability of voting Trump in the 2016 presidential vote by race") +
   scale_fill_manual(values = c("#616A6B", "#d01c8b")) 
   
@@ -910,10 +913,11 @@ p7 <- ggplot(comp_educ, aes(x = education, y = value, fill = model)) +
   geom_violin() +
   xlab("Education") +
   ylab("MRP estimates") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(axis.title = element_text(size = 10),
         plot.title = element_text(size = 10),
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        legend.position = "bottom") +
   ggtitle("Probability of voting Trump in the 2016 presidential vote by education") +
   scale_fill_manual(values = c("#616A6B", "#E67E22")) 
 
@@ -922,10 +926,11 @@ p8 <- ggplot(comp_age, aes(x = age, y = value, fill = model)) +
   geom_violin() +
   xlab("Age") +
   ylab("MRP estimates") +
-  theme_fivethirtyeight() +
+  theme_bw() +
   theme(axis.title = element_text(size = 10),
         plot.title = element_text(size = 10),
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        legend.position = "bottom") +
   ggtitle("Probability of voting Trump in the 2016 presidential vote by age") +
   scale_fill_manual(values = c("#616A6B", "#E67E22", "#d01c8b")) 
 
@@ -1041,23 +1046,23 @@ get_MRP_ests <- function(est_data, var){
 }
 
 
-get_MRP_ests_ver2 <- function(est_data, var){
-  tmp <- est_data %>%
-  pivot_longer(as.character(1:4000),
-               names_to = "posterior_draw",
-               values_to = "posterior_sample") %>%
-  group_by({{var}}, posterior_draw) %>% # Add extra grouping vars here
-  summarise(post_strat_ests = sum(posterior_sample*N_j)/sum(N_j))
-  
-  return_df <- tmp %>%
-  group_by({{var}}) %>%
-  summarise(median = median(post_strat_ests),
-            lower = quantile(post_strat_ests, 0.025),
-            upper = quantile(post_strat_ests, 0.975),
-            ci_len = upper - lower)
-  
-  return(return_df)
-}
+# get_MRP_ests_ver2 <- function(est_data, var){
+#   tmp <- est_data %>%
+#   pivot_longer(as.character(1:4000),
+#                names_to = "posterior_draw",
+#                values_to = "posterior_sample") %>%
+#   group_by({{var}}, posterior_draw) %>% # Add extra grouping vars here
+#   summarise(post_strat_ests = sum(posterior_sample*N_j)/sum(N_j))
+#   
+#   return_df <- tmp %>%
+#   group_by({{var}}) %>%
+#   summarise(median = median(post_strat_ests),
+#             lower = quantile(post_strat_ests, 0.025),
+#             upper = quantile(post_strat_ests, 0.975),
+#             ci_len = upper - lower)
+#   
+#   return(return_df)
+# }
 
 # estimate poststrat by model 
 ests_ps_fit1 <- get_ests_ps(fit1_predict)
@@ -1077,7 +1082,7 @@ mrp_age_state_fit1 <- get_MRP_ests(ests_ps_fit1, age)
 mrp_age_state_fit2 <- get_MRP_ests(ests_ps_fit2, age)
 mrp_age_state_fit3 <- get_MRP_ests(ests_ps_fit3, age)
 
-mrp_race_state_fit3_ver2 <- get_MRP_ests_ver2(ests_ps_fit1, original_re)
+# mrp_race_state_fit3_ver2 <- get_MRP_ests_ver2(ests_ps_fit1, original_re)
 ```
 
 

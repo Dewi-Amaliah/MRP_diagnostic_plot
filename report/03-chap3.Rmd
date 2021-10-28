@@ -12,9 +12,9 @@ read_chunk(here::here("case_study/analysis/mrp_fitting.R"))
 ```{r pkgs-chap3}
 ```
 
-# Case Study: Application of MRP in Presidential Voting Estimation
+# Case Study: Application of MRP in Presidential Voting Estimation {#ch:case-stud}
 
-The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as the survey data and the American Community Survey data 2015-2017 [@acs_data] as the population/ post-stratification data.
+The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as the survey data and the American Community Survey data 2015-2017 [@acs_data] as the population/ poststratification data.
 
 ## Data
 
@@ -27,11 +27,11 @@ The majority of MRP applications are used in the context of estimating public op
 
 ### Cooperative Congressional Election Study (CCES) 2016 
 
-CCES is an annual survey aims to capture Americans' view on Congress, their voting behavior and experience with regards to political geography, social, and demographic context [@cces_data]. In 2016, CCES covers 64,600 samples spread over 51 states. Accordingly, @cces_data mention that the data is precise enough to measure the distribution of voters' preference in most states. In addition, beyond its reliable sample size, CCES is deemed to be desirable dataset as it measures vote preference before and after in two waves so that it is even more reliable compared to generic question [@kuriwaki]. 
+CCES is an annual survey aims to capture Americans' view on Congress, their voting behavior and experience with regards to political geography, social, and demographic context [@cces_data]. In 2016, CCES covers 64,600 samples spread over 51 states. Accordingly, @cces_data mention that the data is precise enough to measure the distribution of voters' preference in most states. In addition, beyond its reliable sample size, CCES is regarded to be desirable dataset as it measures vote preference before and after in two waves so that it is even more reliable compared to generic question [@kuriwaki]. 
 
 To fit MRP models, we use several variables from this survey. To obtain the data from the CCES website, we utilize an R package, `ccesMRPprep` [@ccesmrpprep]. One of the advantages of using this package is that the data has been pre-processed in particular for MRP purposes, in this case, we use the `ccc_std_demographics` function. Also, the variable names are already recoded so it has a more interpretable names. The code to get the data is available in the supplementary materials of this thesis. 
 
-The outcome variables, which will be explained in detail in Section \@ref(spec), are the vote preference/intention (`CC16_364c`), candidate voted (`CC16_410a`), and party identity (`pid3` including leaners, i.e, coded as Independents in pid3 who expressed leaning towards a party in `pid7`). Table \@ref(tab:outcome-table) shows the distribution of answers in those three variables. In `ccesMRPprep`, these variables have been renamed so that they are equivalent to `intent_pres_16`, `voted_pres_16`, and `pid3_leaner`, respectively. It is worth noting that the MRP models we would like to build use binary responses. Hence, these variables are recoded into yes/no in terms of whether the respondents vote for Trump/Republican or not.
+The outcome variables, which will be explained in detail in Section \@ref(spec), are the vote preference/intention (`CC16_364c`), candidate voted (`CC16_410a`), and party identity (`pid3` including leaners, i.e, coded as Independents in pid3 who expressed leaning towards a party in `pid7`). Table \@ref(tab:outcome-table) shows the distribution of answers in those three variables. In `ccesMRPprep`, these variables have been renamed so that they are equivalent to `intent_pres_16`, `voted_pres_16`, and `pid3_leaner`, respectively. It is worth noting that the MRP models we would like to build use binary responses into yes/no in terms of whether the respondents vote for Trump/Republican or not.
 
 ```{r outcome-table}
 ```
@@ -45,7 +45,7 @@ Further, the geography and demographic variables used as covariates in the model
 
 ### American Community Survey (ACS) 2015-2017
 
-In this study, we use the ACS 2015-2017 data as the post-stratification data. The ACS provides annual-basis information about jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics [@acs_data_about]. Further, the ACS uses monthly probabilistic samples to produce the annual estimates. It could be understood that the ACS is desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. It is also implied by @GaoYuxiang2021IMRa that the ACS is the most accurate representation of the U.S. population every year. 
+In this study, we use the ACS 2015-2017 data as the poststratification data. The ACS provides annual-basis information about jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics [@acs_data_about]. Further, the ACS uses monthly probabilistic samples to produce the annual estimates. It could be understood that the ACS is desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. It is also implied by @GaoYuxiang2021IMRa that the ACS is the most accurate representation of the U.S. population every year. However, it is also worth noting that the ACS coverage do not necessarily match the CCES sample, and therefore, bias might always be presented. 
 
 To fit MRP models, we need the individual data of the ACS instead of the aggregated statistics. Hence, we use the 1-year Public Use Microdata Sample (PUMS), which carries the information/records of individual people on a yearly basis. The 1-year PUMS data reflects approximately one percent of the U.S. population [@pums_metadata]. Therefore, in this study, we use three years periods of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (`PWGTP`). Since we use three years period, this weight is then divided by 3.  
 
@@ -57,32 +57,41 @@ The data is publicly available on the [U.S. Census Bureau website](https://www.c
 
 ## Model Specifications {#spec}
 
+```{r survey-pop-data}
+```
+
 In Chapter 2, we found that the diagnostic plots shown in many articles compare MRP estimates with other estimates, one of which compares several MRP estimates with different specifications. Therefore, in this case study, we build five different MRP models as follows.
 
 \newpage
 
 **Baseline model** 
 
-We begin the model fitting with the baseline model. In this model, we set the binary outcome as whether the respondents vote for Trump or not in the 2016 election. Therefore, we transform the response of `voted_pres_16` into a binary variable called `vote`. The covariates used are `age`, `gender`, `state`, and the re-categorised/collapsed `race` variable into fewer levels. As seen in Table \@ref(tab:covariate-tables), `race` has 6 categories, i.e., `White`, `Black`, `Hispanic`, `Asian`, `Native American`, and `All Other`. In the baseline model, we collapsed the `Native American` and `All Other` into `Other`. Hence, the baseline model equation is: 
+We begin the model fitting with the baseline model. In this model, we set the binary outcome as whether the respondents vote for Trump or not in the 2016 election. Therefore, we transform the response of `voted_pres_16` into a binary variable called `vote` ,i.e, if the value of `voted_pres_16` is "Donald Trump", then `vote` variable coded to "yes", otherwise "no". The NA values in `voted_pres_16` will stay as NA in the new `vote` variable. Hence, the distribution of the baseline model's outcome variable is displayed in Table \@ref(tab:vote-dist). 
+
+```{r vote-dist}
+```
+
+The covariates used are `age`, `gender`, `state`, and the re-categorised/collapsed `race` variable into fewer levels. As seen in Table \@ref(tab:covariate-tables), `race` has 6 categories, i.e., `White`, `Black`, `Hispanic`, `Asian`, `Native American`, and `All Other`. In the baseline model, we collapsed the `Native American` and `All Other` into `Other`. Meanwhile, the levels of `age`, `gender`, `state` stay the same in the levels displayed in Table \@ref(tab:covariate-tables). The baseline model equation is: 
 
 \begin{equation} 
 \begin{split}
-\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]}\right), for\ i = 1, ...., n, 
+\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{collapsed\ race}_{m[i]}\right), for\ i = 1, ...., n, 
 \end{split}
 (\#eq:baseline-model)
 \end{equation}
 
-and $vote_{j[i]}$ is the observed binary outcome (1 = yes, 0 = no) for individual $i$ in post-stratification cell $j$. $\beta_0$ is the intercept. $\alpha^{age}_{j[i]}$, $\alpha^{gender}_{j[i]}$, $\alpha^{state}_{j[i]}$, and $\alpha^{collapsed\ race}_{j[i]}$ are the random effects for `age`, `gender`, `state`, and `collapsed race`, respectively. The subscript in each coefficient represents the category of the $i-th$ respondent, such as, $\alpha^{collapsed\ race}_{j[i]}$ takes value from {$\alpha^{collapsed\ race}_{White}$, $\alpha^{collapsed\ race}_{Black}$, $\alpha^{collapsed\ race}_{Hispanic}$, $\alpha^{collapsed\ race}_{Asian}$, and $\alpha^{collapsed\ race}_{Other}$}. Each random effect has an independent prior distribution, such as, $\alpha^{collapsed\ race}_{j}$ ~ $N(0, \sigma^2_{collapsed\ race})$.
+and $vote_{j[i]}$ is the binary outcome (1 = yes, 0 = no) for individual $i$ in poststratification cell $j$. $\beta_0$ is the intercept. $\alpha^{age}_{m[i]}$, $\alpha^{gender}_{m[i]}$, $\alpha^{state}_{m[i]}$, and $\alpha^{collapsed\ race}_{m[i]}$ are the random effects for `age`, `gender`, `state`, and `collapsed race`, respectively. The subscript in each coefficient represents the category of the $i-th$ respondent, such as, $\alpha^{collapsed\ race}_{m[i]}$ takes value from {$\alpha^{collapsed\ race}_{White}$, $\alpha^{collapsed\ race}_{Black}$, $\alpha^{collapsed\ race}_{Hispanic}$, $\alpha^{collapsed\ race}_{Asian}$, and $\alpha^{collapsed\ race}_{Other}$}. Each random effect has an independent prior distribution, such as, $\alpha^{collapsed\ race}_{m}$ ~ $N(0, \sigma^2_{collapsed\ race})$ and $\alpha^{collapsed\ race}_{m}$ ~ $t(3, 0, 2.5)$. Here, we use the default prior because we only want to compare models for visualisation purpose instead of looking for the best model for estimation.  
 
 \vspace{\baselineskip}
 
 **Model with `education` as additional covariate**
 
-Next, we create a bigger model by adding `education` as additional covariate to the baseline model. Hence, the model specification is:
+Next, we create a bigger model by adding `education` as additional covariate to the baseline model. The levels of `education` is also displayed in Table \@ref(tab:covariate-tables). Hence, the model specification is:
+
 
 \begin{equation} 
 \begin{split}
-\Pr(vote_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]} + \alpha^{education}_{j[i]}\right), \\
+\Pr(vote_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{collapsed\ race}_{m[i]} + \alpha^{education}_{m[i]}\right), \\
 for\ i &= 1, ...., n.
 \end{split}
 (\#eq:model2)
@@ -97,7 +106,7 @@ This model is essentially the same with baseline model, except that there are mo
 
 \begin{equation} 
 \begin{split}
-\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{original\ race}_{j[i]}\right), for\ i = 1, ...., n.
+\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{original\ race}_{m[i]}\right), for\ i = 1, ...., n.
 \end{split}
 (\#eq:model3)
 \end{equation}
@@ -107,11 +116,17 @@ This model is essentially the same with baseline model, except that there are mo
 
 **Vote intention/preference**
 
-This model mimicks the model in Equation \@ref(eq:model2), except that we have different outcome or response variable. The response here is whether the respondent intent to vote for Trump (`yes`) or not (`no`). It is transformed from `intent_pres_16` variable in the CCES data. The model is specified as follows:
+This model mimicks the model in Equation \@ref(eq:model2), except that we have different outcome or response variable. The response here is whether the respondent intent to vote for Trump (`yes`) or not (`no`). It is transformed from `intent_pres_16` variable in the CCES data to a new variable called `intent`. If the value of `intent_pres_16` is "Donald Trump (Republican)", then `intent` variable coded to "yes", otherwise "no". The NA values in `intent_pres_16` will stay as NA in the new `intent` variable. The distribution of observed "no", "yes", and NA in this variable is shown in Table \@ref(tab:intent-dist). 
+
+```{r intent-dist}
+```
+
+
+The model is specified as follows:
 
 \begin{equation} 
 \begin{split}
-\Pr(intent_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]} + \alpha^{education}_{j[i]}\right), \\
+\Pr(intent_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{collapsed\ race}_{m[i]} + \alpha^{education}_{m[i]}\right), \\
 for\ i &= 1, ...., n.
 \end{split}
 (\#eq:model4a)
@@ -119,21 +134,36 @@ for\ i &= 1, ...., n.
 
 **Party identity**
 
-Beside vote intention, another outcome is the party identity in terms of whether the respondents identify themselves as Republican or not. This variable is derived from `pid3_leaner` variable. The specification of covariates is also the same with model in Equation \@ref(eq:model2). 
+Beside vote intention, another outcome is the party identity in terms of whether the respondents identify themselves as Republican or not. This variable is derived from `pid3_leaner` variable and referred as `party`. If the value of `pid3_leaner` is "Republican (Including Leaners)", then `party` variable coded to "Republican", otherwise "not Republican". The NA values in `pid3_leaner` will stay as NA in the new `party` variable. The distribution of this outcome variable is displayed in Table \@ref(tab:party-dist).
+
+```{r party-dist}
+```
+
+The specification of covariates is also the same with model in Equation \@ref(eq:model2). 
 
 \begin{equation} 
 \begin{split}
-\Pr(party_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{j[i]} + \alpha^{gender}_{j[i]} + \alpha^{state}_{j[i]} + \alpha^{collapsed\ race}_{j[i]} + \alpha^{education}_{j[i]}\right), \\
+\Pr(party_{j[i]} = 1) &= logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{collapsed\ race}_{m[i]} + \alpha^{education}_{m[i]}\right), \\
 for\ i &= 1, ...., n.
 \end{split}
 (\#eq:model4b)
 \end{equation}
 
 
+The estimates from the multilevel model is then used for the second stage of MRP, which is poststratification. As the explanation in Section \@ref(overview), poststratification is essentially taking the weight average of the cell-wise posterior estimates with the  size of each cell in the population table as the weight [@GaoYuxiang2021IMRa]. For example, the poststratification estimates of Black Men attained High School or less (HS or Less) in Alabama which is categorised in 45 to 64 years old group age who voted for Trump in the 2016 presidential election is:
+
+\begin{equation} 
+\begin{split}
+\theta_S = \frac{\sum_{j\in S}N_j\theta_j}{\sum_{j\in S}N_j},
+\end{split}
+(\#eq:poststrat-observed)
+\end{equation}
+
+where $\theta_S$ corresponds to the proportion of 45 to 64 years old of Black Men attained High School or less (HS or Less) in Alabama who respond to "yes" in the `vote` variable and $N_j$ and $\theta_j$ are the size of cell corresponds to this sub-population category in the poststratification table and the posterior estimates of this sub-population category, respectively. 
+
+
 ## Model Preparation and Fitting {#prep}
 
-```{r survey-pop-data}
-```
 
 ```{r questionmap}
 ```
@@ -143,7 +173,7 @@ for\ i &= 1, ...., n.
 
 The MRP models require a synchronous survey and population data. Hence, to achieve this, we need to map the survey data to the population data. In this study, the model preparation and survey-population data mapping conducted with an R package, `mrpkit` [@mrpkit]. This package allows the transparent and reproducible workflow to build MRP model, from the data mapping until the prediction stage, including the model specification setting. The detailed code to build the MRP models is available in the supplementary materials of this thesis. 
 
-After mapping the survey and population data, we can obtain the post-stratification table displayed in Table \@ref(tab:post-strat-table)
+After mapping the survey and population data, we can obtain the poststratification table displayed in Table \@ref(tab:post-strat-table)
 
 ```{r post-strat-table}
 ```

@@ -1,0 +1,11 @@
+---
+chapter: 4
+knit: "bookdown::render_book"
+---
+
+```{r setup-chap4, include=FALSE, cache=FALSE}
+library(knitr)
+```
+
+# Conclusion {#ch:conclusion}
+

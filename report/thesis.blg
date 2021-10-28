@@ -1,17 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'thesis.blg'
-[129] biber-darwin:340> INFO - === Fri Oct 22, 2021, 08:52:27
-[175] Biber.pm:415> INFO - Reading 'thesis.bcf'
-[328] Biber.pm:952> INFO - Found 32 citekeys in bib section 0
-[348] Biber.pm:4340> INFO - Processing section 0
-[365] Biber.pm:4531> INFO - Looking for bibtex format file 'thesisrefs.bib' for section 0
-[372] bibtex.pm:1689> INFO - LaTeX decoding ...
-[449] bibtex.pm:1494> INFO - Found BibTeX data source 'thesisrefs.bib'
-[631] Utils.pm:395> WARN - legacy month field 'Feb' in entry 'few_2008' is not an integer - this will probably not sort properly.
-[818] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[818] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[818] Biber.pm:4168> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[818] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[886] bbl.pm:654> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[911] bbl.pm:757> INFO - Output to thesis.bbl
-[912] Biber.pm:128> INFO - WARNINGS: 1
+[122] biber-darwin:340> INFO - === Thu Oct 28, 2021, 11:57:24
+[176] Biber.pm:415> INFO - Reading 'thesis.bcf'
+[376] Biber.pm:952> INFO - Found 38 citekeys in bib section 0
+[405] Biber.pm:4340> INFO - Processing section 0
+[426] Biber.pm:4531> INFO - Looking for bibtex format file 'thesisrefs.bib' for section 0
+[435] bibtex.pm:1689> INFO - LaTeX decoding ...
+[530] bibtex.pm:1494> INFO - Found BibTeX data source 'thesisrefs.bib'
+[788] Utils.pm:395> WARN - legacy month field 'Feb' in entry 'few_2008' is not an integer - this will probably not sort properly.
+[989] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[989] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[989] Biber.pm:4168> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[989] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[1072] bbl.pm:654> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[1101] bbl.pm:757> INFO - Output to thesis.bbl
+[1102] Biber.pm:128> INFO - WARNINGS: 1

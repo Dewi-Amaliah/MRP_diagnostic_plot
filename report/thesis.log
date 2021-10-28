@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  22 OCT 2021 08:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  28 OCT 2021 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -913,7 +913,7 @@ LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 33.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
 (Font)              scaled to size 15.55188pt on input line 33.
-<figures/crest.jpg, id=72, 509.905pt x 553.06625pt>
+<figures/crest.jpg, id=76, 509.905pt x 553.06625pt>
 File: figures/crest.jpg Graphic file (type jpg)
 <use figures/crest.jpg>
 Package pdftex.def Info: figures/crest.jpg  used on input line 33.
@@ -976,147 +976,156 @@ LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
 
 ]
 Chapter 1.
+[5]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 13.49991pt on input line 57.
-[5] [6
-
-]
+(Font)              scaled to size 13.49991pt on input line 80.
+LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 84.
+[6] [7]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
+23.
+(/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [8]
 Chapter 2.
-[7]
-LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 80.
-[8]
+[9
 
-LaTeX Warning: Float too large for page by 11.16566pt on input line 98.
+] [10]
 
-[9]
+LaTeX Warning: Float too large for page by 11.16566pt on input line 164.
+
+[11]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 107.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 13
-6.
+(Font)              scaled to size 10.79993pt on input line 173.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 20
+2.
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 136.
+(Font)              scaled to size 9.85492pt on input line 202.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[10
+[12
 
 
 ]
-<figures/prisma_fc.png, id=179, 809.0225pt x 692.5875pt>
+<figures/prisma_fc.png, id=226, 809.0225pt x 692.5875pt>
 File: figures/prisma_fc.png Graphic file (type png)
 <use figures/prisma_fc.png>
-Package pdftex.def Info: figures/prisma_fc.png  used on input line 139.
+Package pdftex.def Info: figures/prisma_fc.png  used on input line 205.
 (pdftex.def)             Requested size: 384.1096pt x 328.83452pt.
-[11 <./figures/prisma_fc.png>] [12]
-<thesis_files/figure-latex/perform-plot-1.pdf, id=217, 454.69875pt x 274.02374p
+[13 <./figures/prisma_fc.png>] [14]
+<thesis_files/figure-latex/perform-plot-1.pdf, id=264, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/perform-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/perform-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/perform-plot-1.pdf  used on 
-input line 202.
+input line 268.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 202--203
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
-[13] [14 <./thesis_files/figure-latex/perform-plot-1.pdf>]
-<thesis_files/figure-latex/compare-plot-1.pdf, id=242, 454.69875pt x 274.02374p
+[15] [16 <./thesis_files/figure-latex/perform-plot-1.pdf>]
+<thesis_files/figure-latex/compare-plot-1.pdf, id=291, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/compare-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/compare-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/compare-plot-1.pdf  used on 
-input line 217.
+input line 283.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 217--218
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
-[15 <./thesis_files/figure-latex/compare-plot-1.pdf>]
-<thesis_files/figure-latex/common-plots-1.pdf, id=255, 454.69875pt x 274.02374p
+[17 <./thesis_files/figure-latex/compare-plot-1.pdf>]
+<thesis_files/figure-latex/common-plots-1.pdf, id=304, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/common-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-plots-1.pdf  used on 
-input line 230.
+input line 296.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 230--231
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 296--297
  [][] 
  []
 
-[16 <./thesis_files/figure-latex/common-plots-1.pdf>]
-<thesis_files/figure-latex/common-axis-1.pdf, id=273, 433.62pt x 578.16pt>
+[18 <./thesis_files/figure-latex/common-plots-1.pdf>]
+<thesis_files/figure-latex/common-axis-1.pdf, id=321, 433.62pt x 578.16pt>
 File: thesis_files/figure-latex/common-axis-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-axis-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-axis-1.pdf  used on i
-nput line 244.
+nput line 310.
 (pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 244--245
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 310--311
  [][] 
  []
 
-<thesis_files/figure-latex/facet-plots-1.pdf, id=276, 454.69875pt x 274.02374pt
+<thesis_files/figure-latex/facet-plots-1.pdf, id=324, 454.69875pt x 274.02374pt
 >
 File: thesis_files/figure-latex/facet-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/facet-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/facet-plots-1.pdf  used on i
-nput line 254.
+nput line 320.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 254--255
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 320--321
  [][] 
  []
 
-[17] [18 <./thesis_files/figure-latex/common-axis-1.pdf>]
-<thesis_files/figure-latex/sankey-feature-1.pdf, id=297, 475.7775pt x 295.1025p
+[19] [20 <./thesis_files/figure-latex/common-axis-1.pdf>]
+<thesis_files/figure-latex/sankey-feature-1.pdf, id=344, 475.7775pt x 295.1025p
 t>
 File: thesis_files/figure-latex/sankey-feature-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/sankey-feature-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/sankey-feature-1.pdf  used o
-n input line 266.
+n input line 334.
 (pdftex.def)             Requested size: 475.77632pt x 295.10176pt.
 
-Overfull \hbox (48.98497pt too wide) in paragraph at lines 266--267
+Overfull \hbox (48.98497pt too wide) in paragraph at lines 334--335
  [][] 
  []
 
-[19 <./thesis_files/figure-latex/facet-plots-1.pdf>] [20 <./thesis_files/figure
+[21 <./thesis_files/figure-latex/facet-plots-1.pdf>] [22 <./thesis_files/figure
 -latex/sankey-feature-1.pdf>]
 Chapter 3.
-[21
+[23
 
-] [22] [23] [24] [25]
+] [24] [25] [26] [27] [28]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 482.
-[26] [27]
-Overfull \hbox (31.89214pt too wide) in paragraph at lines 544--555
+(Font)              scaled to size 9.85492pt on input line 567.
+[29] [30]
+Overfull \hbox (31.89214pt too wide) in paragraph at lines 674--685
  [][] 
  []
 
-[28]
-Appendix A.
-[29
+[31] [32]
+Chapter 4.
+[33
 
-] [30
+] [34
 
 ]
-Underfull \hbox (badness 1424) in paragraph at lines 571--571
+Appendix A.
+[35] [36
+
+]
+Underfull \hbox (badness 1424) in paragraph at lines 704--704
 [][]\T1/ppl/m/n/10.95 (+20) Gabry, J and R ƒe²no-var (2021). \T1/ppl/m/it/10.95
  (+20) cmd-stanr: R In-ter-face to 'Cmd-Stan'\T1/ppl/m/n/10.95 (+20) . https://
 mc-
  []
 
-[31] [32] [33] (./thesis.aux)
+[37] [38] [39] [40] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 39FBAF0016BE4A4B4EFD384752376A2E;3092.
+(rerunfilecheck)             Checksum: 3FABD7949B157159968F4BA7DC9ED48B;3193.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
@@ -1126,11 +1135,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### semi simple group (level 1) entered at line 102 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22453 strings out of 480539
- 384620 string characters out of 5901555
- 1162837 words of memory out of 5000000
- 39269 multiletter control sequences out of 15000+600000
- 506188 words of font info for 299 fonts, out of 8000000 for 9000
+ 22602 strings out of 480539
+ 387040 string characters out of 5901555
+ 1164848 words of memory out of 5000000
+ 39346 multiletter control sequences out of 15000+600000
+ 511549 words of font info for 328 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,16n,81p,3114b,17774s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/enc/dvips/b
@@ -1138,18 +1147,19 @@ ase/8r.enc}</Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmex10.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></Users/deeamaliah/Library/TinyTeX/texmf-d
-ist/fonts/type1/public/mathpazo/fplmri.pfb></Users/deeamaliah/Library/TinyTeX/t
-exmf-dist/fonts/type1/public/bera/fvmb8a.pfb></Users/deeamaliah/Library/TinyTeX
-/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></Users/deeamaliah/Library/TinyT
-eX/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></Users/deeamaliah/Library/Tin
-yTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/deeamaliah/Library/T
-inyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/deeamaliah/Librar
-y/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/deeamaliah/Lib
-rary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (36 pages, 339604 bytes).
+ist/fonts/type1/public/mathpazo/fplmr.pfb></Users/deeamaliah/Library/TinyTeX/te
+xmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></Users/deeamaliah/Library/Tiny
+TeX/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></Users/deeamaliah/Library/Ti
+nyTeX/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></Users/deeamaliah/Library/
+TinyTeX/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></Users/deeamaliah/Librar
+y/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/deeamaliah/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/deeamaliah/L
+ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/deeamalia
+h/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (43 pages, 363717 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
- 148 named destinations out of 1000 (max. 500000)
- 86193 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 695 PDF objects out of 1000 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 98489 words of extra memory for PDF output out of 106986 (max. 10000000)
 

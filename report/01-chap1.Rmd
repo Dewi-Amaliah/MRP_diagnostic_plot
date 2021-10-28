@@ -3,17 +3,62 @@ chapter: 1
 knit: "bookdown::render_book"
 ---
 
-```{r setup, include=FALSE}
+```{r setup-chap1, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, cache=TRUE)
-# Load any R packages you need here
-library(forecast)
-library(ggplot2)
 ```
 
 # Introduction {#ch:intro}
 
-## Problem Statement 
-Survey -> MRP -> visualisation 
+Multilevel regression and poststratification, henceforth referred to as MRP, is a model-based approach to estimate population. In short, MRP incorporates a multilevel regression technique to predict the outcome of interest using a survey data. This prediction is then poststratified using the population size from a larger survey or census to get the population estimates. 
 
-## MRP Overview
+According to @mrp-book, MRP is widely applied to do small area estimation in the absence of a subnational survey. In this case, MRP is able to reliably estimate small area statistics, i.e., small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as estimation by gender, age group, and education. Hence, it is useful, especially because small area statistics are often essential in policy-making, but conducting a subnational survey is often expensive and difficult. Additionally, MRP is also often applied to adjust the estimation from the non-representative survey as a result of the difficulties in recruiting representative survey respondents [@mrp-book].
+
+The standard method to communicate and validate the MRP estimates, such as their accuracy, is by using graphics. Indeed, statistical graphics are deemed a powerful tool to communicate quantitative information and analyse data [@ClevelandWilliamS]; [@1983Gmfd]. @WickhamHadley2015VsmR state that statistical visualisation, particularly model visualisation, is imperative as it helps us to understand the model better, for example, how the model changes as its parameters change or how the parameters change as the data change. They also mention that model visualisation is important to show the model's goodness of fit and whether it is good for some regions only and worse in other regions, or it is uniformly good.
+
+While visualisation is common to communicate and diagnose MRP models, only a few discussions and studies about it, two of the studies that nearly intersect with this topic were conducted by @mekelagelman and @saundra. However, @mekelagelman only focus on a graphical method for discovery and communication purposes of polling results. Besides, the MRP visualisations that they display as examples are isolated on Gelman's previous papers only. Meanwhile, the latter study by @saundra only focuses on how the graphics in public opinion research should be displayed. Therefore, this study tries to fill the gap by discussing the current practices of MRP visualisations generally, not only in public opinion and polling estimates scopes. It also aims to explore the possible improvements of those current practices. 
+
+Explicitly, the objectives of this study are:
+
+1. Discuss the current practice of visualisation of MRP models.
+2. Understand the implication of existing visualisation choices with real-world data.
+3. Explore possible improvements of the current practice of MRP visualisation. 
+
+The first objectives will be reached by doing a systematic literature review, while the second and the third goals will be demonstrated through a case study. 
+
+
+## MRP Overview {#overview}
+
+MRP is essentially conducted with two stages, i.e., multilevel/hierarchical regression modeling and poststratification. The idea is to combine model-based estimation commonly used in small area estimation with poststratification, which is considered the general framework as a weighting scheme in survey analysis [@Gelman97poststratificationinto]. They further argue that using multilevel regression estimates for poststratification allows the estimation for many more categories to gain more detailed population information.
+
+Formally, let $K$ be the number of categorical variables in the population and the $k_{th}$ has $J_k$ categories/levels, the population can be then expressed as $J = \prod_{k=1}^K J_k$ cells. For every cell, there is a known population size $N_j$. If the variable in the population is not in categorical form, then it should be categorised first. Next, suppose that the outcome of interest is a binary variable. MRP procedure is summarised in two stages as follows [@GaoYuxiang2021IMRa]:
+
+1. **Multilevel regression stage**. Multilevel regression is fitted to get estimated population averages $\theta_j$ for every cell $j \in \{1, ...., J\}$. The multilevel logistic regression has a set of random effects $\alpha^k_{m[j]}$ for each categorical covariate $k$. These random effects have the effect of pooling each $\theta_j$ partially towards $X_j\beta$, the $j_{th}$ is the row of $\textbf{X}$, the design matrix corresponding to $\theta_j$, while $\beta$ is the fixed effect of the model. Suppose that $n$ is the number of individual observations in the survey data, the form of multilevel regression could be written as follows:
+
+\begin{equation} 
+\begin{split}
+& Pr(y_i = 1) = logit^{-1}\left(X_i\beta + \sum^K_{k=1}\alpha^k_m[i]\right), for\ i=1, ..., n,\\
+& \alpha^k_m \sim N(0, \sigma^2_k), for\ m = 1, ..., M_k
+\end{split}
+(\#eq:mrp-stage1)
+\end{equation}
+
+
+2. **Poststratification stage**. The probabilities of the outcome from the previous stage, $\theta_j$, is then poststratified using the known population size $N_j$ of each cell $j$ to get the estimates at the subpopulation level. This stage corrects the nonresponse in the population by utilizing the known size of every cell $j$ relative to the total population size $N = \sum_{j=1}^J N_j$. In other words, the estimates is a weighted average of $\theta_j$ with $N_j$ as the weight. Suppose that $S$ is the subpopulation which is the combination of categories in the poststratification matrix, the MRP estimates could be expressed as:
+
+\begin{equation} 
+\begin{split}
+\theta_S = \frac{\sum_{j \in S}N_j\theta_j}{\sum_{j\in S}N_j}
+\end{split}
+(\#eq:mrp-stage2)
+\end{equation}
+
+## Thesis Structure 
+
+This thesis is structured as follows:
+
+- Chapter \@ref(ch:syslitrev) is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies. 
+
+- Chapter \@ref(ch:case-stud) is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved. 
+
+- The final chapter, Chapter \@ref(ch:conclusion), summarises the findings and concludes the contribution of this study and possible future works. 
 

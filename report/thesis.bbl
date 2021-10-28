@@ -191,6 +191,76 @@
       \field{pages}{1247\bibrangedash 1250}
       \range{pages}{4}
     \endentry
+    \entry{1983Gmfd}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ab2be6c801166a5b9d61638d8efb7a36}{%
+           family={Chambers},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Belmont, Calif. : Boston}%
+      }
+      \list{publisher}{1}{%
+        {Wadsworth International Group ; Duxbury Press}%
+      }
+      \strng{namehash}{ab2be6c801166a5b9d61638d8efb7a36}
+      \strng{fullhash}{ab2be6c801166a5b9d61638d8efb7a36}
+      \strng{bibnamehash}{ab2be6c801166a5b9d61638d8efb7a36}
+      \strng{authorbibnamehash}{ab2be6c801166a5b9d61638d8efb7a36}
+      \strng{authornamehash}{ab2be6c801166a5b9d61638d8efb7a36}
+      \strng{authorfullhash}{ab2be6c801166a5b9d61638d8efb7a36}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{053498052X}
+      \field{series}{The Wadsworth statistics/probability series}
+      \field{title}{Graphical methods for data analysis}
+      \field{year}{1983}
+      \keyw{Statistics -- Graphic methods; Computer graphics}
+    \endentry
+    \entry{ClevelandWilliamS}{book}{}
+      \name{author}{1}{}{%
+        {{hash=891ad1f1560d4ca4d59acb11065fd649}{%
+           family={Cleveland},
+           familyi={C\bibinitperiod},
+           given={William\bibnamedelima S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Monterey, Calif.}%
+      }
+      \list{publisher}{2}{%
+        {Wadsworth Advanced Books}%
+        {Software}%
+      }
+      \strng{namehash}{891ad1f1560d4ca4d59acb11065fd649}
+      \strng{fullhash}{891ad1f1560d4ca4d59acb11065fd649}
+      \strng{bibnamehash}{891ad1f1560d4ca4d59acb11065fd649}
+      \strng{authorbibnamehash}{891ad1f1560d4ca4d59acb11065fd649}
+      \strng{authornamehash}{891ad1f1560d4ca4d59acb11065fd649}
+      \strng{authorfullhash}{891ad1f1560d4ca4d59acb11065fd649}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0534037305}
+      \field{title}{The elements of graphing data}
+      \field{year}{1985}
+      \keyw{Graphic methods}
+    \endentry
     \entry{few_2008}{misc}{}
       \name{author}{1}{}{%
         {{hash=0225846e9c16b1e8389734ceaa2c3c34}{%
@@ -507,34 +577,17 @@
       \endverb
     \endentry
     \entry{mrpkit}{manual}{}
-      \name{author}{4}{}{%
-        {{hash=bcc69ca3509324893a5dbf5cba60aa14}{%
-           family={Kennedy},
-           familyi={K\bibinitperiod},
-           given={Lauren},
-           giveni={L\bibinitperiod}}}%
-        {{hash=d22d0f2897624075bcba3f2195a96094}{%
-           family={Gabry},
-           familyi={G\bibinitperiod},
-           given={Jonah},
-           giveni={J\bibinitperiod}}}%
-        {{hash=0f23b597e01d0c0a72afc912632cc7e7}{%
-           family={Amaliah},
-           familyi={A\bibinitperiod},
-           given={Dewi},
-           giveni={D\bibinitperiod}}}%
-        {{hash=4593c2604ae4bb09514d68a14447fad0}{%
-           family={Alexander},
-           familyi={A\bibinitperiod},
-           given={Rohan},
-           giveni={R\bibinitperiod}}}%
+      \name{author}{1}{}{%
+        {{hash=fd35cd8a8bf33fc5f8614b62272d75c7}{%
+           family={{Kennedy, Gabry, Amaliah, Alexander}},
+           familyi={K\bibinitperiod}}}%
       }
-      \strng{namehash}{86bf8c12405dfbdd613cb68c8dfb3a30}
-      \strng{fullhash}{6daf61539a012474455e9c0692d66c17}
-      \strng{bibnamehash}{6daf61539a012474455e9c0692d66c17}
-      \strng{authorbibnamehash}{6daf61539a012474455e9c0692d66c17}
-      \strng{authornamehash}{86bf8c12405dfbdd613cb68c8dfb3a30}
-      \strng{authorfullhash}{6daf61539a012474455e9c0692d66c17}
+      \strng{namehash}{fd35cd8a8bf33fc5f8614b62272d75c7}
+      \strng{fullhash}{fd35cd8a8bf33fc5f8614b62272d75c7}
+      \strng{bibnamehash}{fd35cd8a8bf33fc5f8614b62272d75c7}
+      \strng{authorbibnamehash}{fd35cd8a8bf33fc5f8614b62272d75c7}
+      \strng{authornamehash}{fd35cd8a8bf33fc5f8614b62272d75c7}
+      \strng{authorfullhash}{fd35cd8a8bf33fc5f8614b62272d75c7}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
@@ -813,6 +866,103 @@
       \range{pages}{20}
       \keyw{Bibliometrics ; Business ; Business & Economics ; Entity (Philosophy) ; Evaluation ; Literature reviews ; MANAGEMENT ; RESEARCH ; Researchers ; Reviews ; Social Sciences ; Text data mining}
     \endentry
+    \entry{mrp-book}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=e97ee011364cdf5b3a3adbf48b39c13e}{%
+           family={Lopez-Martin},
+           familyi={L\bibinithyphendelim M\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb0e8458aa9c3e40aef20d78a3fc3b6d}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Justin\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{819510c1273de0fc1ea075689c4ea768}
+      \strng{fullhash}{819510c1273de0fc1ea075689c4ea768}
+      \strng{bibnamehash}{819510c1273de0fc1ea075689c4ea768}
+      \strng{authorbibnamehash}{819510c1273de0fc1ea075689c4ea768}
+      \strng{authornamehash}{819510c1273de0fc1ea075689c4ea768}
+      \strng{authorfullhash}{819510c1273de0fc1ea075689c4ea768}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multilevel Regression and Poststratification Case Studies}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://bookdown.org/jl5522/MRP-case-studies/
+      \endverb
+      \verb{url}
+      \verb https://bookdown.org/jl5522/MRP-case-studies/
+      \endverb
+    \endentry
+    \entry{mekelagelman}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=305c5243d6618efe5b791e2e13381092}{%
+           family={Makela},
+           familyi={M\bibinitperiod},
+           given={Susanna},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ef28f6a2f3d01276b098a4cde2dec1ac}{%
+           family={Si},
+           familyi={S\bibinitperiod},
+           given={Yajuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=2fc083a59ae213450cd7c909e4a80013}{%
+           family={Atkeson},
+           familyi={A\bibinitperiod},
+           given={Lonna},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d3706f92a3135c364de482b033e497ea}{%
+           family={Alvarez},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford UK}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{44edf50b320444c4b2fd16a897ddf2b3}
+      \strng{fullhash}{44edf50b320444c4b2fd16a897ddf2b3}
+      \strng{bibnamehash}{44edf50b320444c4b2fd16a897ddf2b3}
+      \strng{authorbibnamehash}{44edf50b320444c4b2fd16a897ddf2b3}
+      \strng{authornamehash}{44edf50b320444c4b2fd16a897ddf2b3}
+      \strng{authorfullhash}{44edf50b320444c4b2fd16a897ddf2b3}
+      \strng{editorbibnamehash}{5aa76ca0f344fece82493a4fe78bd797}
+      \strng{editornamehash}{5aa76ca0f344fece82493a4fe78bd797}
+      \strng{editorfullhash}{5aa76ca0f344fece82493a4fe78bd797}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Oxford Handbook on Polling and Polling Methods}
+      \field{title}{Graphical Visualization of Polling Results}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1093/oxfordhb/9780190213299.013.12
+      \endverb
+    \endentry
     \entry{MIDWAY2020100141}{article}{}
       \name{author}{1}{}{%
         {{hash=62bd3502219a887cd8075469acb36da4}{%
@@ -901,6 +1051,59 @@
       \field{pages}{375\bibrangedash 385}
       \range{pages}{11}
       \keyw{Demography ; Ethnicity ; Modeling ; Multilevel models ; Polls ; Population estimates ; Public opinion ; State elections ; Voter registration ; Voting}
+    \endentry
+    \entry{saundra}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=11a2634e1f7f5b4c17526567fea1608b}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Saundra\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=933395a0a55446cdf4fd39c7bfe0a6b6}{%
+           family={Jacoby},
+           familyi={J\bibinitperiod},
+           given={William\bibnamedelima G.},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=2fc083a59ae213450cd7c909e4a80013}{%
+           family={Atkeson},
+           familyi={A\bibinitperiod},
+           given={Lonna},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d3706f92a3135c364de482b033e497ea}{%
+           family={Alvarez},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford UK}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{01706cd30b8f42bbfbbf52f22b674717}
+      \strng{fullhash}{01706cd30b8f42bbfbbf52f22b674717}
+      \strng{bibnamehash}{01706cd30b8f42bbfbbf52f22b674717}
+      \strng{authorbibnamehash}{01706cd30b8f42bbfbbf52f22b674717}
+      \strng{authornamehash}{01706cd30b8f42bbfbbf52f22b674717}
+      \strng{authorfullhash}{01706cd30b8f42bbfbbf52f22b674717}
+      \strng{editorbibnamehash}{5aa76ca0f344fece82493a4fe78bd797}
+      \strng{editornamehash}{5aa76ca0f344fece82493a4fe78bd797}
+      \strng{editorfullhash}{5aa76ca0f344fece82493a4fe78bd797}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Oxford Handbook on Polling and Polling Methods}
+      \field{title}{Graphical Displays for Public Opinion Research}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1093/oxfordhb/9780190213299.013.10
+      \endverb
     \endentry
     \entry{SchweizerMarinL2017Apgt}{article}{}
       \name{author}{2}{}{%
@@ -1235,6 +1438,56 @@
       \verb{url}
       \verb https://ggplot2.tidyverse.org
       \endverb
+    \endentry
+    \entry{WickhamHadley2015VsmR}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
+           family={Wickham},
+           familyi={W\bibinitperiod},
+           given={Hadley},
+           giveni={H\bibinitperiod}}}%
+        {{hash=703a76ee965b0aabaf5b41a58ab3995c}{%
+           family={Cook},
+           familyi={C\bibinitperiod},
+           given={Dianne},
+           giveni={D\bibinitperiod}}}%
+        {{hash=aab385203b295bcea3e72bd9a22eebae}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Hoboken}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Subscription Services, Inc., A Wiley Company}%
+      }
+      \strng{namehash}{3c0b78622bfddf6bdf2c0653441f0f40}
+      \strng{fullhash}{3c0b78622bfddf6bdf2c0653441f0f40}
+      \strng{bibnamehash}{3c0b78622bfddf6bdf2c0653441f0f40}
+      \strng{authorbibnamehash}{3c0b78622bfddf6bdf2c0653441f0f40}
+      \strng{authornamehash}{3c0b78622bfddf6bdf2c0653441f0f40}
+      \strng{authorfullhash}{3c0b78622bfddf6bdf2c0653441f0f40}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Visualization can help in model building, diagnosis, and in developing an understanding about how a model summarizes data. This paper proposes three strategies for visualizing statistical models: (i) display the model in the data space, (ii) look at all members of a collection, and (iii) explore the process of model fitting, not just the end result. Each strategy is accompanied by examples, including manova, classification algorithms, hierarchical clustering, ensembles of linear models, projection pursuit, self‐organizing maps, and neural networks.}
+      \field{issn}{1932-1864}
+      \field{journaltitle}{Statistical analysis and data mining}
+      \field{number}{4}
+      \field{title}{Visualizing statistical models: Removing the blindfold}
+      \field{volume}{8}
+      \field{year}{2015}
+      \field{pages}{203\bibrangedash 225}
+      \range{pages}{23}
+      \keyw{Algorithms ; classification ; Cluster analysis ; Clustering ; data mining ; exploratory data analysis ; high-dimensional data ; model visualization ; Neural networks ; Statistical models}
     \endentry
     \entry{WillmottCJ2005Aotm}{article}{}
       \name{author}{2}{}{%
