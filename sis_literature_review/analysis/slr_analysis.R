@@ -5,7 +5,6 @@ library(tidyverse)
 library(kableExtra)
 library(janitor)
 library(patchwork)
-library(ggthemes)
 library(flipPlots)
 library(igraph)
 

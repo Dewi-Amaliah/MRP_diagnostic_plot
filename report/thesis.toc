@@ -4,6 +4,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Acknowledgements}{3}{chapter*.2}%
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{R packages}{3}{section*.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}MRP Overview}{6}{section.1.1}%
@@ -52,12 +54,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Appendix}{47}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Description of plot types}{47}{section.A.1}%
+\contentsline {section}{\numberline {A.1}Supplementary Material}{47}{section.A.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.2}Proportion of observations by states}{47}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Additional Graphs}{47}{section.A.3}%
+\contentsline {section}{\numberline {A.3}Additional Graphs}{50}{section.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Supplementary Material}{47}{section.A.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{49}{appendix*.25}%
+\contentsline {chapter}{Bibliography}{57}{appendix*.34}%

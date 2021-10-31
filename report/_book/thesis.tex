@@ -49,7 +49,51 @@ Conducting a large survey to provide statistics to subpopulation levels is expen
 \chapter*{Acknowledgements}\label{acknowledgements}}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 
-I would like to thank my pet goldfish for \dots
+I would like to express my deepest gratitude to my supervisors, Lauren Kennedy and Shiro Kuriwaki. They have given me so much time, knowledge, wisdom, and patience since I started until I finished this thesis. Their continuous feedback, guidance, encouragement, and advice were like a light in the dark, especially when this thesis became increasingly challenging to complete.
+
+I would like to extend my gratitude to Dan Simpson, the chief examiner of Master of Business Analytics and Creative Activity, for all the guidance in completing this unit.
+
+Last but not least, I would like to thank Australia Awards Scholarship for giving me the scholarship to study at the Monash the University. Without it, studying in Australia would only remain as one of my childhood dreams.
+
+\hypertarget{r-packages}{%
+\section*{R packages}\label{r-packages}}
+\addcontentsline{toc}{section}{R packages}
+
+Several R \autocite{R} packages are utilized to produce this thesis:
+
+\begin{itemize}
+\tightlist
+\item
+  tidyverse
+\item
+  kableExtra
+\item
+  janitor
+\item
+  patchwork
+\item
+  flipPlots
+\item
+  igraph
+\end{itemize}
+
+library(mrpkit)
+library(brms)
+library(tidyverse)
+library(tictoc)
+library(ggplot2)
+library(urbnmapr)
+library(ggthemes)
+library(kableExtra)
+library(patchwork)
+library(Metrics)
+library(survey)
+library(ggstance)
+library(data.table)
+library(ggpmisc)
+library(scales)
+library(wacolors)
+library(tidytext)
 
 \hypertarget{ch:intro}{%
 \chapter{Introduction}\label{ch:intro}}
@@ -400,7 +444,7 @@ NA & 0.08\\
 \end{tabular}
 \end{table}
 
-Further, the geography and demographic variables used as covariates in the models are \texttt{state}, \texttt{age}, \texttt{gender}, \texttt{education}, and \texttt{race}. Table \ref{tab:covariate-tables} shows the distribution of categories/levels of \texttt{age}, \texttt{gender}, \texttt{education}, and \texttt{race}. Initially, age is a discrete variable but in this case it is categorised. Also, \texttt{education} and \texttt{race} has more levels in the original data but it is collapsed here to obtain fewer levels. The proportion of people answered the survey based on the state is displayed in the appendix of this thesis.
+Further, the geography and demographic variables used as covariates in the models are \texttt{state}, \texttt{age}, \texttt{gender}, \texttt{education}, and \texttt{race}. Table \ref{tab:covariate-tables} shows the distribution of categories/levels of \texttt{age}, \texttt{gender}, \texttt{education}, and \texttt{race}. Initially, age is a discrete variable but in this case it is categorised. Also, \texttt{education} and \texttt{race} has more levels in the original data but it is collapsed here to obtain fewer levels. The proportion of people answered the survey based on the state is displayed in the appendix of this thesis (\ref{apd-state}).
 
 \begin{table}
 \caption{\label{tab:covariate-tables}The response of covariates. Note that this response has been categorised into certain levels that are reflected in these tables.}
@@ -460,7 +504,7 @@ In this study, we use the ACS 2015-2017 data as the poststratification data. The
 
 To fit MRP models, we need the individual data of the ACS instead of the aggregated statistics. Hence, we use the 1-year Public Use Microdata Sample (PUMS), which carries the information/records of individual people on a yearly basis. The 1-year PUMS data reflects approximately one percent of the U.S. population \autocite{pums_metadata}. Therefore, in this study, we use three years periods of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (\texttt{PWGTP}). Since we use three years period, this weight is then divided by 3.
 
-The data is publicly available on the \href{https://www.census.gov/programs-surveys/acs/microdata/access.2015.html}{U.S. Census Bureau website}. We downloaded the data in a .csv format (csv\_pus.zip) year by year (2015-2019) through access on \href{https://www2.census.gov/programs-surveys/acs/data/pums/2015/1-Year/}{FTP site}. After that, we did a data pre-processing to bind the three years of the PUMS data. We only use some variables in this data for the MRP-purposes, i.e., unique identifier of the person (\texttt{SERIALNO}), state (\texttt{ST}), weight (\texttt{PWGTP}), education (\texttt{SCHL}), sex (\texttt{SEX}), race (\texttt{RAC1P}), Hispanic origin (\texttt{HISP}), and age (\texttt{AGEP}). We also did a data munging to recode and collapse some categories in these variables. Note that the \texttt{RAC1P} did not record for Hispanic ethnicity. Hence, we introduce a new category here, Hispanic, identified if the person answers other than ``1'' in the \texttt{HISP} variable. Table \ref{tab:acs-response-freq} shows the categorised response of the variables obtained from the ACS, i.e., age, race and ethnicity, and education. Also, notice that we get some NA values in education. This is actually the education level of under-school-age respondents. In fact, we will omit the ``Less than 18 years'' age group in the MRP models as it is not included in the survey data (CCES). Hence, the NAs in education response will be eventually omitted as well. The detailed code of the data pre-processing is available in the supplementary materials of this thesis.
+The data is publicly available on the \href{https://www.census.gov/programs-surveys/acs/microdata/access.2015.html}{U.S. Census Bureau website}. We downloaded the data in a .csv format (csv\_pus.zip) year by year (2015-2019) through access on \href{https://www2.census.gov/programs-surveys/acs/data/pums/2015/1-Year/}{FTP site}. After that, we did a data pre-processing to bind the three years of the PUMS data. We only use some variables in this data for the MRP-purposes, i.e., unique identifier of the person (\texttt{SERIALNO}), state (\texttt{ST}), weight (\texttt{PWGTP}), education (\texttt{SCHL}), sex (\texttt{SEX}), race (\texttt{RAC1P}), Hispanic origin (\texttt{HISP}), and age (\texttt{AGEP}). We also did a data munging to recode and collapse some categories in these variables. Note that the \texttt{RAC1P} did not record for Hispanic ethnicity. Hence, we introduce a new category here, Hispanic, identified if the person answers other than ``1'' in the \texttt{HISP} variable. Table \ref{tab:acs-response-freq} shows the categorised response of the variables obtained from the ACS, i.e., age, race and ethnicity, and education (see Appendix \ref{apd-state} for state). Also, notice that we get some NA values in education. This is actually the education level of under-school-age respondents. In fact, we will omit the ``Less than 18 years'' age group in the MRP models as it is not included in the survey data (CCES). Hence, the NAs in education response will be eventually omitted as well. The detailed code of the data pre-processing is available in the supplementary materials of this thesis.
 
 \begin{table}
 \caption{\label{tab:acs-response-freq}The response categories of post-stratification data.}
@@ -711,8 +755,8 @@ Another critic on the choropleth is also stated by \textcite{statgraph}. He argu
 
 Choropleth also only displays point estimates, which is not enough. Uncertainty should also be considered when visualising data, particularly estimation results, as there is always variability in there \autocite{tukey,MIDWAY2020100141,HullmanJessica2019IPoE}. In this case, a dot plot with confidence or credible interval could be used to visualise MRP estimates, for example, as seen in \textcite{EnnsPeterK2013POit}. We can see that there is a reasonably high percentage of the usage of dot plot with uncertainty in the articles we reviewed. From 34 dot plots, 26 (about 76\%) of them display uncertainty. However, compared to the overall number of communication plots, the portion of the dot plot with uncertainty is only about 20\%.
 
-\hypertarget{visualisation-for-diagnostic-purposes}{%
-\subsection{Visualisation for diagnostic purposes}\label{visualisation-for-diagnostic-purposes}}
+\hypertarget{vis-purp}{%
+\subsection{Visualisation for diagnostic purposes}\label{vis-purp}}
 
 \textbf{Displaying Comparison}
 
@@ -803,23 +847,78 @@ This study, however, only explores the alternative possibility of MRP visualisat
 \hypertarget{appendix}{%
 \chapter{Appendix}\label{appendix}}
 
-\hypertarget{description-of-plot-types}{%
-\section{Description of plot types}\label{description-of-plot-types}}
+\hypertarget{supplementary-material}{%
+\section{Supplementary Material}\label{supplementary-material}}
 
-\hypertarget{proportion-of-observations-by-states}{%
-\section{Proportion of observations by states}\label{proportion-of-observations-by-states}}
+All of the codes used to conduct the analysis and produce the report is available in \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot}{this Github repository}. Particularly, the code for data wrangling and preparation can be found \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/cces_acs_wrangling.Rmd}{here}, and the code for MRP preparation and visualisation can be found \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_fitting.R}{here} and \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_vis.R}{here}, respectively.
 
-You might put some computer output here, or maybe additional tables.
+\hypertarget{apd-state}{%
+\section{Proportion of observations by states}\label{apd-state}}
 
-Note that line 5 must appear before your first appendix. But other appendices can just start like any other chapter.
+The following plots show the percentage of observations by state in CCES and ACS, respectively.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/state-cces-1.pdf}
+\caption{\label{fig:state-cces}Distribution of observation in CCES data by state. The horizontal axis represents the percentage of the observations and the vertical axis represents the state ordered from the largest to lowest percentage of observations.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/state-acs-1.pdf}
+\caption{\label{fig:state-acs}Distribution of observation in ACS data by state. The horizontal axis represents the percentage of the observations and the vertical axis represents the state ordered from the largest to lowest percentage of observations.}
+\end{figure}
 
 \hypertarget{additional-graphs}{%
 \section{Additional Graphs}\label{additional-graphs}}
 
-\hypertarget{supplementary-material}{%
-\section{Supplementary Material}\label{supplementary-material}}
+The following plots represent metrics and 95\% credible interval visualisation as done in Section \ref{vis-purp}.
 
-All of the codes used to conduct analysis and produce the report is available in \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot}{this Github repository}
+\textbf{Education}
+
+Figure \ref{fig:apd-educ-metrics} shows the metrics and Figure \ref{fig:apd-ci-len-edu} shows the 95\% comparison of credible interval length based on education level.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/apd-educ-metrics-1.pdf}
+\caption{\label{fig:apd-educ-metrics}Metrics of the model with edication as additional covariate. The benchmark is the baseline model, not the ground truth. Metrics of High school or less and Post-graduate categories are consistently have the higher deviance to the baseline model.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.9\linewidth]{thesis_files/figure-latex/apd-ci-len-edu-1} \caption{The comparison of the 95 percent credible interval length between model with education as additional covariate and the baseline model by education levels. The credible interval of bigger model for Post-graduate category is slightly narrower compared to the baseline model.}\label{fig:apd-ci-len-edu}
+\end{figure}
+
+\newpage
+
+\textbf{Age (The estimation using the model with education as additional covariate)}
+
+Figure \ref{fig:apd-age-fit2} shows the metrics and Figure \ref{fig:apd-age-ci-fit2} shows the 95\% comparison of credible interval length based on age group (the comparison is between the model with education as additonal covariate and the baseline model).
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/apd-age-fit2-1.pdf}
+\caption{\label{fig:apd-age-fit2}Metrics of the model with education as additional covariate. The benchmark is the baseline model, not the ground truth.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.9\linewidth]{thesis_files/figure-latex/apd-age-ci-fit2-1} \caption{The comparison of the 95 percent credible interval length between model with education as additional covariate and the baseline model by education levels. The lenght of credible interval between the two model fits is pretty much the same.}\label{fig:apd-age-ci-fit2}
+\end{figure}
+
+\newpage
+
+\textbf{Age (The estimation using the model with more race categories)}
+
+Figure \ref{fig:apd-age-fit3} shows the metrics and Figure \ref{fig:apd-age-ci-fit3} shows the 95\% comparison of credible interval length based on age group (the comparison is between the model with more race categories and the baseline model).
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/apd-age-fit3-1.pdf}
+\caption{\label{fig:apd-age-fit3}Metrics of the model with more race categories. The benchmark is the baseline model, not the ground truth.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.9\linewidth]{thesis_files/figure-latex/apd-age-ci-fit3-1} \caption{The comparison of the 95 percent credible interval length between model with more race categories and the baseline model by education levels. The lenght of credible interval between the two model fits is pretty much the same.}\label{fig:apd-age-ci-fit3}
+\end{figure}
 
 \printbibliography[heading=bibintoc]
 

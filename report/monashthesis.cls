@@ -186,7 +186,7 @@
     \thispagestyle{empty}%
     \null\vskip1cm%
     \begin{center}
-        \Large\textbf{\expandafter{\@title}}
+        \Huge\textbf{\expandafter{\@title}}
     \end{center}
     \vfill
     \begin{center}\Large

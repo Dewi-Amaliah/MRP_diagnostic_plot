@@ -596,7 +596,54 @@ get_ci_plot <- function(data, level, title, subtitle, xlab){
 }
 
 
-## ---- cor-edu-data
+## ---- cor-race-plot
+
+get_metrics_plot(race_metrics, 
+                 "Metrics by race categories",
+                 "Model with more race categories compared to the baseline model",
+                 "Race categories")
+
+
+## ---- race-ci-len
+
+compare_ci_len_race <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("state", "original_re"), 
+                                 suffix = c("_fit1", "_fit3")) %>%
+  mutate(ci_len_ratio = ci_len_fit3/ci_len_fit1,
+         ci_dev = ci_len_fit3 - ci_len_fit1) %>%
+  group_by(original_re) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
+
+get_ci_plot(compare_ci_len_race, compare_ci_len_race$original_re, "Comparison of credible interval", 
+            "Model with more race categories compared to the baseline model",
+            "Race categories")
+
+
+## ---- cor-edu-plot
+
+get_metrics_plot(educ_metrics,
+                 "Metrics by education level",
+                 "Model with additional predictor (education) compared to the base model",
+                 "Education levels")
+
+## ---- edu-ci-len
+
+compare_ci_len_ed <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("state", "education"),
+                               suffix = c("_fit1", "_fit2")) %>%
+  mutate(ci_len_ratio = ci_len_fit2/ci_len_fit1,
+         ci_dev = ci_len_fit2 - ci_len_fit1) %>%
+  group_by(education) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
+
+get_ci_plot(compare_ci_len_ed, compare_ci_len_ed$education, "Comparison of credible interval", 
+            "Model with education level compared to base model",
+            "Education level")
+
+
+## ---- apd-educ-metrics
 
 metrics_fit1_fit2 <- get_metrics(comparison_data$modelb,
                                  comparison_data$upper_modelb,
@@ -614,39 +661,12 @@ educ_metrics_tmp <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("
 educ_metrics <- rbind(educ_metrics_tmp, metrics_fit1_fit2) %>%
   mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae")))
 
-
-## ---- cor-race-plot
-
-get_metrics_plot(race_metrics, 
-                 "Estimation performance criteria by race categories",
-                 "Model with more levels of race compared to base model",
-                 "Race categories")
-
-
-## ---- race-ci-len
-
-compare_ci_len_race <- left_join(mrp_race_state_fit1, mrp_race_state_fit3, by = c("state", "original_re"), 
-                                 suffix = c("_fit1", "_fit3")) %>%
-  mutate(ci_len_ratio = ci_len_fit3/ci_len_fit1,
-         ci_dev = ci_len_fit3 - ci_len_fit1) %>%
-  group_by(original_re) %>%
-  summarise(mean_ratio = mean(ci_len_ratio),
-            mean_ci_dev = mean(ci_dev)) %>%
-  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
-
-get_ci_plot(compare_ci_len_race, compare_ci_len_race$original_re, "Comparison of credible interval", 
-            "Model with more levels of race compared to base model",
-            "Race categories")
-
-
-## ---- cor-edu-plot
-
 get_metrics_plot(educ_metrics,
                  "Estimation performance criteria by education level",
                  "Model with additional predictor (education) compared to base model",
                  "Education levels")
 
-## ---- edu-ci-len
+## ---- apd-ci-len-edu
 
 compare_ci_len_ed <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c("state", "education"),
                                suffix = c("_fit1", "_fit2")) %>%
@@ -660,6 +680,79 @@ compare_ci_len_ed <- left_join(mrp_educ_state_fit1, mrp_educ_state_fit2, by = c(
 get_ci_plot(compare_ci_len_ed, compare_ci_len_ed$education, "Comparison of credible interval", 
             "Model with education level compared to base model",
             "Education level")
-  
 
+
+## ---- apd-age-fit2
+
+age_metrics_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("state", "age"),
+                             suffix = c("_fit1", "_fit2")) %>%
+  group_by(age) %>%
+  summarise(cor_adj = 1 - cor(median_fit1, median_fit2),
+            mae = mae(median_fit1, median_fit2),
+            rmse = rmse(median_fit1, median_fit2)) %>%
+  pivot_longer(c(2:4), names_to = "metrics", values_to = "values") %>%
+  rename(level = age)
+
+age_metrics <- rbind(age_metrics_tmp, metrics_fit1_fit2) %>%
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")),
+         level = factor(level, levels = c("18 to 24 years", "25 to 34 years",
+                                          "35 to 44 years", "45 to 64 years",
+                                          "65 years and over", "Statewide")))
+
+get_metrics_plot(age_metrics,
+                 "Metrics by age group",
+                 "Model with additional predictor (education) compared to the base model",
+                 "Age group")
+
+## ---- apd-age-ci-fit2
+
+compare_ci_len_age2 <- left_join(mrp_age_state_fit1, mrp_age_state_fit2, by = c("state", "age"),
+                                 suffix = c("_fit1", "_fit2")) %>%
+  mutate(ci_len_ratio = ci_len_fit2/ci_len_fit1,
+         ci_dev = ci_len_fit2 - ci_len_fit1) %>%
+  group_by(age) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
+
+get_ci_plot(compare_ci_len_age2, compare_ci_len_age2$age, "Comparison of credible interval length", 
+            "Model with education level as predictor compared to base model",
+            "Age group")
+
+## ---- apd-age-fit3
+
+age_metrics2_tmp <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("state", "age"),
+                              suffix = c("_fit1", "_fit3")) %>%
+  group_by(age) %>%
+  summarise(cor_adj = 1 - cor(median_fit1, median_fit3),
+            mae = mae(median_fit1, median_fit3),
+            rmse = rmse(median_fit1, median_fit3)) %>%
+  pivot_longer(c(2:4), names_to = "metrics", values_to = "values") %>%
+  rename(level = age)
+
+age_metrics2 <- rbind(age_metrics2_tmp, metrics_fit1_fit3) %>%
+  mutate(metrics = factor(metrics, levels = c("cor_adj", "rmse", "mae", "ci_len")),
+         level = factor(level, levels = c("18 to 24 years", "25 to 34 years",
+                                          "35 to 44 years", "45 to 64 years",
+                                          "65 years and over", "Statewide")))
+
+get_metrics_plot(age_metrics2,
+                 "Metrics by age level",
+                 "Model with more race caegories compared to the base model",
+                 "Age levels")
+
+## ---- apd-age-ci-fit3
+
+compare_ci_len_age3 <- left_join(mrp_age_state_fit1, mrp_age_state_fit3, by = c("state", "age"),
+                                 suffix = c("_fit1", "_fit3")) %>%
+  mutate(ci_len_ratio = ci_len_fit3/ci_len_fit1,
+         ci_dev = ci_len_fit3 - ci_len_fit1) %>%
+  group_by(age) %>%
+  summarise(mean_ratio = mean(ci_len_ratio),
+            mean_ci_dev = mean(ci_dev)) %>%
+  pivot_longer(c(2:3), names_to = "metrics", values_to = "values")
+
+get_ci_plot(compare_ci_len_age3, compare_ci_len_age3$age, "Comparison of credible interval length", 
+            "Model with more race categories compared to base model",
+            "Age group")
 

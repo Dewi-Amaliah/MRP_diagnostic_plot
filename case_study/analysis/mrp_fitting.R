@@ -4,10 +4,8 @@
 library(mrpkit)
 library(brms)
 library(tidyverse)
-library(tictoc)
 library(ggplot2)
 library(urbnmapr)
-library(ggthemes)
 library(kableExtra)
 library(patchwork)
 library(Metrics)
@@ -15,6 +13,7 @@ library(survey)
 library(ggstance)
 library(data.table)
 library(ggpmisc)
+library(forcats)
 
 ## ---- acs-cces-read
 # read the data
@@ -44,6 +43,8 @@ age_ct <- get_ct(age) %>%
   rename(Age = age)
 education_ct <- get_ct(educ) %>%
   rename(Education = educ)
+state_ct <- get_ct(state) %>%
+  rename(State = state)
 
 
 ## ---- outcome-table
@@ -60,6 +61,18 @@ knitr::kable(list(gender_ct, race_ct, age_ct, education_ct),
              booktabs = TRUE,
              caption = "The response of covariates. Note that this response has been categorised into certain levels that are reflected in these tables.") %>%
   kable_styling() 
+
+## ---- state-cces
+
+state_ct %>%
+  ungroup() %>%
+  mutate(State = fct_reorder(State, percentage)) %>%
+  ggplot(aes(x=State, y=percentage)) +
+  geom_bar(stat="identity", fill="grey50", alpha=.6, width=.4) +
+  coord_flip() +
+  xlab("State") +
+  ylab("Percentage") +
+  theme_bw()
 
 ## ---- acs-response-freq
 
@@ -93,6 +106,20 @@ knitr::kable(list(sex_pop, race_ethnicity_pop, age_pop, educ_collps_pop),
              booktabs = TRUE,
              caption = "The response categories of post-stratification data.") %>%
   kable_styling() 
+
+
+## ---- state-acs
+
+get_ct_acs(state) %>%
+  rename(State = state) %>%
+  ungroup() %>%
+  mutate(State = fct_reorder(State, percentage)) %>%
+  ggplot(aes(x=State, y=percentage)) +
+  geom_bar(stat="identity", fill="grey50", alpha=.6, width=.4) +
+  coord_flip() +
+  xlab("State") +
+  ylab("Percentage") +
+  theme_bw()
 
 ## ---- survey-pop-data
 

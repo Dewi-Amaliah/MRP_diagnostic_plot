@@ -4,18 +4,64 @@ knit: "bookdown::render_book"
 
 \appendix
 
+```{r setup-appendix, include=FALSE, cache = FALSE}
+library(knitr)
+read_chunk(here::here("case_study/analysis/mrp_fitting.R"))
+read_chunk(here::here("case_study/analysis/mrp_vis.R"))
+```
+
 # Appendix 
-
-## Description of plot types 
-
-## Proportion of observations by states
-
-You might put some computer output here, or maybe additional tables.
-
-Note that line 5 must appear before your first appendix. But other appendices can just start like any other chapter.
-
-## Additional Graphs
 
 ## Supplementary Material
 
-All of the codes used to conduct analysis and produce the report is available in [this Github repository](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot) 
+All of the codes used to conduct the analysis and produce the report is available in [this Github repository](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot). Particularly, the code for data wrangling and preparation can be found [here](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/cces_acs_wrangling.Rmd), and the code for MRP preparation and visualisation can be found [here](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_fitting.R) and [here](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_vis.R), respectively.
+
+## Proportion of observations by states {#apd-state}
+
+The following plots show the percentage of observations by state in CCES and ACS, respectively. 
+
+```{r state-cces, fig.height = 6, fig.width = 5, fig.cap = "Distribution of observation in CCES data by state. The horizontal axis represents the percentage of the observations and the vertical axis represents the state ordered from the largest to lowest percentage of observations."}
+```
+
+```{r state-acs, fig.height = 6, fig.width = 5, fig.cap = "Distribution of observation in ACS data by state. The horizontal axis represents the percentage of the observations and the vertical axis represents the state ordered from the largest to lowest percentage of observations."}
+```
+
+## Additional Graphs
+
+The following plots represent metrics and 95% credible interval visualisation as done in Section \@ref(vis-purp).
+
+**Education**
+
+Figure \@ref(fig:apd-educ-metrics) shows the metrics and Figure \@ref(fig:apd-ci-len-edu) shows the 95% comparison of credible interval length based on education level.
+
+```{r apd-educ-metrics, fig.width=5, fig.height=6, fig.cap="Metrics of the model with edication as additional covariate. The benchmark is the baseline model, not the ground truth. Metrics of High school or less and Post-graduate categories are consistently have the higher deviance to the baseline model."}
+```
+
+```{r apd-ci-len-edu, fig.cap="The comparison of the 95 percent credible interval length between model with education as additional covariate and the baseline model by education levels. The credible interval of bigger model for Post-graduate category is slightly narrower compared to the baseline model.", out.width = "90%"}
+```
+
+\newpage
+
+**Age (The estimation using the model with education as additional covariate)**
+
+Figure \@ref(fig:apd-age-fit2) shows the metrics and Figure \@ref(fig:apd-age-ci-fit2) shows the 95% comparison of credible interval length based on age group (the comparison is between the model with education as additonal covariate and the baseline model).
+
+```{r apd-age-fit2, fig.width=5, fig.height=6, fig.cap="Metrics of the model with education as additional covariate. The benchmark is the baseline model, not the ground truth."}
+```
+
+```{r apd-age-ci-fit2, fig.cap = "The comparison of the 95 percent credible interval length between model with education as additional covariate and the baseline model by education levels. The lenght of credible interval between the two model fits is pretty much the same.", out.width = "90%"}
+```
+
+\newpage
+
+**Age (The estimation using the model with more race categories)**
+
+Figure \@ref(fig:apd-age-fit3) shows the metrics and Figure \@ref(fig:apd-age-ci-fit3) shows the 95% comparison of credible interval length based on age group (the comparison is between the model with more race categories and the baseline model).
+
+```{r apd-age-fit3, fig.width=5, fig.height=6, fig.cap="Metrics of the model with more race categories. The benchmark is the baseline model, not the ground truth."}
+```
+
+```{r apd-age-ci-fit3, fig.cap = "The comparison of the 95 percent credible interval length between model with more race categories and the baseline model by education levels. The lenght of credible interval between the two model fits is pretty much the same.", out.width = "90%"}
+```
+
+
