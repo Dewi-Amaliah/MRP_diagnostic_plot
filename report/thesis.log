@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  28 OCT 2021 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  31 OCT 2021 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,31 +756,31 @@ Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 )
 \@quotelevel=\count430
 \@quotereset=\count431
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 29
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 30
 .
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -834,14 +834,14 @@ s.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 29.
+LaTeX Info: Redefining \microtypecontext on input line 30.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 29.
+LaTeX Info: Redefining \showhyphens on input line 30.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -873,9 +873,9 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 29.
-Package biblatex Info: Reference segment=0 on input line 29.
-Package hyperref Info: Link coloring ON on input line 29.
+Package biblatex Info: Reference section=0 on input line 30.
+Package biblatex Info: Reference segment=0 on input line 30.
+Package hyperref Info: Link coloring ON on input line 30.
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -887,47 +887,45 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count432
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+fvs on input line 33
+LaTeX Font Info:    Trying to load font information for T1+fvs on input line 34
 .
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/bera/t1fvs.fd
 File: t1fvs.fd 2004/09/07 scalable font definitions for T1/fvs.
 )
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 33.
+(Font)              scaled to size 9.85492pt on input line 34.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvs' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 33.
+(Font)              scaled to size 12.9599pt on input line 34.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 33.
+(Font)              scaled to size 12.9599pt on input line 34.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 33.
-LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 15.55188pt on input line 33.
-<figures/crest.jpg, id=76, 509.905pt x 553.06625pt>
+(Font)              scaled to size 15.55188pt on input line 34.
+<figures/crest.jpg, id=92, 509.905pt x 553.06625pt>
 File: figures/crest.jpg Graphic file (type jpg)
 <use figures/crest.jpg>
-Package pdftex.def Info: figures/crest.jpg  used on input line 33.
+Package pdftex.def Info: figures/crest.jpg  used on input line 34.
 (pdftex.def)             Requested size: 85.35826pt x 92.57692pt.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 33.
+(Font)              scaled to size 10.79993pt on input line 34.
 [1
 
 {/Users/deeamaliah/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 } <./figures/crest.jpg>]
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 21.59985pt on input line 35.
+(Font)              scaled to size 21.59985pt on input line 36.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 21.59985pt on input line 35.
+(Font)              scaled to size 21.59985pt on input line 36.
 (./thesis.toc
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
 (Font)              scaled to size 9.85492pt on input line 3.
@@ -969,7 +967,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 40.
+(Font)              scaled to size 18.66588pt on input line 41.
+LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 41.
 [1] [2
 
 ] [3] [4
@@ -978,12 +978,10 @@ LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
 Chapter 1.
 [5]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 13.49991pt on input line 80.
-LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 84.
+(Font)              scaled to size 13.49991pt on input line 81.
 [6] [7]
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-23.
+24.
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [8]
@@ -992,18 +990,18 @@ Chapter 2.
 
 ] [10]
 
-LaTeX Warning: Float too large for page by 11.16566pt on input line 164.
+LaTeX Warning: Float too large for page by 11.16566pt on input line 165.
 
 [11]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 173.
+(Font)              scaled to size 10.79993pt on input line 174.
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 20
-2.
+3.
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 202.
+(Font)              scaled to size 9.85492pt on input line 203.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1012,84 +1010,84 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 ]
-<figures/prisma_fc.png, id=226, 809.0225pt x 692.5875pt>
+<figures/prisma_fc.png, id=247, 809.0225pt x 692.5875pt>
 File: figures/prisma_fc.png Graphic file (type png)
 <use figures/prisma_fc.png>
-Package pdftex.def Info: figures/prisma_fc.png  used on input line 205.
+Package pdftex.def Info: figures/prisma_fc.png  used on input line 206.
 (pdftex.def)             Requested size: 384.1096pt x 328.83452pt.
 [13 <./figures/prisma_fc.png>] [14]
-<thesis_files/figure-latex/perform-plot-1.pdf, id=264, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/perform-plot-1.pdf, id=285, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/perform-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/perform-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/perform-plot-1.pdf  used on 
-input line 268.
+input line 269.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 268--269
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 269--270
  [][] 
  []
 
 [15] [16 <./thesis_files/figure-latex/perform-plot-1.pdf>]
-<thesis_files/figure-latex/compare-plot-1.pdf, id=291, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/compare-plot-1.pdf, id=312, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/compare-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/compare-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/compare-plot-1.pdf  used on 
-input line 283.
+input line 284.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 283--284
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
 [17 <./thesis_files/figure-latex/compare-plot-1.pdf>]
-<thesis_files/figure-latex/common-plots-1.pdf, id=304, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/common-plots-1.pdf, id=325, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/common-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-plots-1.pdf  used on 
-input line 296.
+input line 297.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 296--297
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 297--298
  [][] 
  []
 
 [18 <./thesis_files/figure-latex/common-plots-1.pdf>]
-<thesis_files/figure-latex/common-axis-1.pdf, id=321, 433.62pt x 578.16pt>
+<thesis_files/figure-latex/common-axis-1.pdf, id=342, 433.62pt x 578.16pt>
 File: thesis_files/figure-latex/common-axis-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-axis-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-axis-1.pdf  used on i
-nput line 310.
+nput line 311.
 (pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 310--311
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 311--312
  [][] 
  []
 
-<thesis_files/figure-latex/facet-plots-1.pdf, id=324, 454.69875pt x 274.02374pt
+<thesis_files/figure-latex/facet-plots-1.pdf, id=345, 454.69875pt x 274.02374pt
 >
 File: thesis_files/figure-latex/facet-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/facet-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/facet-plots-1.pdf  used on i
-nput line 320.
+nput line 321.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 320--321
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 321--322
  [][] 
  []
 
 [19] [20 <./thesis_files/figure-latex/common-axis-1.pdf>]
-<thesis_files/figure-latex/sankey-feature-1.pdf, id=344, 475.7775pt x 295.1025p
+<thesis_files/figure-latex/sankey-feature-1.pdf, id=365, 475.7775pt x 295.1025p
 t>
 File: thesis_files/figure-latex/sankey-feature-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/sankey-feature-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/sankey-feature-1.pdf  used o
-n input line 334.
+n input line 335.
 (pdftex.def)             Requested size: 475.77632pt x 295.10176pt.
 
-Overfull \hbox (48.98497pt too wide) in paragraph at lines 334--335
+Overfull \hbox (48.98497pt too wide) in paragraph at lines 335--336
  [][] 
  []
 
@@ -1100,32 +1098,108 @@ Chapter 3.
 
 ] [24] [25] [26] [27] [28]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 567.
+(Font)              scaled to size 9.85492pt on input line 568.
 [29] [30]
-Overfull \hbox (31.89214pt too wide) in paragraph at lines 674--685
+Overfull \hbox (31.89214pt too wide) in paragraph at lines 675--686
  [][] 
  []
 
-[31] [32]
-Chapter 4.
-[33
+[31]
+<thesis_files/figure-latex/choro-1.pdf, id=566, 454.69875pt x 274.02374pt>
+File: thesis_files/figure-latex/choro-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/choro-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/choro-1.pdf  used on input l
+ine 704.
+(pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-] [34
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 704--705
+ [][] 
+ []
+
+[32] [33 <./thesis_files/figure-latex/choro-1.pdf>] [34]
+<thesis_files/figure-latex/scatter-est-method-1.pdf, id=614, 361.35pt x 361.35p
+t>
+File: thesis_files/figure-latex/scatter-est-method-1.pdf Graphic file (type pdf
+)
+<use thesis_files/figure-latex/scatter-est-method-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/scatter-est-method-1.pdf  us
+ed on input line 725.
+(pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
+[35 <./thesis_files/figure-latex/scatter-est-method-1.pdf>]
+<thesis_files/figure-latex/dot-est-method-1.pdf, id=636, 433.62pt x 505.89pt>
+File: thesis_files/figure-latex/dot-est-method-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dot-est-method-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dot-est-method-1.pdf  used o
+n input line 735.
+(pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
+
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 735--736
+ [][] 
+ []
+
+<thesis_files/figure-latex/state-wise-scatter-1.pdf, id=640, 578.16pt x 505.89p
+t>
+File: thesis_files/figure-latex/state-wise-scatter-1.pdf Graphic file (type pdf
+)
+<use thesis_files/figure-latex/state-wise-scatter-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/state-wise-scatter-1.pdf  us
+ed on input line 747.
+(pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
+
+Overfull \hbox (151.36723pt too wide) in paragraph at lines 747--748
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
+
+ []
+
+[36] [37 <./thesis_files/figure-latex/dot-est-method-1.pdf>] [38 <./thesis_file
+s/figure-latex/state-wise-scatter-1.pdf>]
+<thesis_files/figure-latex/violin-levels-plot-1.pdf, id=672, 325.215pt x 614.29
+5pt>
+File: thesis_files/figure-latex/violin-levels-plot-1.pdf Graphic file (type pdf
+)
+<use thesis_files/figure-latex/violin-levels-plot-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/violin-levels-plot-1.pdf  us
+ed on input line 758.
+(pdftex.def)             Requested size: 325.2142pt x 614.29349pt.
+[39] [40 <./thesis_files/figure-latex/violin-levels-plot-1.pdf>]
+<thesis_files/figure-latex/cor-race-plot-1.pdf, id=692, 361.35pt x 433.62pt>
+File: thesis_files/figure-latex/cor-race-plot-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/cor-race-plot-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/cor-race-plot-1.pdf  used on
+ input line 776.
+(pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
+[41] [42 <./thesis_files/figure-latex/cor-race-plot-1.pdf>]
+<thesis_files/figure-latex/race-ci-len-1.pdf, id=713, 454.69875pt x 274.02374pt
+>
+File: thesis_files/figure-latex/race-ci-len-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/race-ci-len-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/race-ci-len-1.pdf  used on i
+nput line 785.
+(pdftex.def)             Requested size: 384.1096pt x 231.4871pt.
+[43 <./thesis_files/figure-latex/race-ci-len-1.pdf>] [44]
+Chapter 4.
+[45
+
+] [46
 
 ]
 Appendix A.
-[35] [36
+[47] [48
 
 ]
-Underfull \hbox (badness 1424) in paragraph at lines 704--704
+Underfull \hbox (badness 1424) in paragraph at lines 824--824
 [][]\T1/ppl/m/n/10.95 (+20) Gabry, J and R ƒe²no-var (2021). \T1/ppl/m/it/10.95
  (+20) cmd-stanr: R In-ter-face to 'Cmd-Stan'\T1/ppl/m/n/10.95 (+20) . https://
 mc-
  []
 
-[37] [38] [39] [40] (./thesis.aux)
+[49] [50] [51] [52] [53] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3FABD7949B157159968F4BA7DC9ED48B;3193.
+(rerunfilecheck)             Checksum: 72FDE668E1963FE14660EF96044A6A6F;4032.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
@@ -1135,13 +1209,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### semi simple group (level 1) entered at line 102 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22602 strings out of 480539
- 387040 string characters out of 5901555
- 1164848 words of memory out of 5000000
- 39346 multiletter control sequences out of 15000+600000
- 511549 words of font info for 328 fonts, out of 8000000 for 9000
+ 22796 strings out of 480539
+ 392973 string characters out of 5901555
+ 1169521 words of memory out of 5000000
+ 39464 multiletter control sequences out of 15000+600000
+ 508913 words of font info for 347 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,16n,81p,3114b,17774s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,16n,81p,3114b,17857s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/enc/dvips/b
 ase/8r.enc}</Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmex10.pfb></Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/type1/p
@@ -1156,10 +1230,10 @@ y/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/deeamaliah/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/deeamaliah/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/deeamalia
 h/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (43 pages, 363717 bytes).
+Output written on thesis.pdf (56 pages, 946628 bytes).
 PDF statistics:
- 695 PDF objects out of 1000 (max. 8388607)
- 578 compressed objects within 6 object streams
- 174 named destinations out of 1000 (max. 500000)
- 98489 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 756 compressed objects within 8 object streams
+ 215 named destinations out of 1000 (max. 500000)
+ 96508 words of extra memory for PDF output out of 106986 (max. 10000000)
 

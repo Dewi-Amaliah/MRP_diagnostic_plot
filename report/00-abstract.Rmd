@@ -4,6 +4,7 @@ knit: "bookdown::render_book"
 
 # Abstract {-}
 
-The abstract should outline the main approach and findings of the thesis and must not be more than 500 words.
+Conducting a large survey to provide statistics to subpopulation levels is expensive, time-consuming, and often comes with unrepresentative samples. Multilevel Regression and Poststratification (MRP) has been a promising method to provide reliable estimates for subpopulations. To current, graphical display is widely used to communicate and diagnose MRP estimates. However, there have been few studies on how visualisation should be performed in this field. Accordingly, this study tries to fill this gap by examining the current practice of MRP visualisation using a systematic literature review. This study also applies MRP to estimate the Trump vote share in the U.S. 2016 presidential election using the Cooperative Congressional Election Study (CCES) to demonstrate the implication of the current visualisation practice and explore alternatives for its improvement. The main finding of this study is that uncertainty is not widely displayed in the current practice. The choropleth map is the most frequently used to display MRP estimates even though it only shows point estimates and could hinder the information from areas with a small polygon. Uncertainty is also not much displayed for model diagnostic in the current practice. Using various graphical representations, this study shows that visualisation with uncertainty can illustrate the effect of different model specifications on the estimation result. In addition, this study also proposes an alternative graph to also take the bias-variance trade-off into account in evaluating MRP performance.    
+
 
 \newpage

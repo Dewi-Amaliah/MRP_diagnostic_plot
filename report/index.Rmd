@@ -1,5 +1,5 @@
 ---
-title: 'Thesis title'
+title: 'Visualising Multilevel Regression and Poststratification: Alternatives to the Current Practice'
 degreetype: 'Master of Business Analytics'
 author: 'Dewi Lestari Amaliah'
 studentid: 31251587

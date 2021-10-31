@@ -496,16 +496,20 @@ comparison_data <- plyr::join_all(list(ground_truth,
 library(scales)
 state_estimation_data <- left_join(urbnmapr::states, state_est_base, 
                                    by = c("state_name" = "state"))
+
 ggplot(state_estimation_data, 
        aes(long, lat, group = group, fill = base_model)) +
   geom_polygon(color = "gray90", size = 0.1) +
   coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
   scale_fill_gradientn(colors=c("blue","white","red"),
                        values=rescale(c(0,0.5,1)),
-   limits=c(0,1)) +
-  ggtitle("MPR estimates of probability of voting Trump") +
+                       limits=c(0,1)) +
+  ggtitle("MPR estimates of Trump vote share by states") +
   theme_map() +
-  labs(fill = "MRP estimates") 
+  labs(fill = "Trump vote share") +
+  theme(legend.position = "bottom")
+
+
 ```
 
 # The scatter plot
@@ -578,7 +582,7 @@ get_scatter_common <- function(x, title, subtitle, lower, upper, rmse, mad){
 
 
 spc1 <- get_scatter_common(comparison_data$base_model, 
-                           "For whom did you vote for President of the US?",
+                           "A. For whom did you vote for President of the US?",
                            "Base model",
                            comparison_data$lower_base_model,
                            comparison_data$upper_base_model,
@@ -586,7 +590,7 @@ spc1 <- get_scatter_common(comparison_data$base_model,
                            mad_base)
 
 spc2 <-  get_scatter_common(comparison_data$modelb, 
-                           "For whom did you vote for President of the US?",
+                           "B. For whom did you vote for President of the US?",
                            "Predictor includes education",
                            comparison_data$lower_modelb,
                            comparison_data$upper_modelb,
@@ -594,7 +598,7 @@ spc2 <-  get_scatter_common(comparison_data$modelb,
                            mad_modelb)
 
 spc3 <- get_scatter_common(comparison_data$modelc, 
-                           "For whom did you vote for President of the US?",
+                           "C. For whom did you vote for President of the US?",
                            "Base model with more levels on race",
                            comparison_data$lower_modelc,
                            comparison_data$upper_modelc,
@@ -602,7 +606,7 @@ spc3 <- get_scatter_common(comparison_data$modelc,
                            mad_modelc)
 
 spc4a <- get_scatter_common(comparison_data$intent, 
-                           "Which candidate did you prefer for President?",
+                           "D. Which candidate did you prefer for President?",
                            "Predictor includes education",
                            comparison_data$lower_intent,
                            comparison_data$upper_intent,
@@ -610,7 +614,7 @@ spc4a <- get_scatter_common(comparison_data$intent,
                            mad_intent)
 
 spc4b <- get_scatter_common(comparison_data$party, 
-                           "Party identity (including leaners)",
+                           "E. Party identity (including leaners)",
                            "Predictor includes education",
                            comparison_data$lower_party,
                            comparison_data$upper_party,
@@ -618,7 +622,7 @@ spc4b <- get_scatter_common(comparison_data$party,
                            mad_party)
 
 
-spc1 + spc4a + spc4b + spc2 + spc3 + plot_layout(nrow = 2)
+spc1 + spc2 + spc3 + spc4a + spc4b + plot_layout(nrow = 2)
 ```
 
 Doing the other way around for the axis
@@ -638,7 +642,9 @@ get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
   theme_bw() +
   theme(axis.title = element_text(size = 8),
         plot.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8)) +
+        plot.subtitle = element_text(size = 8),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black")) +
   ylab("MRP estimates (Trump vote)") +
   xlab("Ground truth (Trump vote)") +
   theme(aspect.ratio=1) +
@@ -696,7 +702,7 @@ sp4b <- get_scatter(comparison_data$party,
                            rmse_party,
                            mad_party)
 
-sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 2)
+sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 3)
 ```
 
 
@@ -1176,9 +1182,30 @@ race_metrics <- rbind(race_metrics_tmp, metrics_fit1_fit3) %>%
 
 ```{r}
 # function to get plot
-metrics_label <- c(`cor_adj` = "1-correlation",
+metrics_label <- c(`cor_adj` = "1 - correlation",
                    `rmse` = "Root Mean Square Difference",
                    `mae` = "Mean Absolute Difference")
+
+library(tidytext)
+
+race_metrics %>%
+  group_by(metrics) %>%
+  ungroup %>%
+  mutate(metrics = as.factor(metrics),
+         level = reorder_within(level, values, metrics)) %>%
+  ggplot(aes(level, values, color = level)) +
+    geom_point(show.legend = FALSE) +
+    facet_wrap(~metrics, scales = "free", nrow = 3) +
+    coord_flip() +
+    scale_x_reordered() +
+    scale_y_continuous(expand = c(0,0))
+  
+
+
+
+
+
+
 
 get_metrics_plot <- function(data, title, subtitle, xlab){
   plot <- data %>%
@@ -1187,7 +1214,7 @@ get_metrics_plot <- function(data, title, subtitle, xlab){
   arrange(desc(values)) %>%
   ungroup() %>%
   mutate(level = factor(paste(level, metrics, sep = "__"), 
-                       levels = rev(paste(level, metrics, sep = "__")))) %>%
+                       levels = rev(paste(level, metrics, sep = "__"))))%>%
   ggplot(aes(level, values)) +
   geom_segment(aes(xend = level, yend = 0), 
                colour = "grey50") +

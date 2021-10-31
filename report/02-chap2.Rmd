@@ -83,7 +83,7 @@ We also review other features of the plot using the grammar in `ggplot2` [@ggplo
 Accordingly, we examine the facet, geom, axis, color, and shape. For reproducibility, the metadata also contains the article's author/s, publication year, title, and corresponding figure number as it appeared in the article. After the extraction, we analyze the data using graphical visualization with `ggplot2` [@ggplot2]. The result will be discussed in the following subsection. 
 
 
-## Common practices in MRP visualisations 
+## Common practices in MRP visualisations {#com-prac}
 
 ```{r read-data}
 ```

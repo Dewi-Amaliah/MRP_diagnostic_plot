@@ -9,3 +9,8 @@ library(knitr)
 
 # Conclusion {#ch:conclusion}
 
+Graphics is essential to convey statistical information, and it has been widely used to communicate and diagnose MRP models. However, there have been few studies discussing it. Therefore, in this study, we conduct a systematic literature review to review the current practice in MRP visualisation. In addition, we perform a case study using CCES data to demonstrate the implication of current visualisation practice and explore the alternatives of possible improvement for it. 
+
+We find that the choropleth map is the most frequently used visualisation to communicate MRP estimates. However, it is problematic as it often hinders the information in small geographic areas and does not consider the uncertainty of estimates. Hence, we use another option to display state-wise estimates using a dot plot with an error bar. Regarding uncertainty, even though it is important to show estimates variability, it is not much displayed in practice. We offer some alternatives to display it, for example, using a violin plot. This study also demonstrates how graph has aided us in understanding how estimation method and model choices affect the estimates. We also use the credible interval length to illustrate visualisation that takes the bias-variance trade-off into account. 
+
+This study, however, only explores the alternative possibility of MRP visualisation improvement. Therefore, using experiment, future study is needed to prove whether these alternatives can communicate the message more effectively and enhance the graphics' interpretability.

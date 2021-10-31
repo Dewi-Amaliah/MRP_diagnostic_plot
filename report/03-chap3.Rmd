@@ -6,6 +6,7 @@ knit: "bookdown::render_book"
 ```{r setup-chap3, include=FALSE, cache = FALSE}
 library(knitr)
 read_chunk(here::here("case_study/analysis/mrp_fitting.R"))
+read_chunk(here::here("case_study/analysis/mrp_vis.R"))
 ```
 
 
@@ -14,7 +15,7 @@ read_chunk(here::here("case_study/analysis/mrp_fitting.R"))
 
 # Case Study: Application of MRP in Presidential Voting Estimation {#ch:case-stud}
 
-The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as the survey data and the American Community Survey data 2015-2017 [@acs_data] as the population/ poststratification data.
+The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development,  MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by @Gelman97poststratificationinto, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (@GelmanAndrew2014HBAC; @GhitzaYair2013DIwM; @KiewietdeJongeChadP2018PSPE; @LauderdaleBenjaminE2020Mppf; @LeiRayleigh2017T2EA; @ParkDavidK2004BMEw; @WangWei2015Fewn) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of voting for Trump. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data [@cces_data] as the survey data and the American Community Survey data 2015-2017 [@acs_data] as the population/ poststratification data.
 
 ## Data
 
@@ -178,6 +179,112 @@ After mapping the survey and population data, we can obtain the poststratificati
 ```{r post-strat-table}
 ```
 
-Next, we implement Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates cmdstanr [@cmdstanr] as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC) infrastructure](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
+Next, we implement Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates cmdstanr [@cmdstanr] as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC)](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
+
 
 ## Results and Discussion
+
+```{r read-map-fits}
+```
+
+
+The MRP estimates from these models will be visualised in this subsection. We will illustrate the implications of current visualisation practices and discuss the possibility for improvement using these estimates. We will divide the discussion with regards to communication and diagnostic plot as we did in in the systematic literature review (Subsection \@ref(com-prac)).  
+
+### Visualisations for communication purposes
+
+One of the most widely used graphs to communicate MRP estimates is a choropleth (see Figure \@ref(fig:common-plots)). Choropleth is colored, shaded, or graded to display a spatial pattern of a certain variable. For example, blue and red are used to represent states with more Democrat and Republican voters, respectively, as seen in @GhitzaYair2013DIwM. A color gradient is also used to convey a more detailed message, for example, the state-wise MRP estimates of pro-environment opinion as seen in @EunKimSung2018Epoi. The greener the shade, the more proportion of people support pro-environmental policy. These two examples also show the use of color with respect to the meaning that people generally perceive, i.e., green is often associated with the environment, and blue is often associated with Democrats.  
+
+In this case study, we create a choropleth of MRP estimates of the probability of voting for Trump (\@ref(fig:choro)) in the U.S. 2016 election using the baseline model. We create the same choropleth that is commonly shown based on our findings in the literature review.
+
+```{r choro, fig.cap = "MRP estimates of probability vote for Trump in the U.S. 2016 presidential election by states using the baseline model. The deeper the blue shade the less the Trump's vote share in the corresponding state, while the deeper the red, the more Trump's vote share. It is shown that the baseline model predicts that Trump has less than 50 percent vote share in almost every state in the U.S."}
+```
+
+The choropleth as seen in Figure \@ref(fig:choro) conveys that the baseline model predicts that Trump has less than 50 percent of vote share in almost every state in the U.S. Regardless of whether this model has a good fit or not, the message that this graph tries to convey using a color- code is quite easy to perceive. We can see a blue-shaded U.S. map, meaning that Democrat candidate wins the majority votes in most states. However, such takeaway is general, quite contradictory with the purpose of MRP, which is to give more detailed information about sub-population. From the map, we can see that there is only one state that is nearly red-shaded. However, the readers, especially those unfamiliar with the U.S. map, will probably not know which state it is unless the states are labeled with their name. 
+
+Another critic on the choropleth is also stated by @statgraph. He argues that choropleth is problematic as polygons with small areas are difficult to observe. In fact, these areas sometimes carry particular information. For example, small geopolitical areas often have a density of population. He then mentions that one alternative to overcome this problem is to replace choropleth with a cartogram in which the area is distorted so that its proportional to the value of the variable it represents. Unfortunately, there is no single visualisation among the articles reviewed that utilize this kind of visualisation.
+
+Choropleth also only displays point estimates, which is not enough. Uncertainty should also be considered when visualising data, particularly estimation results, as there is always variability in there [@tukey; @MIDWAY2020100141; @HullmanJessica2019IPoE]. In this case, a dot plot with confidence or credible interval could be used to visualise MRP estimates, for example, as seen in @EnnsPeterK2013POit. We can see that there is a reasonably high percentage of the usage of dot plot with uncertainty in the articles we reviewed. From 34 dot plots, 26 (about 76%) of them display uncertainty. However, compared to the overall number of communication plots, the portion of the dot plot with uncertainty is only about 20%.
+
+### Visualisation for diagnostic purposes
+
+**Displaying Comparison**
+
+According to @tukey, one of the graphic's purposes is for comparison. In MRP visualisation practice, the estimates from various estimation methods are often compared. Here, we compare state-level MRP estimates with raw and weighted estimates regarding their closeness to the actual Trump's vote shares. The common aesthetic used to display this kind of purpose in the reviewed articles is a scatter plot (around 31% of the total diagnostic plots).  
+
+There is an unwritten "rule of thumb" that when displaying two variables in a scatter plot, the horizontal axis displays the predictor, while the outcome is put in the vertical axis [@gelmanunwin]. Regarding MRP visualisation, this "convention" could be translated by putting the estimates in the y-axis and the actual value in the x-axis, although the practice is sometimes interchangeable (see Figure \@ref(fig:common-axis)). We also observe that some of the reviewed scatter plots show performance metrics, such as RMSE and MAE in  @MengXiao-Li2018Spap. Hence, in Figure \@ref(fig:scatter-est-method), we also display them. Regarding uncertainty, we find more scatter plots displayed without it (see Figure \@ref(fig:common-plots)). Here, we add uncertainty to each point estimates. In addition, we use color-blind-friendly color schemes to distinguish the estimation methods as mentioned by @vanderplas and @statgraph. 
+
+```{r est-comparison}
+```
+
+```{r scatter-est-method, fig.cap = "Comparison between various estimates (raw, weighted, and MRP) with the actual Trump's vote shares. The MRP model used here is the model with education as additional predictor. The points represent states with the 95 percent credible interval, while color represents the estimation method used. Weighted estimates is accurately predict the actual value of Trump's vote shares.", fig.height = 5, fig.width = 5}
+```
+
+Regardless of the visualisation matters, the weighted estimates, as seen in Figure \@ref(fig:scatter-est-method), is observed to be the most accurate estimate. It is actually an expected result, as according to @cces_data, the CCES's poststratification weight are weighted to statewide election results. The logic of that one estimate is unbiased, and therefore, some estimates are unbiased also should be kept in mind.  
+
+Back to the visualisation matters, a scatter plot is appropriate when the purpose is to allow the readers to discern the general information of the relationship shape between two variables rather than observing individual data points [@saundra]. Hence, if the purpose is to inspect which states are most and least accurately estimated, the scatter plot would not be the graph to use. Giving labels to the points is sometimes observed in practice, but it would be overlapped and hard to read in this case. Again, the dot plot could be used as an alternative to convey state-wise information, as seen in Figure \@ref(fig:dot-est-method). Here, instead of conveying the estimates, we use their deviance from the actual value of Trump's vote share, i.e., the $Estimates - Actual\ value $. We also display the states in descending order of the actual value of Trump votes, i.e., from the most "red" states to the most "blue" states. 
+
+```{r dot-est-method, fig.height=7, fig.width=6, fig.cap = "The deviance of estimated values from the actual value of Trump's vote shares. The state in the vertical axis are ordered descendingly with regards to the actual Trump vote. The color represents the estimation methods with weighted estimates shows the smallest deviance from the ground truth. This figure shows a pattern in which the more conservative the state, the bigger the deviance."}
+```
+
+Using this graph, we can get the same information regarding how accurate the estimates are. The advantage of this type of visualization is that it can display other information related to the pattern of estimates, and this pattern is observed in all of the estimation methods. It shows that the more conservative the state, the higher the errors. This pattern can be an indication that the survey data is not enough to capture Trump supporters.
+
+Besides estimation method, comparison could also be made between model specification. Revisiting on what @WickhamHadley2015VsmR state, model visualisation could answer how the model fit changes as the data changes. The following graphics will demonstrate this purpose.  
+
+As previously, the comparison shown in Figure \@ref(fig:state-wise-scatter) is displayed using a scatter plot. The comparison is between the MRP estimates and the actual Trump's vote share. Since there are five model specifications, we use the small-multiple principle [@MIDWAY2020100141], i.e., displaying the model fits with facets.
+
+```{r met-fun}
+```
+
+  
+```{r state-wise-scatter, fig.width=8, fig.height=7, fig.align='left', fig.cap="Comparison between MRP estimates and the actual Trump's vote share faceted by model specification. The point represents the state. Panel A represents the fit of baseline model; B represents the model with education as additional predictor; C represents the model with more race categories; A, B, and C have the same response variable, vote, while D and E represente the model with different outcome, which are vote intention and party identity, respectively. The covariates used in model D and E are the same with the covariates of model B. We can see that almost all the model fits underestimates the actual Trump's vote share."}
+```
+
+Using this graph, we can observe that the fit changes as the specification changes. The $45^{\circ}$ line assists the readers in inspecting whether the fit is underestimated or overestimated. Even though almost all of the fits are underestimated, we can see that the bigger model, i.e., the model with education as an additional covariate, has a better fit than the other models (also shown by its MAE). Model in panels D and E, which are models with different outcomes, are less accurate, which is understandable as the benchmark is the actual Trump vote-share which is more aligned with the other outcome,`vote`. 
+
+In addition to estimation by small geographical area, MRP is also often used to estimate population by demographic subsets. We use violin plots to compare how the subpopulation estimates change as the model specification changes in the following visualisation. We use the violin plot as it can show the distribution of the estimates, although this plot was never observed in the articles we reviewed. It the allows the reader to observe the variability of the estimates, i.e., uncertainty, rather then just the point estimates of summary statistics. 
+
+```{r violin-data}
+```
+
+```{r violin-levels-plot, fig.width=4.5, fig.height=8.5, fig.cap = "The comparison of MRP estimates by model specification. The panel shows the demographic variables estimated. Panel A, B, and C represents Trump's vote share by race categories, education level, and age group, respectively."}
+```
+
+Figure \@ref(fig:violin-levels-plot) shows the distribution of the response variable, which is probability of vote for Trump for each demographic levels regardless the geographic levels or the states where the voters live. This figure illustrates how the estimates will be different as the result of different covariates used.   For example, in Panel A, the range of probability of vote for Trump of Native Americans in the model with more race categories is wider than the model that collapsed Native American and All Other as one race category. We can also see that the median of the outcome in All Other race categories is slightly different in the two models. A more pronounced difference could also be observed in Panel B which compare the baseline model with the model with education level as additional covariate. Incorporating education as covariates results different pattern compared to the baseline model, i.e., the higher the education level, the less probability of voting for Trump. In Panel C, we can see the same trend for the three model fits, i.e., the older age-group tend to vote for Trump. However, the median of model with more covariates is slightly higher in all age group. 
+
+\newpage
+
+**Visualising Metrics**
+
+Metrics are the performance measure of the model in estimating the ground truth. In this case, however, since the benchmark is not the actual value due to the absence of Trump's vote share in demographic levels, the term performance will not be appropriate. We will still display graphs for these metrics, though, as an illustration of performance visualisation.   
+
+MAE and bias are predominantly used in most of the articles as the model performance criteria. Essentially, they give the same interpretation, which is how precise the model is in estimating the actual value. We also observe that correlation is frequently used in practice. Some studies also incorporate MSE/RMSE to measure their model performance. 
+
+@WarshawChristopher2012HSWM display correlation and MAE in a single graph by faceting it. Hence, we make a like-wise plot with a slight modification in the correlation (Figure \@ref(fig:cor-race-plot)). The current practices display correlation as it is. When a graph only displays a single metric, there will be no distortion of its interpretation. However, the graph would be quite hard to read if we facet MAE or MSE/RMSE and correlation because of its contradictory interpretation. For MAE and MSE/RMSE, the lower the value, the better the accuracy. In contrast, a higher correlation coefficient is more desirable. Accordingly, in the following graph, we display $1 - correlation$ instead so that the interpretation is unidirectional. We also set the free "scale" so that the consistency of performance of estimates by subpopulation could be examined. Setting the display this way applies the cognitive principle of best graphical practice as stated in @vanderplas, in which data is better presented in a way that allows the reader to compare more accurately. 
+
+```{r perf-metrics}
+```
+
+```{r metrics-plot-fun}
+```
+
+
+```{r cor-edu-data}
+```
+
+```{r ci-len-data}
+```
+
+
+```{r cor-race-plot, fig.width=5, fig.height=6, fig.cap = "Metrics of model with more race categories to estimate subpopulation by race categories. This figure in only an illustration as if it used for displaying model performance as the benchmark is the baseline model, not the ground truth. Each panel shows different metrics (Correlation, Root Mean Square Deviance, and Mean Absolute Difference). The statewide categories means the state-wise metrics regardless of the race categories. Native American and All Other are the population subset with the biggest difference to the baseline model."}
+```
+
+From Figure \@ref(fig:cor-race-plot) suggests that Native American and All Other race categories are consistently estimated to have a higher MAD and lower correlation with the baseline model. It is sensible because the baseline model collapses these categories as one covariate. This figure also illustrates how model visualisation answers whether the model is uniformly good or it is only fit for specific regions, in this case, race categories [@WickhamHadley2015VsmR].
+
+In addition to the metrics displayed in Figure \@ref(fig:cor-race-plot), we also propose alternative metrics that do not exist in the reviewed articles, namely the length of the error bar, in this case, is the 95% credible interval. It is obtained by subtracting the 2.5% quantile from the 97.5% quantile of the estimates. The idea is that there is a bias-variance trade-off in MRP, and metrics, such as MAE, only take bias into account. Therefore, in Figure \@ref(fig:race-ci-len), we display the difference and ratio between the credible interval length of the model with more race categories and the baseline model. This measure will compare the variability of two model fits. If the value of credible interval length difference is near zero, then the variability of two model fits is pretty much the same. The ratio near to 1 could be interpreted in the same way. 
+
+```{r race-ci-len, out.width="90%", fig.cap = "Credible interval length comparison between the model with more race categories and the baseline model. The left panel display the mean of length difference, while the right panel display the mean of credible interval ratio. The credible interval length of Native Americans on model with more race categories is 1.5 wider than the baseline model."}
+```
+
+Figure \@ref(fig:race-ci-len) shows that the estimated interval of Trump's vote share in Native American categories is 1.5 wider compared to the baseline model, while other race categories generally have the same length of the credible interval with the baseline model. Hence, using this type of graph, we can summarise that Native Americans' Trump's vote share more vary than other race categories than the baseline model.  
+
+To sum, this demonstration shows that graphical display can help us to understand the model better. For example, the graphs have shown us that the difference in covariates or model specification could result in reasonably different estimates. 

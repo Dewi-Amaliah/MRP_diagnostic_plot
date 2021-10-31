@@ -259,7 +259,7 @@ ggplot(filter(filter_facet_all, !is.na(facet_type))) +
   geom_bar(aes(x = reorder(facet_type, -n), y = n), stat = "identity", fill = "#2c7bb6") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 10, size = 7)) +
-  xlab("Whats in the facet") +
+  xlab("What is in the facet") +
   ylab("Count") 
 
 ## ---- sankey-feature

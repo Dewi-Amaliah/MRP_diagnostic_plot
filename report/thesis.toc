@@ -44,8 +44,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Results and Discussion}{32}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion}{33}{chapter.4}%
+\contentsline {subsection}{\numberline {3.4.1}Visualisations for communication purposes}{32}{subsection.3.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{35}{appendix.A}%
+\contentsline {subsection}{\numberline {3.4.2}Visualisation for diagnostic purposes}{34}{subsection.3.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{37}{appendix*.18}%
+\contentsline {chapter}{\numberline {4}Conclusion}{45}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Appendix}{47}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Description of plot types}{47}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Proportion of observations by states}{47}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Additional Graphs}{47}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Supplementary Material}{47}{section.A.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{49}{appendix*.25}%

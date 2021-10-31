@@ -4,8 +4,18 @@ knit: "bookdown::render_book"
 
 \appendix
 
-# Appendix
+# Appendix 
+
+## Description of plot types 
+
+## Proportion of observations by states
 
 You might put some computer output here, or maybe additional tables.
 
 Note that line 5 must appear before your first appendix. But other appendices can just start like any other chapter.
+
+## Additional Graphs
+
+## Supplementary Material
+
+All of the codes used to conduct analysis and produce the report is available in [this Github repository](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot) 

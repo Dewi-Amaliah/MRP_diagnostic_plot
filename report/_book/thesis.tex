@@ -8,10 +8,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Add any LaTeX packages and other preamble here if required
 \usepackage{subcaption}
+\usepackage{lscape}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \author{Dewi Lestari Amaliah}
-\title{Thesis title}
+\title{Visualising Multilevel Regression and Poststratification: Alternatives to the Current Practice}
 \studentid{31251587}
 \def\degreetitle{Master of Business Analytics}
 % Add subject and keywords below
@@ -19,7 +20,7 @@
      %pdfsubject={The Subject},
      %pdfkeywords={Some Keywords},
      pdfauthor={Dewi Lestari Amaliah},
-     pdftitle={Thesis title},
+     pdftitle={Visualising Multilevel Regression and Poststratification: Alternatives to the Current Practice},
      pdfproducer={Bookdown with LaTeX}
 }
 
@@ -40,7 +41,7 @@
 \chapter*{Abstract}\label{abstract}}
 \addcontentsline{toc}{chapter}{Abstract}
 
-The abstract should outline the main approach and findings of the thesis and must not be more than 500 words.
+Conducting a large survey to provide statistics to subpopulation levels is expensive, time-consuming, and often comes with unrepresentative samples. Multilevel Regression and Poststratification (MRP) has been a promising method to provide reliable estimates for subpopulations. To current, graphical display is widely used to communicate and diagnose MRP estimates. However, there have been few studies on how visualisation should be performed in this field. Accordingly, this study tries to fill this gap by examining the current practice of MRP visualisation using a systematic literature review. This study also applies MRP to estimate the Trump vote share in the U.S. 2016 presidential election using the Cooperative Congressional Election Study (CCES) to demonstrate the implication of the current visualisation practice and explore alternatives for its improvement. The main finding of this study is that uncertainty is not widely displayed in the current practice. The choropleth map is the most frequently used to display MRP estimates even though it only shows point estimates and could hinder the information from areas with a small polygon. Uncertainty is also not much displayed for model diagnostic in the current practice. Using various graphical representations, this study shows that visualisation with uncertainty can illustrate the effect of different model specifications on the estimation result. In addition, this study also proposes an alternative graph to also take the bias-variance trade-off into account in evaluating MRP performance.
 
 \newpage
 
@@ -53,13 +54,13 @@ I would like to thank my pet goldfish for \dots
 \hypertarget{ch:intro}{%
 \chapter{Introduction}\label{ch:intro}}
 
-Multilevel regression and poststratification, henceforth referred to as MRP, is a model-based approach to estimate population. In short, MRP incorporates a multilevel regression technique to predict the outcome of interest using a survey data. This prediction is then poststratified using the population size from a larger survey or census to get the population estimates.
+An accurate estimate of subpopulations is essential to draw insight from the data, especially when policy or decision is made in small area levels. However, conducting a large survey to provide statistics of subpopulations is expensive, time-consuming, and sometimes comes with unrepresentative samples. Multilevel regression and poststratification, henceforth referred to as MRP, is a model-based approach deemed to estimate subpopulation reliably. In short, MRP incorporates a multilevel regression technique to predict the outcome of interest using survey data. This prediction is then poststratified using the population size from a larger survey or census to get the population estimates.
 
-According to \textcite{mrp-book}, MRP is widely applied to do small area estimation in the absence of a subnational survey. In this case, MRP is able to reliably estimate small area statistics, i.e., small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as estimation by gender, age group, and education. Hence, it is useful, especially because small area statistics are often essential in policy-making, but conducting a subnational survey is often expensive and difficult. Additionally, MRP is also often applied to adjust the estimation from the non-representative survey as a result of the difficulties in recruiting representative survey respondents \autocite{mrp-book}.
+MRP is widely applied to do small area estimation in the absence of a subnational survey \autocite{hanretty}. In this case, MRP is able to estimates small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as estimation by gender, age group, and education. Additionally, MRP is also often applied to adjust the estimation from the non-representative survey as a result of the difficulties in recruiting representative survey respondents \autocite{mrp-book}.
 
-The standard method to communicate and validate the MRP estimates, such as their accuracy, is by using graphics. Indeed, statistical graphics are deemed a powerful tool to communicate quantitative information and analyse data \autocite{ClevelandWilliamS}; \autocite{1983Gmfd}. \textcite{WickhamHadley2015VsmR} state that statistical visualisation, particularly model visualisation, is imperative as it helps us to understand the model better, for example, how the model changes as its parameters change or how the parameters change as the data change. They also mention that model visualisation is important to show the model's goodness of fit and whether it is good for some regions only and worse in other regions, or it is uniformly good.
+The standard method to communicate and validate the MRP estimates, such as their accuracy, is by using graphics. Indeed, statistical graphics are regarded a powerful tool to communicate quantitative information and analyse data \autocite{ClevelandWilliamS,1983Gmfd}. \textcite{WickhamHadley2015VsmR} state that statistical visualisation, particularly model visualisation, is imperative as it helps us to understand the model better, for example, how the model changes as its parameters change or how the parameters change as the data change. They also mention that model visualisation is important to show the model's goodness of fit and whether it is good for some regions only and worse in other regions, or it is uniformly good.
 
-While visualisation is common to communicate and diagnose MRP models, only a few discussions and studies about it, two of the studies that nearly intersect with this topic were conducted by \textcite{mekelagelman} and \textcite{saundra}. However, \textcite{mekelagelman} only focus on a graphical method for discovery and communication purposes of polling results. Besides, the MRP visualisations that they display as examples are isolated on Gelman's previous papers only. Meanwhile, the latter study by \textcite{saundra} only focuses on how the graphics in public opinion research should be displayed. Therefore, this study tries to fill the gap by discussing the current practices of MRP visualisations generally, not only in public opinion and polling estimates scopes. It also aims to explore the possible improvements of those current practices.
+While visualisation is common to communicate and diagnose MRP models, only a few discussions and studies on how should be it performed. Two of the studies that nearly intersect with this topic were conducted by \textcite{mekelagelman} and \textcite{saundra}. However, \textcite{mekelagelman} only focus on a graphical method for discovery and communication purposes of polling results. Besides, the MRP visualisations that they display as examples are isolated on Gelman's previous papers only. Meanwhile, the latter study by \textcite{saundra} only focuses on how the graphics in public opinion research should be displayed. Therefore, this study tries to fill the gap by discussing the current practices of MRP visualisations generally, not only in public opinion and polling estimates scopes. It also aims to explore the possible alternative improvements to those current practice.
 
 Explicitly, the objectives of this study are:
 
@@ -253,8 +254,8 @@ We also review other features of the plot using the grammar in \texttt{ggplot2} 
 
 Accordingly, we examine the facet, geom, axis, color, and shape. For reproducibility, the metadata also contains the article's author/s, publication year, title, and corresponding figure number as it appeared in the article. After the extraction, we analyze the data using graphical visualization with \texttt{ggplot2} \autocite{ggplot2}. The result will be discussed in the following subsection.
 
-\hypertarget{common-practices-in-mrp-visualisations}{%
-\section{Common practices in MRP visualisations}\label{common-practices-in-mrp-visualisations}}
+\hypertarget{com-prac}{%
+\section{Common practices in MRP visualisations}\label{com-prac}}
 
 In this study, graphics are classified into two types, i.e., communication and diagnostic plots. A plot is classified as a communication plot if the plot's goal is solely to convey the MRP result. A diagnostic plot is used to understand the MRP estimate, and typically displays the MRP estimation by showing the performance metrics or compares it with other estimation methods. From 71 articles, we extract the data of 243 plots. 47.33 \% of these plots are diagnostics plots, while the remaining are communication plots.
 
@@ -338,7 +339,7 @@ We find, as shown in Figure \ref{fig:sankey-feature}, that both communication an
 \hypertarget{ch:case-stud}{%
 \chapter{Case Study: Application of MRP in Presidential Voting Estimation}\label{ch:case-stud}}
 
-The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development, MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by \textcite{Gelman97poststratificationinto}, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (\textcite{GelmanAndrew2014HBAC}; \textcite{GhitzaYair2013DIwM}; \textcite{KiewietdeJongeChadP2018PSPE}; \textcite{LauderdaleBenjaminE2020Mppf}; \textcite{LeiRayleigh2017T2EA}; \textcite{ParkDavidK2004BMEw}; \textcite{WangWei2015Fewn}) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of Trump votes. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data \autocite{cces_data} as the survey data and the American Community Survey data 2015-2017 \autocite{acs_data} as the population/ poststratification data.
+The majority of MRP applications are used in the context of estimating public opinion in the social and political sciences, although, in recent development, MRP is also conducted in various fields, for example, health and environmental studies. When first introduced by \textcite{Gelman97poststratificationinto}, MRP was applied to generate state estimation of the 1988 U.S. presidential election. Additionally, various subsequent studies also made presidential voting the case of interest. We recorded at least seven articles (\textcite{GelmanAndrew2014HBAC}; \textcite{GhitzaYair2013DIwM}; \textcite{KiewietdeJongeChadP2018PSPE}; \textcite{LauderdaleBenjaminE2020Mppf}; \textcite{LeiRayleigh2017T2EA}; \textcite{ParkDavidK2004BMEw}; \textcite{WangWei2015Fewn}) included in the Systematic Literature Review in Chapter 2 have applied MRP in the case of the presidential election. Therefore, in this chapter, we will also apply MRP to estimate the 2016 U.S. presidential voting outcome, especially the probability of voting for Trump. This also allows us to compare MRP estimates with the actual value of the Trump votes that are already available. In this case study, we use the Cooperative Congressional Election Study (CCES) 2016 data \autocite{cces_data} as the survey data and the American Community Survey data 2015-2017 \autocite{acs_data} as the population/ poststratification data.
 
 \hypertarget{data}{%
 \section{Data}\label{data}}
@@ -684,22 +685,141 @@ age & state & gender & collapsed\_re & original\_re & education & N\_j\\
 \end{tabular}
 \end{table}
 
-Next, we implement Bayesian multilevel model using \texttt{brms} \autocite{brms} to fit the model and obtain the posterior distributions of the parameters. \texttt{brms} itself incorporates cmdstanr \autocite{cmdstanr} as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using \href{https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html}{Monash's High Performance Cluster (HPC) infrastructure}.
+Next, we implement Bayesian multilevel model using \texttt{brms} \autocite{brms} to fit the model and obtain the posterior distributions of the parameters. \texttt{brms} itself incorporates cmdstanr \autocite{cmdstanr} as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using \href{https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html}{Monash's High Performance Cluster (HPC)}.
 
 \hypertarget{results-and-discussion}{%
 \section{Results and Discussion}\label{results-and-discussion}}
 
+The MRP estimates from these models will be visualised in this subsection. We will illustrate the implications of current visualisation practices and discuss the possibility for improvement using these estimates. We will divide the discussion with regards to communication and diagnostic plot as we did in in the systematic literature review (Subsection \ref{com-prac}).
+
+\hypertarget{visualisations-for-communication-purposes}{%
+\subsection{Visualisations for communication purposes}\label{visualisations-for-communication-purposes}}
+
+One of the most widely used graphs to communicate MRP estimates is a choropleth (see Figure \ref{fig:common-plots}). Choropleth is colored, shaded, or graded to display a spatial pattern of a certain variable. For example, blue and red are used to represent states with more Democrat and Republican voters, respectively, as seen in \textcite{GhitzaYair2013DIwM}. A color gradient is also used to convey a more detailed message, for example, the state-wise MRP estimates of pro-environment opinion as seen in \textcite{EunKimSung2018Epoi}. The greener the shade, the more proportion of people support pro-environmental policy. These two examples also show the use of color with respect to the meaning that people generally perceive, i.e., green is often associated with the environment, and blue is often associated with Democrats.
+
+In this case study, we create a choropleth of MRP estimates of the probability of voting for Trump (\ref{fig:choro}) in the U.S. 2016 election using the baseline model. We create the same choropleth that is commonly shown based on our findings in the literature review.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/choro-1.pdf}
+\caption{\label{fig:choro}MRP estimates of probability vote for Trump in the U.S. 2016 presidential election by states using the baseline model. The deeper the blue shade the less the Trump's vote share in the corresponding state, while the deeper the red, the more Trump's vote share. It is shown that the baseline model predicts that Trump has less than 50 percent vote share in almost every state in the U.S.}
+\end{figure}
+
+The choropleth as seen in Figure \ref{fig:choro} conveys that the baseline model predicts that Trump has less than 50 percent of vote share in almost every state in the U.S. Regardless of whether this model has a good fit or not, the message that this graph tries to convey using a color- code is quite easy to perceive. We can see a blue-shaded U.S. map, meaning that Democrat candidate wins the majority votes in most states. However, such takeaway is general, quite contradictory with the purpose of MRP, which is to give more detailed information about sub-population. From the map, we can see that there is only one state that is nearly red-shaded. However, the readers, especially those unfamiliar with the U.S. map, will probably not know which state it is unless the states are labeled with their name.
+
+Another critic on the choropleth is also stated by \textcite{statgraph}. He argues that choropleth is problematic as polygons with small areas are difficult to observe. In fact, these areas sometimes carry particular information. For example, small geopolitical areas often have a density of population. He then mentions that one alternative to overcome this problem is to replace choropleth with a cartogram in which the area is distorted so that its proportional to the value of the variable it represents. Unfortunately, there is no single visualisation among the articles reviewed that utilize this kind of visualisation.
+
+Choropleth also only displays point estimates, which is not enough. Uncertainty should also be considered when visualising data, particularly estimation results, as there is always variability in there \autocite{tukey,MIDWAY2020100141,HullmanJessica2019IPoE}. In this case, a dot plot with confidence or credible interval could be used to visualise MRP estimates, for example, as seen in \textcite{EnnsPeterK2013POit}. We can see that there is a reasonably high percentage of the usage of dot plot with uncertainty in the articles we reviewed. From 34 dot plots, 26 (about 76\%) of them display uncertainty. However, compared to the overall number of communication plots, the portion of the dot plot with uncertainty is only about 20\%.
+
+\hypertarget{visualisation-for-diagnostic-purposes}{%
+\subsection{Visualisation for diagnostic purposes}\label{visualisation-for-diagnostic-purposes}}
+
+\textbf{Displaying Comparison}
+
+According to \textcite{tukey}, one of the graphic's purposes is for comparison. In MRP visualisation practice, the estimates from various estimation methods are often compared. Here, we compare state-level MRP estimates with raw and weighted estimates regarding their closeness to the actual Trump's vote shares. The common aesthetic used to display this kind of purpose in the reviewed articles is a scatter plot (around 31\% of the total diagnostic plots).
+
+There is an unwritten ``rule of thumb'' that when displaying two variables in a scatter plot, the horizontal axis displays the predictor, while the outcome is put in the vertical axis \autocite{gelmanunwin}. Regarding MRP visualisation, this ``convention'' could be translated by putting the estimates in the y-axis and the actual value in the x-axis, although the practice is sometimes interchangeable (see Figure \ref{fig:common-axis}). We also observe that some of the reviewed scatter plots show performance metrics, such as RMSE and MAE in \textcite{MengXiao-Li2018Spap}. Hence, in Figure \ref{fig:scatter-est-method}, we also display them. Regarding uncertainty, we find more scatter plots displayed without it (see Figure \ref{fig:common-plots}). Here, we add uncertainty to each point estimates. In addition, we use color-blind-friendly color schemes to distinguish the estimation methods as mentioned by \textcite{vanderplas} and \textcite{statgraph}.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/scatter-est-method-1.pdf}
+\caption{\label{fig:scatter-est-method}Comparison between various estimates (raw, weighted, and MRP) with the actual Trump's vote shares. The MRP model used here is the model with education as additional predictor. The points represent states with the 95 percent credible interval, while color represents the estimation method used. Weighted estimates is accurately predict the actual value of Trump's vote shares.}
+\end{figure}
+
+Regardless of the visualisation matters, the weighted estimates, as seen in Figure \ref{fig:scatter-est-method}, is observed to be the most accurate estimate. It is actually an expected result, as according to \textcite{cces_data}, the CCES's poststratification weight are weighted to statewide election results. The logic of that one estimate is unbiased, and therefore, some estimates are unbiased also should be kept in mind.
+
+Back to the visualisation matters, a scatter plot is appropriate when the purpose is to allow the readers to discern the general information of the relationship shape between two variables rather than observing individual data points \autocite{saundra}. Hence, if the purpose is to inspect which states are most and least accurately estimated, the scatter plot would not be the graph to use. Giving labels to the points is sometimes observed in practice, but it would be overlapped and hard to read in this case. Again, the dot plot could be used as an alternative to convey state-wise information, as seen in Figure \ref{fig:dot-est-method}. Here, instead of conveying the estimates, we use their deviance from the actual value of Trump's vote share, i.e., the \$Estimates - Actual~value \$. We also display the states in descending order of the actual value of Trump votes, i.e., from the most ``red'' states to the most ``blue'' states.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/dot-est-method-1.pdf}
+\caption{\label{fig:dot-est-method}The deviance of estimated values from the actual value of Trump's vote shares. The state in the vertical axis are ordered descendingly with regards to the actual Trump vote. The color represents the estimation methods with weighted estimates shows the smallest deviance from the ground truth. This figure shows a pattern in which the more conservative the state, the bigger the deviance.}
+\end{figure}
+
+Using this graph, we can get the same information regarding how accurate the estimates are. The advantage of this type of visualization is that it can display other information related to the pattern of estimates, and this pattern is observed in all of the estimation methods. It shows that the more conservative the state, the higher the errors. This pattern can be an indication that the survey data is not enough to capture Trump supporters.
+
+Besides estimation method, comparison could also be made between model specification. Revisiting on what \textcite{WickhamHadley2015VsmR} state, model visualisation could answer how the model fit changes as the data changes. The following graphics will demonstrate this purpose.
+
+As previously, the comparison shown in Figure \ref{fig:state-wise-scatter} is displayed using a scatter plot. The comparison is between the MRP estimates and the actual Trump's vote share. Since there are five model specifications, we use the small-multiple principle \autocite{MIDWAY2020100141}, i.e., displaying the model fits with facets.
+
+\begin{figure}
+
+\includegraphics{thesis_files/figure-latex/state-wise-scatter-1} \hfill{}
+
+\caption{Comparison between MRP estimates and the actual Trump's vote share faceted by model specification. The point represents the state. Panel A represents the fit of baseline model; B represents the model with education as additional predictor; C represents the model with more race categories; A, B, and C have the same response variable, vote, while D and E represente the model with different outcome, which are vote intention and party identity, respectively. The covariates used in model D and E are the same with the covariates of model B. We can see that almost all the model fits underestimates the actual Trump's vote share.}\label{fig:state-wise-scatter}
+\end{figure}
+
+Using this graph, we can observe that the fit changes as the specification changes. The \(45^{\circ}\) line assists the readers in inspecting whether the fit is underestimated or overestimated. Even though almost all of the fits are underestimated, we can see that the bigger model, i.e., the model with education as an additional covariate, has a better fit than the other models (also shown by its MAE). Model in panels D and E, which are models with different outcomes, are less accurate, which is understandable as the benchmark is the actual Trump vote-share which is more aligned with the other outcome,\texttt{vote}.
+
+In addition to estimation by small geographical area, MRP is also often used to estimate population by demographic subsets. We use violin plots to compare how the subpopulation estimates change as the model specification changes in the following visualisation. We use the violin plot as it can show the distribution of the estimates, although this plot was never observed in the articles we reviewed. It the allows the reader to observe the variability of the estimates, i.e., uncertainty, rather then just the point estimates of summary statistics.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/violin-levels-plot-1.pdf}
+\caption{\label{fig:violin-levels-plot}The comparison of MRP estimates by model specification. The panel shows the demographic variables estimated. Panel A, B, and C represents Trump's vote share by race categories, education level, and age group, respectively.}
+\end{figure}
+
+Figure \ref{fig:violin-levels-plot} shows the distribution of the response variable, which is probability of vote for Trump for each demographic levels regardless the geographic levels or the states where the voters live. This figure illustrates how the estimates will be different as the result of different covariates used. For example, in Panel A, the range of probability of vote for Trump of Native Americans in the model with more race categories is wider than the model that collapsed Native American and All Other as one race category. We can also see that the median of the outcome in All Other race categories is slightly different in the two models. A more pronounced difference could also be observed in Panel B which compare the baseline model with the model with education level as additional covariate. Incorporating education as covariates results different pattern compared to the baseline model, i.e., the higher the education level, the less probability of voting for Trump. In Panel C, we can see the same trend for the three model fits, i.e., the older age-group tend to vote for Trump. However, the median of model with more covariates is slightly higher in all age group.
+
+\newpage
+
+\textbf{Visualising Metrics}
+
+Metrics are the performance measure of the model in estimating the ground truth. In this case, however, since the benchmark is not the actual value due to the absence of Trump's vote share in demographic levels, the term performance will not be appropriate. We will still display graphs for these metrics, though, as an illustration of performance visualisation.
+
+MAE and bias are predominantly used in most of the articles as the model performance criteria. Essentially, they give the same interpretation, which is how precise the model is in estimating the actual value. We also observe that correlation is frequently used in practice. Some studies also incorporate MSE/RMSE to measure their model performance.
+
+\textcite{WarshawChristopher2012HSWM} display correlation and MAE in a single graph by faceting it. Hence, we make a like-wise plot with a slight modification in the correlation (Figure \ref{fig:cor-race-plot}). The current practices display correlation as it is. When a graph only displays a single metric, there will be no distortion of its interpretation. However, the graph would be quite hard to read if we facet MAE or MSE/RMSE and correlation because of its contradictory interpretation. For MAE and MSE/RMSE, the lower the value, the better the accuracy. In contrast, a higher correlation coefficient is more desirable. Accordingly, in the following graph, we display \(1 - correlation\) instead so that the interpretation is unidirectional. We also set the free ``scale'' so that the consistency of performance of estimates by subpopulation could be examined. Setting the display this way applies the cognitive principle of best graphical practice as stated in \textcite{vanderplas}, in which data is better presented in a way that allows the reader to compare more accurately.
+
+\begin{figure}
+\centering
+\includegraphics{thesis_files/figure-latex/cor-race-plot-1.pdf}
+\caption{\label{fig:cor-race-plot}Metrics of model with more race categories to estimate subpopulation by race categories. This figure in only an illustration as if it used for displaying model performance as the benchmark is the baseline model, not the ground truth. Each panel shows different metrics (Correlation, Root Mean Square Deviance, and Mean Absolute Difference). The statewide categories means the state-wise metrics regardless of the race categories. Native American and All Other are the population subset with the biggest difference to the baseline model.}
+\end{figure}
+
+From Figure \ref{fig:cor-race-plot} suggests that Native American and All Other race categories are consistently estimated to have a higher MAD and lower correlation with the baseline model. It is sensible because the baseline model collapses these categories as one covariate. This figure also illustrates how model visualisation answers whether the model is uniformly good or it is only fit for specific regions, in this case, race categories \autocite{WickhamHadley2015VsmR}.
+
+In addition to the metrics displayed in Figure \ref{fig:cor-race-plot}, we also propose alternative metrics that do not exist in the reviewed articles, namely the length of the error bar, in this case, is the 95\% credible interval. It is obtained by subtracting the 2.5\% quantile from the 97.5\% quantile of the estimates. The idea is that there is a bias-variance trade-off in MRP, and metrics, such as MAE, only take bias into account. Therefore, in Figure \ref{fig:race-ci-len}, we display the difference and ratio between the credible interval length of the model with more race categories and the baseline model. This measure will compare the variability of two model fits. If the value of credible interval length difference is near zero, then the variability of two model fits is pretty much the same. The ratio near to 1 could be interpreted in the same way.
+
+\begin{figure}
+\includegraphics[width=0.9\linewidth]{thesis_files/figure-latex/race-ci-len-1} \caption{Credible interval length comparison between the model with more race categories and the baseline model. The left panel display the mean of length difference, while the right panel display the mean of credible interval ratio. The credible interval length of Native Americans on model with more race categories is 1.5 wider than the baseline model.}\label{fig:race-ci-len}
+\end{figure}
+
+Figure \ref{fig:race-ci-len} shows that the estimated interval of Trump's vote share in Native American categories is 1.5 wider compared to the baseline model, while other race categories generally have the same length of the credible interval with the baseline model. Hence, using this type of graph, we can summarise that Native Americans' Trump's vote share more vary than other race categories than the baseline model.
+
+To sum, this demonstration shows that graphical display can help us to understand the model better. For example, the graphs have shown us that the difference in covariates or model specification could result in reasonably different estimates.
+
 \hypertarget{ch:conclusion}{%
 \chapter{Conclusion}\label{ch:conclusion}}
+
+Graphics is essential to convey statistical information, and it has been widely used to communicate and diagnose MRP models. However, there have been few studies discussing it. Therefore, in this study, we conduct a systematic literature review to review the current practice in MRP visualisation. In addition, we perform a case study using CCES data to demonstrate the implication of current visualisation practice and explore the alternatives of possible improvement for it.
+
+We find that the choropleth map is the most frequently used visualisation to communicate MRP estimates. However, it is problematic as it often hinders the information in small geographic areas and does not consider the uncertainty of estimates. Hence, we use another option to display state-wise estimates using a dot plot with an error bar. Regarding uncertainty, even though it is important to show estimates variability, it is not much displayed in practice. We offer some alternatives to display it, for example, using a violin plot. This study also demonstrates how graph has aided us in understanding how estimation method and model choices affect the estimates. We also use the credible interval length to illustrate visualisation that takes the bias-variance trade-off into account.
+
+This study, however, only explores the alternative possibility of MRP visualisation improvement. Therefore, using experiment, future study is needed to prove whether these alternatives can communicate the message more effectively and enhance the graphics' interpretability.
 
 \appendix
 
 \hypertarget{appendix}{%
 \chapter{Appendix}\label{appendix}}
 
+\hypertarget{description-of-plot-types}{%
+\section{Description of plot types}\label{description-of-plot-types}}
+
+\hypertarget{proportion-of-observations-by-states}{%
+\section{Proportion of observations by states}\label{proportion-of-observations-by-states}}
+
 You might put some computer output here, or maybe additional tables.
 
 Note that line 5 must appear before your first appendix. But other appendices can just start like any other chapter.
+
+\hypertarget{additional-graphs}{%
+\section{Additional Graphs}\label{additional-graphs}}
+
+\hypertarget{supplementary-material}{%
+\section{Supplementary Material}\label{supplementary-material}}
+
+All of the codes used to conduct analysis and produce the report is available in \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot}{this Github repository}
 
 \printbibliography[heading=bibintoc]
 

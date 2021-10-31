@@ -261,6 +261,92 @@
       \field{year}{1985}
       \keyw{Graphic methods}
     \endentry
+    \entry{EnnsPeterK2013POit}{article}{}
+      \name{author}{2}{}{%
+        {{hash=58ea1350f0ad5e1fc81bd07e143d3bd4}{%
+           family={Enns},
+           familyi={E\bibinitperiod},
+           given={Peter\bibnamedelima K},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=37c0ea05fcb1b5f03ddd9d411b12c0e5}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Julianna},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Los Angeles, CA}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{7cb6a7cbd6daf144ad4fe16c99fc929f}
+      \strng{fullhash}{7cb6a7cbd6daf144ad4fe16c99fc929f}
+      \strng{bibnamehash}{7cb6a7cbd6daf144ad4fe16c99fc929f}
+      \strng{authorbibnamehash}{7cb6a7cbd6daf144ad4fe16c99fc929f}
+      \strng{authornamehash}{7cb6a7cbd6daf144ad4fe16c99fc929f}
+      \strng{authorfullhash}{7cb6a7cbd6daf144ad4fe16c99fc929f}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this article, we create, validate, and analyze new dynamic measures of state partisanship, state policy mood, and state political ideology. The measures of partisanship and policy mood begin in 1956 and the measure of ideology begins in 1976. Our approach uses the advantages of two leading techniques for measuring state public opinion—multilevel regression and poststratification (MRP) and survey aggregation. The resulting estimates are based on nearly 500 different surveys with a total of more than 740,000 respondents. After validating our measures, we show that during the last half century, policy preferences in the states have shifted in important and sometimes surprising ways. For example, we find that differences in political attitudes across time can be as important as differences across states.}
+      \field{issn}{1532-4400}
+      \field{journaltitle}{State politics and policy quarterly}
+      \field{number}{3}
+      \field{title}{Public Opinion in the U.S. States: 1956 to 2010}
+      \field{volume}{13}
+      \field{year}{2013}
+      \field{pages}{349\bibrangedash 372}
+      \range{pages}{24}
+    \endentry
+    \entry{EunKimSung2018Epoi}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1cb9882703377c4c018ae6e17007206d}{%
+           family={Eun\bibnamedelima Kim},
+           familyi={E\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Sung},
+           giveni={S\bibinitperiod}}}%
+        {{hash=56ccd0e24349ba5db9bd3af42a0cad62}{%
+           family={Urpelainen},
+           familyi={U\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{43c8a4bc0682bc14a3826ee1b6c2efcd}
+      \strng{fullhash}{43c8a4bc0682bc14a3826ee1b6c2efcd}
+      \strng{bibnamehash}{43c8a4bc0682bc14a3826ee1b6c2efcd}
+      \strng{authorbibnamehash}{43c8a4bc0682bc14a3826ee1b6c2efcd}
+      \strng{authornamehash}{43c8a4bc0682bc14a3826ee1b6c2efcd}
+      \strng{authorfullhash}{43c8a4bc0682bc14a3826ee1b6c2efcd}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Partisan polarization of public opinion is a major trend in American environmental politics. While the national pattern is widely recognized, scholars know much less about the polarization of public opinion over time at the state level. This lack of knowledge is unfortunate because geographic variation in the polarization of opinion is essential for explaining the origins of partisan polarization and evaluating its consequences for policy. To fill the gap, the multilevel regression and poststratification technique is applied to provide credible estimates of state-level environmental public opinion for both Democrats and Republicans, 1973-2012. It appears that the growing partisan gap reflects increased pro-environmental opinion among Democrats across many states, whereas Republican state-level public opinion is converging toward a much lower baseline. Cross-state variation among both parties has decreased over time, contributing to greater partisan polarization in the aggregate. Changes in the sorting of voters in and out of political parties cannot explain these patterns of polarization.}
+      \field{issn}{0964-4016}
+      \field{journaltitle}{Environmental politics}
+      \field{number}{1}
+      \field{title}{Environmental public opinion in U.S. states, 1973-2012}
+      \field{volume}{27}
+      \field{year}{2018}
+      \field{pages}{89\bibrangedash 114}
+      \range{pages}{26}
+      \keyw{American politics ; environmental politics ; partisan polarization ; public opinion}
+    \endentry
     \entry{few_2008}{misc}{}
       \name{author}{1}{}{%
         {{hash=0225846e9c16b1e8389734ceaa2c3c34}{%
@@ -433,6 +519,51 @@
       \field{title}{Poststratification Into Many Categories Using Hierarchical Logistic Regression}
       \field{year}{1997}
     \endentry
+    \entry{gelmanunwin}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fef02797c475524db141bc41263fd993}{%
+           family={Unwin},
+           familyi={U\bibinitperiod},
+           given={Antony},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Alexandria}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis Group}%
+      }
+      \strng{namehash}{dded20075fe252be76d3e9e03d6676bf}
+      \strng{fullhash}{dded20075fe252be76d3e9e03d6676bf}
+      \strng{bibnamehash}{dded20075fe252be76d3e9e03d6676bf}
+      \strng{authorbibnamehash}{dded20075fe252be76d3e9e03d6676bf}
+      \strng{authornamehash}{dded20075fe252be76d3e9e03d6676bf}
+      \strng{authorfullhash}{dded20075fe252be76d3e9e03d6676bf}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The importance of graphical displays in statistical practice has been recognized sporadically in the statistical literature over the past century, with wider awareness following Tukey's Exploratory Data Analysis and Tufte's books in the succeeding decades. But statistical graphics still occupy an awkward in-between position: within statistics, exploratory and graphical methods represent a minor subfield and are not well integrated with larger themes of modeling and inference. Outside of statistics, infographics (also called information visualization or Infovis) are huge, but their purveyors and enthusiasts appear largely to be uninterested in statistical principles. We present here a set of goals for graphical displays discussed primarily from the statistical point of view and discuss some inherent contradictions in these goals that may be impeding communication between the fields of statistics and Infovis. One of our constructive suggestions, to Infovis practitioners and statisticians alike, is to try not to cram into a single graph what can be better displayed in two or more. We recognize that we offer only one perspective and intend this article to be a starting point for a wide-ranging discussion among graphic designers, statisticians, and users of statistical methods. The purpose of this article is not to criticize but to explore the different goals that lead researchers in different fields to value different aspects of data visualization.}
+      \field{issn}{1061-8600}
+      \field{journaltitle}{Journal of computational and graphical statistics}
+      \field{number}{1}
+      \field{title}{Infovis and Statistical Graphics: Different Goals, Different Looks}
+      \field{volume}{22}
+      \field{year}{2013}
+      \field{pages}{2\bibrangedash 28}
+      \range{pages}{27}
+      \keyw{Computer graphics ; Graphic designers ; Graphics ; Infovis ; International Year of Statistics Featured Discussion: Info Vis ; Statistical communication ; Statistical methods ; Statistics ; Studies ; Visualization}
+    \endentry
     \entry{GhitzaYair2013DIwM}{article}{}
       \name{author}{2}{}{%
         {{hash=a301126e766af94d2100399d3a9bd9f2}{%
@@ -575,6 +706,107 @@
       \verb{doi}
       \verb 10.5281/zenodo.5082518
       \endverb
+    \endentry
+    \entry{hanretty}{article}{}
+      \name{author}{1}{}{%
+        {{hash=aa64d4c7f08fad1ea928dfb5e77ecb80}{%
+           family={Hanretty},
+           familyi={H\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa64d4c7f08fad1ea928dfb5e77ecb80}
+      \strng{fullhash}{aa64d4c7f08fad1ea928dfb5e77ecb80}
+      \strng{bibnamehash}{aa64d4c7f08fad1ea928dfb5e77ecb80}
+      \strng{authorbibnamehash}{aa64d4c7f08fad1ea928dfb5e77ecb80}
+      \strng{authornamehash}{aa64d4c7f08fad1ea928dfb5e77ecb80}
+      \strng{authorfullhash}{aa64d4c7f08fad1ea928dfb5e77ecb80}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article provides an overview of multilevel regression and post-stratification. It reviews the stages in estimating opinion for small areas, identifies circumstances in which multilevel regression and post-stratification can go wrong, or go right, and provides a worked example for the UK using publicly available data sources and a previously published post-stratification frame.}
+      \field{journaltitle}{Political Studies Review}
+      \field{number}{4}
+      \field{title}{An Introduction to Multilevel Regression and Post-Stratification for Estimating Constituency Opinion}
+      \field{volume}{18}
+      \field{year}{2020}
+      \field{pages}{630\bibrangedash 645}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1177/1478929919864773
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1177/1478929919864773
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/1478929919864773
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/1478929919864773
+      \endverb
+    \endentry
+    \entry{HullmanJessica2019IPoE}{article}{}
+      \name{author}{5}{}{%
+        {{hash=b068fe967c605a4bad2e31b2374698dd}{%
+           family={Hullman},
+           familyi={H\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8be5053454647beb0da66ca2fccb8222}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Xiaoli},
+           giveni={X\bibinitperiod}}}%
+        {{hash=df5c7af01dad8aa57f9ff29ddfa6c2d3}{%
+           family={Correll},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7655084cd4e8a3efce793d148f3086f4}{%
+           family={Kale},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62ee66d0503a0d594daf8e77fec37f8f}{%
+           family={Kay},
+           familyi={K\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e3ff094000d2821ad84408be9554fc83}
+      \strng{fullhash}{382f0ca728c220e3f0a8a380df44f23c}
+      \strng{bibnamehash}{382f0ca728c220e3f0a8a380df44f23c}
+      \strng{authorbibnamehash}{382f0ca728c220e3f0a8a380df44f23c}
+      \strng{authornamehash}{e3ff094000d2821ad84408be9554fc83}
+      \strng{authorfullhash}{382f0ca728c220e3f0a8a380df44f23c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Understanding and accounting for uncertainty is critical to effectively reasoning about visualized data. However, evaluating the impact of an uncertainty visualization is complex due to the difficulties that people have interpreting uncertainty and the challenge of defining correct behavior with uncertainty information. Currently, evaluators of uncertainty visualization must rely on general purpose visualization evaluation frameworks which can be ill-equipped to provide guidance with the unique difficulties of assessing judgments under uncertainty. To help evaluators navigate these complexities, we present a taxonomy for characterizing decisions made in designing an evaluation of an uncertainty visualization. Our taxonomy differentiates six levels of decisions that comprise an uncertainty visualization evaluation: the behavioral targets of the study, expected effects from an uncertainty visualization, evaluation goals, measures, elicitation techniques, and analysis approaches. Applying our taxonomy to 86 user studies of uncertainty visualizations, we find that existing evaluation practice, particularly in visualization research, focuses on Performance and Satisfaction-based measures that assume more predictable and statistically-driven judgment behavior than is suggested by research on human judgment and decision making. We reflect on common themes in evaluation practice concerning the interpretation and semantics of uncertainty, the use of confidence reporting, and a bias toward evaluating performance as accuracy rather than decision quality. We conclude with a concrete set of recommendations for evaluators designed to reduce the mismatch between the conceptualization of uncertainty in visualization versus other fields.}
+      \field{issn}{1077-2626}
+      \field{journaltitle}{IEEE transactions on visualization and computer graphics}
+      \field{number}{1}
+      \field{title}{In Pursuit of Error: A Survey of Uncertainty Visualization Evaluation}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{903\bibrangedash 913}
+      \range{pages}{11}
+      \keyw{Data visualization ; Decision making ; Measurement uncertainty ; probability distribution ; subjective confidence ; Task analysis ; Taxonomy ; Uncertainty ; Uncertainty visualization ; user study ; Visualization}
     \endentry
     \entry{mrpkit}{manual}{}
       \name{author}{1}{}{%
@@ -963,6 +1195,36 @@
       \verb 10.1093/oxfordhb/9780190213299.013.12
       \endverb
     \endentry
+    \entry{MengXiao-Li2018Spap}{article}{}
+      \name{author}{1}{}{%
+        {{hash=85ea5d8c6fc2be6b9cae229fdff73961}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Xiao-Li},
+           giveni={X\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{85ea5d8c6fc2be6b9cae229fdff73961}
+      \strng{fullhash}{85ea5d8c6fc2be6b9cae229fdff73961}
+      \strng{bibnamehash}{85ea5d8c6fc2be6b9cae229fdff73961}
+      \strng{authorbibnamehash}{85ea5d8c6fc2be6b9cae229fdff73961}
+      \strng{authornamehash}{85ea5d8c6fc2be6b9cae229fdff73961}
+      \strng{authorfullhash}{85ea5d8c6fc2be6b9cae229fdff73961}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1932-6157}
+      \field{journaltitle}{The annals of applied statistics}
+      \field{number}{2}
+      \field{title}{Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election}
+      \field{volume}{12}
+      \field{year}{2018}
+    \endentry
     \entry{MIDWAY2020100141}{article}{}
       \name{author}{1}{}{%
         {{hash=62bd3502219a887cd8075469acb36da4}{%
@@ -1149,6 +1411,49 @@
       \field{pages}{1292\bibrangedash 1294}
       \range{pages}{3}
       \keyw{Meta-Analysis as Topic ; Infection Control - methods ; Review Literature as Topic ; Humans ; Career development ; Medical colleges ; Health aspects}
+    \endentry
+    \entry{tukey}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9edab5dbc1987bcb98d6de058f00fc47}{%
+           family={Tukey},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{fullhash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{bibnamehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authorbibnamehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authornamehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authorfullhash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational and Graphical Statistics}
+      \field{number}{1}
+      \field{title}{Graphic Comparisons of Several Linked Aspects: Alternatives and Suggested Principles}
+      \field{volume}{2}
+      \field{year}{1993}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1080/10618600.1993.10474595
+      \endverb
+      \verb{eprint}
+      \verb https://www.tandfonline.com/doi/pdf/10.1080/10618600.1993.10474595
+      \endverb
+      \verb{urlraw}
+      \verb https://www.tandfonline.com/doi/abs/10.1080/10618600.1993.10474595
+      \endverb
+      \verb{url}
+      \verb https://www.tandfonline.com/doi/abs/10.1080/10618600.1993.10474595
+      \endverb
     \endentry
     \entry{pums_metadata}{misc}{}
       \name{author}{1}{}{%
@@ -1373,6 +1678,51 @@
       \range{pages}{12}
       \keyw{Elections ; Forecasting techniques ; Presidential elections ; Public opinion surveys ; Regression analysis ; Studies}
     \endentry
+    \entry{WarshawChristopher2012HSWM}{article}{}
+      \name{author}{2}{}{%
+        {{hash=26eed69a1f131512fb9f30f56cd7bedf}{%
+           family={Warshaw},
+           familyi={W\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e45e84dd5a00f5ce7c2db2028fd542db}{%
+           family={Rodden},
+           familyi={R\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {New York, USA}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{bf08ac2f6774e219885dd5fc391d75f2}
+      \strng{fullhash}{bf08ac2f6774e219885dd5fc391d75f2}
+      \strng{bibnamehash}{bf08ac2f6774e219885dd5fc391d75f2}
+      \strng{authorbibnamehash}{bf08ac2f6774e219885dd5fc391d75f2}
+      \strng{authornamehash}{bf08ac2f6774e219885dd5fc391d75f2}
+      \strng{authorfullhash}{bf08ac2f6774e219885dd5fc391d75f2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Due to insufficient sample sizes in national surveys, strikingly little is known about public opinion at the level of Congressional and state legislative districts in the United States. As a result, there has been virtually no study of whether legislators accurately represent the will of their constituents on individual issues. This article solves this problem by developing a multilevel regression and poststratification (MRP) model that combines survey and census data to estimate public opinion at the district level. We show that MRP estimates are excellent predictors of public opinion and referenda results for both congressional and state senate districts. Moreover, they have less error, higher correlations, and lower variance than either disaggregated survey estimates or presidential vote shares. The MRP approach provides American and Comparative Politics scholars with a valuable new tool to measure issue-specific public opinion at low levels of geographic aggregation.}
+      \field{issn}{0022-3816}
+      \field{journaltitle}{The Journal of politics}
+      \field{number}{1}
+      \field{title}{How Should We Measure District-Level Public Opinion on Individual Issues?}
+      \field{volume}{74}
+      \field{year}{2012}
+      \field{pages}{203\bibrangedash 219}
+      \range{pages}{17}
+      \keyw{Congressional districts ; Demography ; Electoral districts ; Modeling ; Opinion polls ; Presidential elections ; Public opinion ; Same sex marriage ; Sample size ; Voting}
+    \endentry
     \entry{layered-grammar}{article}{}
       \name{author}{1}{}{%
         {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
@@ -1405,6 +1755,49 @@
       \verb 10.1198/jcgs.2009.07098
       \endverb
     \endentry
+    \entry{statgraph}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
+           family={Wickham},
+           familyi={W\bibinitperiod},
+           given={Hadley},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Cancer Society}%
+      }
+      \strng{namehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{fullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{bibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorbibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authornamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorfullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Statistical graphics (let alone visualisation) is a very broad field. This article is my personal take on it, focussing on the works that are most useful for creating insightful graphics. Visualisations work because they display data in a way that is easy for the brain to parse and interpret: this means we need to know a little bit about cognitive psychology, particularly the perception of continuous values, colour and differences. It's also helpful to be aware of what's already been done, so I also summarise the origins the most common statistical graphics, plots of statistical summaries, graphics for high-dimensional data, display spatial data, and the grammar of graphics.}
+      \field{booktitle}{Encyclopedia of Environmetrics}
+      \field{isbn}{9780470057339}
+      \field{title}{Statistical Graphics}
+      \field{year}{2013}
+      \verb{doi}
+      \verb https://doi.org/10.1002/9780470057339.vnn164
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470057339.vnn164
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470057339.vnn164
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470057339.vnn164
+      \endverb
+      \keyw{visualisation,cognitive psychology,scatterplot,histogram,perception,grammar of graphics,maps}
+    \endentry
     \entry{ggplot2}{book}{}
       \name{author}{1}{}{%
         {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
@@ -1422,7 +1815,7 @@
       \strng{authorbibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
       \strng{authornamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
       \strng{authorfullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
