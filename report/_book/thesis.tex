@@ -308,13 +308,13 @@ This study finds that from 115 diagnostic plots, 109 (about 95\%) compare MRP es
 \caption{\label{fig:common-plots}Common plot types used in MRP visualisations. The blue shade display the number of plots that showed uncertainty, while the grey shade display the number of plots that did not show uncertainty. Both communication and diagnostics plots rarely displayed uncertainty.}
 \end{figure}
 
-Plot type, referred to as \texttt{geom} in the grammar of graphics, represents the shape and features displayed in the graph. Figure \ref{fig:common-plots} suggests that communication and diagnostic plots have a different pattern in which plot types are used. Communicating MRP estimates are mostly done using a choropleth map as MRP is often used for small area estimation. For diagnostic purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics.
+Plot type, referred to as \texttt{geom} in the grammar of graphics, represents the shape and features displayed in the graph. Figure \ref{fig:common-plots} suggests that communication and diagnostic plots have a different pattern in which plot types are used (See Appendix \ref{terms} for description/definition of each plot type). Communicating MRP estimates are mostly done using a choropleth map as MRP is often used for small area estimation. For diagnostic purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics.
 
 Notice that Figure \ref{fig:common-plots} also displays the use of uncertainty in MRP model visualisations. According to \textcite{MIDWAY2020100141}, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder some statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study - uncertainty is not often seen in the plots. This is possibly because many of the application areas are more familiar with official statistics. In official statistics uncertainty is often unreported because results that are not sufficiently precise are not reported.
 
 \textbf{Values put in x and y-axis}
 
-The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations (Figure \ref{fig:common-axis}), estimates, small area, actual value (truth), and time are amoung the values that are displayed in the plot. We can also see that the constructs represented by the x and y-axis are more varied in diagnostic plots. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common that the the fixed value is represented by the x-axis, while the random variable is represented in the y-axis. We do not see this in our results as we find estimates and truth are plotted on the x and y axes interchangeably. Another common rule of thumb is that time is almost always represented on the x-axis, which is supported by the findings of our study.
+The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations (Figure \ref{fig:common-axis}), estimates, small area, actual value (truth), and time are among the values that are displayed in the plot. We can also see that the constructs represented by the x and y-axis are more varied in diagnostic plots. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common that the the fixed value is represented by the x-axis, while the random variable is represented in the y-axis. We do not see this in our results as we find estimates and truth are plotted on the x and y axes interchangeably. Another common rule of thumb is that time is almost always represented on the x-axis, which is supported by the findings of our study.
 
 \begin{figure}
 \centering
@@ -817,6 +817,33 @@ This study, however, only explores the alternative possibility of MRP visualisat
 \section{Supplementary Material}\label{supplementary-material}}
 
 All of the codes used to conduct the analysis and produce the report is available in \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot}{this Github repository}. Particularly, the code for data wrangling and preparation can be found \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/cces_acs_wrangling.Rmd}{here}, and the code for MRP preparation and visualisation can be found \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_fitting.R}{here} and \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_vis.R}{here}, respectively.
+
+\hypertarget{terms}{%
+\section{Terms description}\label{terms}}
+
+There are some terms we used in Section \{com-prac\} that the readers might find unfamiliar with, especially in Figure \ref{fig:common-plots}, Figure \ref{fig:common-axis}, and Figure \ref{fig:facet-plots}. Hence Table \ref{tab:terms-desc} displays the description of those terms.
+
+\begin{table}
+
+\caption{\label{tab:terms-desc}Terms description used in Systematic Literature Review result}
+\centering
+\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Term & Description\\
+\midrule
+dot plot & Data is displayed by point/dot, one of the axis is categorical variable.\\
+scatter plot & Data is diplayed by point/dot, both x and y-axis are numeric.\\
+choropleth map & Thematic map coloured by the proportion of statistical variable it represents.\\
+bar plot & Data is displayed by rectangular bar, one of the axis is categorical variable.\\
+histogram & Similar to bar plot but number are grouped into ranges.\\
+\addlinespace
+density plot & Distribution of numerical variable, the y-axis is the kernel density estimates.\\
+other types & Other plot types found in the reviewed articles, but the number is too few to be categorised as one category (boxplot, heatmap, bubble plot, and logit curve)\\
+case & The response variable that is estimated. It sometimes displayed as faceted plot, in which each panel represents different outcome/response variable. For example, a graph contains 2 facets, A and B are the MRP estimates for opinion regarding same-sex marriage and abortion, respectively. Hence, A and B are considered as case.\\
+small area & Estimates of subpopulation, geographically or demographically, for example estimates by state, county, gender, age group, education level, and religion. In some plots, it could also be another variable associates with the MRP estimates. For example, if MRP estimates used as predictor for another response variable and there is a visualisation display their relationship, then this variable is considered as small area.\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \hypertarget{apd-state}{%
 \section{Proportion of observations by states}\label{apd-state}}

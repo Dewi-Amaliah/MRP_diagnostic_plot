@@ -56,8 +56,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.1}Supplementary Material}{47}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Proportion of observations by states}{47}{section.A.2}%
+\contentsline {section}{\numberline {A.2}Terms description}{47}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Additional Graphs}{50}{section.A.3}%
+\contentsline {section}{\numberline {A.3}Proportion of observations by states}{48}{section.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{57}{appendix*.34}%
+\contentsline {section}{\numberline {A.4}Additional Graphs}{51}{section.A.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{57}{appendix*.35}%

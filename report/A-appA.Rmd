@@ -16,6 +16,29 @@ read_chunk(here::here("case_study/analysis/mrp_vis.R"))
 
 All of the codes used to conduct the analysis and produce the report is available in [this Github repository](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot). Particularly, the code for data wrangling and preparation can be found [here](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/cces_acs_wrangling.Rmd), and the code for MRP preparation and visualisation can be found [here](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_fitting.R) and [here](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_vis.R), respectively.
 
+## Terms description {#terms}
+
+There are some terms we used in Section {com-prac} that the readers might find unfamiliar with, especially in Figure \@ref(fig:common-plots), Figure \@ref(fig:common-axis), and Figure \@ref(fig:facet-plots). Hence Table \@ref(tab:terms-desc) displays the description of those terms. 
+
+```{r terms-desc}
+terms <- tribble(~Term, ~Description,
+                 "dot plot", "Data is displayed by point/dot, one of the axis is categorical variable.",
+                 "scatter plot", "Data is diplayed by point/dot, both x and y-axis are numeric.",
+                 "choropleth map", "Thematic map coloured by the proportion of statistical variable it represents.",
+                 "bar plot", "Data is displayed by rectangular bar, one of the axis is categorical variable.",
+                 "histogram", "Similar to bar plot but number are grouped into ranges.",
+                 "density plot", "Distribution of numerical variable, the y-axis is the kernel density estimates.", 
+                 "other types", "Other plot types found in the reviewed articles, but the number is too few to be categorised as one category (boxplot, heatmap, bubble plot, and logit curve)",
+                 "case", "The response variable that is estimated. It sometimes displayed as faceted plot, in which each panel represents different outcome/response variable. For example, a graph contains 2 facets, A and B are the MRP estimates for opinion regarding same-sex marriage and abortion, respectively. Hence, A and B are considered as case.",
+                 "small area", "Estimates of subpopulation, geographically or demographically, for example estimates by state, county, gender, age group, education level, and religion. In some plots, it could also be another variable associates with the MRP estimates. For example, if MRP estimates used as predictor for another response variable and there is a visualisation display their relationship, then this variable is considered as small area.")
+
+kable(terms, format = "latex",
+      caption = "Terms description used in Systematic Literature Review result",
+      booktabs = TRUE) %>%
+  column_spec(2, width = "30em")
+```
+
+
 ## Proportion of observations by states {#apd-state}
 
 The following plots show the percentage of observations by state in CCES and ACS, respectively. 
