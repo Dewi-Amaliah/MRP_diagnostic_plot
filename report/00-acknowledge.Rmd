@@ -8,38 +8,17 @@ I would like to express my deepest gratitude to my supervisors, Lauren Kennedy a
 
 I would like to extend my gratitude to Dan Simpson, the chief examiner of Master of Business Analytics and Creative Activity, for all the guidance in completing this unit.
 
-Last but not least, I would like to thank Australia Awards Scholarship for giving me the scholarship to study at the Monash the University. Without it, studying in Australia would only remain as one of my childhood dreams.
+Last but not least, I would like to thank Australia Awards Scholarship for giving me the scholarship to study at the Monash University. Without it, studying in Australia would only remain as one of my childhood dreams.
 
 
 
 ## R packages {-}
 
-Several R [@R] packages are utilized to produce this thesis: 
+Several R [@R] packages are utilized to produce this thesis: mrpkit [@mrpkit]; ccesMRPprep [@ccesmrpprep]; brms [@brms]; survey [@survey]; tidyverse [@tidyverse]; forcats [@forcats]; Metrics [@Metrics]; data.table [@datatable]; kableExtra [@kable]; janitor [@janitor]; scales [@scales]; ggplot2 [@ggplot2]; patchwork [@pw]; flipPlots [@flipflops]; igraph [@igraph]; urbnmapr [@urban]; ggstance [@stance]; ggpmisc [@ggpmisc]; wacolors [@wacolors]; rmarkdown [@rmd]; knitr [@knitr]; MonashEBSTemplates [@monashtemp]. 
 
-- tidyverse
-- kableExtra
-- janitor
-- patchwork
-- flipPlots
-- igraph
 
-library(mrpkit)
-library(brms)
-library(tidyverse)
-library(tictoc)
-library(ggplot2)
-library(urbnmapr)
-library(ggthemes)
-library(kableExtra)
-library(patchwork)
-library(Metrics)
-library(survey)
-library(ggstance)
-library(data.table)
-library(ggpmisc)
-library(scales)
-library(wacolors)
-library(tidytext)
+
+
 
 
 
