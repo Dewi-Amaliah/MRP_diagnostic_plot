@@ -179,7 +179,7 @@ After mapping the survey and population data, we can obtain the poststratificati
 ```{r post-strat-table}
 ```
 
-Next, we implement Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates cmdstanr [@cmdstanr] as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC)](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
+Next, we implement Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates cmdstanr [@cmdstanr] as the backend. The samples from posterior distribution are generated in 4 chains with 1000 iterations in each chain using Hamiltonian Monte Carlo routines. The first half iterations are warmup and disregarded. It reach convergence when the potential scale reduction factor, $\hat{R}$, was equal to 1. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC)](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
 
 
 ## Results and Discussion
