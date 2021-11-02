@@ -23,7 +23,7 @@ Explicitly, the objectives of this study are:
 2. Understand the implication of existing visualisation choices with real-world data.
 3. Explore possible improvements of the current practice of MRP visualisation. 
 
-The first objectives will be reached by doing a systematic literature review, while the second and the third goals will be demonstrated through a case study. 
+The first objectives will be reached by doing a systematic literature review on peer-reviewed articles that applied MRP, while the second and the third goals will be demonstrated through a case study on the 2016 U.S. presidential election using the Cooperative Congressional Election Study (CCES) and American Community Survey (ACS) data.  
 
 
 ## MRP Overview {#overview}

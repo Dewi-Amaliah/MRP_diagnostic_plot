@@ -41,7 +41,7 @@
 \chapter*{Abstract}\label{abstract}}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Conducting a large survey to provide statistics to subpopulation levels is expensive, time-consuming, and often comes with unrepresentative samples. Multilevel Regression and Poststratification (MRP) has been a promising method to provide reliable estimates for subpopulations. To current, graphical display is widely used to communicate and diagnose MRP estimates. However, there have been few studies on how visualisation should be performed in this field. Accordingly, this study tries to fill this gap by examining the current practice of MRP visualisation using a systematic literature review. This study also applies MRP to estimate the Trump vote share in the U.S. 2016 presidential election using the Cooperative Congressional Election Study (CCES) to demonstrate the implication of the current visualisation practice and explore alternatives for its improvement. The main finding of this study is that uncertainty is not widely displayed in the current practice. The choropleth map is the most frequently used to display MRP estimates even though it only shows point estimates and could hinder the information from areas with a small polygon. Uncertainty is also not much displayed for model diagnostic in the current practice. Using various graphical representations, this study shows that visualisation with uncertainty can illustrate the effect of different model specifications on the estimation result. In addition, this study also proposes an alternative graph to also take the bias-variance trade-off into account in evaluating MRP performance.
+Conducting a large survey to provide statistics to subpopulation levels is expensive, time-consuming, and often comes with unrepresentative samples. Multilevel Regression and Poststratification (MRP) has been a promising method to provide reliable estimates for subpopulations. To current, graphical display is widely used to communicate and diagnose MRP estimates. However, there have been few studies on how visualisation should be performed in this field. Accordingly, this study tries to fill this gap by examining the current practice of MRP visualisation using a systematic literature review. This study also applies MRP to estimate the Trump vote share in the U.S. 2016 presidential election using the Cooperative Congressional Election Study (CCES) data to demonstrate the implication of the current visualisation practice and explore alternatives for its improvement. The main finding of this study is that uncertainty is not widely displayed in the current practice. The choropleth map is the most frequently used to display MRP estimates even though it only shows point estimates and could hinder the information from areas with a small polygon. Uncertainty is also not much displayed for model diagnostic in the current practice. Using various graphical representations, this study shows that visualisation with uncertainty can illustrate the effect of different model specifications on the estimation result. In addition, this study also proposes an alternative graph to also take the bias-variance trade-off into account in evaluating MRP performance.
 
 \newpage
 
@@ -85,7 +85,7 @@ Explicitly, the objectives of this study are:
   Explore possible improvements of the current practice of MRP visualisation.
 \end{enumerate}
 
-The first objectives will be reached by doing a systematic literature review, while the second and the third goals will be demonstrated through a case study.
+The first objectives will be reached by doing a systematic literature review on peer-reviewed articles that applied MRP, while the second and the third goals will be demonstrated through a case study on the 2016 U.S. presidential election using the Cooperative Congressional Election Study (CCES) and American Community Survey (ACS) data.
 
 \hypertarget{overview}{%
 \section{MRP Overview}\label{overview}}
@@ -277,7 +277,7 @@ According to \textcite{BotchkarevAlexei2019ANTD}, performance metrics is \emph{`
 \begin{figure}
 \centering
 \includegraphics{thesis_files/figure-latex/perform-plot-1.pdf}
-\caption{\label{fig:perform-plot}We observed five performance metrics used: Mean Absolute Error (MAE), bias, correlation, Mean Square Error/Root Mean Square Error (MSE/RMSE), and Standard Error (SE). The blue shade represents the number of articles that show performace metrics in plot, while the grey shade represents the number of articles that show performance of MRP but did not use the corresponding metrics.}
+\caption{\label{fig:perform-plot}We observed five performance metrics used: Mean Absolute Error (MAE), bias, correlation, Mean Square Error/Root Mean Square Error (MSE/RMSE), and Standard Error (SE). Each bar represents the number of plot that show performance metrics, particularly, the grey shade represents the number of plot that show MRP performance but did not use the corresponding metrics. It is possible that a plot shows more than one metrics, so that the blue bars do not count to the sum. We learn that MAE is metrics that is mostly shown in plots we reviewed.}
 \end{figure}
 
 In this study, we find that there are 39 plots out of 115 diagnostic plots (about 34\%) that display performance measures. As seen in Figure \ref{fig:perform-plot}, we find that MAE is the most widely used performance metric in MRP visualisations. Bias, which is interpreted similarly to MAE, is also widely used. Meanwhile, the squared error measures, which are MSE/RMSE and standard error, are only used in a few plots. It is interesting that correlation, which is not a common metric for performance, is more widely used than square error metrics.
@@ -292,7 +292,7 @@ The goal of MRP is to make a population estimate. The method aims to adjust an u
 \begin{figure}
 \centering
 \includegraphics{thesis_files/figure-latex/compare-plot-1.pdf}
-\caption{\label{fig:compare-plot}Estimates that are compared with MRP. The blue shade represents the number of articles that compare MRP estimates with the result of other estimation methods, while the grey shade represents the number of articles that also showed comparison of MRP but did not compare to this particular estimate. Note that the blue bars do not sum to the count because some plots compared to multiple alternative estimates.}
+\caption{\label{fig:compare-plot}Estimates that are compared with MRP. The bars represent the number of plots that display comparison of MRP with other estimates. Particularly, the blue shade represents the number of plots that compare MRP estimates with the estimates shown in each bar, while the grey shade represents the number of plots that also show comparison of MRP but did not compare to this particular estimate. Note that the blue bars do not sum to the count because some plots compared to multiple alternative estimates. It is shown that MRP estimates are mostly compared with raw estimates.}
 \end{figure}
 
 This study finds that from 115 diagnostic plots, 109 (about 95\%) compare MRP estimates with estimates from other methods. Figure \ref{fig:compare-plot} shows the distribution of alternative estimates. MRP estimates are mostly compared to direct estimates and the ground truth. Some studies also compare estimates from several MRP models (usually with different model specifications). There are not many plots showing the comparison between MRP estimates and weighted estimates.
@@ -308,18 +308,18 @@ This study finds that from 115 diagnostic plots, 109 (about 95\%) compare MRP es
 \caption{\label{fig:common-plots}Common plot types used in MRP visualisations. The blue shade display the number of plots that showed uncertainty, while the grey shade display the number of plots that did not show uncertainty. Both communication and diagnostics plots rarely displayed uncertainty.}
 \end{figure}
 
-Plot type, referred to as \texttt{geom} in the grammar of graphics, represents the shape and features displayed in the graph. Figure \ref{fig:common-plots} suggests that communication and diagnostic plots have a different pattern in which plot types are used. Communicating MRP estimates are mostly done using a choropleth map as MRP is often used for small area estimation. For diagnostic purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics.
+Plot type, referred to as \texttt{geom} in the grammar of graphics, represents the shape and features displayed in the graph. Figure \ref{fig:common-plots} suggests that communication and diagnostic plots have a different pattern in which plot types are used (See Appendix \ref{terms} for description/definition of each plot type). Communicating MRP estimates are mostly done using a choropleth map as MRP is often used for small area estimation. For diagnostic purposes, dot plots are mostly used to compare more than two estimation methods or to show some performance metrics.
 
 Notice that Figure \ref{fig:common-plots} also displays the use of uncertainty in MRP model visualisations. According to \textcite{MIDWAY2020100141}, displaying uncertainty in the statistical graphs is essential as the absence of this measure would produce a misleading interpretation and hinder some statistical messages. However, he further states that uncertainty is often neglected in data visualisation. This is what we find in this study - uncertainty is not often seen in the plots. This is possibly because many of the application areas are more familiar with official statistics. In official statistics uncertainty is often unreported because results that are not sufficiently precise are not reported.
 
 \textbf{Values put in x and y-axis}
 
-The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations (Figure \ref{fig:common-axis}), estimates, small area, actual value (truth), and time are amoung the values that are displayed in the plot. We can also see that the constructs represented by the x and y-axis are more varied in diagnostic plots. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common that the the fixed value is represented by the x-axis, while the random variable is represented in the y-axis. We do not see this in our results as we find estimates and truth are plotted on the x and y axes interchangeably. Another common rule of thumb is that time is almost always represented on the x-axis, which is supported by the findings of our study.
+The main component of a data visualisation is the axis. x and y-axis represents what value/data are exactly displayed in the graph. In MRP visualisations (Figure \ref{fig:common-axis}), estimates, small area, actual value (truth), and time are among the values that are displayed in the plot. We can also see that the constructs represented by the x and y-axis are more varied in diagnostic plots. It is worth noting that there are no strict rules on values to put in x and y-axis. However, it is a common that the the fixed value is represented by the x-axis, while the random variable is represented in the y-axis. We do not see this in our results as we find estimates and truth are plotted on the x and y axes interchangeably. Another common rule of thumb is that time is almost always represented on the x-axis, which is supported by the findings of our study.
 
 \begin{figure}
 \centering
 \includegraphics{thesis_files/figure-latex/common-axis-1.pdf}
-\caption{\label{fig:common-axis}Common values put in plots' axis. Axis in diagnostic plots more varied compared to communication plot.}
+\caption{\label{fig:common-axis}Common values put in plots' axis. If the values represented in the x and y-axis are longitude and lattitude, it means that the plot is a map. `not used' means that the plot is one dimension. It conveys that axis in diagnostic plots more varied compared to communication plot.}
 \end{figure}
 
 \textbf{Facet}
@@ -329,10 +329,8 @@ Paneling or faceting is considered as to one of the effective visualisation tech
 \begin{figure}
 \centering
 \includegraphics{thesis_files/figure-latex/facet-plots-1.pdf}
-\caption{\label{fig:facet-plots}The facetting variable in MRP visualisations}
+\caption{\label{fig:facet-plots}The facetting variable in MRP visualisations. Most of plots in the articles reviewed are faceted by small area and case (outcomes measured)}
 \end{figure}
-
-\newpage
 
 \textbf{Other features used}
 
@@ -343,7 +341,7 @@ We find, as shown in Figure \ref{fig:sankey-feature}, that both communication an
 \begin{figure}
 \centering
 \includegraphics{thesis_files/figure-latex/sankey-feature-1.pdf}
-\caption{\label{fig:sankey-feature}Color and shape commonly used in MRP visualisations. Both communication and diagnostic plots rarely use color and shape features.}
+\caption{\label{fig:sankey-feature}Values that are commonly represented by color and shape in MRP visualisations. Both communication and diagnostic plots rarely use color and shape features to display values.}
 \end{figure}
 
 \hypertarget{ch:case-stud}{%
@@ -695,7 +693,7 @@ age & state & gender & collapsed\_re & original\_re & education & N\_j\\
 \end{tabular}
 \end{table}
 
-Next, we implement Bayesian multilevel model using \texttt{brms} \autocite{brms} to fit the model and obtain the posterior distributions of the parameters. \texttt{brms} itself incorporates cmdstanr \autocite{cmdstanr} as the backend. The samples of posterior distribution are generated in 4 chains with 1000 iterations in each chain. Since this task is computationally heavy and time-consuming, we conduct it using \href{https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html}{Monash's High Performance Cluster (HPC)}.
+Next, we implement Bayesian multilevel model using \texttt{brms} \autocite{brms} to fit the model and obtain the posterior distributions of the parameters. \texttt{brms} itself incorporates cmdstanr \autocite{cmdstanr} as the backend. The samples from posterior distribution are generated in 4 chains with 1000 iterations in each chain using Hamiltonian Monte Carlo routines. The first half iterations are warmup and disregarded. It reach convergence when the potential scale reduction factor, \(\hat{R}\), was equal to 1. Since this task is computationally heavy and time-consuming, we conduct it using \href{https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html}{Monash's High Performance Cluster (HPC)}.
 
 \hypertarget{results-and-discussion}{%
 \section{Results and Discussion}\label{results-and-discussion}}
@@ -817,6 +815,33 @@ This study, however, only explores the alternative possibility of MRP visualisat
 \section{Supplementary Material}\label{supplementary-material}}
 
 All of the codes used to conduct the analysis and produce the report is available in \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot}{this Github repository}. Particularly, the code for data wrangling and preparation can be found \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/cces_acs_wrangling.Rmd}{here}, and the code for MRP preparation and visualisation can be found \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_fitting.R}{here} and \href{https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/mrp_vis.R}{here}, respectively.
+
+\hypertarget{terms}{%
+\section{Terms description}\label{terms}}
+
+There are some terms we used in Section \{com-prac\} that the readers might find unfamiliar with, especially in Figure \ref{fig:common-plots}, Figure \ref{fig:common-axis}, and Figure \ref{fig:facet-plots}. Hence Table \ref{tab:terms-desc} displays the description of those terms.
+
+\begin{table}
+
+\caption{\label{tab:terms-desc}Terms description used in Systematic Literature Review result}
+\centering
+\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Term & Description\\
+\midrule
+dot plot & Data is displayed by point/dot, one of the axis is categorical variable.\\
+scatter plot & Data is diplayed by point/dot, both x and y-axis are numeric.\\
+choropleth map & Thematic map coloured by the proportion of statistical variable it represents.\\
+bar plot & Data is displayed by rectangular bar, one of the axis is categorical variable.\\
+histogram & Similar to bar plot but number are grouped into ranges.\\
+\addlinespace
+density plot & Distribution of numerical variable, the y-axis is the kernel density estimates.\\
+other types & Other plot types found in the reviewed articles, but the number is too few to be categorised as one category (boxplot, heatmap, bubble plot, and logit curve)\\
+case & The response variable that is estimated. It sometimes displayed as faceted plot, in which each panel represents different outcome/response variable. For example, a graph contains 2 facets, A and B are the MRP estimates for opinion regarding same-sex marriage and abortion, respectively. Hence, A and B are considered as case.\\
+small area & Estimates of subpopulation, geographically or demographically, for example estimates by state, county, gender, age group, education level, and religion. In some plots, it could also be another variable associates with the MRP estimates. For example, if MRP estimates used as predictor for another response variable and there is a visualisation display their relationship, then this variable is considered as small area.\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \hypertarget{apd-state}{%
 \section{Proportion of observations by states}\label{apd-state}}

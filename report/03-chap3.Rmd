@@ -182,8 +182,8 @@ After mapping the survey and population data, we can obtain a poststratification
 ```{r post-strat-table}
 ```
 
-Next, we implement a Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates either rstan (LK NOTES: cite this) or cmdstanr [@cmdstanr] as the backend, which in turn wrap the probabilistic programming language Stan (LK NOTES: cite this). We use 4000 samples of posterior distribution generated with 4 independent chains. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC)](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
 
+Next, we implement a Bayesian multilevel model using `brms` [@brms] to fit the model and obtain the posterior distributions of the parameters. `brms` itself incorporates either rstan (LK NOTES: cite this) or cmdstanr [@cmdstanr] as the backend, which in turn wrap the probabilistic programming language Stan (LK NOTES: cite this). We use 4000 samples of posterior distribution generated with 4 independent chains. Since this task is computationally heavy and time-consuming, we conduct it using [Monash’s High Performance Cluster (HPC)](https://docs.monarch.erc.monash.edu/MonARCH/aboutMonArch.html). 
 
 ## Results and Discussion
 
