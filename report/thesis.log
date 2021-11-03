@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  3 NOV 2021 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  3 NOV 2021 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1197,16 +1197,16 @@ nput line 793.
 Chapter 4.
 [45
 
-] [46
-
-]
+] [46]
 Appendix A.
 
 Overfull \hbox (2.44518pt too wide) in paragraph at lines 828--844
  [][] 
  []
 
-[47]
+[47
+
+]
 <thesis_files/figure-latex/state-cces-1.pdf, id=811, 361.35pt x 433.62pt>
 File: thesis_files/figure-latex/state-cces-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/state-cces-1.pdf>
@@ -1307,7 +1307,7 @@ y/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/deeamaliah/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/deeamaliah/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/deeamalia
 h/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (65 pages, 1010357 bytes).
+Output written on thesis.pdf (65 pages, 1010987 bytes).
 PDF statistics:
  1103 PDF objects out of 1200 (max. 8388607)
  929 compressed objects within 10 object streams
