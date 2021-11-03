@@ -14,7 +14,7 @@ Last but not least, I would like to thank Australia Awards Scholarship for givin
 
 ## R packages {-}
 
-Several R [@R] packages are utilized to produce this thesis: mrpkit [@mrpkit]; ccesMRPprep [@ccesmrpprep]; brms [@brms]; cmdstanr [@cmdstanr]; survey [@survey]; tidyverse [@tidyverse]; forcats [@forcats]; Metrics [@Metrics]; data.table [@datatable]; kableExtra [@kable]; janitor [@janitor]; scales [@scales]; ggplot2 [@ggplot2]; patchwork [@pw]; flipPlots [@flipflops]; igraph [@igraph]; urbnmapr [@urban]; ggstance [@stance]; ggpmisc [@ggpmisc]; wacolors [@wacolors]; rmarkdown [@rmd]; knitr [@knitr]; MonashEBSTemplates [@monashtemp]. 
+Several R [@R] packages are utilized to produce this thesis: `mrpkit` [@mrpkit]; `ccesMRPprep` [@ccesmrpprep]; `brms` [@brms]; `cmdstanr` [@cmdstanr]; `survey` [@survey]; `tidyverse` [@tidyverse]; `forcats` [@forcats]; `Metrics` [@Metrics]; `data.table` [@datatable]; `kableExtra` [@kable]; `janitor` [@janitor]; `scales` [@scales]; `ggplot2` [@ggplot2]; `patchwork` [@pw]; `flipPlots` [@flipflops]; `igraph` [@igraph]; `urbnmapr` [@urban]; `ggstance` [@stance]; `ggpmisc` [@ggpmisc]; `wacolors` [@wacolors]; `rmarkdown` [@rmd]; `knitr` [@knitr]; `MonashEBSTemplates` [@monashtemp]. 
 
 
 

@@ -46,9 +46,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Results and Discussion}{32}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Visualisations for communication purposes}{32}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.1}Visualisations for communication purposes}{33}{subsection.3.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Visualisation for diagnostic purposes}{34}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}Visualisation for diagnostic purposes}{35}{subsection.3.4.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Conclusion}{45}{chapter.4}%
 \defcounter {refsection}{0}\relax 

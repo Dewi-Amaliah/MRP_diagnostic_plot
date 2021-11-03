@@ -38,7 +38,7 @@ The outcome variables, which will be explained in detail in Section \@ref(spec),
 ```
 
 
-Further, the geography and demographic variables used as covariates in the models are `state`, `age`, `gender`, `education`, and `race`. Table \@ref(tab:covariate-tables) shows the distribution of categories/levels of `age`, `gender`, `education`, and `race`. Initially, age is a discrete variable but in this case it is categorised. (LK NOTES: Do you mean "age is recorded as integers but we transformed it into X age groups."?) Also, `education` and `race` have more levels in the original data but are collapsed to have to obtain fewer levels (LK NOTES: add in why you did this). The proportion of people answered the survey based on the state is displayed in the appendix of this thesis (\@ref(apd-state)). 
+Further, the geography and demographic variables used as covariates in the models are `state`, `age`, `gender`, `education`, and `race`. Table \@ref(tab:covariate-tables) shows the distribution of categories/levels of `age`, `gender`, `education`, and `race`. Initially, age recorded as integers but we transformed it into five age groups. Also, `education` and `race` have more levels in the original data but are collapsed to have to obtain fewer levels. In particular, we use the standard/default categorisation in the `ccesMRPprep` package. The proportion of people answered the survey based on the state is displayed in the appendix of this thesis (\@ref(apd-state)). 
 
 ```{r covariate-tables}
 ```
@@ -46,7 +46,7 @@ Further, the geography and demographic variables used as covariates in the model
 
 ### American Community Survey (ACS) 2015-2017
 
-In this study, we use the ACS 2015-2017 data as the poststratification data. The ACS is a large, survey of the American population conducted by the census bureau and covering jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics [@acs_data_about]. The ACS uses monthly probabilistic samples to produce the annual estimates. The ACS is desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. It is also implied by @GaoYuxiang2021IMRa that the ACS is the most accurate representation of the U.S. population every year (LK NOTES: I don't think this is implied). However, it is also worth noting that the ACS coverage do not necessarily match the CCES sample, and therefore, bias might always be presented. (LK NOTES: I think you could mean two things from this. The first is that the ACS and the CCES are both surveys and both do not fully capture the population. The other could be that the target population of the ACS (American population) and the population we are interested in (voting population) is different. The third (I know I said two) is that the CCES and the ACS target different populations. You'll need to check this with Shiro. It would be good to clarify this)
+In this study, we use the ACS 2015-2017 data as the poststratification data. The ACS is a large, survey of the American population conducted by the census bureau and covering jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics [@acs_data_about]. The ACS uses monthly probabilistic samples to produce the annual estimates. The ACS is desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4%, 91.9%, 91.6%, respectively [@acs_coverage_rate]. However, it is also worth noting that the target population of the ACS (American population) and the population we are interested in (voting population) is different, and therefore, bias might always be presented.
 
 To construct the desired poststratification matrix, we need the individual data of the ACS instead of the aggregated statistics. To do this, we use the 1-year Public Use Microdata Sample (PUMS), which carries the information/records of individual people on a yearly basis, appropriately deidentified. The 1-year PUMS data reflects approximately one percent of the U.S. population [@pums_metadata]. Therefore, in this study, we use three years periods of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (`PWGTP`). Since we use three years period, this weight is then divided by 3 to obtain a population total that matches the full population total.  
 
@@ -63,7 +63,6 @@ The data is publicly available on the [U.S. Census Bureau website](https://www.c
 
 In Chapter 2, we found that the diagnostic plots shown in many articles compare MRP estimates with other estimates. One version of this compares several MRP estimates with different model specifications. To allow us to make the same comparisons in this case study, we build five different MRP models as follows.
 
-\newpage
 
 **Baseline model** 
 
@@ -76,13 +75,16 @@ The demographic predictors used are `age`, `gender`, `state`, and `race`. As see
 
 \begin{equation} 
 \begin{split}
-\Pr(vote_{j[i]} = 1) = logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{collapsed\ race}_{m[i]}\right), for\ i = 1, ...., n, 
+\Pr(vote_{j[i]} = 1) & = logit^{-1}\left(\beta_0 + \alpha^{age}_{m[i]} + \alpha^{gender}_{m[i]} + \alpha^{state}_{m[i]} + \alpha^{collapsed\ race}_{m[i]}\right), \\
+for\ i  & = 1, ...., n, \\
+\beta_0  & \sim t(3,0,2.5) \\
+\alpha^k_m  & \sim N(0,\sigma_k)
 \end{split}
 (\#eq:baseline-model)
 \end{equation}
 
 
-and $vote_{j[i]}$ is the binary outcome (1 = yes, 0 = no) for individual $i$ in poststratification cell $j$. $\beta_0$ is the intercept. $\alpha^{age}_{m[i]}$, $\alpha^{gender}_{m[i]}$, $\alpha^{state}_{m[i]}$, and $\alpha^{collapsed\ race}_{m[i]}$ are the random effects for `age`, `gender`, `state`, and `collapsed race`, respectively. The subscript in each coefficient represents the category of the $i-th$ respondent, such as, $\alpha^{collapsed\ race}_{m[i]}$ takes value from {$\alpha^{collapsed\ race}_{White}$, $\alpha^{collapsed\ race}_{Black}$, $\alpha^{collapsed\ race}_{Hispanic}$, $\alpha^{collapsed\ race}_{Asian}$, and $\alpha^{collapsed\ race}_{Other}$}. Each random effect has an independent prior distribution, such as, $\alpha^{collapsed\ race}_{m}$ ~ $N(0, \sigma^2_{collapsed\ race})$ and $\alpha^{collapsed\ race}_{m}$ ~ $t(3, 0, 2.5)$. Here, we use the default prior because we only want to compare models for visualisation purpose instead of looking for the best model for estimation.  
+and $vote_{j[i]}$ is the binary outcome (1 = yes, 0 = no) for individual $i$ in poststratification cell $j$. $\beta_0$ is the intercept. $\alpha^{age}_{m[i]}$, $\alpha^{gender}_{m[i]}$, $\alpha^{state}_{m[i]}$, and $\alpha^{collapsed\ race}_{m[i]}$ are the random effects for `age`, `gender`, `state`, and `collapsed race`, respectively. The subscript in each coefficient represents the category of the $i-th$ respondent, such as, $\alpha^{collapsed\ race}_{m[i]}$ takes value from {$\alpha^{collapsed\ race}_{White}$, $\alpha^{collapsed\ race}_{Black}$, $\alpha^{collapsed\ race}_{Hispanic}$, $\alpha^{collapsed\ race}_{Asian}$, and $\alpha^{collapsed\ race}_{Other}$}. Each random effect has an independent prior distribution, such as, $\alpha^{collapsed\ race}_{m}$ ~ $N(0, \sigma^2_{collapsed\ race})$ and $\beta_0$ ~ $t(3, 0, 2.5)$. Here, we use the default prior because we only want to compare models for visualisation purpose instead of looking for the best model for estimation.  
 
 \vspace{\baselineskip}
 
@@ -152,9 +154,7 @@ for\ i &= 1, ...., n.
 \end{equation}
 
 
-The estimates from the multilevel model is then used for the second stage of MRP, which is poststratification. As the explanation in Section \@ref(overview), poststratification is essentially taking the weighted average of the cell-wise posterior estimates with the  size of each cell in the population table as the weight [@GaoYuxiang2021IMRa]. For example, the poststratification estimates of Black Men with an educational level of high school or less (HS or Less) in Alabama and aged 45 to 64 years old who voted for Trump in the 2016 presidential election is:
-
-(LK NOTES: Dewi, I'm not quite sure about this bit - the thing you discuss above would be one poststratification cell so I am unsure about the sum.)
+The estimates from the multilevel model is then used for the second stage of MRP, which is poststratification. As the explanation in Section \@ref(overview), poststratification is essentially taking the weighted average of the cell-wise posterior estimates with the  size of each cell in the population table as the weight [@GaoYuxiang2021IMRa]. For example, the poststratification estimates of people who completed High School or less and voted for Trump in the 2016 presidential election is:
 
 \begin{equation} 
 \begin{split}
@@ -175,7 +175,7 @@ where $\theta_S$ corresponds to the proportion of 45 to 64 years old of Black Me
 ```{r tabulation}
 ```
 
-The MRP models require synchronous measurements between survey and population data. To achieve this, we need to map the survey data to the population data. In this study, the model preparation and survey-population data mapping is conducted with an R package, `mrpkit` [@mrpkit]. This package allows the transparent and reproducible workflow to build MRP model, from the data mapping until the prediction stage, including the model specification setting. The detailed code to build the MRP models is available in the supplementary materials of this thesis. (LK NOTES: I suggest that you say something along the lines of "This R package is not the result of my thesis but I am one of the authors of the package.")
+The MRP models require synchronous measurements between survey and population data. To achieve this, we need to map the survey data to the population data. In this study, the model preparation and survey-population data mapping is conducted with an R package, `mrpkit` [@mrpkit]. This package allows the transparent and reproducible workflow to build MRP model, from the data mapping until the prediction stage, including the model specification setting. This package is not the product of this study but I am one of its authors. The detailed code to build the MRP models is available in the supplementary materials of this thesis. 
 
 After mapping the survey and population data, we can obtain a poststratification table, the first five rows of which is displayed in Table \@ref(tab:post-strat-table)
 
@@ -210,7 +210,7 @@ Choropleth maps also only display point estimates, which is only one component o
 
 ### Visualisation for diagnostic purposes {#vis-purp}
 
-**Displaying Comparison**
+**Displaying Comparison of Estimation Methods**
 
 According to @tukey, one of the graphic's purposes is for comparison. In MRP visualisation practice, the estimates from various estimation methods are often compared. Here, we compare state-level MRP estimates with raw and weighted estimates compared to their closeness to the ground truth (actual Trump vote shares). The common aesthetic used to display this kind of purpose in the reviewed articles is a scatter plot (around 31% of the total diagnostic plots).  
 
@@ -230,6 +230,9 @@ However, a scatter plot is appropriate when the purpose is to allow the readers 
 ```
 
 Using this graph, we can get the same information regarding estimate accuracy. However, we can also display other information related to the estimation error, which can then be compared across estimation methods. It shows that the more conservative the state, the higher the error. This pattern could indicate that the survey data adjustments are not sufficient to correct for sampling bias, or potentially bias between the population we poststratify to and the voting population.
+
+
+**Displaying Comparison of Model Specifications**
 
 Aside from comparing estimation methods(weighed, raw or direct estimates and mrp), we could also compare between different model specifications. Revisiting on what @WickhamHadley2015VsmR stated, model visualisation could answer how the model fits change as the data changes. The following graphics will demonstrate this purpose.  
 
@@ -253,8 +256,6 @@ In addition to estimation by small geographical area, MRP is also often used to 
 ```
 
 Figure \@ref(fig:violin-levels-plot) shows the distribution of the response variable, which is probability of vote for Trump for each demographic levels regardless the geographic levels or the states where the voters live. This figure illustrates how the estimates will be different as the result of different covariates used.   For example, in Panel A, the range of probability of vote for Trump of Native Americans in the model with more race categories is wider than the model that collapsed Native American and All Other as one race category. We can also see that the median of the outcome in All Other race categories is slightly different in the two models. A more pronounced difference could also be observed in Panel B which compare the baseline model with the model with education level as additional covariate. Incorporating education into the model results in a different pattern compared to the baseline model, i.e., the higher the education level, the less probability of voting for Trump. In Panel C, we can see the same trend for the three model fits, where the older age-groups tend to be more likely to vote for Trump. However, the median of model with additional adjustment variables is slightly higher in all age groups. 
-
-\newpage
 
 **Visualising Metrics**
 
