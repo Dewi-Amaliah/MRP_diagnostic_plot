@@ -5,8 +5,8 @@ knit: "bookdown::render_book"
 
 ```{r setup-chap3, include=FALSE, cache = FALSE}
 library(knitr)
-read_chunk(here::here("case_study/analysis/mrp_fitting.R"))
-read_chunk(here::here("case_study/analysis/mrp_vis.R"))
+read_chunk(here::here("case_study/analysis/analysis_code/mrp_fitting.R"))
+read_chunk(here::here("case_study/analysis/analysis_code/mrp_vis.R"))
 ```
 
 
