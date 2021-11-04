@@ -1,4 +1,4 @@
-# Visualising MRP: Alternative of The Current Practice
+# Visualising MRP: Alternatives of The Current Practice
 
 ## :clipboard: About
 
