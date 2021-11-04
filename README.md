@@ -37,9 +37,13 @@ cces_2016 <- cces %>%
 
 ### ACS data 
 
+This study uses 3-years of ACS data, i.e., [2015-2017 Public Use Microdata Sample (PUMS)](https://www.census.gov/programs-surveys/acs/microdata/access.2015.html), which can be obtained through:
 
+1. [2015 PUMS data](https://www2.census.gov/programs-surveys/acs/data/pums/2015/1-Year/), download the file named: csv_pus.zip
+2. [2016 PUMS data](https://www2.census.gov/programs-surveys/acs/data/pums/2016/1-Year/), download the file named: csv_pus.zip
+3. [2017 PUMS data](https://www2.census.gov/programs-surveys/acs/data/pums/2017/1-Year/), download the file named: csv_pus.zip
 
-The complete code to do data preparation is available in [this file](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/blob/main/case_study/analysis/cces_acs_wrangling.Rmd). 
+The complete codes to do data preparation is available in [this file](https://github.com/Dewi-Amaliah/MRP_diagnostic_plot/tree/main/case_study/analysis/analysis_code). 
 
 ## :file_folder: File Structure
 
@@ -47,37 +51,42 @@ The file stucture of this repository is:
 
 #### :card_index_dividers: case_study
 
-This folder includes all of the files needed to do case study.
+This folder includes all of the files needed to reproduce the analysis in the case study (assume that the downloaded ACS data is saved in folder data/data_raw). 
+
   - analysis
-    - cces_acs_wrangling.R (data wrangling of CCES and ACS data)
-    - mrp_build.R (code to build MRP model)
-    - mrp_visualisation.R (code to visualise MRP estimates)
+    - analysis_code (folder contains codes used in the case study)
+      - cces_acs_wrangling.R (data wrangling of CCES and ACS data)
+      - mrp_build.Rmd (code used when initially building the MRP and explore visualisation, not used in the final report)
+      - mrp_fitting.R (code used to prepare and specifiy MRP models, used in the report for Chapter 3)
+      - mrp_vis.R (code used to visualise MRP estimatesm used in report for Chapter 3)
     - hpc_code (folder contains R codes and slurm submission for High Performance Cluster)
-    
-  Note: 
-  - Wrangled data and raw data are not published in this repository with respect to data publication license. However steps to access the data would be discussed in the report (chapter 3).
-  - results folder is not included in this repository due to size limit. Code to produce the file in results is accessable and reproducible in case_study/mrp_build.R
-  
-#### :card_index_dividers: endnote_lib
-
-This folder contains endnote files to manage reviewed literatures. 
-  
-#### :card_index_dividers: lit_review_analysis
-  This folder contains the analysis of extracted data from systematic literature review. 
-  - analysis
-    - preliminary_result.Rmd (rough result of systematic literature review)
-    - preliminary_result.html (html version)
-    - slr_analysis.R (code used in Chapter 2)
-  - paper_metadata
-    Folder contains csv files of papers' metadata extracted from slr. 
-
-#### :card_index_dividers: lit_review_documentation
-  - Database_search.docx (documentation of paper identification in each research database)
-  - inclusion_mismatch_notes.docx (documentation of screening mismatch by DA and LK)
-
+      - The results of model fitting in the HPC are saved in a folder called results.
+        
 #### :card_index_dividers: presentation
   This folder contains slides for presenting the thesis (preliminary presentation and final presentation).
-  Slides are made using Xaringan. 
+  Slides are made using Xaringan in `rmarkdown`.
 
 #### :card_index_dividers: report
-  This folder contains the thesis/report. The full report (pdf version) is located in _book folder.
+  This folder contains the thesis/report. The full report (pdf version) is located in folder: "_book"
+  
+#### :card_index_dividers: sys_literature_review
+
+This folder includes all of the files needed to reproduce the systematic literature review in this study.
+  
+  - analysis (folder contains the analysis of extracted data from systematic literature review).
+    - preliminary_result.Rmd (rough result of systematic literature review)
+    - slr_analysis.R (code used in Chapter 2)
+  - endnote_lib
+    - This folder contains endnote files to manage reviewed literatures. 
+  - lit_review_documentation
+    - Database_search.docx (documentation of paper identification in each research database)
+    - inclusion_mismatch_notes.docx (documentation of screening mismatch by DA and LK)
+  - paper_metadata
+    - Folder contains csv files of papers' metadata extracted from slr. 
+
+## :wrench: Packages used 
+
+If you want to reproduce this analysis, make sure you have these packages installed:
+`mrpkit`; `ccesMRPprep` ; `brms`; `cmdstanr`; `survey`; `tidyverse`; `forcats`; `Metrics`; `data.table`; `kableExtra`; `janitor`; `scales`; `ggplot2`; `patchwork`; `flipPlots`; `igraph`; `urbnmapr`; `ggstance`; `ggpmisc`; `wacolors`; `rmarkdown`; `knitr`; `MonashEBSTemplates`.
+
+
