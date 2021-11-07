@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.1}Performance metrics used in MRP}{15}{subsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Common comparisions with MRP}{17}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Common comparisons with MRP}{17}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.3}Common grammar in MRP visualisations}{18}{subsection.2.4.3}%
 \defcounter {refsection}{0}\relax 
@@ -38,13 +38,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.1}Cooperative Congressional Election Study (CCES) 2016}{24}{subsection.3.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}American Community Survey (ACS) 2015-2017}{26}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}American Community Survey (ACS) 2015-2017}{25}{subsection.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Model Specifications}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Model Specifications}{28}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Model Preparation and Fitting}{31}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Model Preparation and Fitting}{32}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Results and Discussion}{32}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Results and Discussion}{33}{section.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.1}Visualisations for communication purposes}{33}{subsection.3.4.1}%
 \defcounter {refsection}{0}\relax 

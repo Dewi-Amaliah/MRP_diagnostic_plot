@@ -552,7 +552,8 @@ get_metrics_plot <- function(data, title, subtitle, xlab){
           axis.title = element_text(size = 9),
           axis.text.x = element_text(size = 6),
           plot.title = element_text(size = 10),
-          plot.subtitle = element_text(size = 8))
+          plot.subtitle = element_text(size = 8),
+          plot.margin = unit(c(1,1,1,1), "cm"))
   return(plot)
 }
 

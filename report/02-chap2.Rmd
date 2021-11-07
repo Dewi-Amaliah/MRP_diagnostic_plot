@@ -34,12 +34,12 @@ We screen all of the articles based on predetermined criteria. We find that 3 ar
 
 ### Stage 1: Review of abstracts
 
-In the first stage DA and LK independently review all article abstracts with the following eligibility criteria:
+In the first stage the author and and my supervisor (Kennedy) independently review all article abstracts with the following eligibility criteria:
 
 1. The abstract should mention analysis of data or creation of simulation data. 
 2. The abstract should mention the use of MRP or multilevel models to make population estimates or the use of other regression models (BART, spatial, stacking, trees) to make population estimates.
 
-During the screening, DA and LK agreed that 61 articles meet the eligibility criteria listed above, while 104 articles do not meet the criteria. The two reviewers disagreed on 44 articles. Accordingly, DA and LK skim the full manuscript to decide whether the paper could be included in the next stage or not. As the result, an additional 22 more articles are moved to stage 2, making a total of 83. 
+During the screening, we agreed agreed that 61 articles meet the eligibility criteria listed above, while 104 articles do not meet the criteria. The two reviewers disagreed on 44 articles. Accordingly, we skim the full manuscript to decide whether the paper could be included in the next stage or not. As the result, an additional 22 more articles are moved to stage 2, making a total of 83. 
 
 ### Stage 2: Full manuscript review
 
@@ -104,7 +104,7 @@ In this study, we find that there are `r n_perf` plots out of `r n_diagplot` dia
 
 Most of these metrics only refer to point estimates, i.e., the distance between the predicted value and the actual values. Also, these metrics mainly measure bias. However, MRP is a model in which bias-variance is applied. Therefore, other measures are also needed that reflect the degree of uncertainty and variations in the predicted value. Measures such as length of confidence or credibility interval can be used, in which the narrower the value, the more precise the estimates.
 
-### Common comparisions with MRP
+### Common comparisons with MRP
 
 The goal of MRP is to make a population estimate. The method aims to adjust an unrepresentative survey to obtain accurate population and sub-population estimates. Where possible MRP is usually compared with a true value. This is generally only possible in political science applications where an election provides this true estimate. To understand how MRP improves estimates from an unrepresentative survey when compared with no adjustment, MRP estimates are usually compared with direct estimates (raw). Similarly, to understand the improvement of estimates when compared with more traditional methods, MRP is often compared with weighted estimates.
 

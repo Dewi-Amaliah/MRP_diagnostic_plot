@@ -11,17 +11,13 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, cache=TRUE)
 
 Accurate population and subpopulation estimates are essential to draw insight from the data, especially when policies or decisions are made given the specific context of smaller regions. However, conducting a large survey to provide statistics at a subpopulation level is expensive, time-consuming, and often needs to account for unrepresentative samples. Multilevel regression and poststratification, henceforth referred to as MRP, is a model-based approach used to estimate subpopulations. In short, MRP incorporates a multilevel regression technique to predict the outcome of interest using survey data. This prediction is then poststratified using the population size from a larger survey or census to get the population estimates.
 
-MRP is widely applied to create small area estimates in the absence of a subnational surveys [@hanretty] particularly small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as estimation by gender, age group, and education. Additionally, MRP is also often applied to adjust the estimation from a non-representative survey as the result of difficulties in recruiting representative survey respondents [@mrp-book].
+MRP is widely applied to create small area estimates in the absence of a subnational surveys [@hanretty] particularly small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as gender, age group, and education. Additionally, MRP is also often applied to adjust the estimation from a non-representative survey as the result of difficulties in recruiting representative survey respondents [@GelmanAndrew2007SwSW]
 
 The standard method to communicate and validate the MRP estimates, such as their accuracy, is by using graphics. Indeed, statistical graphics are regarded a powerful tool to communicate quantitative information and analyse data [@ClevelandWilliamS; @1983Gmfd]. @WickhamHadley2015VsmR state that statistical visualisation, particularly model visualisation, is imperative as it helps us to understand the model better, for example, how the model changes as its parameters change or how the parameters change as the data changes. They also mention that model visualisation is important to show the model's goodness of fit and whether it is good for some regions only and worse in other regions, or whether it is uniformly good.
 
 While visualisation is common to communicate and diagnose MRP models, there are only a few discussions and studies on how it should be performed. @mekelagelman and @saundra work on similar areas focussing on the use of graphics in political science. However, @mekelagelman only focus on a graphical method for discovery and communication purposes of polling results. Besides, the MRP visualisations that they display as examples are isolated on Gelman's previous papers only. Meanwhile, the latter study by @saundra only focuses on how the graphics in public opinion research should be displayed. Therefore, this study tries to fill the gap by discussing the current practices of MRP visualisations generally, not only in public opinion and polling estimates applications. It also aims to explore the possible alternative improvements to current practice. 
 
-Explicitly, the objectives of this study are:
-
-1. Discuss the current practice of visualisation of MRP models.
-2. Understand the implication of existing visualisation choices with real-world data.
-3. Explore possible improvements of the current practice of MRP visualisation. 
+Explicitly, the objectives of this study are: discuss the current practice of visualisation of MRP models; understand the implication of existing visualisation choices with real-world data; and explore possible improvements of the current practice of MRP visualisation. 
 
 The first objectives will be reached by doing a systematic literature review on peer-reviewed articles that applied MRP, while the second and the third goals will be demonstrated through a case study on the 2016 U.S. presidential election using the Cooperative Congressional Election Study (CCES) and the American Community Survey (ACS) data.  
 
@@ -54,11 +50,5 @@ Formally, let $K$ be the number of categorical variables in the population and t
 
 ## Thesis Structure 
 
-This thesis is structured as follows:
-
-- Chapter \@ref(ch:syslitrev) is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies. 
-
-- Chapter \@ref(ch:case-stud) is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved. 
-
-- The final chapter, Chapter \@ref(ch:conclusion), summarises the findings and concludes the contribution of this study and possible future works. 
+The first chapter of this thesis is introuction in which the motivation and objectives of this study are articulated.  Chapter \@ref(ch:syslitrev) is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies. Next, Chapter \@ref(ch:case-stud) is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved. The final chapter, Chapter \@ref(ch:conclusion), summarises the findings and concludes the contribution of this study and possible future works. 
 

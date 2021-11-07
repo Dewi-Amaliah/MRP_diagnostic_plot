@@ -634,7 +634,7 @@ get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
              y = y, 
              ymin = lower, 
              ymax = upper)) +
-  geom_point(color = "#DE0100", size = 1) +
+  geom_point(color = "#DE0100", size = 1, alpha = 0.6) +
   geom_abline(intercept = 0, linetype = "dotted") +
   geom_errorbar(color = "#DE0100", size = 0.3) +
   scale_x_continuous(limits = c(0, 1)) +
@@ -642,9 +642,7 @@ get_scatter <- function(y, title, subtitle, lower, upper, rmse, mad){
   theme_bw() +
   theme(axis.title = element_text(size = 8),
         plot.title = element_text(size = 8),
-        plot.subtitle = element_text(size = 8),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black")) +
+        plot.subtitle = element_text(size = 8)) +
   ylab("MRP estimates (Trump vote)") +
   xlab("Ground truth (Trump vote)") +
   theme(aspect.ratio=1) +
@@ -702,7 +700,7 @@ sp4b <- get_scatter(comparison_data$party,
                            rmse_party,
                            mad_party)
 
-sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 3)
+sp1 + sp4a + sp4b + sp2 + sp3 + plot_layout(nrow = 2)
 ```
 
 
@@ -899,19 +897,19 @@ comp_age <- rbind(age_est_base, age_est_mod2, age_est_mod3) %>%
 ```
 
 
-```{r violin-levels, fig.width=10, fig.height=9}
+```{r violin-levels, fig.width=8, fig.height=7}
 # create the plot for race
 p6 <- ggplot(comp_race, aes(x = original_re, y = value, fill = model)) +
   geom_violin() +
   xlab("Race") +
   ylab("MRP estimates") +
   theme_bw() +
-  theme(axis.title = element_text(size = 10),
-        plot.title = element_text(size = 10),
+  theme(axis.title = element_text(size = 9),
+        plot.title = element_text(size = 9),
         axis.text.x = element_text(angle = 20),
         legend.title = element_blank(),
         legend.position = "bottom") +
-  ggtitle("Probability of voting Trump in the 2016 presidential vote by race") +
+  ggtitle("Trump's vote share in the 2016 presidential vote by race") +
   scale_fill_manual(values = c("#616A6B", "#d01c8b")) 
   
 # create the plot for education 
@@ -920,11 +918,11 @@ p7 <- ggplot(comp_educ, aes(x = education, y = value, fill = model)) +
   xlab("Education") +
   ylab("MRP estimates") +
   theme_bw() +
-  theme(axis.title = element_text(size = 10),
-        plot.title = element_text(size = 10),
+  theme(axis.title = element_text(size = 9),
+        plot.title = element_text(size = 9),
         legend.title = element_blank(),
         legend.position = "bottom") +
-  ggtitle("Probability of voting Trump in the 2016 presidential vote by education") +
+  ggtitle("Trump's vote share in the 2016 presidential vote by education") +
   scale_fill_manual(values = c("#616A6B", "#E67E22")) 
 
 # create the plot for age
@@ -933,11 +931,11 @@ p8 <- ggplot(comp_age, aes(x = age, y = value, fill = model)) +
   xlab("Age") +
   ylab("MRP estimates") +
   theme_bw() +
-  theme(axis.title = element_text(size = 10),
-        plot.title = element_text(size = 10),
+  theme(axis.title = element_text(size = 9),
+        plot.title = element_text(size = 9),
         legend.title = element_blank(),
         legend.position = "bottom") +
-  ggtitle("Probability of voting Trump in the 2016 presidential vote by age") +
+  ggtitle("Trump's vote share in the 2016 presidential vote by age") +
   scale_fill_manual(values = c("#616A6B", "#E67E22", "#d01c8b")) 
 
 (p6 | p7)/p8

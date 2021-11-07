@@ -26,7 +26,7 @@ search %>%
 
 ## ---- read-data
 # read data
-papers <- read_csv(here::here("sis_literature_review/paper_metadata/metadata_july_22.csv"))
+papers <- read_csv(here::here("sys_literature_review/paper_metadata/metadata_july_22.csv"))
 
 # number of plots 
 

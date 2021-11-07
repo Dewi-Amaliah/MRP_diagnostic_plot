@@ -606,6 +606,44 @@
       \field{volume}{1}
       \field{year}{2021}
     \endentry
+    \entry{GelmanAndrew2007SwSW}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{fullhash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{bibnamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{authorbibnamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{authornamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \strng{authorfullhash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The general principles of Bayesian data analysis imply that models for survey responses should be constructed conditional on all variables that affect the probability of inclusion and nonresponse, which are also the variables used in survey weighting and clustering. However, such models can quickly become very complicated, with potentially thousands of poststratification cells. It is then a challenge to develop general families of multilevel probability models that yield reasonable Bayesian inferences. We discuss in the context of several ongoing public health and social surveys. This work is currently open-ended, and we conclude with thoughts on how research could proceed to solve these problems.}
+      \field{issn}{0883-4237}
+      \field{journaltitle}{Statistical science}
+      \field{number}{2}
+      \field{title}{Struggles with Survey Weighting and Regression Modeling}
+      \field{volume}{22}
+      \field{year}{2007}
+      \field{pages}{153\bibrangedash 164}
+      \range{pages}{12}
+      \keyw{Linear regression ; Modeling ; Multilevel modeling ; Multilevel models ; Population estimates ; poststratification ; Regression analysis ; Regression coefficients ; sampling weights ; shrinkage ; Social surveys ; Statistical discrepancies ; Term weighting ; Weighted averages}
+    \endentry
     \entry{GelmanAndrew2014HBAC}{article}{}
       \name{author}{1}{}{%
         {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
@@ -629,6 +667,7 @@
       \strng{authorbibnamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
       \strng{authornamehash}{1e1eb60e3b6e222217bf8e9b24070b28}
       \strng{authorfullhash}{1e1eb60e3b6e222217bf8e9b24070b28}
+      \field{extraname}{2}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -1133,7 +1172,7 @@
       \field{pages}{419\bibrangedash 446}
       \range{pages}{28}
     \endentry
-    \entry{ccesmrpprep}{manual}{}
+    \entry{ddi}{manual}{}
       \name{author}{1}{}{%
         {{hash=b0b3d9fe0996dd122388736734eaaa3a}{%
            family={Kuriwaki},
@@ -1148,6 +1187,37 @@
       \strng{authornamehash}{b0b3d9fe0996dd122388736734eaaa3a}
       \strng{authorfullhash}{b0b3d9fe0996dd122388736734eaaa3a}
       \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 0.1.0}
+      \field{title}{ddi: The Data Defect Index for Samples that May not be IID}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://CRAN.R-project.org/package=ddi
+      \endverb
+      \verb{url}
+      \verb https://CRAN.R-project.org/package=ddi
+      \endverb
+    \endentry
+    \entry{ccesmrpprep}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=b0b3d9fe0996dd122388736734eaaa3a}{%
+           family={Kuriwaki},
+           familyi={K\bibinitperiod},
+           given={Shiro},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{fullhash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{bibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authorbibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authornamehash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \strng{authorfullhash}{b0b3d9fe0996dd122388736734eaaa3a}
+      \field{extraname}{2}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradate}{1}
@@ -1185,7 +1255,7 @@
       \strng{authorbibnamehash}{b0b3d9fe0996dd122388736734eaaa3a}
       \strng{authornamehash}{b0b3d9fe0996dd122388736734eaaa3a}
       \strng{authorfullhash}{b0b3d9fe0996dd122388736734eaaa3a}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradate}{2}
@@ -1351,45 +1421,6 @@
       \field{pages}{175\bibrangedash 194}
       \range{pages}{20}
       \keyw{Bibliometrics ; Business ; Business & Economics ; Entity (Philosophy) ; Evaluation ; Literature reviews ; MANAGEMENT ; RESEARCH ; Researchers ; Reviews ; Social Sciences ; Text data mining}
-    \endentry
-    \entry{mrp-book}{misc}{}
-      \name{author}{3}{}{%
-        {{hash=e97ee011364cdf5b3a3adbf48b39c13e}{%
-           family={Lopez-Martin},
-           familyi={L\bibinithyphendelim M\bibinitperiod},
-           given={Juan},
-           giveni={J\bibinitperiod}}}%
-        {{hash=bb0e8458aa9c3e40aef20d78a3fc3b6d}{%
-           family={Phillips},
-           familyi={P\bibinitperiod},
-           given={Justin\bibnamedelima H.},
-           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
-           family={Gelman},
-           familyi={G\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{819510c1273de0fc1ea075689c4ea768}
-      \strng{fullhash}{819510c1273de0fc1ea075689c4ea768}
-      \strng{bibnamehash}{819510c1273de0fc1ea075689c4ea768}
-      \strng{authorbibnamehash}{819510c1273de0fc1ea075689c4ea768}
-      \strng{authornamehash}{819510c1273de0fc1ea075689c4ea768}
-      \strng{authorfullhash}{819510c1273de0fc1ea075689c4ea768}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Multilevel Regression and Poststratification Case Studies}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://bookdown.org/jl5522/MRP-case-studies/
-      \endverb
-      \verb{url}
-      \verb https://bookdown.org/jl5522/MRP-case-studies/
-      \endverb
     \endentry
     \entry{survey}{book}{}
       \name{author}{1}{}{%

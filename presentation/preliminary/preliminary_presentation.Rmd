@@ -14,7 +14,8 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       ratio: '16:9'
----
+      
+--- 
 layout: true
 class: split-two with-border
 
@@ -48,7 +49,7 @@ class: split-two with-border
     
 Based on the systematic literature review, this plot displays the existing practice of MRP visualisation. 
 
-```{r res, echo=FALSE, message=FALSE}
+```{r res, echo=FALSE, message=FALSE, eval = FALSE}
 library(tidyverse)
 
 papers <- read_csv(here::here("paper_metadata/metadata_july_22.csv"))
@@ -103,4 +104,5 @@ class: gray-row1-col1 gray-row3-col1
 ---
 count: false
 class: gray-row1-col1 gray-row2-col1 
+---
 ---

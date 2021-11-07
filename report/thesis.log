@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  3 NOV 2021 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  7 NOV 2021 10:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -979,127 +979,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
 ]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 13.49991pt on input line 58.
+(Font)              scaled to size 13.49991pt on input line 60.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 59.
+(hyperref)                be the same. Added a new anchor on input line 61.
 
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 61
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 63
 .
 (/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 61.
+(Font)              scaled to size 9.85492pt on input line 63.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[3] [4
-
-]
-Chapter 1.
-[5]
+[3]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 93.
-[6] [7]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-33.
-(/Users/deeamaliah/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [8]
+(Font)              scaled to size 12.9599pt on input line 66.
+[4]
+Chapter 1.
+[5
+
+] [6] [7] [8]
 Chapter 2.
 [9
 
 ] [10]
 
-LaTeX Warning: Float too large for page by 11.16566pt on input line 174.
+LaTeX Warning: Float too large for page by 11.16566pt on input line 156.
 
 [11]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 183.
+(Font)              scaled to size 10.79993pt on input line 165.
 [12
 
 
 ]
-<figures/prisma_fc.png, id=303, 809.0225pt x 692.5875pt>
+<figures/prisma_fc.png, id=302, 809.0225pt x 692.5875pt>
 File: figures/prisma_fc.png Graphic file (type png)
 <use figures/prisma_fc.png>
-Package pdftex.def Info: figures/prisma_fc.png  used on input line 215.
+Package pdftex.def Info: figures/prisma_fc.png  used on input line 197.
 (pdftex.def)             Requested size: 384.1096pt x 328.83452pt.
 [13 <./figures/prisma_fc.png>] [14]
-<thesis_files/figure-latex/perform-plot-1.pdf, id=340, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/perform-plot-1.pdf, id=339, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/perform-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/perform-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/perform-plot-1.pdf  used on 
-input line 278.
+input line 260.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 278--279
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 260--261
  [][] 
  []
 
 [15] [16 <./thesis_files/figure-latex/perform-plot-1.pdf>]
-<thesis_files/figure-latex/compare-plot-1.pdf, id=366, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/compare-plot-1.pdf, id=365, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/compare-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/compare-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/compare-plot-1.pdf  used on 
-input line 293.
+input line 275.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 293--294
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
 [17 <./thesis_files/figure-latex/compare-plot-1.pdf>]
-<thesis_files/figure-latex/common-plots-1.pdf, id=379, 454.69875pt x 274.02374p
+<thesis_files/figure-latex/common-plots-1.pdf, id=378, 454.69875pt x 274.02374p
 t>
 File: thesis_files/figure-latex/common-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-plots-1.pdf  used on 
-input line 306.
+input line 288.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 306--307
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 288--289
  [][] 
  []
 
 [18 <./thesis_files/figure-latex/common-plots-1.pdf>]
-<thesis_files/figure-latex/common-axis-1.pdf, id=397, 433.62pt x 578.16pt>
+<thesis_files/figure-latex/common-axis-1.pdf, id=396, 433.62pt x 578.16pt>
 File: thesis_files/figure-latex/common-axis-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-axis-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/common-axis-1.pdf  used on i
-nput line 320.
+nput line 302.
 (pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 320--321
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 302--303
  [][] 
  []
 
-<thesis_files/figure-latex/facet-plots-1.pdf, id=400, 454.69875pt x 274.02374pt
+<thesis_files/figure-latex/facet-plots-1.pdf, id=399, 454.69875pt x 274.02374pt
 >
 File: thesis_files/figure-latex/facet-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/facet-plots-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/facet-plots-1.pdf  used on i
-nput line 330.
+nput line 312.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 330--331
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 312--313
  [][] 
  []
 
 [19] [20 <./thesis_files/figure-latex/common-axis-1.pdf>]
-<thesis_files/figure-latex/sankey-feature-1.pdf, id=420, 475.7775pt x 295.1025p
+<thesis_files/figure-latex/sankey-feature-1.pdf, id=419, 475.7775pt x 295.1025p
 t>
 File: thesis_files/figure-latex/sankey-feature-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/sankey-feature-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/sankey-feature-1.pdf  used o
-n input line 342.
+n input line 324.
 (pdftex.def)             Requested size: 475.77632pt x 295.10176pt.
 
-Overfull \hbox (48.98497pt too wide) in paragraph at lines 342--343
+Overfull \hbox (48.98497pt too wide) in paragraph at lines 324--325
  [][] 
  []
 
@@ -1110,165 +1105,164 @@ Chapter 3.
 
 ] [24] [25] [26] [27] [28]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 576.
+(Font)              scaled to size 9.85492pt on input line 558.
 [29] [30] [31]
-Overfull \hbox (31.89214pt too wide) in paragraph at lines 683--694
+Overfull \hbox (20.94215pt too wide) in paragraph at lines 665--676
  [][] 
  []
 
 [32]
-<thesis_files/figure-latex/choro-1.pdf, id=628, 454.69875pt x 274.02374pt>
+<thesis_files/figure-latex/choro-1.pdf, id=625, 454.69875pt x 274.02374pt>
 File: thesis_files/figure-latex/choro-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/choro-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/choro-1.pdf  used on input l
-ine 712.
+ine 694.
 (pdftex.def)             Requested size: 454.69763pt x 274.02307pt.
 
-Overfull \hbox (27.90628pt too wide) in paragraph at lines 712--713
+Overfull \hbox (27.90628pt too wide) in paragraph at lines 694--695
  [][] 
  []
 
 [33] [34 <./thesis_files/figure-latex/choro-1.pdf>]
-<thesis_files/figure-latex/scatter-est-method-1.pdf, id=666, 361.35pt x 361.35p
+<thesis_files/figure-latex/scatter-est-method-1.pdf, id=664, 361.35pt x 361.35p
 t>
 File: thesis_files/figure-latex/scatter-est-method-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/scatter-est-method-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/scatter-est-method-1.pdf  us
-ed on input line 733.
+ed on input line 715.
 (pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
-[35]
-<thesis_files/figure-latex/dot-est-method-1.pdf, id=680, 433.62pt x 505.89pt>
+[35] [36 <./thesis_files/figure-latex/scatter-est-method-1.pdf>]
+<thesis_files/figure-latex/dot-est-method-1.pdf, id=695, 433.62pt x 505.89pt>
 File: thesis_files/figure-latex/dot-est-method-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/dot-est-method-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/dot-est-method-1.pdf  used o
-n input line 743.
+n input line 725.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 743--744
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 725--726
  [][] 
  []
 
-[36 <./thesis_files/figure-latex/scatter-est-method-1.pdf>] [37 <./thesis_files
-/figure-latex/dot-est-method-1.pdf>]
-<thesis_files/figure-latex/state-wise-scatter-1.pdf, id=711, 578.16pt x 505.89p
+<thesis_files/figure-latex/state-wise-scatter-1.pdf, id=699, 578.16pt x 505.89p
 t>
 File: thesis_files/figure-latex/state-wise-scatter-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/state-wise-scatter-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/state-wise-scatter-1.pdf  us
-ed on input line 757.
+ed on input line 739.
 (pdftex.def)             Requested size: 578.15858pt x 505.88875pt.
 
-Overfull \hbox (151.36723pt too wide) in paragraph at lines 757--758
+Overfull \hbox (151.36723pt too wide) in paragraph at lines 739--740
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 
  []
 
-<thesis_files/figure-latex/violin-levels-plot-1.pdf, id=712, 325.215pt x 614.29
+[37] [38 <./thesis_files/figure-latex/dot-est-method-1.pdf>] [39 <./thesis_file
+s/figure-latex/state-wise-scatter-1.pdf>]
+<thesis_files/figure-latex/violin-levels-plot-1.pdf, id=732, 325.215pt x 614.29
 5pt>
 File: thesis_files/figure-latex/violin-levels-plot-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/violin-levels-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/violin-levels-plot-1.pdf  us
-ed on input line 768.
+ed on input line 750.
 (pdftex.def)             Requested size: 325.2142pt x 614.29349pt.
-[38] [39 <./thesis_files/figure-latex/state-wise-scatter-1.pdf>] [40 <./thesis_
-files/figure-latex/violin-levels-plot-1.pdf>]
-<thesis_files/figure-latex/cor-race-plot-1.pdf, id=747, 361.35pt x 433.62pt>
+[40] [41 <./thesis_files/figure-latex/violin-levels-plot-1.pdf>]
+<thesis_files/figure-latex/cor-race-plot-1.pdf, id=752, 361.35pt x 433.62pt>
 File: thesis_files/figure-latex/cor-race-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/cor-race-plot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/cor-race-plot-1.pdf  used on
- input line 784.
+ input line 766.
 (pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
-[41] [42 <./thesis_files/figure-latex/cor-race-plot-1.pdf>]
-<thesis_files/figure-latex/race-ci-len-1.pdf, id=767, 454.69875pt x 274.02374pt
+<thesis_files/figure-latex/race-ci-len-1.pdf, id=757, 454.69875pt x 274.02374pt
 >
 File: thesis_files/figure-latex/race-ci-len-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/race-ci-len-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/race-ci-len-1.pdf  used on i
-nput line 793.
+nput line 775.
 (pdftex.def)             Requested size: 384.1096pt x 231.4871pt.
-[43 <./thesis_files/figure-latex/race-ci-len-1.pdf>] [44]
+[42] [43 <./thesis_files/figure-latex/cor-race-plot-1.pdf>] [44 <./thesis_files
+/figure-latex/race-ci-len-1.pdf>]
 Chapter 4.
 [45
 
 ] [46]
 Appendix A.
 
-Overfull \hbox (2.44518pt too wide) in paragraph at lines 828--844
+Overfull \hbox (2.44518pt too wide) in paragraph at lines 815--831
  [][] 
  []
 
 [47
 
 ]
-<thesis_files/figure-latex/state-cces-1.pdf, id=811, 361.35pt x 433.62pt>
+<thesis_files/figure-latex/state-cces-1.pdf, id=813, 361.35pt x 433.62pt>
 File: thesis_files/figure-latex/state-cces-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/state-cces-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/state-cces-1.pdf  used on in
-put line 853.
+put line 840.
 (pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
-<thesis_files/figure-latex/state-acs-1.pdf, id=812, 361.35pt x 433.62pt>
+<thesis_files/figure-latex/state-acs-1.pdf, id=814, 361.35pt x 433.62pt>
 File: thesis_files/figure-latex/state-acs-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/state-acs-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/state-acs-1.pdf  used on inp
-ut line 859.
+ut line 846.
 (pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
 [48] [49 <./thesis_files/figure-latex/state-cces-1.pdf>] [50 <./thesis_files/fi
 gure-latex/state-acs-1.pdf>]
-<thesis_files/figure-latex/apd-educ-metrics-1.pdf, id=848, 361.35pt x 433.62pt>
+<thesis_files/figure-latex/apd-educ-metrics-1.pdf, id=850, 361.35pt x 433.62pt>
 
 File: thesis_files/figure-latex/apd-educ-metrics-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/apd-educ-metrics-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/apd-educ-metrics-1.pdf  used
- on input line 874.
+ on input line 861.
 (pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
-<thesis_files/figure-latex/apd-ci-len-edu-1.pdf, id=849, 454.69875pt x 274.0237
+<thesis_files/figure-latex/apd-ci-len-edu-1.pdf, id=851, 454.69875pt x 274.0237
 4pt>
 File: thesis_files/figure-latex/apd-ci-len-edu-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/apd-ci-len-edu-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/apd-ci-len-edu-1.pdf  used o
-n input line 879.
+n input line 866.
 (pdftex.def)             Requested size: 384.1096pt x 231.4871pt.
 [51 <./thesis_files/figure-latex/apd-educ-metrics-1.pdf>]
-<thesis_files/figure-latex/apd-age-fit2-1.pdf, id=863, 361.35pt x 433.62pt>
+<thesis_files/figure-latex/apd-age-fit2-1.pdf, id=865, 361.35pt x 433.62pt>
 File: thesis_files/figure-latex/apd-age-fit2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/apd-age-fit2-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/apd-age-fit2-1.pdf  used on 
-input line 890.
+input line 877.
 (pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
-<thesis_files/figure-latex/apd-age-ci-fit2-1.pdf, id=864, 454.69875pt x 274.023
+<thesis_files/figure-latex/apd-age-ci-fit2-1.pdf, id=866, 454.69875pt x 274.023
 74pt>
 File: thesis_files/figure-latex/apd-age-ci-fit2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/apd-age-ci-fit2-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/apd-age-ci-fit2-1.pdf  used 
-on input line 895.
+on input line 882.
 (pdftex.def)             Requested size: 384.1096pt x 231.4871pt.
 [52 <./thesis_files/figure-latex/apd-ci-len-edu-1.pdf>]
-<thesis_files/figure-latex/apd-age-fit3-1.pdf, id=879, 361.35pt x 433.62pt>
+<thesis_files/figure-latex/apd-age-fit3-1.pdf, id=881, 361.35pt x 433.62pt>
 File: thesis_files/figure-latex/apd-age-fit3-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/apd-age-fit3-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/apd-age-fit3-1.pdf  used on 
-input line 906.
+input line 893.
 (pdftex.def)             Requested size: 361.34912pt x 433.61894pt.
-<thesis_files/figure-latex/apd-age-ci-fit3-1.pdf, id=880, 454.69875pt x 274.023
+<thesis_files/figure-latex/apd-age-ci-fit3-1.pdf, id=882, 454.69875pt x 274.023
 74pt>
 File: thesis_files/figure-latex/apd-age-ci-fit3-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/apd-age-ci-fit3-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/apd-age-ci-fit3-1.pdf  used 
-on input line 911.
+on input line 898.
 (pdftex.def)             Requested size: 384.1096pt x 231.4871pt.
 [53 <./thesis_files/figure-latex/apd-age-fit2-1.pdf>] [54 <./thesis_files/figur
 e-latex/apd-age-ci-fit2-1.pdf>] [55 <./thesis_files/figure-latex/apd-age-fit3-1
 .pdf>] [56 <./thesis_files/figure-latex/apd-age-ci-fit3-1.pdf>] [57
 
 ]
-Underfull \hbox (badness 1424) in paragraph at lines 914--914
+Underfull \hbox (badness 1424) in paragraph at lines 901--901
 [][]\T1/ppl/m/n/10.95 (+20) Gabry, J and R ƒe²no-var (2021). \T1/ppl/m/it/10.95
  (+20) cmd-stanr: R In-ter-face to 'Cmd-Stan'\T1/ppl/m/n/10.95 (+20) . https://
 mc-
@@ -1286,11 +1280,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 ### semi simple group (level 1) entered at line 102 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22994 strings out of 480539
- 398605 string characters out of 5901555
- 1173252 words of memory out of 5000000
- 39608 multiletter control sequences out of 15000+600000
- 510041 words of font info for 350 fonts, out of 8000000 for 9000
+ 22970 strings out of 480539
+ 398576 string characters out of 5901555
+ 1172347 words of memory out of 5000000
+ 39593 multiletter control sequences out of 15000+600000
+ 509832 words of font info for 348 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,16n,81p,3114b,17860s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/deeamaliah/Library/TinyTeX/texmf-dist/fonts/enc/dvips/b
@@ -1307,10 +1301,10 @@ y/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/deeamaliah/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/deeamaliah/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/deeamalia
 h/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (65 pages, 1010987 bytes).
+Output written on thesis.pdf (65 pages, 1012983 bytes).
 PDF statistics:
- 1103 PDF objects out of 1200 (max. 8388607)
- 929 compressed objects within 10 object streams
- 255 named destinations out of 1000 (max. 500000)
- 90412 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1105 PDF objects out of 1200 (max. 8388607)
+ 931 compressed objects within 10 object streams
+ 253 named destinations out of 1000 (max. 500000)
+ 86316 words of extra memory for PDF output out of 89155 (max. 10000000)
 

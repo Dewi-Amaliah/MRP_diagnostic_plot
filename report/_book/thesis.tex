@@ -41,7 +41,7 @@
 \chapter*{Abstract}\label{abstract}}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Surveys provide important evidence for policy making, decision making and understanding society. However, conducting the large surveys required to provide subpopulation level estimates is expensive and time-consuming. Multilevel Regression and Poststratification (MRP) has been a promising method to provide reliable estimates for subpopulations without the amount of data needed for reliable direct estimates. Currently, graphical display is widely used to communicate and diagnose MRP estimates. However, there have been few studies on how visualisation should be performed in this field. Accordingly, this study tries to fill this gap by examining the current practice of MRP visualisation using a systematic literature review. This study also applies MRP to estimate the Trump vote share in the U.S. 2016 presidential election using the Cooperative Congressional Election Study (CCES) data to demonstrate the implication of the current visualisation practice and explore alternatives for improvement. The main finding of this study is that uncertainty is not widely displayed in the current practice. The choropleth map is the most frequently used to display MRP estimates even though it only shows point estimates and could hinder the information conveyed. Uncertainty is also not often displayed for model diagnostic purposes in the current practice. Using various graphical representations, this study shows that visualisation with uncertainty can illustrate the effect of different model specifications on the estimation result. In addition, this study also proposes an alternative graph to also take the bias-variance trade-off into account in evaluating MRP performance.\\
+Surveys provide important evidence for policy making, decision making and understanding society. However, conducting the large surveys required to provide subpopulation level estimates is expensive and time-consuming. Multilevel Regression and Poststratification (MRP) is a promising method to provide reliable estimates for subpopulations from surveys without the amount of data needed for reliable direct estimates. Graphical displays have been widely used to communicate and diagnose MRP estimates. However, there have been few studies on how visualisation should be performed in this field. Accordingly, this study examines the current practice of MRP visualisation using a systematic literature review. This study also applies MRP to estimate the Trump vote share in the U.S. 2016 presidential election using the Cooperative Congressional Election Study (CCES) data to illustrate the implication of current visualisation practices and explore alternatives for improvement. We find that uncertainty is not often displayed in the current practice, despite its importance for survey inference. The choropleth map is the most frequently used to display MRP estimates even though it only shows point estimates and could hinder the information conveyed. Using various graphical representations, we show that visualisation with uncertainty can illustrate the effect of different model specifications on the estimation result. In addition, this study also proposes a visualisation strategy to also take the bias-variance trade-off into account when evaluating MRP models.\\
 \newpage
 
 \hypertarget{acknowledgements}{%
@@ -52,37 +52,28 @@ I would like to express my deepest gratitude to my supervisors, Lauren Kennedy a
 
 I would like to extend my gratitude to Dan Simpson, the chief examiner of Master of Business Analytics and Creative Activity, for all the guidance in completing this unit.
 
-Last but not least, I would like to thank Australia Awards Scholarship for giving me the scholarship to study at the Monash University. Without it, studying in Australia would only remain as one of my childhood dreams.
+I also would like to thank Australia Awards Scholarship for giving me the scholarship to study at the Monash University. Without it, studying in Australia would only remain as one of my childhood dreams.
+
+Last but not least, I dedicated this thesis to my late father, who always gave me unconditional love and support in pursuing my dreams.
 
 \hypertarget{r-packages}{%
 \section*{R packages}\label{r-packages}}
 \addcontentsline{toc}{section}{R packages}
 
-Several R \autocite{R} packages are utilized to produce this thesis: \texttt{mrpkit} \autocite{mrpkit}; \texttt{ccesMRPprep} \autocite{ccesmrpprep}; \texttt{brms} \autocite{brms}; \texttt{cmdstanr} \autocite{cmdstanr}; \texttt{survey} \autocite{survey}; \texttt{tidyverse} \autocite{tidyverse}; \texttt{forcats} \autocite{forcats}; \texttt{Metrics} \autocite{Metrics}; \texttt{data.table} \autocite{datatable}; \texttt{kableExtra} \autocite{kable}; \texttt{janitor} \autocite{janitor}; \texttt{scales} \autocite{scales}; \texttt{ggplot2} \autocite{ggplot2}; \texttt{patchwork} \autocite{pw}; \texttt{flipPlots} \autocite{flipflops}; \texttt{igraph} \autocite{igraph}; \texttt{urbnmapr} \autocite{urban}; \texttt{ggstance} \autocite{stance}; \texttt{ggpmisc} \autocite{ggpmisc}; \texttt{wacolors} \autocite{wacolors}; \texttt{rmarkdown} \autocite{rmd}; \texttt{knitr} \autocite{knitr}; \texttt{MonashEBSTemplates} \autocite{monashtemp}.
+Several R \autocite{R} packages are utilized to produce this thesis: \texttt{mrpkit} \autocite{mrpkit}; \texttt{ccesMRPprep} \autocite{ccesmrpprep}; \texttt{brms} \autocite{brms}; \texttt{cmdstanr} \autocite{cmdstanr}; \texttt{ddi} \autocite{ddi};\texttt{survey} \autocite{survey}; \texttt{tidyverse} \autocite{tidyverse}; \texttt{forcats} \autocite{forcats}; \texttt{Metrics} \autocite{Metrics}; \texttt{data.table} \autocite{datatable}; \texttt{kableExtra} \autocite{kable}; \texttt{janitor} \autocite{janitor}; \texttt{scales} \autocite{scales}; \texttt{ggplot2} \autocite{ggplot2}; \texttt{patchwork} \autocite{pw}; \texttt{flipPlots} \autocite{flipflops}; \texttt{igraph} \autocite{igraph}; \texttt{urbnmapr} \autocite{urban}; \texttt{ggstance} \autocite{stance}; \texttt{ggpmisc} \autocite{ggpmisc}; \texttt{wacolors} \autocite{wacolors}; \texttt{rmarkdown} \autocite{rmd}; \texttt{knitr} \autocite{knitr}; \texttt{MonashEBSTemplates} \autocite{monashtemp}.
 
 \hypertarget{ch:intro}{%
 \chapter{Introduction}\label{ch:intro}}
 
 Accurate population and subpopulation estimates are essential to draw insight from the data, especially when policies or decisions are made given the specific context of smaller regions. However, conducting a large survey to provide statistics at a subpopulation level is expensive, time-consuming, and often needs to account for unrepresentative samples. Multilevel regression and poststratification, henceforth referred to as MRP, is a model-based approach used to estimate subpopulations. In short, MRP incorporates a multilevel regression technique to predict the outcome of interest using survey data. This prediction is then poststratified using the population size from a larger survey or census to get the population estimates.
 
-MRP is widely applied to create small area estimates in the absence of a subnational surveys \autocite{hanretty} particularly small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as estimation by gender, age group, and education. Additionally, MRP is also often applied to adjust the estimation from a non-representative survey as the result of difficulties in recruiting representative survey respondents \autocite{mrp-book}.
+MRP is widely applied to create small area estimates in the absence of a subnational surveys \autocite{hanretty} particularly small geographic areas, such as state or county estimates. MRP also allows the demographic-wise estimation, such as gender, age group, and education. Additionally, MRP is also often applied to adjust the estimation from a non-representative survey as the result of difficulties in recruiting representative survey respondents \autocite{GelmanAndrew2007SwSW}
 
 The standard method to communicate and validate the MRP estimates, such as their accuracy, is by using graphics. Indeed, statistical graphics are regarded a powerful tool to communicate quantitative information and analyse data \autocite{ClevelandWilliamS,1983Gmfd}. \textcite{WickhamHadley2015VsmR} state that statistical visualisation, particularly model visualisation, is imperative as it helps us to understand the model better, for example, how the model changes as its parameters change or how the parameters change as the data changes. They also mention that model visualisation is important to show the model's goodness of fit and whether it is good for some regions only and worse in other regions, or whether it is uniformly good.
 
 While visualisation is common to communicate and diagnose MRP models, there are only a few discussions and studies on how it should be performed. \textcite{mekelagelman} and \textcite{saundra} work on similar areas focussing on the use of graphics in political science. However, \textcite{mekelagelman} only focus on a graphical method for discovery and communication purposes of polling results. Besides, the MRP visualisations that they display as examples are isolated on Gelman's previous papers only. Meanwhile, the latter study by \textcite{saundra} only focuses on how the graphics in public opinion research should be displayed. Therefore, this study tries to fill the gap by discussing the current practices of MRP visualisations generally, not only in public opinion and polling estimates applications. It also aims to explore the possible alternative improvements to current practice.
 
-Explicitly, the objectives of this study are:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Discuss the current practice of visualisation of MRP models.
-\item
-  Understand the implication of existing visualisation choices with real-world data.
-\item
-  Explore possible improvements of the current practice of MRP visualisation.
-\end{enumerate}
+Explicitly, the objectives of this study are: discuss the current practice of visualisation of MRP models; understand the implication of existing visualisation choices with real-world data; and explore possible improvements of the current practice of MRP visualisation.
 
 The first objectives will be reached by doing a systematic literature review on peer-reviewed articles that applied MRP, while the second and the third goals will be demonstrated through a case study on the 2016 U.S. presidential election using the Cooperative Congressional Election Study (CCES) and the American Community Survey (ACS) data.
 
@@ -126,16 +117,7 @@ Formally, let \(K\) be the number of categorical variables in the population and
 \hypertarget{thesis-structure}{%
 \section{Thesis Structure}\label{thesis-structure}}
 
-This thesis is structured as follows:
-
-\begin{itemize}
-\item
-  Chapter \ref{ch:syslitrev} is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies.
-\item
-  Chapter \ref{ch:case-stud} is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved.
-\item
-  The final chapter, Chapter \ref{ch:conclusion}, summarises the findings and concludes the contribution of this study and possible future works.
-\end{itemize}
+The first chapter of this thesis is introuction in which the motivation and objectives of this study are articulated. Chapter \ref{ch:syslitrev} is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies. Next, Chapter \ref{ch:case-stud} is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved. The final chapter, Chapter \ref{ch:conclusion}, summarises the findings and concludes the contribution of this study and possible future works.
 
 \hypertarget{ch:syslitrev}{%
 \chapter{Systematic Literature Review}\label{ch:syslitrev}}
@@ -182,7 +164,7 @@ We screen all of the articles based on predetermined criteria. We find that 3 ar
 \hypertarget{stage-1-review-of-abstracts}{%
 \subsection{Stage 1: Review of abstracts}\label{stage-1-review-of-abstracts}}
 
-In the first stage DA and LK independently review all article abstracts with the following eligibility criteria:
+In the first stage the author and and my supervisor (Kennedy) independently review all article abstracts with the following eligibility criteria:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -193,7 +175,7 @@ In the first stage DA and LK independently review all article abstracts with the
   The abstract should mention the use of MRP or multilevel models to make population estimates or the use of other regression models (BART, spatial, stacking, trees) to make population estimates.
 \end{enumerate}
 
-During the screening, DA and LK agreed that 61 articles meet the eligibility criteria listed above, while 104 articles do not meet the criteria. The two reviewers disagreed on 44 articles. Accordingly, DA and LK skim the full manuscript to decide whether the paper could be included in the next stage or not. As the result, an additional 22 more articles are moved to stage 2, making a total of 83.
+During the screening, we agreed agreed that 61 articles meet the eligibility criteria listed above, while 104 articles do not meet the criteria. The two reviewers disagreed on 44 articles. Accordingly, we skim the full manuscript to decide whether the paper could be included in the next stage or not. As the result, an additional 22 more articles are moved to stage 2, making a total of 83.
 
 \hypertarget{stage-2-full-manuscript-review}{%
 \subsection{Stage 2: Full manuscript review}\label{stage-2-full-manuscript-review}}
@@ -283,8 +265,8 @@ In this study, we find that there are 39 plots out of 115 diagnostic plots (abou
 
 Most of these metrics only refer to point estimates, i.e., the distance between the predicted value and the actual values. Also, these metrics mainly measure bias. However, MRP is a model in which bias-variance is applied. Therefore, other measures are also needed that reflect the degree of uncertainty and variations in the predicted value. Measures such as length of confidence or credibility interval can be used, in which the narrower the value, the more precise the estimates.
 
-\hypertarget{common-comparisions-with-mrp}{%
-\subsection{Common comparisions with MRP}\label{common-comparisions-with-mrp}}
+\hypertarget{common-comparisons-with-mrp}{%
+\subsection{Common comparisons with MRP}\label{common-comparisons-with-mrp}}
 
 The goal of MRP is to make a population estimate. The method aims to adjust an unrepresentative survey to obtain accurate population and sub-population estimates. Where possible MRP is usually compared with a true value. This is generally only possible in political science applications where an election provides this true estimate. To understand how MRP improves estimates from an unrepresentative survey when compared with no adjustment, MRP estimates are usually compared with direct estimates (raw). Similarly, to understand the improvement of estimates when compared with more traditional methods, MRP is often compared with weighted estimates.
 
@@ -358,10 +340,10 @@ CCES is an annual survey that aims to capture Americans' view on Congress, their
 
 To fit MRP models, we use several variables from this survey. To obtain the data from the CCES website, we utilize an R package, \texttt{ccesMRPprep} \autocite{ccesmrpprep}. One of the advantages of using this package is that the data has been pre-processed in particular for MRP purposes, in this case, we use the \texttt{ccc\_std\_demographics} function. Also, the variable names are already recoded so it has more interpretable names. The code to get the data is available in the supplementary materials of this thesis.
 
-The outcome variables, which will be explained in detail in Section \ref{spec}, is the vote preference/intention (\texttt{CC16\_364c}), candidate voted for (\texttt{CC16\_410a}), and party identity (\texttt{pid3} including leaners who are coded as Independents in pid3 but expressed leaning towards a party in \texttt{pid7}). Table \ref{tab:outcome-table} shows the distribution of answers in those three variables. In \texttt{ccesMRPprep}, these variables have been renamed to \texttt{intent\_pres\_16}, \texttt{voted\_pres\_16}, and \texttt{pid3\_leaner}, respectively. It is worth noting that the MRP models we would like to build use binary responses. As we are comparing to the US presidential election, we would like a variable that represents whether the respondents vote for Trump/Republican or not.
+Throughout this demonstration, we estimate the proportion of voters who turned out to vote for Trump in the 2016 U.S. Presidential Election. We choose this outcome following other demonstrations (e.g.~\textcite{kuriwaki}; \textcite{MengXiao-Li2018Spap}) precisely because the population quantity is observed after the survey is run. That allows us to validate my estimates against a ground truth. To visualise the implication of different model specification, we also choose other two outcomes, which are vote preference and party identity. In CCES 2016 these variables named candidate voted for (\texttt{CC16\_410a}), the vote preference/intention (\texttt{CC16\_364c}),and party identity (\texttt{pid3} including leaners who are coded as Independents in pid3 but expressed leaning towards a party in \texttt{pid7}). Table \ref{tab:outcome-table} shows the distribution of answers in those three variables. In \texttt{ccesMRPprep}, these variables have been renamed to \texttt{intent\_pres\_16}, \texttt{voted\_pres\_16}, and \texttt{pid3\_leaner}, respectively. It is worth noting that the MRP models we would like to build use binary responses. As we are comparing to the US presidential election, we would like a variable that represents whether the respondents vote for Trump/Republican or not.
 
 \begin{table}
-\caption{\label{tab:outcome-table}Percentage of each answer in CCES 2016. This question will be the MRP models outcome in this case study. Since the model outcome is binary, these answer will be converted to be yes/no in the context of vote for Trump/Republican.}
+\caption{\label{tab:outcome-table}Percentage of each answer in CCES 2016 (n = 64,000). This question will be the MRP models outcome in this case study. Since the model outcome is binary, these answer will be converted to be yes/no in the context of vote for Trump/Republican.}
 
 \centering
 \begin{tabular}[t]{lr}
@@ -463,7 +445,7 @@ Post-Grad & 13.17\\
 \hypertarget{american-community-survey-acs-2015-2017}{%
 \subsection{American Community Survey (ACS) 2015-2017}\label{american-community-survey-acs-2015-2017}}
 
-In this study, we use the ACS 2015-2017 data as the poststratification data. The ACS is a large, survey of the American population conducted by the census bureau and covering jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics \autocite{acs_data_about}. The ACS uses monthly probabilistic samples to produce the annual estimates. The ACS is desirable data to represent the U.S. population since the coverage rate for the 2015-2017 ACS is 92.4\%, 91.9\%, 91.6\%, respectively \autocite{acs_coverage_rate}. However, it is also worth noting that the target population of the ACS (American population) and the population we are interested in (voting population) is different, and therefore, bias might always be presented.
+In this study, we use the ACS 2015-2017 data as the poststratification data. The ACS is a large, survey of the American population conducted by the census bureau and covering jobs and occupations, demographic and citizenship, educational attainment, homeownership, and other topics \autocite{acs_data_about}. The ACS uses monthly probabilistic samples to produce the annual estimates. The ACS is desirable data to represent the U.S. population since the coverage rate, a measure on how well does the survey cover population, for the 2015-2017 ACS is 92.4\%, 91.9\%, 91.6\%, respectively \autocite{acs_coverage_rate}. However, it is also worth noting that the population of interest of the ACS (American population) and the population we are interested in (voting population) is different (the ACS measures the general US population, while the CCES wants to study the behavior of the U.S. adult citizens who turned out to vote), and therefore, bias might always be presented.
 
 To construct the desired poststratification matrix, we need the individual data of the ACS instead of the aggregated statistics. To do this, we use the 1-year Public Use Microdata Sample (PUMS), which carries the information/records of individual people on a yearly basis, appropriately deidentified. The 1-year PUMS data reflects approximately one percent of the U.S. population \autocite{pums_metadata}. Therefore, in this study, we use three years periods of the ACS 1-Year PUMS from 2015-2017 instead of 2016 only to get a better and more stable representation of the American population. Every individual in the data has a weight (\texttt{PWGTP}). Since we use three years period, this weight is then divided by 3 to obtain a population total that matches the full population total.
 
@@ -684,11 +666,11 @@ After mapping the survey and population data, we can obtain a poststratification
 \toprule
 age & state & gender & collapsed\_re & original\_re & education & N\_j\\
 \midrule
-18 to 24 years & Alabama & Male & White & White & HS or Less & 63982.0000\\
-18 to 24 years & Alabama & Male & White & White & Some College & 67957.0000\\
-18 to 24 years & Alabama & Male & White & White & 4-Year & 8851.6667\\
-18 to 24 years & Alabama & Male & White & White & Post-Grad & 320.3333\\
-18 to 24 years & Alabama & Male & Black & Black & HS or Less & 40443.3333\\
+18 to 24 years & Alabama & Male & White & White & HS or Less & 63982.00\\
+18 to 24 years & Alabama & Male & White & White & Some College & 67957.00\\
+18 to 24 years & Alabama & Male & White & White & 4-Year & 8851.67\\
+18 to 24 years & Alabama & Male & White & White & Post-Grad & 320.33\\
+18 to 24 years & Alabama & Male & Black & Black & HS or Less & 40443.33\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -724,7 +706,7 @@ Choropleth maps also only display point estimates, which is only one component o
 
 \textbf{Displaying Comparison of Estimation Methods}
 
-According to \textcite{tukey}, one of the graphic's purposes is for comparison. In MRP visualisation practice, the estimates from various estimation methods are often compared. Here, we compare state-level MRP estimates with raw and weighted estimates compared to their closeness to the ground truth (actual Trump vote shares). The common aesthetic used to display this kind of purpose in the reviewed articles is a scatter plot (around 31\% of the total diagnostic plots).
+According to \textcite{tukey}, one of the graphic's purposes is for comparison. In MRP visualisation practice, the estimates from various estimation methods are often compared. Here, we compare state-level MRP estimates with raw and weighted estimates compared to their closeness to the ground truth (actual Trump vote shares), which we obtained from R-package \texttt{ddi} \autocite{ddi}. The common aesthetic used to display this kind of purpose in the reviewed articles is a scatter plot (around 31\% of the total diagnostic plots).
 
 There is an unwritten ``rule of thumb'' that when displaying two variables in a scatter plot, the horizontal axis displays the predictor, while the outcome is put in the vertical axis \autocite{gelmanunwin}. Regarding MRP visualisation, this ``convention'' could be translated by putting the estimates in the y-axis and the actual value in the x-axis, although the practice is sometimes interchangeable (see Figure \ref{fig:common-axis}). We also observe that some of the reviewed scatter plots show performance metrics, such as RMSE and MAE in \textcite{MengXiao-Li2018Spap}. Hence, in Figure \ref{fig:scatter-est-method}, we also display these. Most scatter plots we reviewed did not display uncertainty (see Figure \ref{fig:common-plots}). Here, we add uncertainty to each point estimates. In addition, we use color-blind-friendly color schemes to distinguish the estimation methods as mentioned by \textcite{vanderplas} and \textcite{statgraph}.
 
@@ -800,11 +782,16 @@ To sum, this demonstration shows that graphical display can help us to understan
 \hypertarget{ch:conclusion}{%
 \chapter{Conclusion}\label{ch:conclusion}}
 
-Graphics is essential to convey statistical information, and it has been widely used to communicate and diagnose MRP models. However, there have been few studies discussing it. Therefore, in this study, we conduct a systematic literature review to review the current practice in MRP visualisation. In addition, we perform a case study using CCES data to demonstrate the implication of current visualisation practices and explore the alternatives and possible improvements.
+Graphical displays are essential to explore and understand data and model fits. They have been widely used to communicate and diagnose MRP models. However, there have been few studies formally investigating the use of visualisation within an MRP context. Therefore, in this study, we conduct a systematic literature review to understand the current practice in MRP visualisation. In addition, we perform a case study using the Cooperative and Congressional Election Study (CCES) to demonstrate the implication of current visualisation practices and explore the alternatives and possible improvements.
 
-We find that the choropleth map is the most frequently used visualisation to communicate MRP estimates. However, it is problematic as it often hinders the information in small geographic areas and does not consider the uncertainty of estimates. Instead, we explore alternatives to display state-wise estimates using a dot plot with an error bar. Regarding uncertainty, even though it is important to show estimates variability, few plots display uncertainty in practice. We offer some alternatives to display it, for example, using a violin plot. This study also demonstrates how graphs have aided us in understanding how estimation method and model choices affect the estimates. We also use the credible interval length to illustrate the bias-variance trade-off.
+We find that the choropleth map is the most frequently used visualisation to communicate MRP estimates. However, it is problematic as it often hinders the information in small geographic areas and does not consider the uncertainty of estimates. Instead, we explore alternatives to display state-wise estimates using a dot plot with an error bar.
+Even though it is important to show estimate uncertainty, in our literature review, we find few plots actually displayed it. We propose some alternatives to display uncertainty, for example, using a violin plot. This study also demonstrates how graphs have aided us in understanding how methods and modeling choices affect the estimates. We also use credible interval length to illustrate the bias-variance trade-off.
 
-In a broader context, this study has provided empirical evidence on how visualisation has been performed in MRP studies. These findings could be a benchmark to explore more alternatives improvements of visualisation choices that are not covered in this study. We realize that the MRP model we have shown might not be the best fit in terms of its accuracy. Hence it could have been improved by setting another model specification. Also, this study only explores alternatives to MRP visualisation. Future work should employ careful experimentation. These future studies will provide evidence as to whether these alternatives can communicate more effectively and enhance interpretability.
+Naturally, this study has some limitations. In the CCES case study, none of the MRP models perform as well as the weighted estimates. However, this allowed us to demonstrate the use of visualisation to compare models that had different types of errors (such as bias or variance). Future work could compare the use of the visualisation proposed with an accurate model.
+
+Another limitation is this study only explores alternatives to MRP visualisation in a case study. While this was useful for this study because it helped us to see the differences between visualisations, it does not conclusively provide evidence these alternatives can communicate more effectively and enhance interpretability. To get evidence of this, future work should employ careful experimentation. One example of this would be showing different types of graphs to people and seeing which aids the most accurate interpretation.
+
+This study has provided empirical evidence on how visualisation has been performed in MRP research. One use of these findings is as a starting point to continue to explore alternative visualisations, such as those proposed in Chapter \ref{ch:case-stud}. Another use is to provide inspiration for MRP users in their own work and research. Finally, this work highlights the importance of including uncertainty which was not being included in practice.
 
 \appendix
 

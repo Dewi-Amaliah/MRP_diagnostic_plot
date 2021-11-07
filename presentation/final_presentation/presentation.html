@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Visualising Multilevel Regression and Poststratification:</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dewi Amaliah" />
+    <meta name="date" content="2021-11-08" />
+    <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections/anchor-sections.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+background-image:url(image/cover.png)
+background-size: cover
+
+
+
+---
+&lt;br&gt;
+
+# Background and Motivation
+
+
+- Surveys are important.
+
+- Multilevel regression and poststratification could provide reliable estimates of subpopulations.
+
+- Graphical display is widely used to communicate and diagnose MRP estimates. 
+
+- Makela, Si, and Gelman (2017) and Schneider and Jacoby (2017) study the visualisation of polling data and public opinion research. 
+
+
+---
+
+# Study Objectives 
+
+
+Perform **Systematic Literature Review** to:
+
+- Understand the current practice of visualisation of MRP models.
+
+and **Case Study** to:
+
+- Understand the implication of existing visualisation choices with real-world data. 
+
+- Explore possible improvement of the current practice of MRP visualisation. 
+
+
+---
+# Systematic Literature Review
+
+.pull-left[
+
+- Identification of relevant literature, i.e., articles using MRP as its method and should display at least one MRP visualtisation. 
+
+- Database used to identify literatures: JSTOR, EBSCO, and PubMed. 
+
+- Done in two stages: abstract and full manuscript review.
+
+- 71 articles are relevant; extracted 243 plots. 
+
+]
+
+.pull-right[
+
+
+]
+
+---
+
+# Systematic Literature Review
+
+.pull-left[
+
+- Identification of relevant literature, i.e., articles using MRP as its method and should display at least one MRP visualtisation. 
+
+- Database used to identify literatures: JSTOR, EBSCO, and PubMed. 
+
+- Done in two stages: abstract and full manuscript review.
+
+- 71 articles are relevant; extracted 243 plots. 
+
+]
+
+.pull-right[
+
+**Common plot type displayed**
+
+![plot type](image/pt.png)
+
+]
+
+---
+# Systematic Literature Review
+
+.pull-left[
+
+- Identification of relevant literature, i.e., articles using MRP as its method and should display at least one MRP visualtisation. 
+
+- Database used to identify literatures: JSTOR, EBSCO, and PubMed. 
+
+- Done in two stages: abstract and full manuscript review.
+
+- 71 articles are relevant; extracted 243 plots. 
+
+]
+
+.pull-right[
+
+**Common plot type displayed**
+
+![plot type](image/plot_type.png)
+
+]
+
+---
+## Case Study
+
+### Aim
+
+Applies MRP in estimating the Trump's vote share in the U.S. 2016 Presidential Election.
+
+### Data 
+
+- Survey data: Cooperative Congressional Election Study (CCES) 2016. 
+
+- Population data: American Community Survey (2015-2017)
+
+---
+
+### Visualising MRP 
+
+
+
+- **Communication-purpose visualisation**
+- **Metrics visualisation**
+- **Comparison-purpose**
+
+  - Comparison of estimation methods (raw, weighted, and MRP estimates)
+  - Comparison of model specifications:
+    
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Model specifications in the case study&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Response &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Predictors &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Baseline &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; vote &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; age, gender, state, collapsed_race &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Model 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; vote &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; age, gender, state, collapsed_race, education &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Model 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; vote &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; age, gender, state, original_race &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Model 4a &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; intent &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; age, gender, state, collapsed_race, education &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Model 4b &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; party id &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; age, gender, state, collapsed_race, education &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Comparison of Estimation Methods (raw, weighted, and MRP)
+
+
+.pull-left[
+
+**Current practice**
+
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/scatter1.png" width="85%" /&gt;
+]
+
+
+.pull-right[
+
+]
+
+---
+
+### Comparison of Estimation Methods (raw, weighted, and MRP)
+
+.pull-left[
+
+**Current practice**
+
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/scatter1.png" width="85%" /&gt;
+]
+
+
+.pull-right[
+
+**Alternative**
+
+
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/dot.png" width="75%" /&gt;
+
+]
+
+---
+
+**Comparison of Model Specifications (current practice)**
+
+.center[
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/scatter2.png" width="75%" /&gt;
+]
+---
+
+**Comparison of Model Specifications (alternative)**
+
+.center[
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/violin.png" width="75%" /&gt;
+]
+
+---
+
+# Conclusion
+
+- This study has shown us the current practice in MRP visualisation. 
+
+- Uncertainty is often not taken into account when visualising MRP, hence we offer some alternatives to display it. 
+
+- **Future work** is needed with careful experimentation to provide the evidence whether these alternatives can communicate MRP models more effectively and enhance interpretability.
+
+---
+
+# References 
+
+Makela, S, Y Si, and A Gelman (2017). “Graphical Visualization of Polling Results”. In:
+The Oxford Handbook on Polling and Polling Methods. Ed. by L Atkeson and M Alvarez.
+Oxford UK: Oxford University Press.
+
+
+Schneider, SK and WG Jacoby (2017). “Graphical Displays for Public Opinion Research”. In: The Oxford Handbook on Polling and Polling Methods. Ed. by L Atkeson and M Alvarez.
+Oxford UK: Oxford University Press.
+
+---
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+---
+
+## Communication-purpose visualisation
+
+.pull-left[
+![map](image/map.png)
+]
+.pull-right[
+
+&lt;br&gt;
+- Choropleth can hinder the information of small area with small polygon.
+
+- Only displays point estimates.
+
+- Often hard to interpret.
+]
+
+---
+
+## Metrics visualisation
+
+.pull-left[
+
+**Common metrics**
+
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/met1.png" width="70%" /&gt;
+]
+
+
+.pull-right[
+
+**Additional**
+
+&lt;img src="/Users/deeamaliah/Documents/Semester4/MRP_diagnostic_plot/presentation/final_presentation/image/met2.png" width="90%" /&gt;
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

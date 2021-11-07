@@ -51,7 +51,7 @@ state_ct <- get_ct(state) %>%
 # table for outcome, this table consists of 3 tables
 knitr::kable(list(voted_ct, intent_ct, party_id_ct), 
              booktabs = TRUE,
-             caption = "Percentage of each answer in CCES 2016. This question will be the MRP models outcome in this case study. Since the model outcome is binary, these answer will be converted to be yes/no in the context of vote for Trump/Republican.") %>%
+             caption = "Percentage of each answer in CCES 2016 (n = 64,000). This question will be the MRP models outcome in this case study. Since the model outcome is binary, these answer will be converted to be yes/no in the context of vote for Trump/Republican.") %>%
   kable_styling() 
 
 
@@ -356,8 +356,8 @@ map_model<- readRDS(here::here("case_study/results/map_model.rds"))
 
 map_model$poststrat_data() %>%
   head(n = 5) %>%
-  kable(caption = "First five rows of the post-stratification table", booktabs = TRUE) %>% 
+  kable(caption = "First five rows of the post-stratification table", booktabs = TRUE,
+        digits = 2) %>% 
   kable_styling()
-
 
 
