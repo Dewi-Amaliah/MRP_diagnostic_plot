@@ -2,7 +2,7 @@
 
 ## :clipboard: About
 
-This is a repository for my master degree thesis about Multilevel Regression and Poststratification (MRP) visualisation. This study aims to:
+This is a repository for my master degree research project about Multilevel Regression and Poststratification (MRP) visualisation. This study aims to:
 
 1. Discuss the current practice of visualisation of MRP models.
 2. Understand the implication of existing visualisation choices with real-world data.
