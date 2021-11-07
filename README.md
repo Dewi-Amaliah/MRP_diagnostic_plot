@@ -56,7 +56,7 @@ This folder includes all of the files needed to reproduce the analysis in the ca
   - analysis
     - analysis_code (folder contains codes used in the case study)
       - cces_acs_wrangling.R (data wrangling of CCES and ACS data)
-      - mrp_build.Rmd (code used when initially building the MRP and explore visualisation, not used in the final report)
+      - mrp_build.Rmd (code used when prepare and fitting MRP models)
       - mrp_fitting.R (code used to prepare and specifiy MRP models, used in the report for Chapter 3)
       - mrp_vis.R (code used to visualise MRP estimatesm used in report for Chapter 3)
     - hpc_code (folder contains R codes and slurm submission for High Performance Cluster)
