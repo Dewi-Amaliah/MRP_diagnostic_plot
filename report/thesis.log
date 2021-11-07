@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  7 NOV 2021 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.22)  8 NOV 2021 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,7 +1270,7 @@ mc-
 
 [58] [59] [60] [61] [62] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A6AAC48531C5E9C6010DD7E63CEB4AC5;4093.
+(rerunfilecheck)             Checksum: 44B41DE85DE12100D1901B2490637298;4093.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
@@ -1282,7 +1282,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  22970 strings out of 480539
  398576 string characters out of 5901555
- 1172347 words of memory out of 5000000
+ 1172370 words of memory out of 5000000
  39593 multiletter control sequences out of 15000+600000
  509832 words of font info for 348 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1301,7 +1301,7 @@ y/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/deeamaliah/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/deeamaliah/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/deeamalia
 h/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (65 pages, 1012983 bytes).
+Output written on thesis.pdf (65 pages, 1013143 bytes).
 PDF statistics:
  1105 PDF objects out of 1200 (max. 8388607)
  931 compressed objects within 10 object streams

@@ -190,8 +190,8 @@
     \end{center}
     \vfill
     \begin{center}\Large
-        {A thesis submitted
-        for the degree of\\[0.3cm] \degreetitle}
+        {A research project report submitted
+        for the unit of\\[0.3cm] \degreetitle}
     \end{center}
     \vfill
     \begin{center}

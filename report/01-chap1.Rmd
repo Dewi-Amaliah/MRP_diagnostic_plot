@@ -48,7 +48,7 @@ Formally, let $K$ be the number of categorical variables in the population and t
 (\#eq:mrp-stage2)
 \end{equation}
 
-## Thesis Structure 
+## Report Structure 
 
-The first chapter of this thesis is introuction in which the motivation and objectives of this study are articulated.  Chapter \@ref(ch:syslitrev) is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies. Next, Chapter \@ref(ch:case-stud) is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved. The final chapter, Chapter \@ref(ch:conclusion), summarises the findings and concludes the contribution of this study and possible future works. 
+The first chapter of this report is introduction in which the motivation and objectives of this study are articulated.  Chapter \@ref(ch:syslitrev) is a systematic literature review. This chapter discuss the review of current practice in MRP visualisations in various studies. Next, Chapter \@ref(ch:case-stud) is a case study of MRP visualisations. This chapter aims to demonstrate the MRP application in the case of U.S. presidential voting result estimation. This chapter also demonstrates how the current practice of MRP visualisation could be improved. The final chapter, Chapter \@ref(ch:conclusion), summarises the findings and concludes the contribution of this study and possible future works. 
 

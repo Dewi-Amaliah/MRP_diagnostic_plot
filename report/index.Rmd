@@ -1,6 +1,6 @@
 ---
 title: 'Visualising Multilevel Regression and Poststratification: Alternatives to the Current Practice'
-degreetype: 'Master of Business Analytics'
+degreetype: 'Business Analytics Creative Activity'
 author: 'Dewi Lestari Amaliah'
 studentid: 31251587
 output: bookdown::pdf_book

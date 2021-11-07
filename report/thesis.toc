@@ -10,7 +10,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}MRP Overview}{6}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Thesis Structure}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Report Structure}{8}{section.1.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Systematic Literature Review}{9}{chapter.2}%
 \defcounter {refsection}{0}\relax 
