@@ -87,6 +87,6 @@ This folder includes all of the files needed to reproduce the systematic literat
 ## :wrench: Packages used 
 
 If you want to reproduce this analysis, make sure you have these packages installed:
-`mrpkit`; `ccesMRPprep` ; `brms`; `cmdstanr`; `survey`; `tidyverse`; `forcats`; `Metrics`; `data.table`; `kableExtra`; `janitor`; `scales`; `ggplot2`; `patchwork`; `flipPlots`; `igraph`; `urbnmapr`; `ggstance`; `ggpmisc`; `wacolors`; `rmarkdown`; `knitr`; `MonashEBSTemplates`.
+`mrpkit`; `ccesMRPprep` ; `brms`; `cmdstanr`; `survey`; `ddi`; `tidyverse`; `forcats`; `Metrics`; `data.table`; `kableExtra`; `janitor`; `scales`; `ggplot2`; `patchwork`; `flipPlots`; `igraph`; `urbnmapr`; `ggstance`; `ggpmisc`; `wacolors`; `rmarkdown`; `knitr`; `MonashEBSTemplates`.
 
 
